@@ -63,12 +63,19 @@ module.exports = {
       template: 'src/index.html'
     }),
 
-    new CopyWebpackPlugin([{
-      from: 'src/assets',
-      to: 'assets',
-    }, {
-      from: './apache_site.conf',
-      to: 'apache_site.conf'
-    }], { ignore: ['mock-data/*'] })
+    new CopyWebpackPlugin([
+      {
+        from: 'src/assets',
+        to: 'assets',
+      },
+      {
+        from: 'src/examples',
+        to: 'examples',
+      },
+      {
+        from: './apache_site.conf',
+        to: 'apache_site.conf'
+      }
+    ], { ignore: ['mock-data/*'] })
   ]
 };
