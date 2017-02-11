@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +11,7 @@ import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootst
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 
 import { ContentBlockModule } from './shared/content-block/content-block.module';
+import { ExampleModule } from './shared/example/example.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
@@ -32,6 +34,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpModule,
     CollapseModule,
@@ -40,7 +43,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UiComponentsModule,
     AssetsModule,
     AppRoutingModule,
-    ContentBlockModule
+    ContentBlockModule,
+    ExampleModule
   ],
   exports: [
     RouterModule
