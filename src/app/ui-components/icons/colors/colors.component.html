@@ -1,70 +1,55 @@
 <div class="page-header">
-  <h2>Resizing Icons</h2>
+  <h2>Icon Colors</h2>
 </div>
 
 <p>
-  Add one of the following classes to resize an icon.
+  Icons' <code>&lt;use&gt;</code> element will inherit the color of the closest
+  parent with a color applied.
 </p>
-<ul class="list-inline">
-  <li>
-    <code>.icon-1</code>
-  </li>
-  <li>
-    <code>.icon-2</code>
-  </li>
-  <li>
-    <code>.icon-3</code>
-  </li>
-  <li>
-    <code>.icon-4</code>
-  </li>
-  <li>
-    <code>.icon-5</code>
-  </li>
-  <li>
-    <code>.icon-6</code>
-  </li>
-</ul>
 
 <div class="page-subheader">
-  <h3>Resizing Inline SVG Icons</h3>
+  <h3>Applied to Icon</h3>
 </div>
 
+<p>
+  You can apply a color helper directly to the <code>&lt;svg&gt;</code> element.
+</p>
+
 <div class="crds-example">
-  <svg class="svg-github icon icon-1">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
-
-  <svg class="svg-github icon icon-2">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
-
-  <svg class="svg-github icon icon-3">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
-
-  <svg class="svg-github icon icon-4">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
-
-  <svg class="svg-github icon icon-5">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
-
-  <svg class="svg-github icon icon-6">
-    <use xlink:href="/assets/sprite.css.svg#github"></use>
-  </svg>
+<svg class="icon text-danger" viewBox="0 0 256 256">
+  <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons.svg#calendar"></use>
+</svg>
 </div>
 
 <div class="page-subheader">
-  <h3>Resizing CSS SVG Icons</h3>
+  <h3>Applied to Parent</h3>
 </div>
 
+<p>
+  Here the color is applied to the parent element and the icon inherits it.
+</p>
+
 <div class="crds-example">
-  <i class="icon icon-1 svg-calendar"></i>
-  <i class="icon icon-2 svg-calendar"></i>
-  <i class="icon icon-3 svg-calendar"></i>
-  <i class="icon icon-4 svg-calendar"></i>
-  <i class="icon icon-5 svg-calendar"></i>
-  <i class="icon icon-6 svg-calendar"></i>
+<div class="text-primary">
+  <svg class="icon" viewBox="0 0 256 256">
+    <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons.svg#calendar"></use>
+  </svg>
+</div>
+</div>
+
+<div class="page-subheader">
+  <h3>Background Colors</h3>
+</div>
+
+<p>
+  Notice that if the component in which the icon is placed has an color applied,
+  the icon will also inherit that color.
+</p>
+
+<div class="crds-example">
+<div class="alert alert-info">
+  <svg class="icon" viewBox="0 0 256 256">
+    <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons.svg#calendar"></use>
+  </svg>
+</div>
 </div>
