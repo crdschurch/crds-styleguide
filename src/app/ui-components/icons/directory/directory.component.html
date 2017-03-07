@@ -10,25 +10,10 @@
 </p>
 
 <ul class="list-unstyled push-top soft-top icon-directory-list">
-  <li>
-    <i class="icon icon-1 svg-calendar"></i> <span class="soft-half-left">svg-calendar</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-check-circle"></i> <span class="soft-half-left">svg-check-circle</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-chevron-left"></i> <span class="soft-half-left">svg-chevron-left</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-chevron-right"></i> <span class="soft-half-left">svg-chevron-right</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-circle-thin"></i> <span class="soft-half-left">svg-circle-thin</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-github"></i> <span class="soft-half-left">svg-github</span>
-  </li>
-  <li>
-    <i class="icon icon-1 svg-usd"></i> <span class="soft-half-left">svg-usd</span>
+  <li *ngFor="let icon of icons">
+    <svg class="icon icon-1" viewBox="0 0 256 256">
+      <use attr.xlink:href="/assets/icons.svg#{{icon}}" height="256" width="256"></use>
+    </svg>
+    <span class="soft-half-left">{{icon}}</span>
   </li>
 </ul>
