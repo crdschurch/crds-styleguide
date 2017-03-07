@@ -4,11 +4,19 @@
   <h2>Inline SVG Icons</h2>
 </div>
 
+<p>SVG icons use the combination of <code>&lt;svg&gt;</code> and 
+<code>&lt;use&gt;</code> elements. The icon is dictated by the name after the
+hash in the <code>&lt;use&gt;</code> element's <code>href</code>. You can
+view the options in the <a routerLink="/ui/icons/directory">icon directory</a>.</p>
+
+<p>It's imperative that you include the <code>viewBox</code>,
+<code>height</code>, and <code>width</code> attributes as shown below.</p>
+
 <div class="row">
 
   <div class="col-sm-6" *ngFor="let icon of icons">
     <div class="crds-example">
-<svg class="icon icon-1" viewBox="0 0 256 256">
+<svg class="icon" viewBox="0 0 256 256">
   <use attr.xlink:href="/assets/icons.svg#{{icon}}" height="256" width="256"></use>
 </svg>
     </div>
