@@ -6,60 +6,12 @@
 
 <div class="row">
 
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-calendar icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#calendar"></use>
+  <div class="col-sm-6" *ngFor="let icon of icons">
+    <div class="crds-example">
+<svg class="icon icon-1" viewBox="0 0 256 256">
+  <use attr.xlink:href="/assets/icons.svg#{{icon}}" height="256" width="256"></use>
 </svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-check-circle icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#check-circle"></use>
-</svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-chevron-left icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#chevron-left"></use>
-</svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-chevron-right icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#chevron-right"></use>
-</svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-circle-thin icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#circle-thin"></use>
-</svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-github icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#github"></use>
-</svg>
-</div>
-</div>
-
-<div class="col-sm-6">
-<div class="crds-example">
-<svg class="svg-usd icon icon-1">
-<use xlink:href="/assets/sprite.css.svg#usd"></use>
-</svg>
-</div>
-</div>
+    </div>
+  </div>
 
 </div>
