@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class IconService {
-  
+
   icons = [
     'calendar',
     'check-circle',
@@ -17,6 +17,6 @@ export class IconService {
     'instagram',
     'usd',
     'youtube'
-  ]
+  ];
 
 }
