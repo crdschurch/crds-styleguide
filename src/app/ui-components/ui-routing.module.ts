@@ -44,6 +44,7 @@ import { IconDirectoryComponent } from './icons/directory/directory.component';
 import { IconInlineComponent } from './icons/inline-svg/inline-svg.component';
 import { IconCssComponent } from './icons/css-svg/css-svg.component';
 import { IconResizeComponent } from './icons/resize-svg/resize-svg.component';
+import { IconColorsComponent } from './icons/colors/colors.component';
 
 /* tables */
 import { TablesComponent } from './tables/tables.component';
@@ -141,6 +142,10 @@ const uiRoutes: Routes = [
           {
             path: 'resize-svg',
             component: IconResizeComponent
+          },
+          {
+            path: 'colors',
+            component: IconColorsComponent
           }
         ]
       },
