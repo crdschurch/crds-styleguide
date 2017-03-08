@@ -8,7 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     'polyfills': ['./src/polyfills.ts'],
-    'app': ['./src/main.ts']
+    'app': ['./src/main.ts', './src/styles/application.scss']
   },
 
   resolve: {
@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        loader: 'html-loader'
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -38,14 +38,9 @@ module.exports = {
         loader: 'file?name=assets/[name].[hash].[ext]'
       },
       {
-        test: /\.css$/,
-        include: helpers.root('src', 'app'),
-        loader: 'raw'
-      },
-      {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ['raw-loader', 'sass-loader']
+        loader: ExtractTextPlugin.extract(['raw-loader', 'sass-loader'])
       }
     ]
   },
@@ -61,6 +56,12 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      template: 'src/header.ejs',
+      filename: 'header.html',
+      inject: false
     }),
 
     new CopyWebpackPlugin([
