@@ -15,6 +15,7 @@ export class IconService {
     'github',
     'twitter',
     'instagram',
+    'search',
     'usd',
     'youtube'
   ];
