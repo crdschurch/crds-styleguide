@@ -58,6 +58,12 @@ module.exports = {
       template: 'src/index.html'
     }),
 
+    new HtmlWebpackPlugin({
+      template: 'src/header.ejs',
+      filename: 'header.html',
+      inject: false
+    }),
+
     new CopyWebpackPlugin([
       {
       from: 'src/assets',
