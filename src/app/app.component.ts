@@ -5,6 +5,7 @@ let Prism = require('prismjs');
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  styleUrls: ['../styles/application.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked {
