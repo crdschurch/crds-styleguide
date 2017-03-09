@@ -64,9 +64,9 @@ module.exports = {
       to: 'assets',
       },
       {
-        context: './node_modules/crds-styles/assets/stylesheets/svg/assets/',
+        context: './node_modules/crds-styles/assets/svgs/',
         from: '*.svg',
-        to: 'assets',
+        to: 'assets/svgs'
       }
     ], { ignore: ['mock-data/*'] })
 
