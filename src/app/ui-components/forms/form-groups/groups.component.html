@@ -102,7 +102,17 @@
             [class.active]="(button === selectedButton) && !customInputSelected"
             (click)="onSelect(button)">
       <div class="row">
-        <div>{{ button.label }}:</div>
+        <div class="btn-group-label">
+          <span class="btn-group-icons">
+            <svg class="icon circle-thin" viewBox="0 0 256 256">
+              <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#circle-thin"></use>
+            </svg>
+
+            <svg class="icon check-circle" viewBox="0 0 256 256">
+              <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#check-circle"></use>
+            </svg>
+          </span>
+          {{ button.label }}:</div>
         <div>{{ button.amount | currency: "USD": true }}</div>
       </div>
     </button>
