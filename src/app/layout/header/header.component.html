@@ -7,15 +7,29 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <theme-toggle-switch class="visible-xs-block"></theme-toggle-switch>
+
+      <a class="logo-ddk" routerLink="/">
+        <svg viewBox="0 0 50 50" width="50px" height="50px">
+          <use href="/assets/svgs/logo-ddk.svg#logo-ddk"></use>
+        </svg>
+      </a>
       <a class="navbar-brand" routerLink="/">
-        <img src="//crossroads-media.s3.amazonaws.com/images/logo.svg" width="130" height="18.69" />
+        <svg viewBox="0 0 578 84" width="125px" height="25px">
+          <use href="/assets/svgs/logo-crds.svg#logo-crds"></use>
+        </svg>
       </a>
     </div>
 
     <div class="collapse navbar-collapse" [collapse]="isMenuCollapsed">
-      <ul class="nav navbar-nav">
-        <li dropdown="for-designers">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">For Designers <span class="caret"></span></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li dropdown="for-designers" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">
+            For Designers
+            <svg class="icon" viewBox="0 0 256 256">
+              <use href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
             <div class="container">
               <a routerLink="/designers" routerLinkActive="active">
@@ -25,8 +39,13 @@
           </div>
         </li>
 
-        <li dropdown="for-developers">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
+        <li dropdown="for-developers" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            For Developers
+            <svg class="icon" viewBox="0 0 256 256">
+              <use href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
             <div class="container">
               <a routerLink="/developers" routerLinkActive="active">
@@ -42,8 +61,13 @@
           </div>
         </li>
 
-        <li dropdown="ui-components">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Components <span class="caret"></span></a>
+        <li dropdown="ui-components" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            UI Components
+            <svg class="icon" viewBox="0 0 256 256">
+              <use href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
             <div class="container">
               <a routerLink="/ui" routerLinkActive="active">
@@ -80,8 +104,13 @@
           </div>
         </li>
 
-        <li dropdown="assets">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assets <span class="caret"></span></a>
+        <li dropdown="assets" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Assets
+            <svg class="icon" viewBox="0 0 256 256">
+              <use href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
             <div class="container">
               <a routerLink="/assets" routerLinkActive="active">
@@ -101,16 +130,10 @@
             </div>
           </div>
         </li>
-
+        <li><a href="https://github.com/crdschurch/crds-styleguide" target="_blank">Github</a></li>
+        <li class="hidden-xs"><theme-toggle-switch></theme-toggle-switch></li>
       </ul>
 
-      <ul class="nav navbar-nav pull-right">
-        <li class="navbar-text">Enable dark examples?</li>
-        <li class="navbar-btn">
-          <theme-toggle-switch></theme-toggle-switch>
-        </li>
-        <li><a href="https://github.com/crdschurch/crds-styleguide">View On Github</a></li>
-      </ul>
     </div>
   </div>
 </nav>

@@ -9,6 +9,8 @@ export class IconService {
     'check-circle',
     'chevron-left',
     'chevron-right',
+    'chevron-up',
+    'chevron-down',
     'circle-thin',
     'contrast',
     'facebook',

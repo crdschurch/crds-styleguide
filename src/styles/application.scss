@@ -1,5 +1,10 @@
 @import '~crds-styles/assets/stylesheets/bootstrap';
+
 @import '~prismjs/themes/prism';
+
+.dark-theme {
+  @import '~prismjs/themes/prism-okaidia';
+}
 
 @import 'variables';
 @import 'global';

@@ -11,20 +11,30 @@ aside > nav {
     &.active:hover,
     &.active:focus {
       background: $gray;
-      border-color: darken($gray, 10%);
+      border-color: darken($gray, 10);
     }
     > a:focus {
       text-decoration: none;
       color: $brand-primary;
     }
   }
+  .dark-theme & {
+    .list-group-item {
+      background: darken($cr-gray-dark, 15);
+      border-color: darken($cr-gray-dark, 20);
+
+      &.active,
+      &.active:hover,
+      &.active:focus {
+        background: $cr-gray-darker;
+        border-color: $cr-gray-darker;
+      }
+    }
+  }
 }
 
-body.crds-dark-theme {
+body.dark-theme {
   transition: all 0.3s;
-  .crds-example {
-    @extend .dark-theme;
-  }
 }
 
 .component {
@@ -88,6 +98,17 @@ body.crds-dark-theme {
 
 .jumbotron {
   margin-bottom: 3em;
+  .dark-theme & {
+    background: $cr-gray-darker;
+    border-bottom: 1px solid darken($cr-gray-dark, 10);
+  }
+}
+
+code {
+  .dark-theme & {
+    background: $cr-gray;
+    color: $cr-gray-darker;
+  }
 }
 
 .crds-example {
@@ -101,6 +122,16 @@ body.crds-dark-theme {
   &, & + figure.highlight > pre {
     border-color: $cr-gray-lighter;
     padding: 1.25em;
+  }
+
+
+  .dark-theme & {
+    &, & + figure.highlight > pre {
+      border-color: darken($cr-gray-dark, 10);
+    }
+    & + figure.highlight > pre {
+      background: darken($cr-gray-dark, 10);
+    }
   }
 
   & {
