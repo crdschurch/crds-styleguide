@@ -9,17 +9,22 @@
 hash in the <code>&lt;use&gt;</code> element's <code>href</code>. You can
 view the options in the <a routerLink="/ui/icons/directory">icon directory</a>.</p>
 
-<p>It's imperative that you include the <code>viewBox</code>,
-<code>height</code>, and <code>width</code> attributes as shown below.</p>
+<p>It's imperative that you include the <code>viewBox</code> attribute as shown below.</p>
 
 <div class="row">
 
   <div class="col-sm-6" *ngFor="let icon of icons">
-    <div class="crds-example">
+    <div class="crds-example" data-processed="true">
 <svg class="icon" viewBox="0 0 256 256">
-  <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}" height="256" width="256"></use>
+  <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
 </svg>
     </div>
+    <figure class="highlight">
+      <pre class="language-markup">
+&lt;svg class=&quot;icon&quot; viewBox=&quot;0 0 256 256&quot;&gt;
+  &lt;use xlink:href=&quot;&#x2F;assets&#x2F;svgs&#x2F;icons.svg#{{icon}}&quot;&gt;&lt;&#x2F;use&gt;
+&lt;&#x2F;svg&gt;</pre>
+    </figure>
   </div>
 
 </div>
