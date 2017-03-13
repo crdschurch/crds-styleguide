@@ -22,21 +22,75 @@
   <body>
 
     <div class="header">
+      <div tabindex="-1" role="dialog" class="modal fade mobile-menu">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <ul>
+              <li>
+                <a href="#">Sign In</a>
+              </li>
+              <li>
+                <a role="button" data-toggle="collapse" href="#collapse-about">
+                  About Us
+                  <svg class="icon icon-1" viewBox="0 0 256 256">
+                    <use href="/assets/svgs/icons.svg#chevron-right"></use>
+                  </svg>
+                </a>
+                <ul id="collapse-about" class="collapse">
+                  <li>
+                    <a href="#">Our History</a>
+                  </li>
+                  <li>
+                    <a href="#">Pastoral Care</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Another Link</a>
+              </li>
+              <li>
+                <a href="#">Another Link</a>
+              </li>
+              <li>
+                <a href="#">Another Link</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Header -->
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
 
             <!-- Hamburglar -->
+            <a class="navbar-left hidden-md hidden-lg hidden-xl"
+               data-toggle="modal" data-target=".header .modal">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use href="/assets/svgs/icons.svg#menu"></use>
+              </svg>
+            </a>
+
+            <!-- Mobile Search Icon -->
+            <a href="#" class="pull-right hidden-md hidden-lg hidden-xl">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use href="/assets/svgs/icons.svg#search"></use>
+              </svg>
+            </a>
 
             <!-- Logo -->
             <a href="#" class="navbar-brand logo">
               <svg viewBox="0 0 578 84" width="578" height="84">
-                <use xlink:href="assets/svgs/logo-crds.svg#logo-crds"></use>
+                <use href="assets/svgs/logo-crds.svg#logo-crds"></use>
               </svg>
             </a>
 
             <!-- User Menu -->
-            <div class="dropdown pull-right profile-menu">
+            <div class="dropdown pull-right profile-menu hidden-xs hidden-sm">
               <a href="javascript:void(0)" class="nav-profile-image img-circle dropdown-toggle" data-toggle="dropdown">
                 <img src="https://crossroads-media.imgix.net/images/avatar.svg">
               </a>
@@ -73,7 +127,7 @@
             </div>
 
             <!-- Primary nav menu -->
-            <ul class="nav nav-pills nav-primary pull-right">
+            <ul class="nav nav-pills nav-primary pull-right hidden-xs hidden-sm">
 
               <!-- Primary nav item -->
               <li class="dropdown">
@@ -152,7 +206,7 @@
               <li class="push-half-right">
                 <a href="#" class="btn">
                   <svg class="icon icon-1" viewBox="0 0 256 256">
-                    <use height="256" width="256" xlink:href="/assets/svgs/icons.svg#search"></use>
+                    <use href="/assets/svgs/icons.svg#search"></use>
                   </svg>
                 </a>
               </li>
