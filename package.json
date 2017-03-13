@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "crds-ng2-content-block": "crdschurch/crds-ng2-content-block#development",
-    "@types/core-js": "^0.9.34",
+    "@types/core-js": "0.9.36",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.46",
     "angular2-template-loader": "^0.6.0",
