@@ -7,15 +7,18 @@ export class IconService {
   icons = [
     'calendar',
     'check-circle',
+    'chevron-down',
     'chevron-left',
     'chevron-right',
+    'chevron-up',
     'circle-thin',
     'contrast',
     'facebook',
     'github',
-    'twitter',
     'instagram',
+    'menu',
     'search',
+    'twitter',
     'usd',
     'youtube'
   ];
