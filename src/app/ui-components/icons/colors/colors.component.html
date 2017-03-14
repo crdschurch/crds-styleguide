@@ -15,11 +15,17 @@
   You can apply a color helper directly to the <code>&lt;svg&gt;</code> element.
 </p>
 
-<div class="crds-example">
-<svg class="icon text-danger" viewBox="0 0 256 256">
-  <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#calendar"></use>
+<div class="crds-example" data-processed="true">
+<svg class="icon text-primary" viewBox="0 0 256 256">
+  <use href="/assets/svgs/icons.svg#calendar"></use>
 </svg>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;svg class=&quot;icon text-primary&quot; viewBox=&quot;0 0 256 256&quot;&gt;
+  &lt;use href=&quot;&#x2F;assets&#x2F;svgs&#x2F;icons.svg#calendar&quot;&gt;&lt;&#x2F;use&gt;
+&lt;&#x2F;svg&gt;</pre>
+</figure>
 
 <div class="page-subheader">
   <h3>Applied to Parent</h3>
@@ -29,13 +35,21 @@
   Here the color is applied to the parent element and the icon inherits it.
 </p>
 
-<div class="crds-example">
-<div class="text-primary">
+<div class="crds-example" data-processed="true">
+<div class="text-secondary">
   <svg class="icon" viewBox="0 0 256 256">
-    <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#calendar"></use>
+    <use href="/assets/svgs/icons.svg#calendar"></use>
   </svg>
 </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class=&quot;text-secondary&quot;&gt;
+  &lt;svg class=&quot;icon&quot; viewBox=&quot;0 0 256 256&quot;&gt;
+    &lt;use href=&quot;&#x2F;assets&#x2F;svgs&#x2F;icons.svg#calendar&quot;&gt;&lt;&#x2F;use&gt;
+  &lt;&#x2F;svg&gt;
+&lt;&#x2F;div&gt;</pre>
+</figure>
 
 <div class="page-subheader">
   <h3>Background Colors</h3>
@@ -46,10 +60,18 @@
   the icon will also inherit that color.
 </p>
 
-<div class="crds-example">
+<div class="crds-example" data-processed="true">
 <div class="alert alert-info">
   <svg class="icon" viewBox="0 0 256 256">
-    <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#calendar"></use>
+    <use href="/assets/svgs/icons.svg#calendar"></use>
   </svg>
 </div>
 </div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class=&quot;alert alert-info&quot;&gt;
+  &lt;svg class=&quot;icon&quot; viewBox=&quot;0 0 256 256&quot;&gt;
+    &lt;use href=&quot;&#x2F;assets&#x2F;svgs&#x2F;icons.svg#calendar&quot;&gt;&lt;&#x2F;use&gt;
+  &lt;&#x2F;svg&gt;
+&lt;&#x2F;div&gt;</pre>
+</figure>
