@@ -1,0 +1,14 @@
+.theme-toggle-switch {
+  color: $cr-gray;
+  float: right;
+  padding: 10px 15px;
+
+  &:hover {
+    color: darken($cr-gray, 10);
+  }
+
+  .dark-theme & {
+    color: $cr-white;
+    border-left: 1px solid darken($cr-gray-dark, 10);
+  }
+}
