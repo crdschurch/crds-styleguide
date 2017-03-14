@@ -15,7 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
 import { DevelopersModule } from './developers/developers.module';
 import { UiComponentsModule } from './ui-components/ui-components.module';
+
 import { AssetsModule } from './assets/assets.module';
+import { LogoComponent } from './assets/logo/logo.component';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';

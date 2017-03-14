@@ -110,5 +110,8 @@
       padding: 0;
     }
   }
+}
 
+.navbar-brand svg {
+  @include size(8.125rem, 1.1875rem);
 }

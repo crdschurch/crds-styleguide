@@ -12,7 +12,7 @@
     <div class="input-group input-group-left">
       <span class="input-group-addon">
         <svg class="icon" viewBox="0 0 256 256">
-          <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#usd"></use>
+          <use href="/assets/svgs/icons.svg#usd"></use>
         </svg>
       </span>
       <input type="customAmount" name="customAmount" value="" placeholder="Enter Amount" class="form-control">
@@ -102,7 +102,17 @@
             [class.active]="(button === selectedButton) && !customInputSelected"
             (click)="onSelect(button)">
       <div class="row">
-        <div>{{ button.label }}:</div>
+        <div class="btn-group-label">
+          <span class="btn-group-icons">
+            <svg class="icon circle-thin" viewBox="0 0 256 256">
+              <use height="256" width="256" href="/assets/svgs/icons.svg#circle-thin"></use>
+            </svg>
+
+            <svg class="icon check-circle" viewBox="0 0 256 256">
+              <use height="256" width="256" href="/assets/svgs/icons.svg#check-circle"></use>
+            </svg>
+          </span>
+          {{ button.label }}:</div>
         <div>{{ button.amount | currency: "USD": true }}</div>
       </div>
     </button>
@@ -119,7 +129,7 @@
     <div class="custom-input" *ngIf="customInputSelected">
         <span class="custom-input-icon">
           <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use height="256" width="256" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-right"></use>
+            <use href="/assets/svgs/icons.svg#chevron-right"></use>
           </svg>
         </span>
 
