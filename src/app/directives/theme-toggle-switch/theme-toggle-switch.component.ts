@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
 
 @Component({
   selector: 'theme-toggle-switch',
-  template: '<a class="theme-toggle-switch" (click)="onSwitch()"><svg class="icon icon-1" viewBox="0 0 256 256"><use height="256" width="256" href="/assets/svgs/icons.svg#contrast"></use></svg></a>'
+  template: '<a class="theme-toggle-switch" (click)="onSwitch()"><svg class="icon icon-1" viewBox="0 0 256 256"><use height="256" width="256" xlink:href="/assets/svgs/icons.svg#contrast"></use></svg></a>'
 })
 export class ThemeToggleSwitchComponent {
 
