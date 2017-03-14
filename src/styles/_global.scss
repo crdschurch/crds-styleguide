@@ -129,9 +129,6 @@ code {
     &, & + figure.highlight > pre {
       border-color: darken($cr-gray-dark, 10);
     }
-    & + figure.highlight > pre {
-      background: darken($cr-gray-dark, 10);
-    }
   }
 
   & {

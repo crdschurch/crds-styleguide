@@ -35,10 +35,7 @@
     }
 
     .dark-theme & {
-      // NOTE – move this to crds-styles?
       @extend .navbar-inverse;
-      background-color: $cr-black;
-      border-bottom: 1px solid darken($cr-gray-dark, 10);
 
       .navbar-brand {
         fill: $cr-white;
