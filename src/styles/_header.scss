@@ -14,7 +14,72 @@
   h3 {
     font-size: 2rem;
   }
+
+  &.navbar-default {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    background-color: $cr-white;
+
+    .logo-ddk {
+      float: left;
+      display: block;
+      height: 50px;
+    }
+
+    .navbar-brand {
+      fill: $cr-gray;
+    }
+
+    .navbar-nav li.on > a {
+      color: $cr-cyan;
+    }
+
+    .dark-theme & {
+      @extend .navbar-inverse;
+
+      .navbar-brand {
+        fill: $cr-white;
+      }
+
+      .navbar-nav li.on > a {
+        color: $cr-cyan;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .container-fluid {
+      padding: 0;
+      a.navbar-brand {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    .icon {
+      margin-left: 3px;
+      width: 10px;
+      height: 10px;
+      transition: 250ms;
+    }
+  }
+
+  .navbar-nav > li {
+    > .dropdown-menu {
+      margin-top: 1px;
+      .dark-theme & {
+        background: $cr-gray-darker;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  .open > .dropdown-toggle > .icon {
+    transform: rotate(-180deg);
+  }
 }
+
 
 .mega-menu {
   &_title {
