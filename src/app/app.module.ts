@@ -42,7 +42,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UiComponentsModule,
     AssetsModule,
     AppRoutingModule,
-    ContentBlockModule.forRoot({ category: 'ddk' })
+    ContentBlockModule.forRoot({ categories: Array('ddk') })
   ],
   exports: [
     RouterModule
