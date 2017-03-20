@@ -4,6 +4,10 @@
   padding: 2em 0;
   margin-top: 2em;
 
+  .dark-theme & {
+    background: $cr-gray-darker;
+  }
+
   .footer-list {
     margin-bottom: 1em;
 
