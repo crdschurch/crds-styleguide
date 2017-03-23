@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './assets.component.html'
+  selector: 'ddk-assets',
+  template: '<router-outlet></router-outlet>'
 })
 export class AssetsComponent {}
