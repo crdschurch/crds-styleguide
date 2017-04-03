@@ -56,8 +56,16 @@ import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+
+/* molecules component */
+import { MoleculesComponent } from './molecules/molecules.component';
+import { MoleculesJumbotronComponent } from './molecules/jumbotron/jumbotron.component';
+
 /* sign-in */
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from './molecules/sign-in/sign-in.component';
+
+/* avatar groups */
+import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.component';
 
 const uiRoutes: Routes = [
   {
@@ -173,10 +181,6 @@ const uiRoutes: Routes = [
         ]
       },
       {
-        path: 'sign-in',
-        component: SignInComponent
-      },
-      {
         path: 'forms',
         component: FormsComponent,
         children: [
@@ -249,7 +253,26 @@ const uiRoutes: Routes = [
       {
         path: 'cards',
         component: CardsComponent
-      }
+      },
+      {
+        path: 'molecules',
+        component: MoleculesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'sign-in',
+            pathMatch: 'full'
+          },
+          {
+            path: 'sign-in',
+            component: SignInComponent
+          },
+          {
+            path: 'avatar-groups',
+            component: AvatarGroupsComponent
+          }
+        ]
+      },
     ]
   }
 ];
