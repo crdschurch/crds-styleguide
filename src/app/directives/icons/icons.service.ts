@@ -17,6 +17,7 @@ export class IconService {
     'github',
     'instagram',
     'menu',
+    'question-circle',
     'search',
     'twitter',
     'usd',
