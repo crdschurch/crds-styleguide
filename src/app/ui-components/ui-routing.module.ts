@@ -23,6 +23,8 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { TextUtilitiesComponent } from './utilities/text-utilities/text-utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -101,7 +103,18 @@ const uiRoutes: Routes = [
       },
       {
         path: 'utilities',
-        component: UtilitiesComponent
+        component: UtilitiesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'text',
+            pathMatch: 'full'
+          },
+          {
+            path: 'text',
+            component: TextUtilitiesComponent
+          }
+        ]
       },
       {
         path: 'buttons',

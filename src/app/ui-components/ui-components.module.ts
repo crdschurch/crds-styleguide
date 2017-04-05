@@ -38,6 +38,8 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { TextUtilitiesComponent } from './utilities/text-utilities/text-utilities.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -121,6 +123,8 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
 
     /* utility classes */
     UtilitiesComponent,
+    UtilitiesJumbotronComponent,
+    TextUtilitiesComponent,
 
     /* alerts */
     AlertsComponent,
