@@ -74,6 +74,7 @@ import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 /* molecules */
@@ -160,6 +161,7 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
     FormStatesComponent,
     FormDatepickerComponent,
     FormGroupsComponent,
+    SearchFieldComponent,
 
     CardsComponent,
     SidebarNavComponent,

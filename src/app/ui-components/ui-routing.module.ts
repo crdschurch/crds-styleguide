@@ -56,6 +56,7 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
 
@@ -213,6 +214,10 @@ const uiRoutes: Routes = [
           {
             path: 'datepicker',
             component: FormDatepickerComponent
+          },
+          {
+            path: 'search',
+            component: SearchFieldComponent
           },
           {
             path: 'groups',
