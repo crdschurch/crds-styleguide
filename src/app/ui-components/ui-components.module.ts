@@ -39,7 +39,14 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
-import { TextUtilitiesComponent } from './utilities/text-utilities/text-utilities.component';
+import { BorderUtilitiesComponent } from './utilities/borders/borders.component';
+import { CornerUtilitiesComponent } from './utilities/corners/corners.component';
+import { DisplayUtilitiesComponent } from './utilities/display/display.component';
+import { ImageUtilitiesComponent } from './utilities/images/images.component';
+import { MarginUtilitiesComponent } from './utilities/margin/margin.component';
+import { PaddingUtilitiesComponent } from './utilities/padding/padding.component';
+import { TextUtilitiesComponent } from './utilities/text/text.component';
+import { VerticalPositioningUtilitiesComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -125,7 +132,14 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
     /* utility classes */
     UtilitiesComponent,
     UtilitiesJumbotronComponent,
+    BorderUtilitiesComponent,
+    CornerUtilitiesComponent,
+    DisplayUtilitiesComponent,
+    ImageUtilitiesComponent,
+    MarginUtilitiesComponent,
+    PaddingUtilitiesComponent,
     TextUtilitiesComponent,
+    VerticalPositioningUtilitiesComponent,
 
     /* alerts */
     AlertsComponent,

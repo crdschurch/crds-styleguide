@@ -24,7 +24,14 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
-import { TextUtilitiesComponent } from './utilities/text-utilities/text-utilities.component';
+import { BorderUtilitiesComponent } from './utilities/borders/borders.component';
+import { CornerUtilitiesComponent } from './utilities/corners/corners.component';
+import { DisplayUtilitiesComponent } from './utilities/display/display.component';
+import { ImageUtilitiesComponent } from './utilities/images/images.component';
+import { MarginUtilitiesComponent } from './utilities/margin/margin.component';
+import { PaddingUtilitiesComponent } from './utilities/padding/padding.component';
+import { TextUtilitiesComponent } from './utilities/text/text.component';
+import { VerticalPositioningUtilitiesComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -108,12 +115,40 @@ const uiRoutes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'text',
+            redirectTo: 'borders',
             pathMatch: 'full'
+          },
+          {
+            path: 'borders',
+            component: BorderUtilitiesComponent
+          },
+          {
+            path: 'corners',
+            component: CornerUtilitiesComponent
+          },
+          {
+            path: 'display',
+            component: DisplayUtilitiesComponent
+          },
+          {
+            path: 'images',
+            component: ImageUtilitiesComponent
+          },
+          {
+            path: 'margin',
+            component: MarginUtilitiesComponent
+          },
+          {
+            path: 'padding',
+            component: PaddingUtilitiesComponent
           },
           {
             path: 'text',
             component: TextUtilitiesComponent
+          },
+          {
+            path: 'vertical-positioning',
+            component: VerticalPositioningUtilitiesComponent
           }
         ]
       },
