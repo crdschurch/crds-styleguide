@@ -84,15 +84,11 @@ import { FormDatepickerComponent } from './forms/datepicker/datepicker.component
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
-/* molecules */
-import { MoleculesComponent } from './molecules/molecules.component';
-import { MoleculesJumbotronComponent } from './molecules/jumbotron/jumbotron.component';
-
 /* sign-in */
-import { SignInComponent } from './molecules/sign-in/sign-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
-import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.component';
+import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 @NgModule({
   imports: [
@@ -183,10 +179,6 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
     VariationsComponent,
     NoImageComponent,
     VideoComponent,
-
-    /* Molecules */
-    MoleculesComponent,
-    MoleculesJumbotronComponent,
 
     /* sign in */
     SignInComponent,
