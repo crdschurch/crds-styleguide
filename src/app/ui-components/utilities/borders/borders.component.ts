@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './borders.component.html'
 })
 
-export class BorderUtilitiesComponent {}
+export class BordersComponent {}

@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './display.component.html'
 })
 
-export class DisplayUtilitiesComponent {}
+export class DisplayComponent {}

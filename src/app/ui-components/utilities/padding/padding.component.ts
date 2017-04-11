@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './padding.component.html'
 })
 
-export class PaddingUtilitiesComponent {}
+export class PaddingComponent {}

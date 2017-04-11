@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './corners.component.html'
 })
 
-export class CornerUtilitiesComponent {}
+export class CornersComponent {}

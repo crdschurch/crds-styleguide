@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './margin.component.html'
 })
 
-export class MarginUtilitiesComponent {}
+export class MarginComponent {}

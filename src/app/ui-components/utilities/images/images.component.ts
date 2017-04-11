@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './images.component.html'
 })
 
-export class ImageUtilitiesComponent {}
+export class ImagesComponent {}

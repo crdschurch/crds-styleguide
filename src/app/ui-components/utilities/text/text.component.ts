@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './text.component.html'
 })
 
-export class TextUtilitiesComponent {}
+export class TextComponent {}

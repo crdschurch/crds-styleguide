@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './vertical-positioning.component.html'
 })
 
-export class VerticalPositioningUtilitiesComponent {} 
+export class VerticalPositioningComponent {} 
