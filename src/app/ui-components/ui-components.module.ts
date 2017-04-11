@@ -38,6 +38,15 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { BordersComponent } from './utilities/borders/borders.component';
+import { CornersComponent } from './utilities/corners/corners.component';
+import { DisplayComponent } from './utilities/display/display.component';
+import { ImagesComponent } from './utilities/images/images.component';
+import { MarginComponent } from './utilities/margin/margin.component';
+import { PaddingComponent } from './utilities/padding/padding.component';
+import { TextComponent } from './utilities/text/text.component';
+import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -118,6 +127,15 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
     /* utility classes */
     UtilitiesComponent,
+    UtilitiesJumbotronComponent,
+    BordersComponent,
+    CornersComponent,
+    DisplayComponent,
+    ImagesComponent,
+    MarginComponent,
+    PaddingComponent,
+    TextComponent,
+    VerticalPositioningComponent,
 
     /* alerts */
     AlertsComponent,

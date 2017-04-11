@@ -23,6 +23,15 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { BordersComponent } from './utilities/borders/borders.component';
+import { CornersComponent } from './utilities/corners/corners.component';
+import { DisplayComponent } from './utilities/display/display.component';
+import { ImagesComponent } from './utilities/images/images.component';
+import { MarginComponent } from './utilities/margin/margin.component';
+import { PaddingComponent } from './utilities/padding/padding.component';
+import { TextComponent } from './utilities/text/text.component';
+import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -97,7 +106,46 @@ const uiRoutes: Routes = [
       },
       {
         path: 'utilities',
-        component: UtilitiesComponent
+        component: UtilitiesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'borders',
+            pathMatch: 'full'
+          },
+          {
+            path: 'borders',
+            component: BordersComponent
+          },
+          {
+            path: 'corners',
+            component: CornersComponent
+          },
+          {
+            path: 'display',
+            component: DisplayComponent
+          },
+          {
+            path: 'images',
+            component: ImagesComponent
+          },
+          {
+            path: 'margin',
+            component: MarginComponent
+          },
+          {
+            path: 'padding',
+            component: PaddingComponent
+          },
+          {
+            path: 'text',
+            component: TextComponent
+          },
+          {
+            path: 'vertical-positioning',
+            component: VerticalPositioningComponent
+          }
+        ]
       },
       {
         path: 'buttons',
