@@ -38,6 +38,15 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { BordersComponent } from './utilities/borders/borders.component';
+import { CornersComponent } from './utilities/corners/corners.component';
+import { DisplayComponent } from './utilities/display/display.component';
+import { ImagesComponent } from './utilities/images/images.component';
+import { MarginComponent } from './utilities/margin/margin.component';
+import { PaddingComponent } from './utilities/padding/padding.component';
+import { TextComponent } from './utilities/text/text.component';
+import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -72,17 +81,14 @@ import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
-/* molecules */
-import { MoleculesComponent } from './molecules/molecules.component';
-import { MoleculesJumbotronComponent } from './molecules/jumbotron/jumbotron.component';
-
 /* sign-in */
-import { SignInComponent } from './molecules/sign-in/sign-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
-import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.component';
+import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 @NgModule({
   imports: [
@@ -121,6 +127,15 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
 
     /* utility classes */
     UtilitiesComponent,
+    UtilitiesJumbotronComponent,
+    BordersComponent,
+    CornersComponent,
+    DisplayComponent,
+    ImagesComponent,
+    MarginComponent,
+    PaddingComponent,
+    TextComponent,
+    VerticalPositioningComponent,
 
     /* alerts */
     AlertsComponent,
@@ -156,6 +171,7 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
     FormStatesComponent,
     FormDatepickerComponent,
     FormGroupsComponent,
+    SearchFieldComponent,
 
     CardsComponent,
     SidebarNavComponent,
@@ -163,10 +179,6 @@ import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.c
     VariationsComponent,
     NoImageComponent,
     VideoComponent,
-
-    /* Molecules */
-    MoleculesComponent,
-    MoleculesJumbotronComponent,
 
     /* sign in */
     SignInComponent,

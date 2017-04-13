@@ -23,6 +23,15 @@ import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.comp
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { BordersComponent } from './utilities/borders/borders.component';
+import { CornersComponent } from './utilities/corners/corners.component';
+import { DisplayComponent } from './utilities/display/display.component';
+import { ImagesComponent } from './utilities/images/images.component';
+import { MarginComponent } from './utilities/margin/margin.component';
+import { PaddingComponent } from './utilities/padding/padding.component';
+import { TextComponent } from './utilities/text/text.component';
+import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
@@ -54,18 +63,14 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
-
-/* molecules component */
-import { MoleculesComponent } from './molecules/molecules.component';
-import { MoleculesJumbotronComponent } from './molecules/jumbotron/jumbotron.component';
-
 /* sign-in */
-import { SignInComponent } from './molecules/sign-in/sign-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
-import { AvatarGroupsComponent } from './molecules/avatar-groups/avatar-groups.component';
+import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 const uiRoutes: Routes = [
   {
@@ -101,7 +106,46 @@ const uiRoutes: Routes = [
       },
       {
         path: 'utilities',
-        component: UtilitiesComponent
+        component: UtilitiesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'borders',
+            pathMatch: 'full'
+          },
+          {
+            path: 'borders',
+            component: BordersComponent
+          },
+          {
+            path: 'corners',
+            component: CornersComponent
+          },
+          {
+            path: 'display',
+            component: DisplayComponent
+          },
+          {
+            path: 'images',
+            component: ImagesComponent
+          },
+          {
+            path: 'margin',
+            component: MarginComponent
+          },
+          {
+            path: 'padding',
+            component: PaddingComponent
+          },
+          {
+            path: 'text',
+            component: TextComponent
+          },
+          {
+            path: 'vertical-positioning',
+            component: VerticalPositioningComponent
+          }
+        ]
       },
       {
         path: 'buttons',
@@ -202,6 +246,10 @@ const uiRoutes: Routes = [
             component: FormDatepickerComponent
           },
           {
+            path: 'search',
+            component: SearchFieldComponent
+          },
+          {
             path: 'groups',
             component: FormGroupsComponent
           }
@@ -255,23 +303,12 @@ const uiRoutes: Routes = [
         component: CardsComponent
       },
       {
-        path: 'molecules',
-        component: MoleculesComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'sign-in',
-            pathMatch: 'full'
-          },
-          {
-            path: 'sign-in',
-            component: SignInComponent
-          },
-          {
-            path: 'avatar-groups',
-            component: AvatarGroupsComponent
-          }
-        ]
+        path: 'sign-in',
+        component: SignInComponent
+      },
+      {
+        path: 'avatar-groups',
+        component: AvatarGroupsComponent
       },
     ]
   }

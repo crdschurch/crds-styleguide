@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ddk-molecules-jumbotron',
+  selector: 'ddk-utilities-jumbotron',
   templateUrl: './jumbotron.component.html'
 })
-export class MoleculesJumbotronComponent {}
+export class UtilitiesJumbotronComponent {}
