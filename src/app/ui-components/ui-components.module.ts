@@ -48,8 +48,9 @@ import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
-/* alerts */
+/* feedback */
 import { FeedbackComponent } from './feedback/feedback.component';
+import { FeedbackJumbotronComponent } from './feedback/jumbotron/jumbotron.component';
 import { AlertsComponent } from './feedback/alerts/alerts.component';
 import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
@@ -139,8 +140,9 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     TextComponent,
     VerticalPositioningComponent,
 
-    /* alerts */
+    /* feedback */
     FeedbackComponent,
+    FeedbackJumbotronComponent,
     AlertsComponent,
     ToastNotificationsComponent,
 
