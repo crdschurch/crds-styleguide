@@ -49,7 +49,9 @@ import { TextComponent } from './utilities/text/text.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
-import { AlertsComponent } from './alerts/alerts.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AlertsComponent } from './feedback/alerts/alerts.component';
+import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
@@ -138,7 +140,9 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     VerticalPositioningComponent,
 
     /* alerts */
+    FeedbackComponent,
     AlertsComponent,
+    ToastNotificationsComponent,
 
     /* loaders */
     LoadersComponent,
