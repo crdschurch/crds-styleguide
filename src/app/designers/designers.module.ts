@@ -9,6 +9,7 @@ import { DesignersRoutingModule } from './designers-routing.module';
 
 /* guidelines */
 import { GuidelinesComponent } from './guidelines/guidelines.component';
+import { IntroComponent } from './guidelines/intro/intro.component';
 import { ColorUsageComponent } from './guidelines/color-usage/color-usage.component';
 import { CopyVoiceComponent } from './guidelines/copy-voice/copy-voice.component';
 import { LogosComponent } from './guidelines/logos/logos.component';
@@ -35,6 +36,7 @@ import { ResponsiveWebDesignComponent } from './getting-started/responsive-web-d
 
     /* guidelines */
     GuidelinesComponent,
+    IntroComponent,
     ColorUsageComponent,
     CopyVoiceComponent,
     LogosComponent,

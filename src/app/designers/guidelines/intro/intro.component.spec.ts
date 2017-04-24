@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { GuidelinesIntroComponent } from './guidelines-intro.component';
+import { IntroComponent } from './intro.component';
 
-describe('Component: GuidelinesIntro', () => {
+describe('Component: Intro', () => {
   it('should create an instance', () => {
-    let component = new GuidelinesIntroComponent();
+    let component = new IntroComponent();
     expect(component).toBeTruthy();
   });
 });

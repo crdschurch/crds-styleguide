@@ -4,6 +4,7 @@ import { DesignersComponent } from './designers.component';
 
 /* guidelines */
 import { GuidelinesComponent } from './guidelines/guidelines.component';
+import { IntroComponent } from './guidelines/intro/intro.component';
 import { ColorUsageComponent } from './guidelines/color-usage/color-usage.component';
 import { CopyVoiceComponent } from './guidelines/copy-voice/copy-voice.component';
 import { LogosComponent } from './guidelines/logos/logos.component';
@@ -31,8 +32,12 @@ const designersRoutes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'color-usage',
+            redirectTo: 'intro',
             pathMatch: 'full'
+          },
+          {
+            path: 'intro',
+            component: IntroComponent
           },
           {
             path: 'color-usage',
