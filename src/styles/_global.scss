@@ -131,7 +131,7 @@ code {
     }
   }
 
-  & {
+  &:not(.crds-text-example) {
     padding-top: 3.25em;
     &:after {
       content: 'Example';
