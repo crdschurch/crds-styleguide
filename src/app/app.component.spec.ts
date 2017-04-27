@@ -23,7 +23,7 @@ describe('App: CrdsDdk', () => {
       ],
       imports: [
         CollapseModule,
-        ContentBlockModule.forRoot({ category: 'main' }),
+        ContentBlockModule.forRoot({ endpoint: 'https://contentint.crossroads.net/', categories: Array('ddk') }),
         HttpModule,
         RouterTestingModule.withRoutes([])
       ]
