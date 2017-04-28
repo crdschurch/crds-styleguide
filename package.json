@@ -35,7 +35,7 @@
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "crds-ng2-content-block": "crdschurch/crds-ng2-content-block#development",
+    "crds-ng2-content-block": "1.0.4",
     "@types/core-js": "0.9.36",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.46",
