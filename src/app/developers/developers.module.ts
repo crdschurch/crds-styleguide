@@ -24,7 +24,6 @@ import { GridComponent } from './grid/grid.component';
 import { ImgixComponent } from './imgix/imgix.component';
 import { InstallationComponent } from './installation/installation.component';
 import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
-import { Ng2ComponentsComponent } from './ng2-components/ng2-components.component';
 import { WebFontsComponent } from './web-fonts/web-fonts.component';
 
 @NgModule({
@@ -52,7 +51,6 @@ import { WebFontsComponent } from './web-fonts/web-fonts.component';
     ImgixComponent,
     InstallationComponent,
     NamingConventionsComponent,
-    Ng2ComponentsComponent,
     WebFontsComponent
   ]
 })
