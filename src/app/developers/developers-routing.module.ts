@@ -7,7 +7,14 @@ import { BuiltOnBootstrapComponent } from './built-on-bootstrap/built-on-bootstr
 import { CodingStyleComponent } from './coding-style/coding-style.component';
 import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
 import { CssSassComponent } from './css-sass/css-sass.component';
+
 import { CustomNpmPackagesComponent } from './custom-npm-packages/custom-npm-packages.component';
+import { OverviewDryComponent } from './custom-npm-packages/overview-dry/overview-dry.component';
+import { ContentBlocksComponent } from './custom-npm-packages/content-blocks/content-blocks.component';
+import { ReactiveSsoComponent } from './custom-npm-packages/reactive-sso/reactive-sso.component';
+import { SharedHeaderComponent } from './custom-npm-packages/shared-header/shared-header.component';
+import { JumbotronComponent } from './custom-npm-packages/jumbotron/jumbotron.component';
+
 import { FileStructureComponent } from './file-structure/file-structure.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { GridComponent } from './grid/grid.component';
@@ -44,7 +51,30 @@ const developerRoutes: Routes = [
       },
       {
         path: 'custom-npm-packages',
-        component: CustomNpmPackagesComponent
+        component: CustomNpmPackagesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'overview-dry',
+            pathMatch: 'full'
+          },
+          {
+            path: 'overview-dry',
+            component: OverviewDryComponent
+          },
+          {
+            path: 'shared-header',
+            component: SharedHeaderComponent
+          },
+          {
+            path: 'reactive-sso',
+            component: ReactiveSsoComponent
+          },
+          {
+            path: 'content-blocks',
+            component: ContentBlocksComponent
+          }
+        ]
       },
       {
         path: 'file-structure',

@@ -1,12 +1,26 @@
+<ddk-buttons-jumbotron></ddk-buttons-jumbotron>
 <div class="container">
-	<div class="page-header">
-	  <h3>Custom NPM Packages</h3>
-	</div>
-
-	<ul>
-		<li>Overview/DRY code/reusable components</li>
-		<li>Shared header</li>
-		<li>Reactive SSO</li>
-		<li>Content Blocks</li>
-	</ul>
+  <div class="component">
+    <aside>
+      <nav>
+        <ul class="list-group">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/custom-npm-packages/overview-dry">Overview/DRY code/reusable components</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/custom-npm-packages/shared-header">Shared header</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/custom-npm-packages/reactive-sso">Reactive SSO</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/custom-npm-packages/content-blocks">Content Blocks</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
