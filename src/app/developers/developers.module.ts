@@ -16,7 +16,7 @@ import { OverviewDryComponent } from './custom-npm-packages/overview-dry/overvie
 import { ContentBlocksComponent } from './custom-npm-packages/content-blocks/content-blocks.component';
 import { ReactiveSsoComponent } from './custom-npm-packages/reactive-sso/reactive-sso.component';
 import { SharedHeaderComponent } from './custom-npm-packages/shared-header/shared-header.component';
-import { JumbotronComponent } from './custom-npm-packages/jumbotron/jumbotron.component';
+import { CustomNpmPackagesJumbotronComponent } from './custom-npm-packages/custom-npm-packages-jumbotron/custom-npm-packages-jumbotron.component';
 
 import { FileStructureComponent } from './file-structure/file-structure.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
@@ -45,7 +45,7 @@ import { WebFontsComponent } from './web-fonts/web-fonts.component';
     ContentBlocksComponent,
     ReactiveSsoComponent,
     SharedHeaderComponent,
-    JumbotronComponent,
+    CustomNpmPackagesJumbotronComponent,
     FileStructureComponent,
     GettingStartedComponent,
     GridComponent,
