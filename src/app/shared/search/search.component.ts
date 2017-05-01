@@ -37,7 +37,6 @@ export class SearchComponent {
   }
 
   public updateSearchResults(event: any) {
-
     this.setAllInactive();
     if (!this.searchValue) {
       return true;

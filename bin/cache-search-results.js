@@ -13,7 +13,20 @@ var fs = require('fs'),
       '.gitkeep',
       '.npmignore',
       '*.svg',
-      '*.css'
+      '*.css',
+      'src/app/app.component.html',
+      'src/app/dashboard/dashboard.component.html',
+      'src/app/assets/assets.component.html',
+      'src/app/assets/logo/logo.component.html',
+      'src/app/developers/intro/intro.component.html',
+      'src/app/developers/ng2-components/ng2-components.component.html',
+      'src/app/layout/header/header.component.html',
+      'src/app/layout/footer/footer.component.html',
+      'src/app/shared/search/search.component.html'
+    ],
+    ignoredDirs = [
+      'layout',
+      'shared'
     ],
     results = [],
     resultsFile = './src/app/shared/search/search-results.ts';
@@ -41,7 +54,9 @@ String.prototype.titleize = function() {
 // HTML Files
 recursive(path, ignoredFiles, function(err, files) {
   files.forEach(function(file) {
-    var url = '/',
+    console.log(file);
+    var validComponent = true,
+        url = '/',
         urlSegments = file.split('/'),
         component = urlSegments[urlSegments.length - 1].split('.')[0].replace(/\-/g, ' ').titleize();
     urlSegments.forEach(function(segment, idx) {
