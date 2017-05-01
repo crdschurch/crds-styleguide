@@ -3,7 +3,7 @@
 var fs = require('fs'),
     recursive = require('recursive-readdir'),
     path = './src',
-    htmlIgnore = [
+    ignoredFiles = [
       '.DS_Store',
       'index.html',
       '*.scss',
@@ -15,19 +15,8 @@ var fs = require('fs'),
       '*.svg',
       '*.css'
     ],
-    tsIgnore = [
-      '.DS_Store',
-      '*.html',
-      '*.scss',
-      '*.ico',
-      '*.ejs',
-      '*.gitkeep',
-      '*.npmignore',
-      '*.svg',
-      '*.css'
-    ],
     results = [],
-    resultsFile = './src/search-results.json';
+    resultsFile = './src/app/shared/search/search-results.ts';
 
 function getSegmentFromUrl(segment) {
   switch (segment) {
@@ -39,7 +28,7 @@ function getSegmentFromUrl(segment) {
 
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
-}
+};
 
 String.prototype.titleize = function() {
   var string_array = this.split(' ');
@@ -47,14 +36,14 @@ String.prototype.titleize = function() {
     return str.capitalize();
   });
   return string_array.join(' ');
-}
+};
 
 // HTML Files
-recursive(path, htmlIgnore, function(err, files) {
+recursive(path, ignoredFiles, function(err, files) {
   files.forEach(function(file) {
-    var url = '',
+    var url = '/',
         urlSegments = file.split('/'),
-        component = urlSegments[urlSegments.length - 1].split('.')[0].replace(/\-/, ' ').titleize();
+        component = urlSegments[urlSegments.length - 1].split('.')[0].replace(/\-/g, ' ').titleize();
     urlSegments.forEach(function(segment, idx) {
       if (idx > 1 && idx + 1 != urlSegments.length) {
         url += getSegmentFromUrl(segment) + '/';
@@ -65,22 +54,6 @@ recursive(path, htmlIgnore, function(err, files) {
       name: component
     });
   });
-  fs.writeFile(resultsFile, JSON.stringify(results), function(err) {});
+  var content = 'export const SEARCH_RESULTS = ' + JSON.stringify(results);
+  fs.writeFile(resultsFile, content, function(err) {});
 });
-
-// Route Files
-// recursive(path, tsIgnore, function(err, files) {
-//   files.forEach(function(file) {
-//     if (file.includes('routing.module.ts')) {
-//       // console.log(file);
-//       fs.readFile(file, 'utf8', function(err, data) {
-//         // var content = data.match(/Routes[\ ]+?\=[\ ]+?\[(.*)\]\;/);
-//         // var content = data.match(/Routes/);
-//         var startChar = data.search(/Routes\ =\ \[/),
-//             endChar = data.search(/\n\]\;/) + 3,
-//             routes = data.substr(startChar, endChar - startChar);
-//         console.log(eval(routes));
-//       });
-//     }
-//   });
-// });
