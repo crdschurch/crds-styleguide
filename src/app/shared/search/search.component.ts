@@ -29,8 +29,19 @@ export class SearchComponent {
     this.setAllInactive();
   }
 
+  public validateChar(event) {
+    const pattern = /^[a-z0-9\-\ ]+$/i;
+    if (!pattern.test(event.key)) {
+      event.preventDefault();
+    }
+  }
+
   public updateSearchResults(event: any) {
+
     this.setAllInactive();
+    if (!this.searchValue) {
+      return true;
+    }
     let q = this.searchValue.toLowerCase();
     this._searchResults.forEach((result) => {
       if (result.name.toLowerCase().search(q) >= 0) {

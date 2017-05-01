@@ -1,5 +1,6 @@
 <input class="form-control" placeholder="Search" type="text"
-       (keyup)="updateSearchResults($event)" [(ngModel)]="searchValue">
+       (keyup)="updateSearchResults($event)" (keydown)="validateChar($event)"
+       [(ngModel)]="searchValue">
 
 <ul *ngFor="let result of _searchResults">
   <li [ngClass]="{ hide: !result.active }">
