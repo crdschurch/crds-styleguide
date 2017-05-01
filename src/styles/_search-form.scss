@@ -1,0 +1,25 @@
+.ddk-search-form {
+  position: relative;
+
+  .input-group .form-control,
+  button {
+    margin: 0;
+  }
+
+  ul {
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    background-color: $cr-white;
+    z-index: 3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  ul a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+  }
+}
