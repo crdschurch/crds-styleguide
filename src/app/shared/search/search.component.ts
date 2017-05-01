@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SEARCH_RESULTS } from './search-results';
 
 @Component({
   selector: 'search-form',
-  templateUrl: './search.component.html'
+  templateUrl: './search.component.html',
 })
 
 export class SearchComponent {
@@ -22,8 +22,16 @@ export class SearchComponent {
         this.searchValue = null;
         this.setAllInactive();
       }
-  });
+    });
   }
+
+  @HostListener('window:keyup', ['$event'])
+  focusOnSearch($event) {
+    if ($event.key === '/') {
+      document.getElementById('ddk-search').focus();
+    }
+  }
+
 
   public init() {
     this.setAllInactive();

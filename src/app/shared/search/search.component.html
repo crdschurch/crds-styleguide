@@ -1,6 +1,6 @@
 <div class="ddk-search-form">
   <div class="input-group">
-    <input class="form-control" placeholder="Search" type="text"
+    <input id="ddk-search" class="form-control" placeholder="Search" type="text"
           (keyup)="updateSearchResults($event)" (keydown)="validateChar($event)"
           [(ngModel)]="searchValue">
     <span class="input-group-btn">
