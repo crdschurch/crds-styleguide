@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './designers.component.html'
+  selector: 'ddk-designers-components',
+  template: '<router-outlet></router-outlet>'
 })
-export class DesignersComponent {}
+export class DesignersComponent {
+}
