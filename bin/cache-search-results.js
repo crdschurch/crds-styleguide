@@ -39,6 +39,16 @@ function getSegmentFromUrl(segment) {
   return segment;
 }
 
+function sortByName(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+
 String.prototype.capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 };
@@ -54,7 +64,6 @@ String.prototype.titleize = function() {
 // HTML Files
 recursive(path, ignoredFiles, function(err, files) {
   files.forEach(function(file) {
-    console.log(file);
     var validComponent = true,
         url = '/',
         urlSegments = file.split('/'),
@@ -69,6 +78,7 @@ recursive(path, ignoredFiles, function(err, files) {
       name: component
     });
   });
+  results = results.sort(sortByName);
   var content = 'export const SEARCH_RESULTS = ' + JSON.stringify(results);
   fs.writeFile(resultsFile, content, function(err) {});
 });
