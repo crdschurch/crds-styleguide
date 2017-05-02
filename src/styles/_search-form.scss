@@ -1,9 +1,16 @@
 .ddk-search-form {
   position: relative;
 
-  .input-group .form-control,
+  input {
+    background-color: $cr-white !important;
+    border-color: $cr-gray-lighter !important;
+    box-shadow: none !important;
+    margin: 0;
+  }
+
   button {
     margin: 0;
+    border-radius: 0 !important;
   }
 
   ul {
