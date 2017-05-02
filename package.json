@@ -6,9 +6,9 @@
   "scripts": {
     "serve": "npm run start",
     "start": "npm run build-dev && webpack-dev-server --inline --open --progress --port 4200 --content-base dist/",
-    "build-dev": "rimraf dist && webpack --config config/webpack.dev.js --progress --profile --bail",
-    "build-int": "rimraf dist && webpack --config config/webpack.int.js --progress --profile --bail",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build-dev": "rimraf dist && npm run cache-search-results && webpack --config config/webpack.dev.js --progress --profile --bail",
+    "build-int": "rimraf dist && npm run cache-search-results && webpack --config config/webpack.int.js --progress --profile --bail",
+    "build": "rimraf dist && npm run cache-search-results && webpack --config config/webpack.prod.js --progress --profile --bail",
     "lint": "tslint \"src/**/*.ts\"",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
