@@ -26,7 +26,8 @@ var fs = require('fs'),
     ],
     ignoredDirs = [
       'layout',
-      'shared'
+      'shared',
+      'jumbotron'
     ],
     results = [],
     resultsFile = './src/app/shared/search/search-results.ts';
@@ -61,7 +62,6 @@ String.prototype.titleize = function() {
   return string_array.join(' ');
 };
 
-// HTML Files
 recursive(path, ignoredFiles, function(err, files) {
   files.forEach(function(file) {
     var validComponent = true,
@@ -73,10 +73,17 @@ recursive(path, ignoredFiles, function(err, files) {
         url += getSegmentFromUrl(segment) + '/';
       }
     });
-    results.push({
-      url: url,
-      name: component
+    ignoredDirs.forEach((dir) => {
+      if (urlSegments.includes(dir)) {
+        validComponent = false;
+      }
     });
+    if (validComponent) {
+      results.push({
+        url: url,
+        name: component
+      });
+    }
   });
   results = results.sort(sortByName);
   var content = 'export const SEARCH_RESULTS = ' + JSON.stringify(results);
