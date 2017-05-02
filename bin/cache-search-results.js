@@ -86,6 +86,7 @@ recursive(path, ignoredFiles, function(err, files) {
     }
   });
   results = results.sort(sortByName);
-  var content = 'export const SEARCH_RESULTS = ' + JSON.stringify(results);
+  results = JSON.stringify(results, null, 2).replace(/\"/g, "'");
+  var content = 'export const SEARCH_RESULTS = ' + results + ';\n';
   fs.writeFile(resultsFile, content, function(err) {});
 });
