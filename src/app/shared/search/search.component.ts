@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { SEARCH_RESULTS } from './search-results';
 
@@ -7,15 +7,14 @@ import { SEARCH_RESULTS } from './search-results';
   templateUrl: './search.component.html',
 })
 
-export class SearchComponent {
+export class SearchComponent implements OnInit {
 
-  public searchValue = '';
+  searchValue: string;
 
   private _searchResults: Array<any>;
 
   constructor(private router: Router) {
     this._searchResults = SEARCH_RESULTS;
-    this.init();
 
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
@@ -25,16 +24,16 @@ export class SearchComponent {
     });
   }
 
+  ngOnInit() {
+    this.searchValue = null;
+    this.setAllInactive();
+  }
+
   @HostListener('window:keyup', ['$event'])
   focusOnSearch($event) {
     if ($event.key === '/') {
       document.getElementById('ddk-search').focus();
     }
-  }
-
-
-  public init() {
-    this.setAllInactive();
   }
 
   public validateChar(event) {
@@ -44,7 +43,8 @@ export class SearchComponent {
     }
   }
 
-  public updateSearchResults(event: any) {
+  public updateSearchResults(value: string) {
+    this.searchValue = value;
     this.setAllInactive();
     if (!this.searchValue) {
       return true;

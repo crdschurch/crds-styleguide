@@ -1,7 +1,7 @@
 <div class="ddk-search-form">
-  <input id="ddk-search" class="form-control" placeholder="Search" type="text"
-        (keyup)="updateSearchResults($event)" (keydown)="validateChar($event)"
-        [(ngModel)]="searchValue">
+  <input #searchQ id="ddk-search" class="form-control" placeholder="Search"
+         type="text" (keyup)="updateSearchResults(searchQ.value)"
+         (keydown)="validateChar($event)" [value]="searchValue">
 
   <ul class="list-unstyled">
     <li [ngClass]="{ hide: !result.active }"
