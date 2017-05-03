@@ -1,12 +1,12 @@
-<div class="container push-top">
+<div class="container">
   <ol *ngIf="displaySidebar()" class="breadcrumb">
     <li><a routerLink="/developers">Developers</a></li>
     <li class="active" *ngIf="displaySidebarNav('getting-started')">Getting Started</li>
     <li class="active" *ngIf="displaySidebarNav('learn-more')">Learn More</li>
-  </ol>
+  </ol><br>
 
   <div class="component">
-    <aside *ngIf="displaySidebar()" class="push-top">
+    <aside *ngIf="displaySidebar()">
       <nav>
         <ul class="list-group" *ngIf="displaySidebarNav('getting-started')">
           <li routerLinkActive="active" class="list-group-item">
@@ -31,13 +31,13 @@
 
         <ul class="list-group" *ngIf="displaySidebarNav('learn-more')">
           <li routerLinkActive="active" class="list-group-item">
-            <a routerLink="/developers/built-on-bootstrap">Built On Bootstrap</a>
+            <a routerLink="/developers/built-on-bootstrap">Bootstrap</a>
           </li>
           <li routerLinkActive="active" class="list-group-item">
             <a routerLink="/developers/css-sass">CSS / Sass</a>
           </li>
           <li routerLinkActive="active" class="list-group-item">
-            <a routerLink="/developers/grid">Grid</a>
+            <a routerLink="/developers/grid">Grid System</a>
           </li>
           <li routerLinkActive="active" class="list-group-item">
             <a routerLink="/developers/imgix">Imgix</a>

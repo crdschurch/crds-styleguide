@@ -27,7 +27,7 @@ export class AppComponent implements AfterViewChecked {
       }
     }
 
-    let preformatted = document.querySelectorAll('.language-markup, .language-javascript, .language-css');
+    let preformatted = document.querySelectorAll('.language-markup, .language-javascript, .language-css, .language-bash');
 
     for (let j = 0; j < preformatted.length; j++) {
       if (!preformatted[j].getAttribute('data-processed')) {
