@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DevelopersComponent } from './developers.component';
 import { DevelopersIntroComponent } from './intro/intro.component';
+import { WhatIsTheDDKComponent } from './getting-started/what-is-the-ddk/what-is-the-ddk.component';
 import { BuiltOnBootstrapComponent } from './built-on-bootstrap/built-on-bootstrap.component';
 import { CodingStyleComponent } from './coding-style/coding-style.component';
 import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
@@ -29,12 +30,21 @@ const developerRoutes: Routes = [
     component: DevelopersComponent,
     children: [
       {
+        path: '',
+        redirectTo: 'intro',
+        pathMatch: 'full'
+      },
+      {
         path: 'intro',
         component: DevelopersIntroComponent
       },
       {
-        path: 'built-on-bootstrap',
-        component: BuiltOnBootstrapComponent
+        path: 'getting-started',
+        component: GettingStartedComponent
+      },
+      {
+        path: 'installation',
+        component: InstallationComponent
       },
       {
         path: 'coding-style',
@@ -45,45 +55,26 @@ const developerRoutes: Routes = [
         component: ContributionTipsComponent
       },
       {
-        path: 'css-sass',
-        component: CssSassComponent
-      },
-      {
-        path: 'custom-npm-packages',
-        component: CustomNpmPackagesComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'overview-dry',
-            pathMatch: 'full'
-          },
-          {
-            path: 'overview-dry',
-            component: OverviewDryComponent
-          },
-          {
-            path: 'shared-header',
-            component: SharedHeaderComponent
-          },
-          {
-            path: 'reactive-sso',
-            component: ReactiveSsoComponent
-          },
-          {
-            path: 'content-blocks',
-            component: ContentBlocksComponent
-          }
-        ]
+        path: 'naming-conventions',
+        component: NamingConventionsComponent
       },
       {
         path: 'file-structure',
         component: FileStructureComponent
       },
       {
-        path: 'getting-started',
-        component: GettingStartedComponent
+        path: 'built-on-bootstrap',
+        component: BuiltOnBootstrapComponent
       },
       {
+        path: 'built-on-bootstrap',
+        component: BuiltOnBootstrapComponent
+      },
+      {
+        path: 'css-sass',
+        component: CssSassComponent
+      },
+       {
         path: 'grid',
         component: GridComponent
       },
@@ -92,17 +83,13 @@ const developerRoutes: Routes = [
         component: ImgixComponent
       },
       {
-        path: 'installation',
-        component: InstallationComponent
-      },
-      {
-        path: 'naming-conventions',
-        component: NamingConventionsComponent
-      },
-      {
         path: 'web-fonts',
         component: WebFontsComponent
-      }
+      },
+      {
+        path: 'custom-npm-packages',
+        component: CustomNpmPackagesComponent
+       }
     ]
   }
 ];

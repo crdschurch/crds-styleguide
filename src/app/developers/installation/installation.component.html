@@ -1,11 +1,10 @@
-<div class="container">
 	<div class="page-header">
 	  <h3>Installation</h3>
 	</div>
 
-	NOTE: The following guidelines assume you have a functioning application with support for consuming NPM dependencies and compiling SCSS files at runtime. 
+	NOTE: The following guidelines assume you have a functioning application with support for consuming NPM dependencies and compiling SCSS files at runtime.
 
-	<p>Installing <code>crds-styles</code> is a two step process.</p> 
+	<p>Installing <code>crds-styles</code> is a two step process.</p>
 
 	<p>The first step involves installing crds-styles and updating your application to consume the styles provided by it. The second step requires an update to your build process so that the physical assets (SVGs) included in crds-styles get copied into your dist/ directory during a build.</p>
 
@@ -17,8 +16,8 @@
 
 	<p><code>$ npm install crds-styles --save-dev</code></p>
 
-	<p>This will update the devDependencies section of your package.json file with an entry for the crds-styles package and install the new require in your local node_modules directory.</p> 
-	<p>NOTE: crds-styles already includes the entire Bootstrap CSS library in it’s manifest, so there’s no need to add that package as a separate dependency.</p> 
+	<p>This will update the devDependencies section of your package.json file with an entry for the crds-styles package and install the new require in your local node_modules directory.</p>
+	<p>NOTE: crds-styles already includes the entire Bootstrap CSS library in it’s manifest, so there’s no need to add that package as a separate dependency.</p>
 
 	<p>Next, import crds-styles by adding the following line within your application’s SCSS manifest file…</p>
 
@@ -59,5 +58,3 @@ module.exports = {{ '{' }}
 	<p>NOTE: Crossroads has standardized on Webpack v1 at the time of this writing. If you’re using another task-runner (Angular-CLI, Gulp, etc.) to compile your application, the process may look a little different.</p>
 
 	<p>Restart your application and you’re done. You can now take advantage of all the styles, selectors and various patterns illustrated throughout the DDK and/or official Bootstrap documentation.</p>
-
-</div>

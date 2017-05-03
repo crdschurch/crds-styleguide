@@ -24,7 +24,8 @@ const designersRoutes: Routes = [
     children: [
       {
         path: '',
-        component: DesignersComponent
+        redirectTo: 'guidelines',
+        pathMatch: 'full'
       },
       {
         path: 'guidelines',
