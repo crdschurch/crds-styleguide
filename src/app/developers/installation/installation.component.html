@@ -1,42 +1,38 @@
-<div class="container">
-	<div class="page-header">
-	  <h3>Installation</h3>
-	</div>
+<h1 class="page-header">Installation</h1>
 
-	NOTE: The following guidelines assume you have a functioning application with support for consuming NPM dependencies and compiling SCSS files at runtime. 
+<div class="alert alert-warning">The following guidelines assume you have a functioning application with support for consuming NPM dependencies and compiling SCSS files at runtime.</div>
 
-	<p>Installing <code>crds-styles</code> is a two step process.</p> 
+<p>Installing <code>crds-styles</code> is a two step process.</p>
 
-	<p>The first step involves installing crds-styles and updating your application to consume the styles provided by it. The second step requires an update to your build process so that the physical assets (SVGs) included in crds-styles get copied into your dist/ directory during a build.</p>
+<p>The first step involves installing <code>crds-styles</code> and updating your application to consume the styles provided by it. The second step requires an update to your build process so that the physical assets (SVGs) included in crds-styles get copied into your dist/ directory during a build.</p><br>
 
-	<div class="page-subheader">
-	  <h3>Install the Styles</h3>
-	</div>
+<h3 class="component-header">Install the Styles</h3>
 
-	<p>Execute the following command to update your application dependencies…</p>
+<p>Execute the following command to update your application dependencies...</p>
 
-	<p><code>$ npm install crds-styles --save-dev</code></p>
+<figure class="highlight">
+	<pre class="language-bash">npm install crds-styles --save-dev</pre>
+</figure><br>
 
-	<p>This will update the devDependencies section of your package.json file with an entry for the crds-styles package and install the new require in your local node_modules directory.</p> 
-	<p>NOTE: crds-styles already includes the entire Bootstrap CSS library in it’s manifest, so there’s no need to add that package as a separate dependency.</p> 
+<p>This will update the <code>devDependencies</code> section of your package.json file with an entry for the crds-styles package and install the new require in your local <code>node_modules</code> directory.</p>
 
-	<p>Next, import crds-styles by adding the following line within your application’s SCSS manifest file…</p>
+<div class="alert alert-info"><code>crds-styles</code> already includes the entire Bootstrap CSS library in it’s manifest, so there’s no need to add that package as a separate dependency.</div>
+
+<p>Next, import <code>crds-styles</code> by adding the following line within your application’s SCSS manifest file...</p>
 
 <figure class="highlight">
   <pre class="language-css">
 @import ‘crds-styles/assets/stylesheets/bootstrap’;
 </pre>
-</figure>
+</figure><br>
 
-	<div class="page-subheader">
-	  <h3>Update Your Build Process</h3>
-	</div>
+<h3 class="component-header">Update Your Build Process</h3>
 
-	<p>To render the icons provided by crds-styles, the precompiled SVGs must be publicly accessible to your users.</p>
+<p>To render the icons provided by <code>crds-styles</code>, the precompiled SVGs must be publicly accessible to your users.</p>
 
-	<p>In order to make them available across environments, we recommend copying those assets from the node_modules/crds-styles/assets directory during the build process so they can be served right alongside your application’s other bundled assets.</p>
+<p>In order to make them available across environments, we recommend copying those assets from the <code>node_modules/crds-styles/assets</code> directory during the build process so they can be served right alongside your application’s other bundled assets.</p>
 
-	<p>An example configuration for Webpack builds might look like this…</p>
+<p>An example configuration for Webpack builds might look like this…</p>
 
 <figure class="highlight">
   <pre class="language-javascript">
@@ -54,10 +50,8 @@ module.exports = {{ '{' }}
   ]
 {{ '}' }}
 </pre>
-</figure>
+</figure><br>
 
-	<p>NOTE: Crossroads has standardized on Webpack v1 at the time of this writing. If you’re using another task-runner (Angular-CLI, Gulp, etc.) to compile your application, the process may look a little different.</p>
+<div class="alert alert-info">Crossroads has standardized on Webpack v1 at the time of this writing. If you’re using another task-runner (Angular-CLI, Gulp, etc.) to compile your application, the process may look a little different.</div>
 
-	<p>Restart your application and you’re done. You can now take advantage of all the styles, selectors and various patterns illustrated throughout the DDK and/or official Bootstrap documentation.</p>
-
-</div>
+<p>Restart your application and you’re done. You can now take advantage of all the styles, selectors and various patterns illustrated throughout the DDK and/or official Bootstrap documentation.</p>

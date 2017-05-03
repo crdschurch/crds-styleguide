@@ -7,6 +7,9 @@
   > li {
     position: static;
   }
+  a.active {
+    color: $cr-gray;
+  }
 }
 
 .navbar {
@@ -82,6 +85,7 @@
 
 
 .mega-menu {
+
   &_title {
     padding-left: 15px;
     padding-right: 15px;
@@ -90,8 +94,14 @@
   &_inner {
     border: none;
     border-radius: 0;
-    padding: 1em 0 2em;
+    padding: 1em 0 4em;
     width: 100%;
+
+    .col-md-12 > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &_list {
@@ -101,9 +111,13 @@
       @include make-sm-column(4);
     }
 
+    > p {
+      cursor: default;
+    }
+
     ul {
       list-style: none;
-      margin: 0;
+      margin: 0 0.8em;
       padding: 0;
     }
   }
