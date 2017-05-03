@@ -24,67 +24,50 @@ const designersRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'guidelines',
+        redirectTo: 'intro',
         pathMatch: 'full'
       },
       {
-        path: 'guidelines',
-        component: GuidelinesComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'intro',
-            pathMatch: 'full'
-          },
-          {
-            path: 'intro',
-            component: IntroComponent
-          },
-          {
-            path: 'color-usage',
-            component: ColorUsageComponent
-          },
-          {
-            path: 'copy-voice',
-            component: CopyVoiceComponent
-          },
-          {
-            path: 'logos',
-            component: LogosComponent
-          },
-          {
-            path: 'photography',
-            component: PhotographyComponent
-          },
-          {
-            path: 'typography',
-            component: TypographyComponent
-          }
-        ]
+        path: 'guideline',
+        redirectTo: 'intro',
+        pathMatch: 'full'
       },
       {
-        path: 'getting-started',
-        component: GettingStartedComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'mobile-first',
-            pathMatch: 'full'
-          },
-          {
-            path: 'mobile-first',
-            component: MobileFirstComponent
-          },
-          {
-            path: 'prototyping',
-            component: PrototypingComponent
-          },
-          {
-            path: 'responsive-web-design',
-            component: ResponsiveWebDesignComponent
-          }
-        ]
+        path: 'intro',
+        component: IntroComponent
       },
+      {
+        path: 'color-usage',
+        component: ColorUsageComponent
+      },
+      {
+        path: 'copy-voice',
+        component: CopyVoiceComponent
+      },
+      {
+        path: 'logos',
+        component: LogosComponent
+      },
+      {
+        path: 'photography',
+        component: PhotographyComponent
+      },
+      {
+        path: 'typography',
+        component: TypographyComponent
+      },
+      {
+        path: 'mobile-first',
+        component: MobileFirstComponent
+      },
+      {
+        path: 'prototyping',
+        component: PrototypingComponent
+      },
+      {
+        path: 'responsive-web-design',
+        component: ResponsiveWebDesignComponent
+      }
     ]
   }
 ];
