@@ -2,7 +2,6 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
-var Dotenv = require('dotenv-webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -48,10 +47,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'polyfills']
-    }),
-
-    new Dotenv({
-      systemvars: true
     }),
 
     new HtmlWebpackPlugin({
