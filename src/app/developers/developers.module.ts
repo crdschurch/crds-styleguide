@@ -1,22 +1,47 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { ContentBlockModule } from '../shared/content-block/content-block.module';
+import { DeveloperRoutingModule } from './developers-routing.module';
 import { DevelopersComponent } from './developers.component';
+import { DevelopersIntroComponent } from './intro/intro.component';
+import { BuiltOnBootstrapComponent } from './built-on-bootstrap/built-on-bootstrap.component';
+import { CodingStyleComponent } from './coding-style/coding-style.component';
+import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
+import { CssSassComponent } from './css-sass/css-sass.component';
 
-const devRoutes: Routes = [
-  { path: 'developers', component: DevelopersComponent}
-]
+import { CustomNpmPackagesComponent } from './custom-npm-packages/custom-npm-packages.component';
+
+import { FileStructureComponent } from './file-structure/file-structure.component';
+import { GettingStartedComponent } from './getting-started/getting-started.component';
+import { GridComponent } from './grid/grid.component';
+import { ImgixComponent } from './imgix/imgix.component';
+import { InstallationComponent } from './installation/installation.component';
+import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
+import { WebFontsComponent } from './web-fonts/web-fonts.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(devRoutes),
+    DeveloperRoutingModule,
     ContentBlockModule
   ],
   declarations: [
-    DevelopersComponent
+    DevelopersComponent,
+    DevelopersIntroComponent,
+    BuiltOnBootstrapComponent,
+    CodingStyleComponent,
+    ContributionTipsComponent,
+    CssSassComponent,
+    CustomNpmPackagesComponent,
+    FileStructureComponent,
+    GettingStartedComponent,
+    GridComponent,
+    ImgixComponent,
+    InstallationComponent,
+    NamingConventionsComponent,
+    WebFontsComponent
   ]
 })
 export class DevelopersModule { }

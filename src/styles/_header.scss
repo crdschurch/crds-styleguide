@@ -7,6 +7,9 @@
   > li {
     position: static;
   }
+  a.active {
+    color: $cr-gray;
+  }
 }
 
 .navbar {
@@ -14,9 +17,75 @@
   h3 {
     font-size: 2rem;
   }
+
+  &.navbar-default {
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    background-color: $cr-white;
+
+    .logo-ddk {
+      float: left;
+      display: block;
+      height: 50px;
+    }
+
+    .navbar-brand {
+      fill: $cr-gray;
+    }
+
+    .navbar-nav li.on > a {
+      color: $cr-cyan;
+    }
+
+    .dark-theme & {
+      @extend .navbar-inverse;
+
+      .navbar-brand {
+        fill: $cr-white;
+      }
+
+      .navbar-nav li.on > a {
+        color: $cr-cyan;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .container-fluid {
+      padding: 0;
+      a.navbar-brand {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    .icon {
+      margin-left: 3px;
+      width: 10px;
+      height: 10px;
+      transition: 250ms;
+    }
+  }
+
+  .navbar-nav > li {
+    > .dropdown-menu {
+      margin-top: 1px;
+      .dark-theme & {
+        background: $cr-gray-darker;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+
+  .open > .dropdown-toggle > .icon {
+    transform: rotate(-180deg);
+  }
 }
 
+
 .mega-menu {
+
   &_title {
     padding-left: 15px;
     padding-right: 15px;
@@ -25,8 +94,14 @@
   &_inner {
     border: none;
     border-radius: 0;
-    padding: 1em 0 2em;
+    padding: 1em 0 4em;
     width: 100%;
+
+    .col-md-12 > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &_list {
@@ -36,10 +111,18 @@
       @include make-sm-column(4);
     }
 
+    > p {
+      cursor: default;
+    }
+
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
   }
+}
+
+.navbar-brand svg {
+  @include size(8.125rem, 1.1875rem);
 }

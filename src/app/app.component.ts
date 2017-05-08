@@ -1,14 +1,23 @@
-import { Component, ViewEncapsulation, AfterViewChecked } from '@angular/core';
+import { Component, ViewEncapsulation, AfterViewChecked, ElementRef, Renderer } from '@angular/core';
 
 let Prism = require('prismjs');
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['../styles/application.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements AfterViewChecked {
+
+  constructor(private elementRef: ElementRef, private renderer: Renderer) {
+    this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
+      if (event.target.closest('.crds-example')) {
+        if (event.target.nodeName === 'A' || event.target.classList.contains('btn')) {
+          return false;
+        }
+      }
+    });
+  }
 
   ngAfterViewChecked() {
     let examples = document.getElementsByClassName('crds-example');
@@ -18,7 +27,8 @@ export class AppComponent implements AfterViewChecked {
       }
     }
 
-    let preformatted = document.getElementsByClassName('language-markup');
+    let preformatted = document.querySelectorAll('.language-markup, .language-javascript, .language-css, .language-bash');
+
     for (let j = 0; j < preformatted.length; j++) {
       if (!preformatted[j].getAttribute('data-processed')) {
         this.addSyntaxHighlighting(preformatted[j]);

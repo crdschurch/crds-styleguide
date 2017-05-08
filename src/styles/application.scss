@@ -1,8 +1,15 @@
+@import '~crds-styles/assets/stylesheets/variables';
+@import 'variables';
 @import '~crds-styles/assets/stylesheets/bootstrap';
+
 @import '~prismjs/themes/prism';
 
-@import 'variables';
+.dark-theme {
+  @import '~prismjs/themes/prism-okaidia';
+}
+
 @import 'global';
+@import 'theme-toggle-switch';
 @import 'typography';
 @import 'colors';
 @import 'header';
@@ -11,3 +18,5 @@
 @import 'component-list';
 @import 'typography';
 @import 'forms';
+@import 'loaders';
+@import 'icons';

@@ -2,14 +2,17 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
 
 @Component({
   selector: 'theme-toggle-switch',
-  templateUrl: './theme-toggle-switch.component.html',
-  styleUrls: ['./theme-toggle-switch.component.scss']
+  template: `
+    <a class="theme-toggle-switch" (click)="onSwitch()">
+      <svg class="icon icon-1" viewBox="0 0 256 256"><use height="256" width="256" xlink:href="/assets/svgs/icons.svg#contrast"></use></svg>
+    </a>
+  `
 })
 export class ThemeToggleSwitchComponent {
 
   private body;
   private state: String = 'off';
-  private selector: String = 'crds-dark-theme';
+  private selector: String = 'dark-theme';
 
   @Output() stateChange = new EventEmitter<any>();
 

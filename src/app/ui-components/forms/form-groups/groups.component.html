@@ -9,10 +9,40 @@
 <div class="crds-example">
   <div class="form-group">
     <label for="customAmount" class="sr-only">Amount (in dollars)</label>
-    <div class="input-group">
-      <span class="input-group-addon">$</span>
+    <div class="input-group input-group-block input-group-left">
+      <span class="input-group-addon">
+        <svg class="icon" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#usd"></use>
+        </svg>
+      </span>
       <input type="customAmount" name="customAmount" value="" placeholder="Enter Amount" class="form-control">
     </div>
+  </div>
+</div>
+
+<div class="page-subheader">
+  <h3>Input Button</h3>
+</div>
+
+<div class="crds-example">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="First Name">
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-secondary">
+        Submit
+      </button>
+    </span>
+  </div>
+  <hr>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-secondary">
+        <svg class="icon icon-1" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#search"></use>
+        </svg>
+      </button>
+    </span>
   </div>
 </div>
 
@@ -62,23 +92,140 @@
 </div>
 
 <div class="crds-example">
-  <h3 class="form-header">Frequency:</h3>
+  <h3 class="control-label">Frequency:</h3>
   <div class="radio radio-inline">
-    <label>
-      <input type="radio" name="inlineLight" id="inlineLight1" value="option1" checked>
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn1" value="option1" checked>
+    <label for="inlineRadioBtn1">
       Option 1
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
   <div class="radio radio-inline">
-    <label>
-      <input type="radio" name="inlineLight" id="inlineLight2" value="option2">
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn2" value="option2">
+    <label for="inlineRadioBtn2">
       Option 2
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
   <div class="radio radio-inline disabled">
-    <label>
-      <input type="radio" name="darkRadios" id="inlineLight3" value="option3" disabled>
+    <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn3" value="option3" disabled>
+    <label for="inlineRadioBtn3">
       Option 3 (disabled)
     </label>
+    <div class="check" tabindex="0"></div>
   </div>
 </div>
+
+<div class="page-subheader">
+  <h3>Button Form Group</h3>
+</div>
+
+<div class="crds-example" data-processed="true">
+  <div class="btn-group btn-group-block">
+    <button *ngFor="let button of vert_buttons"
+            type="button"
+            class="btn btn-option btn-flex btn-outline"
+            [class.active]="(button === selectedButton) && !customInputSelected"
+            (click)="onSelect(button)">
+      <div class="row">
+        <div class="btn-group-label">
+          <span class="btn-group-icons">
+            <svg class="icon circle-thin" viewBox="0 0 256 256">
+              <use height="256" width="256" xlink:href="/assets/svgs/icons.svg#circle-thin"></use>
+            </svg>
+
+            <svg class="icon check-circle" viewBox="0 0 256 256">
+              <use height="256" width="256" xlink:href="/assets/svgs/icons.svg#check-circle"></use>
+            </svg>
+          </span>
+          {{ button.label }}:</div>
+        <div>{{ button.amount | currency: "USD": true }}</div>
+      </div>
+    </button>
+
+    <button type="button"
+            class="btn btn-option btn-flex btn-outline"
+            (click)="selectedCustom()"
+            [ngClass]="{ active: (customInputSelected) }">
+      <div class="row">
+        <div class="text-left">Custom Option:</div>
+      </div>
+    </button>
+
+    <div class="custom-input" *ngIf="customInputSelected">
+        <span class="custom-input-icon">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#chevron-right"></use>
+          </svg>
+        </span>
+
+        <form class="custom-input-field"
+              action="/">
+          <div class="form-group">
+            <label class="sr-only" for="custom-input">Custom Input</label>
+            <div class="input-group input-group-block input-group-left">
+              <span class="input-group-addon">$</span>
+              <input type="text"
+                    class="form-control"
+                    placeholder="Enter Custom Input"
+                    id="custom-input"
+                    maxlength="9">
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+</div>
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class="btn-group btn-group-block">
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline active"
+          (click)="onSelect(button)">
+    &lt;div class="row">
+      &lt;div>...&lt;/div>
+      &lt;div>...&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="onSelect(button)">
+    &lt;div class="row">
+      &lt;div>...&lt;/div>
+      &lt;div>...&lt;/div>
+    &lt;/div>
+  &lt;/button>
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="onSelect(button)">
+    &lt;div class="row">
+      &lt;div>...&lt;/div>
+      &lt;div>...&lt;/div>
+    &lt;/div>
+  &lt;/button>
+
+  &lt;button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectedCustom()">
+    &lt;div class="row">
+      &lt;div class="text-left">...&lt;/div>
+    &lt;/div>
+  &lt;/button>
+
+  &lt;div class="custom-input">
+      &lt;form class="custom-input-field" action="/">
+        &lt;div class="form-group">
+          &lt;label class="sr-only" for="custom-input">...&lt;/label>
+          &lt;div class="input-group input-group-block input-group-left">
+            &lt;span class="input-group-addon">$&lt;/span>
+            &lt;input type="text"
+                  class="form-control"
+                  placeholder="..."
+                  id="custom-input"
+                  maxlength="9">
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+    &lt;/div>
+&lt;/div></pre>
+</figure>
