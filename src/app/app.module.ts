@@ -9,15 +9,18 @@ import { CollapseModule } from 'ng2-bootstrap';
 import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/bootstrap-dropdown.directive';
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
+import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { ContentBlockModule } from './shared/content-block/content-block.module';
 import { ExampleModule } from './shared/example/example.module';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DesignersModule } from './designers/designers.module';
 import { DevelopersModule } from './developers/developers.module';
 import { UiComponentsModule } from './ui-components/ui-components.module';
+
 import { AssetsModule } from './assets/assets.module';
+import { LogoComponent } from './assets/logo/logo.component';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -43,8 +46,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UiComponentsModule,
     AssetsModule,
     AppRoutingModule,
-    ContentBlockModule,
-    ExampleModule
+    ExampleModule,
+    ContentBlockModule.forRoot({ endpoint: process.env.CRDS_CMS_ENDPOINT, categories: Array('ddk') })
   ],
   exports: [
     RouterModule

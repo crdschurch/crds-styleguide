@@ -8,7 +8,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
-import { HeadingsComponent } from './typography/headings/headings.component';
+import { FontScalingComponent } from './typography/font-scaling/font-scaling.component';
 import { TypesettingComponent } from './typography/typesetting/typesetting.component';
 import { AddressComponent } from './typography/address/address.component';
 import { BlockquoteComponent } from './typography/blockquote/blockquote.component';
@@ -19,15 +19,41 @@ import { WebFontsComponent } from './typography/web-fonts/web-fonts.component';
 import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
+import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+
+/* utility classes */
+import { UtilitiesComponent } from './utilities/utilities.component';
+import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
+import { BordersComponent } from './utilities/borders/borders.component';
+import { CornersComponent } from './utilities/corners/corners.component';
+import { DisplayComponent } from './utilities/display/display.component';
+import { ImagesComponent } from './utilities/images/images.component';
+import { MarginComponent } from './utilities/margin/margin.component';
+import { PaddingComponent } from './utilities/padding/padding.component';
+import { TextComponent } from './utilities/text/text.component';
+import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* alerts */
 import { AlertsComponent } from './alerts/alerts.component';
+
+/* loaders */
+import { LoadersComponent } from './loaders/loaders.component';
+import { LoaderIconsComponent } from './loaders/icons/icons.component';
+import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+
+/* icons */
+import { IconsComponent } from './icons/icons.component';
+import { IconDirectoryComponent } from './icons/directory/directory.component';
+import { IconInlineComponent } from './icons/inline-svg/inline-svg.component';
+import { IconCssComponent } from './icons/css-svg/css-svg.component';
+import { IconResizeComponent } from './icons/resize-svg/resize-svg.component';
+import { IconColorsComponent } from './icons/colors/colors.component';
 
 /* tables */
 import { TablesComponent } from './tables/tables.component';
@@ -37,7 +63,14 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
+
+/* sign-in */
+import { SignInComponent } from './sign-in/sign-in.component';
+
+/* avatar groups */
+import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 const uiRoutes: Routes = [
   {
@@ -64,6 +97,53 @@ const uiRoutes: Routes = [
           {
             path: 'overrides',
             component: ColorOverridesComponent
+          },
+          {
+            path: 'backgrounds',
+            component: ColorBackgroundsComponent
+          }
+        ]
+      },
+      {
+        path: 'utilities',
+        component: UtilitiesComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'borders',
+            pathMatch: 'full'
+          },
+          {
+            path: 'borders',
+            component: BordersComponent
+          },
+          {
+            path: 'corners',
+            component: CornersComponent
+          },
+          {
+            path: 'display',
+            component: DisplayComponent
+          },
+          {
+            path: 'images',
+            component: ImagesComponent
+          },
+          {
+            path: 'margin',
+            component: MarginComponent
+          },
+          {
+            path: 'padding',
+            component: PaddingComponent
+          },
+          {
+            path: 'text',
+            component: TextComponent
+          },
+          {
+            path: 'vertical-positioning',
+            component: VerticalPositioningComponent
           }
         ]
       },
@@ -91,8 +171,58 @@ const uiRoutes: Routes = [
         ]
       },
       {
+        path: 'icons',
+        component: IconsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'directory',
+            pathMatch: 'full'
+          },
+          {
+            path: 'directory',
+            component: IconDirectoryComponent
+          },
+          {
+            path: 'inline-svg',
+            component: IconInlineComponent
+          },
+          {
+            path: 'css-svg',
+            component: IconCssComponent
+          },
+          {
+            path: 'resize-svg',
+            component: IconResizeComponent
+          },
+          {
+            path: 'colors',
+            component: IconColorsComponent
+          }
+        ]
+      },
+      {
         path: 'alerts',
         component: AlertsComponent
+      },
+      {
+        path: 'loaders',
+        component: LoadersComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'icons',
+            pathMatch: 'full'
+          },
+          {
+            path: 'icons',
+            component: LoaderIconsComponent
+          },
+          {
+            path: 'skeleton-blocks',
+            component: SkeletonBlocksComponent
+          }
+        ]
       },
       {
         path: 'forms',
@@ -114,6 +244,10 @@ const uiRoutes: Routes = [
           {
             path: 'datepicker',
             component: FormDatepickerComponent
+          },
+          {
+            path: 'search',
+            component: SearchFieldComponent
           },
           {
             path: 'groups',
@@ -139,8 +273,8 @@ const uiRoutes: Routes = [
             component: WebFontsComponent
           },
           {
-            path: 'headings',
-            component: HeadingsComponent
+            path: 'font-scaling',
+            component: FontScalingComponent
           },
           {
             path: 'typesetting',
@@ -167,7 +301,15 @@ const uiRoutes: Routes = [
       {
         path: 'cards',
         component: CardsComponent
-      }
+      },
+      {
+        path: 'sign-in',
+        component: SignInComponent
+      },
+      {
+        path: 'avatar-groups',
+        component: AvatarGroupsComponent
+      },
     ]
   }
 ];

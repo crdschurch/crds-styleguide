@@ -7,98 +7,158 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <theme-toggle-switch class="visible-xs-block"></theme-toggle-switch>
+
+      <a class="logo-ddk" routerLink="/">
+        <svg viewBox="0 0 50 50" width="50px" height="50px">
+          <use xlink:href="/assets/svgs/logo-ddk.svg#logo-ddk"></use>
+        </svg>
+      </a>
       <a class="navbar-brand" routerLink="/">
-        <img src="//crossroads-media.s3.amazonaws.com/images/logo.svg" width="130" height="18.69" />
+        <svg viewBox="0 0 578 84" width="578" height="84">
+          <use xlink:href="assets/svgs/logo-crds.svg#logo-crds"></use>
+        </svg>
       </a>
     </div>
 
     <div class="collapse navbar-collapse" [collapse]="isMenuCollapsed">
-      <ul class="nav navbar-nav">
-        <li dropdown="for-designers">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">For Designers <span class="caret"></span></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li dropdown="for-designers" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">
+            For Designers
+            <svg class="icon" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
-            <div class="container">
-              <a routerLink="/designers" routerLinkActive="active">
-                <h3 class="mega-menu_title">Guide for Designers</h3>
-              </a>
-            </div>
+            <div class="container"><div class="row"><div class="col-md-12">
+
+              <h3 class="mega-menu_title component-header text-muted push-bottom">Guide for Designers</h3>
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Guidelines</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
+                  <li><a routerLink="/designers/intro"
+                  routerLinkActive="active">Intro</a></li>
+                  <li><a routerLink="/designers/color-usage"
+                  routerLinkActive="active">Color Usage</a></li>
+                  <li><a routerLink="/designers/copy-voice"
+                  routerLinkActive="active">Copy/Voice</a></li>
+                  <li><a routerLink="/designers/logos"
+                  routerLinkActive="active">Logos</a></li>
+                  <li><a routerLink="/designers/photography"
+                  routerLinkActive="active">Photography</a></li>
+                  <li><a routerLink="/designers/typography"
+                  routerLinkActive="active">Typography</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Getting Started</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
+                  <li><a routerLink="/designers/mobile-first" routerLinkActive="active">Mobile First</a></li>
+                  <li><a routerLink="/designers/prototyping" routerLinkActive="active">Prototyping</a></li>
+                  <li><a routerLink="/designers/responsive-web-design" routerLinkActive="active">Responsive Web Design</a></li>
+                </ul>
+              </div>
+
+            </div></div></div>
           </div>
         </li>
 
-        <li dropdown="for-developers">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">For Developers <span class="caret"></span></a>
+        <li dropdown="for-developers" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            For Developers
+            <svg class="icon" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
-            <div class="container">
+            <div class="container"><div class="row"><div class="col-md-12">
               <a routerLink="/developers" routerLinkActive="active">
-                <h3 class="mega-menu_title">Guide for Developers</h3>
+                <h3 class="mega-menu_title component-header text-muted push-bottom">Guide for Developers</h3>
               </a>
-            </div>
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Getting Started</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
+                  <li><a routerLink="/developers/getting-started" routerLinkActive="active">What is the DDK?</a></li>
+                  <li><a routerLink="/developers/installation" routerLinkActive="active">Installation</a></li>
+                  <li><a routerLink="/developers/coding-style" routerLinkActive="active">Coding Style</a></li>
+                  <li><a routerLink="/developers/file-structure" routerLinkActive="active">File Structure</a></li>
+                  <li><a routerLink="/developers/naming-conventions" routerLinkActive="active">Naming Conventions</a></li>
+                  <li><a routerLink="/developers/contribution-tips" routerLinkActive="active">Contribution Tips</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Learn More</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
+                  <li><a routerLink="/developers/built-on-bootstrap" routerLinkActive="active">Built on Bootstrap</a></li>
+                  <li><a routerLink="/developers/css-sass" routerLinkActive="active">CSS/SASS</a></li>
+                  <li><a routerLink="/developers/grid" routerLinkActive="active">Grid</a></li>
+                  <li><a routerLink="/developers/imgix" routerLinkActive="active">Imgix</a></li>
+                  <li><a routerLink="/developers/web-fonts" routerLinkActive="active">Web Fonts</a></li>
+                  <li><a routerLink="/developers/custom-npm-packages" routerLinkActive="active">Custom NPM Packages</a></li>
+                </ul>
+              </div>
+            </div></div></div>
           </div>
         </li>
 
-        <li dropdown="ui-components">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UI Components <span class="caret"></span></a>
+        <li dropdown="ui-components" routerLinkActive="on">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            UI Components
+            <svg class="icon" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </a>
           <div class="dropdown-menu mega-menu_inner">
-            <div class="container">
-              <a routerLink="/ui" routerLinkActive="active">
-                <h3 class="mega-menu_title">Overview of UI Components</h3>
-              </a>
-              <div class="mega-menu_list">
-                <h4>Core</h4>
-                <ul>
+            <div class="container"><div class="row"><div class="col-md-12">
+              <h3 class="mega-menu_title component-header text-muted push-bottom">Overview of UI Components</h3>
+
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Core</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
                   <li><a routerLink="/ui/typography" routerLinkActive="active">Typography</a></li>
                   <li><a routerLink="/ui/colors" routerLinkActive="active">Colors</a></li>
+                  <li><a routerLink="/ui/utilities" routerLinkActive="active">Utility Classes</a></li>
                 </ul>
               </div>
 
-              <div class="mega-menu_list">
-                <h4>Atoms</h4>
-                <ul>
+              <div class="mega-menu_list push-bottom">
+                <h4 class="tagline">Atoms</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
                   <li><a routerLink="/ui/buttons" routerLinkActive="active">Buttons</a></li>
+                  <li><a routerLink="/ui/icons" routerLinkActive="active">Icons</a></li>
                   <li><a routerLink="/ui/forms" routerLinkActive="active">Forms</a></li>
                   <li><a routerLink="/ui/alerts" routerLinkActive="active">Alerts</a></li>
+                  <li><a routerLink="/ui/loaders" routerLinkActive="active">Loaders</a></li>
                   <li><a routerLink="/ui/tables" routerLinkActive="active">Tables</a></li>
+                  <li><a routerLink="/assets/logo" routerLinkActive="active">Logo</a></li>
                 </ul>
               </div>
 
               <div class="mega-menu_list">
-                <h4>Molecules</h4>
+                <h4 class="tagline">Molecules</h4>
+                <hr>
+                <ul class="push-bottom hard-sides">
+                  <li><a routerLink="/ui/sign-in" routerLinkActive="active">Sign In</a></li>
+                  <li><a routerLink="/ui/avatar-groups" routerLinkActive="active">Avatar Groups</a></li>
+                </ul>
               </div>
-            </div>
+            </div></div></div>
           </div>
         </li>
 
-        <li dropdown="assets">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assets <span class="caret"></span></a>
-          <div class="dropdown-menu mega-menu_inner">
-            <div class="container">
-              <a routerLink="/assets" routerLinkActive="active">
-                <h3 class="mega-menu_title">Assets</h3>
-              </a>
-              <div class="mega-menu_list">
-                <h4>Core</h4>
-              </div>
-
-              <div class="mega-menu_list">
-                <h4>Atoms</h4>
-              </div>
-
-              <div class="mega-menu_list">
-                <h4>Molecules</h4>
-              </div>
-            </div>
-          </div>
-        </li>
-
+        <li><a href="https://github.com/crdschurch/crds-styleguide" target="_blank">Github</a></li>
+        <li class="hidden-xs"><theme-toggle-switch></theme-toggle-switch></li>
       </ul>
 
-      <ul class="nav navbar-nav pull-right">
-        <li class="navbar-text">Enable dark examples?</li>
-        <li class="navbar-btn">
-          <theme-toggle-switch></theme-toggle-switch>
-        </li>
-        <li><a href="https://github.com/crdschurch/crds-styleguide">View On Github</a></li>
-      </ul>
     </div>
   </div>
 </nav>

@@ -1,9 +1,58 @@
 <div class="container">
-  <div class="page-header">
-    <h1><content-block id="developersTitle"></content-block></h1>
+  <ol *ngIf="displaySidebar()" class="breadcrumb push-top">
+    <li><a routerLink="/developers">Developers</a></li>
+    <li class="active" *ngIf="displaySidebarNav('getting-started')">Getting Started</li>
+    <li class="active" *ngIf="displaySidebarNav('learn-more')">Learn More</li>
+  </ol><br>
+
+  <div class="component">
+    <aside *ngIf="displaySidebar()">
+      <nav>
+        <ul class="list-group" *ngIf="displaySidebarNav('getting-started')">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started">What is the DDK?</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/installation">Installation</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/coding-style">Coding Style</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/file-structure">File Structure</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/naming-conventions">Naming Conventions</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/contribution-tips">Contribution Tips</a>
+          </li>
+        </ul>
+
+        <ul class="list-group" *ngIf="displaySidebarNav('learn-more')">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/built-on-bootstrap">Bootstrap</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/css-sass">CSS / Sass</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/grid">Grid System</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/imgix">Imgix</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/web-fonts">Web Fonts</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/custom-npm-packages">Custom NPM Packages</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <content-block id="developersIntroCopy"></content-block>
-  <hr>
-  <p><a routerLink="/ui" class="btn btn-lg btn-primary">See the UI Components</a></p>
-  <br><br>
 </div>
