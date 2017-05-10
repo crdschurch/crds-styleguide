@@ -66,8 +66,12 @@ module.exports = {
 
     new CopyWebpackPlugin([
       {
-      from: 'src/assets',
-      to: 'assets',
+        from: 'src/assets',
+        to: 'assets',
+      },
+      {
+        from: 'src/examples',
+        to: 'examples',
       },
       {
         context: './node_modules/crds-styles/assets/svgs/',
