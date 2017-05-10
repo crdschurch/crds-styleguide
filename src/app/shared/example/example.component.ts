@@ -46,6 +46,7 @@ export class ExampleComponent implements OnInit {
   }
 
   loadResource(path) {
+    this.manifest['active'] = path;
     let url = `${this.path}${path}`;
     this.getMarkup(url);
   }
