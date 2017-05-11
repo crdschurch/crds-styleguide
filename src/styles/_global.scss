@@ -171,3 +171,21 @@ code {
     }
   }
 }
+
+crds-example {
+  position: relative;
+
+  .panel-body {
+    padding-top: 3.25em;
+    &:after {
+      content: 'Example';
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 90%;
+      position: absolute;
+      top: 1.25em;
+      left: 1.5em;
+      color: $gray-light;
+    }
+  }
+}
