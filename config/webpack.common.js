@@ -3,7 +3,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 var Dotenv = require('dotenv-webpack');
+var fs = require('fs');
+var DOMParser = require('xmldom').DOMParser;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var pry = require('pryjs');
+var glob = require('glob');
 
 module.exports = {
   entry: {
@@ -55,6 +59,10 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+
+    new HtmlWebpackPlugin({
       template: 'src/header.ejs',
       filename: 'header.html',
       inject: false
@@ -74,6 +82,41 @@ module.exports = {
         from: '*.svg',
         to: 'assets/svgs'
       }
-    ], { ignore: ['mock-data/*'] })
+    ]),
+
+    // Update all ./dist/examples/*.html files to reflect /app.[hash].css
+    function() {
+      this.plugin("done", function(stats) {
+
+        let hash = stats.hash;
+        let parser = new DOMParser();
+        let examples = glob.sync(stats.compilation.compiler.outputPath + '/examples/**/*.html');
+
+        // Loop through & edit each example...
+        for (let example of examples) {
+          fs.readFile(example, 'utf8', function (err, data) {
+            if (err) return console.log(err);
+
+            // Parse contents of file to DOM
+            let doc = parser.parseFromString(data, "text/html");
+            let links = doc.getElementsByTagName('link');
+
+            for(let i=0; i<links.length; i++) {
+              let attr = links[i].getAttribute('href');
+              if(attr === '/app.css') {
+                // Append hash to included link element
+                links[i].setAttribute('href', '/app.' + stats.hash + '.css');
+              }
+            }
+
+            // Rewrite the example file with updated DOM
+            fs.writeFile(example, doc.toString(), 'utf8', function (err) {
+              if (err) return console.log(err);
+            });
+          });
+        };
+      });
+    }
+
   ]
 };
