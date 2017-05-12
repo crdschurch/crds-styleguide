@@ -3,7 +3,11 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
 let Prism = require('prismjs');
-var path = require('path');
+let path = require('path');
+let entities = new (require('html-entities').Html5Entities)();
+
+
+import 'prismjs/components/prism-typescript';
 
 @Component({
   selector: 'ddk-example',
@@ -55,7 +59,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   parseManifest(res: Response) {
     this.manifest = res.json();
     this.files = this.manifest.files;
-    this.loadResource(this.manifest.entry);
+    this.loadResource(this.files[0]);
 
     let url = `${this.path}${this.manifest.entry}`;
     this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -71,6 +75,9 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
           break;
         case '.js':
           filetype = 'javascript'
+          break;
+        case '.ts':
+          filetype = 'typescript'
           break;
         default:
           filetype = 'markup';
