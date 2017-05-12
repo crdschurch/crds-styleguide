@@ -73,23 +73,28 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
   getMarkup(url) {
     this.http.get(url).subscribe((data: Response) => {
+      let filetype = this.getFileType(url);
       this.markup = data['_body'];
-      let filetype;
-      switch (path.extname(data.url)) {
-        case '.css':
-          filetype = 'css';
-          break;
-        case '.js':
-          filetype = 'javascript';
-          break;
-        case '.ts':
-          filetype = 'typescript';
-          break;
-        default:
-          filetype = 'markup';
-      }
       this.addSyntaxHighlighting(filetype);
     });
+  }
+
+  getFileType(url) {
+    let filetype;
+    switch (path.extname(url)) {
+      case '.css':
+        filetype = 'css';
+        break;
+      case '.js':
+        filetype = 'javascript';
+        break;
+      case '.ts':
+        filetype = 'typescript';
+        break;
+      default:
+        filetype = 'markup';
+    }
+    return filetype;
   }
 
   addSyntaxHighlighting(language) {
