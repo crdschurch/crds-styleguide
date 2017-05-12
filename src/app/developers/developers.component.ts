@@ -1,3 +1,5 @@
+/* tslint:disable:max-line-length */
+
 import { Component, AfterViewChecked} from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +10,7 @@ let Prism = require('prismjs');
 })
 export class DevelopersComponent implements AfterViewChecked {
 
-  constructor(private router:Router) {
+  constructor(private router: Router) {
   }
 
   ngAfterViewChecked() {

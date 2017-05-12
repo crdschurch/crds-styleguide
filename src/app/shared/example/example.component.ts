@@ -18,7 +18,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   private el: Element;
   private iframeSrc: SafeResourceUrl;
   private manifest: any;
-  private rootPath: string = '/examples/'
+  private rootPath = '/examples/';
   private path: string;
   private entry: string;
   private files: Array<any>;
@@ -28,8 +28,8 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   private preformattedMarkup: string;
 
   @Input() id: string;
-  @Input() width: string = '100%';
-  @Input() height: string = '100';
+  @Input() width = '100%';
+  @Input() height = '100';
   @ViewChild('contentRef') contentRef;
 
   constructor(private sanitizer: DomSanitizer, private http: Http, private elementRef: ElementRef) {
@@ -37,8 +37,8 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   }
 
   ngOnInit() {
-    if(this.id !== undefined) {
-      this.path = `${this.rootPath}${this.id}/`
+    if (this.id !== undefined) {
+      this.path = `${this.rootPath}${this.id}/`;
       this.markup = '<html></html>';
       this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
     }
@@ -46,16 +46,16 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
   ngAfterViewChecked() {
     let el = this.contentRef.nativeElement;
-    if(!el.getAttribute('data-processed')) {
+    if (!el.getAttribute('data-processed')) {
       this.buildExample(el);
     }
   }
 
   ngAfterViewInit() {
     this.markupInline = this.contentRef.nativeElement.children.length > 0;
-    if(this.markupInline) {
+    if (this.markupInline) {
       let pre = this.contentRef.nativeElement.querySelector('pre');
-      if(pre !== null) {
+      if (pre !== null) {
         this.preformattedMarkup = pre.innerHTML;
         pre.remove();
       }
@@ -75,15 +75,15 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     this.http.get(url).subscribe((data: Response) => {
       this.markup = data['_body'];
       let filetype;
-      switch(path.extname(data.url)) {
+      switch (path.extname(data.url)) {
         case '.css':
           filetype = 'css';
           break;
         case '.js':
-          filetype = 'javascript'
+          filetype = 'javascript';
           break;
         case '.ts':
-          filetype = 'typescript'
+          filetype = 'typescript';
           break;
         default:
           filetype = 'markup';
@@ -93,15 +93,15 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   }
 
   addSyntaxHighlighting(language) {
-    let els = this.el.getElementsByTagName('pre')
-    for(let i = 0; i < els.length; i++) {
+    let els = this.el.getElementsByTagName('pre');
+    for (let i = 0; i < els.length; i++) {
       this.markup = Prism.highlight(this.markup, Prism.languages[language]);
     }
   }
 
-  loadResource(path) {
-    this.manifest['active'] = path;
-    let url = `${this.path}${path}`;
+  loadResource(action) {
+    this.manifest['active'] = action;
+    let url = `${this.path}${action}`;
     this.getMarkup(url);
   }
 
@@ -115,7 +115,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       return;
     }
     el.setAttribute('data-processed', 'true');
-    if(el.children.length > 0) {
+    if (el.children.length > 0) {
       let html = entities.decode(this.preformattedMarkup || el.innerHTML).replace(/^\n+|\n+$/g, '');
       let node = document.createTextNode(html);
       let pre = document.createElement('pre');
