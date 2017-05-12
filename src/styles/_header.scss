@@ -48,6 +48,11 @@
         color: $cr-cyan;
       }
     }
+
+    .inverted & {
+      background-color: rgba($cr-white, .6);
+      border-bottom: none;
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -74,6 +79,11 @@
       .dark-theme & {
         background: $cr-gray-darker;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.75);
+      }
+
+      .inverted & {
+        background: #333333;
+        margin-top: 0;
       }
     }
   }
