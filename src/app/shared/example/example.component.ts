@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
@@ -6,10 +6,10 @@ let Prism = require('prismjs');
 var path = require('path');
 
 @Component({
-  selector: 'crds-example',
+  selector: 'ddk-example',
   templateUrl: 'example.component.html'
 })
-export class ExampleComponent implements OnInit {
+export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -20,26 +20,36 @@ export class ExampleComponent implements OnInit {
   private files: Array<any>;
   private markup: string;
   private currentFile: string;
+  private markupInline: boolean;
 
   @Input() id: string;
   @Input() width: string = '100%';
   @Input() height: string = '100';
+  @ViewChild('contentRef') contentRef;
 
   constructor(private sanitizer: DomSanitizer, private http: Http, private elementRef: ElementRef) {
     this.el = <Element>this.elementRef.nativeElement;
   }
 
   ngOnInit() {
-    this.path = `${this.rootPath}${this.id}/`
-    this.markup = '<html></html>';
-    this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
+    if(this.id !== undefined) {
+      this.path = `${this.rootPath}${this.id}/`
+      this.markup = '<html></html>';
+      this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
+    }
   }
 
-  addSyntaxHighlighting(language) {
-    let els = this.el.getElementsByTagName('pre')
-    for(let i = 0; i < els.length; i++) {
-      this.markup = Prism.highlight(this.markup, Prism.languages[language]);
+  ngAfterViewChecked() {
+    let examples = document.body.querySelectorAll('.crds-inline-markup');
+    for (let i = 0; i < examples.length; i++) {
+      if (!examples[i].getAttribute('data-processed')) {
+        this.buildExample(examples[i]);
+      }
     }
+  }
+
+  ngAfterViewInit() {
+    this.markupInline = this.contentRef.nativeElement.children.length > 0;
   }
 
   parseManifest(res: Response) {
@@ -69,6 +79,13 @@ export class ExampleComponent implements OnInit {
     });
   }
 
+  addSyntaxHighlighting(language) {
+    let els = this.el.getElementsByTagName('pre')
+    for(let i = 0; i < els.length; i++) {
+      this.markup = Prism.highlight(this.markup, Prism.languages[language]);
+    }
+  }
+
   loadResource(path) {
     this.manifest['active'] = path;
     let url = `${this.path}${path}`;
@@ -78,5 +95,28 @@ export class ExampleComponent implements OnInit {
   onClick(file) {
     this.loadResource(file);
     return false;
+  }
+
+  buildExample(el) {
+    if (el.getAttribute('data-processed')) {
+      return;
+    }
+    el.setAttribute('data-processed', 'true');
+    if(el.children.length > 0) {
+      let html = el.innerHTML.replace(/^\n+|\n+$/g, '');
+      let node = document.createTextNode(html);
+      let pre = document.createElement('pre');
+          pre.classList.add('language-markup');
+          pre.appendChild(node);
+      let figure = document.createElement('figure');
+          figure.classList.add('highlight');
+          figure.appendChild(pre);
+      this.insertAfter(figure, el);
+      Prism.highlightElement(pre);
+    }
+  }
+
+  private insertAfter(newNode, referenceNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
   }
 }

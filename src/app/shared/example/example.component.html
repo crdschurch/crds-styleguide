@@ -1,16 +1,15 @@
-<div class="panel panel-default">
-  <div class="panel-body">
+<div #contentRef class="crds-example crds-inline-markup" [hidden]="!markupInline"><ng-content></ng-content></div>
 
-    <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true" class="col-sm-12"></iframe>
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="list-group">
-          <a href="#" *ngFor="let file of files" class="list-group-item" (click)="onClick(file)" [ngClass]="{ 'active': manifest.active === file }">{{file}}</a>
-        </div>
+<div class="crds-example" [hidden]="markupInline">
+  <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true" class="col-sm-12"></iframe>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="list-group">
+        <a href="#" *ngFor="let file of files" class="list-group-item" (click)="onClick(file)" [ngClass]="{ 'active': manifest.active === file }">{{file}}</a>
       </div>
-      <div class="col-sm-9">
-        <pre [innerHTML]="markup"></pre>
-      </div>
+    </div>
+    <div class="col-sm-9">
+      <pre [innerHTML]="markup"></pre>
     </div>
   </div>
 </div>
