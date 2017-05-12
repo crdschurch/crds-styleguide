@@ -25,6 +25,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   private markup: string;
   private currentFile: string;
   private markupInline: boolean;
+  private preformattedMarkup: string;
 
   @Input() id: string;
   @Input() width: string = '100%';
@@ -44,16 +45,21 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   }
 
   ngAfterViewChecked() {
-    let examples = document.body.querySelectorAll('.crds-inline-markup');
-    for (let i = 0; i < examples.length; i++) {
-      if (!examples[i].getAttribute('data-processed')) {
-        this.buildExample(examples[i]);
-      }
+    let el = this.contentRef.nativeElement;
+    if(!el.getAttribute('data-processed')) {
+      this.buildExample(el);
     }
   }
 
   ngAfterViewInit() {
     this.markupInline = this.contentRef.nativeElement.children.length > 0;
+    if(this.markupInline) {
+      let pre = this.contentRef.nativeElement.querySelector('pre');
+      if(pre !== null) {
+        this.preformattedMarkup = pre.innerHTML;
+        pre.remove();
+      }
+    }
   }
 
   parseManifest(res: Response) {
@@ -110,7 +116,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     }
     el.setAttribute('data-processed', 'true');
     if(el.children.length > 0) {
-      let html = el.innerHTML.replace(/^\n+|\n+$/g, '');
+      let html = entities.decode(this.preformattedMarkup || el.innerHTML).replace(/^\n+|\n+$/g, '');
       let node = document.createTextNode(html);
       let pre = document.createElement('pre');
           pre.classList.add('language-markup');
