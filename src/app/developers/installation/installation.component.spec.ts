@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { Ng2ComponentsComponent } from './ng2-components.component';
+import { InstallationComponent } from './installation.component';
 
-describe('Component: Cards', () => {
+describe('Component: InstallationComponent', () => {
   it('should create an instance', () => {
-    let component = new Ng2ComponentsComponent();
+    let component = new InstallationComponent();
     expect(component).toBeTruthy();
   });
 });
