@@ -72,6 +72,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
 /* avatar groups */
 import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
+/* media objects */
+import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -309,6 +312,10 @@ const uiRoutes: Routes = [
       {
         path: 'avatar-groups',
         component: AvatarGroupsComponent
+      },
+      {
+        path: 'media-objects',
+        component: MediaObjectsComponent
       },
     ]
   }
