@@ -1,0 +1,43 @@
+<h1 class="page-header">Grid</h1>
+
+<p>The standard 12-column grid provided by Bootstrap is alive &amp; well and empowers us to easily create mobile-first layouts with sensible defaults across many different device-sizes. Please refer to <a href="http://getbootstrap.com/css/#grid">the documentation</a> for the finer points of manipulating columns and grid sizes.</p>
+
+<p>Rather than use the clunky, non-semantic grid selectors like <code>.col-xs-*</code>, etc. to manipulate your columns, it is preferable to encapsulate this logic in your scss files using the provided mixins.</p><br>
+
+<p>DON’T do this…</p>
+
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;div class=”row”>
+  &lt;div class=”col-md-6”>...&lt;/div>
+  &lt;div class=”col-md-6”>...&lt;/div>
+&lt;/div>
+</pre>
+</figure><br>
+
+<p>Do this, instead…</p>
+
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;section>
+  &lt;article>...&lt;/article>
+  &lt;aside>...&lt;/aside>
+&lt;/section>
+</pre><p class="tagline text-right">template.html</p>
+</figure>
+
+<figure class="highlight">
+  <pre class="language-css">
+@import ‘crds-styles/assets/stylesheets/bootstrap’;
+
+section {{ '{' }}
+  @include make-row;
+{{ '}' }}
+
+article, aside {{ '{' }}
+  @include make-md-column(6);
+{{ '}' }}
+</pre><p class="tagline text-right">application.scss</p>
+</figure><br>
+
+<p>The above, recommended approach decouples the presentational markup from the page structure, which allows for more flexibility across breakpoints and easier long-term maintenance. The entire list of grid-specific mixins provided by <code>crds-styles</code> can be viewed on Github.</p>

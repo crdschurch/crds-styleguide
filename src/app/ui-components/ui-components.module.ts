@@ -18,6 +18,7 @@ import { BasicComponent } from './cards/basic/basic.component';
 import { VariationsComponent } from './cards/variations/variations.component';
 import { NoImageComponent } from './cards/no-image/no-image.component';
 import { VideoComponent } from './cards/video/video.component';
+import { ExampleModule } from '../shared/example/example.module';
 
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
@@ -98,6 +99,7 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     TabsModule,
     DatepickerModule.forRoot(),
     ButtonsModule.forRoot(),
+    ExampleModule,
     ContentBlockModule
   ],
   exports: [

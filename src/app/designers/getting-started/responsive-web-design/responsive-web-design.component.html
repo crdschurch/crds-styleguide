@@ -1,20 +1,16 @@
-<div class="page-header">
-  <h3>Responsive Web Design</h3>
-</div>
+<h1 class="page-header">Responsive Web Design</h1>
 
 <p>Responsive Web Design (RWD) is the methodology of writing mark-up once, then using CSS and media queries to best present the content to whatever device being used. You may think RWD and Mobile First are frenemies but they’re more like that quirky couple whose ever changing passion for one another is secretly envied by everyone else. You know who I’m talking about. Instead of designing and coding different layouts for mobile, tablets and laptops, we use front-end code to manipulate the page elements to shine at any size.</p>
 
 <p>In our layouts, we’ll use the same 12 column grid, resized for each breakpoint. This example compares the smallest grid, mobile, with the largest one, desktop.</p>
 
-<img src="https://s3.amazonaws.com/crds-cms-uploads/crds-styleguide/grid.png">
+<img src="https://s3.amazonaws.com/crds-cms-uploads/crds-styleguide/grid.png" class="img-responsive push-bottom">
 
-<div class="page-subheader">
-  <h3>Cool theory? Check it out in practice.</h3>
-</div>
+<h2 class="component-header">Cool theory? Check it out in practice</h2>
 
 <p>Say you have a sweet mobile layout ready to go. There’s a photo that spans 12 columns with copy below and a button CTA. When this layout is scaled up to desktop, it’s huge. I mean HUGE. Enter RWD. We can now take the same 3 elements, make the photo span 6 columns and float the copy and button to the right in the remaining 6 columns. In a snippet of code, the layout is reworked for desktop.</p>
 
-<img src="https://s3.amazonaws.com/crds-cms-uploads/crds-styleguide/rwd.png">
+<img src="https://s3.amazonaws.com/crds-cms-uploads/crds-styleguide/rwd.png" class="img-responsive push-bottom">
 
 <p>Content within fixed containers will reside between the left edge of the 1 column and the right of the 12 column. The outer margin on each side is equally divided, centering the layout in the browser. The majority of our page content, particularly long text pages, reside in fixed containers. The other option is to use fluid containers which will proportionally distribute the same grid across the entire width of the browser. An example of this is a large impact billboard or a maybe a navigation bar that spans the width of the page. Even when using these fluid containers, you can still nest a fixed container to keep the content in your predefined column widths.</p>
 
@@ -38,7 +34,7 @@
 			<td>11 @ 26px</td>
 			<td>15px</td>
 		</tr>
-		<tr>	
+		<tr>
 			<td>Mobile HD</td>
 			<td>576px</td>
 			<td>12 @ 18px</td>
@@ -64,7 +60,7 @@
 			<td>1200px</td>
 			<td>12 @ 70px</td>
 			<td>11 @ 30px</td>
-			<td>15px min.</td>	
+			<td>15px min.</td>
 		</tr>
 	</tbody>
 </table>
