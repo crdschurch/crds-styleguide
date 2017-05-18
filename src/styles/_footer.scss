@@ -8,6 +8,10 @@
     background: $cr-gray-darker;
   }
 
+  .inverted & {
+    background: rgba($cr-white, .2);
+  }
+
   .footer-list {
     margin-bottom: 1em;
 

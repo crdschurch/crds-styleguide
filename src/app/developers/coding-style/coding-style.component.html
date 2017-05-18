@@ -1,0 +1,48 @@
+<h1 class="page-header">Coding Style</h1>
+
+<p>In keeping with Bootstrap conventions, Crossroads has adopted the patterns of <a href="https://github.com/stubbornella/oocss/wiki">Object-Oriented CSS (OOCSS)</a> when developing the crds-styles package. Developed in 2008 by Nicole Sullivan, the OOCSS methodology is a modular approach to organizing your CSS by promoting composability and flexibility.</p><br>
+
+<p>Consider the following example...</p>
+
+<figure class="highlight">
+  <pre class="language-css">
+.btn-1 {{ '{' }}
+  padding: 1em;
+  border: 1px solid #000;
+  color: blue;
+{{ '}' }}
+
+.btn-2 {{ '{' }}
+  padding: 1em;
+  border: 1px solid #000;
+  color: red;
+{{ '}' }}
+</pre>
+</figure><br>
+
+<p>This is pretty verbose. We can make these selectors a little cleaner by refactoring them in an object-oriented fashion...</p>
+
+<figure class="highlight">
+  <pre class="language-css">
+.btn {{ '{' }}
+  padding: 1em;
+  border: 1px solid #000;
+{{ '}' }}
+
+.btn-blue {{ '{' }}
+  color: blue;
+{{ '}' }}
+
+.btn-red {{ '{' }}
+  color: red;
+{{ '}' }}
+</pre>
+</figure><br>
+
+<p>The general gist of OOCSS is that common declarations are encapsulated into base selectors and then augmented by more specific ones. Given the above refactored approach, you might find an element in your HTML that looks like this...</p>
+
+<figure class="highlight">
+  <pre class="language-markup">
+&lt;a href="#" class="btn btn-blue">...&lt;/a>
+</pre>
+</figure>

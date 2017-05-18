@@ -4,4 +4,5 @@ import { Component } from '@angular/core';
   selector: 'ddk-utilities-jumbotron',
   templateUrl: './jumbotron.component.html'
 })
-export class UtilitiesJumbotronComponent {}
+export class UtilitiesJumbotronComponent {
+}

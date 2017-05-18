@@ -31,6 +31,20 @@ aside > nav {
       }
     }
   }
+
+  .inverted & {
+    .list-group-item {
+      background: rgba($cr-gray-dark, .4);
+      border-color: rgba($cr-gray-dark, .4);
+
+      &.active,
+      &.active:hover,
+      &.active:focus {
+        background: $cr-gray-darker;
+        border-color: $cr-gray-darker;
+      }
+    }
+  }
 }
 
 body.dark-theme {
@@ -59,6 +73,28 @@ body.dark-theme {
 .tbd {
   a {
     color: $gray;
+  }
+}
+
+.breadcrumb {
+  .inverted & {
+    background: rgba($cr-white, .6);
+
+    a {
+      color: $cr-gray-light;
+
+      &:hover {
+        color: darken($cr-gray-light, 30);
+      }
+    }
+
+    > li + li:before {
+      color: darken($cr-gray-dark, 30);
+    }
+
+    > .active {
+      color: darken($cr-gray-dark, 30);
+    }
   }
 }
 
@@ -102,72 +138,8 @@ body.dark-theme {
     background: $cr-gray-darker;
     border-bottom: 1px solid darken($cr-gray-dark, 10);
   }
-}
 
-code {
-  .dark-theme & {
-    background: $cr-gray;
-    color: $cr-gray-darker;
-  }
-}
-
-.crds-example {
-  position: relative;
-  border: 1px solid;
-  margin-top: 1em;
-  margin-bottom: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-
-  &, & + figure.highlight > pre {
-    border-color: $cr-gray-lighter;
-    padding: 1.25em;
-  }
-
-
-  .dark-theme & {
-    &, & + figure.highlight > pre {
-      border-color: darken($cr-gray-dark, 10);
-    }
-  }
-
-  & {
-    padding-top: 3.25em;
-    &:after {
-      content: 'Example';
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 90%;
-      position: absolute;
-      top: 1.25em;
-      left: 1.5em;
-      color: $gray-light;
-    }
-  }
-
-  &[data-label]:after {
-    content: attr(data-label);
-  }
-
-  & + figure.highlight > pre {
-    margin-top: 0;
-    border-top: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-left: 2em;
-  }
-
-  .typeface-example & {
-    border-radius: 5px;
-    font-size: 160%;
-    word-wrap: break-word;
-    &::after {
-      @extend .font-family-base-bold;
-      font-style: normal;
-      font-size: 56%;
-      position: absolute;
-      top: 2.25em;
-      left: 2.5em;
-    }
+  .inverted & {
+    background: rgba($cr-white, .2);
   }
 }

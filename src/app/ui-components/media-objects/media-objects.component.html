@@ -1,0 +1,71 @@
+<div class="jumbotron">
+  <div class="container">
+    <crds-content-block id="UIMediaObjectsHeader"></crds-content-block>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-offset-3">
+    <div class="page-header">
+      <h2>Media Objects</h2>
+    </div>
+
+    <p>Media objects are a commonly used UI component that feature a left- or right-aligned image alongside a block of text.</p>
+
+    <div class="page-subheader">
+      <h3>Default Media Object</h3>
+    </div>
+
+    <p>By default, the <code>.media-label</code> is in-line with the heading text.</p>
+
+    <ddk-example>
+      <div class="media">
+        <div class="media-img-wrapper">
+          <div class="media-object-default img-circle media-object img-size-5">
+          </div>
+        </div>
+
+        <div class="media-body">
+          <h3 class="media-heading">Jane Doe
+            <span class="media-label">
+              <span class="label label-default">LABEL</span>
+            </span>
+          </h3>
+
+          <p class="media-meta">1.0 MI</p>
+
+          <span>1234 Main St.<br>
+          City, ST 56789</span>
+        </div>
+      </div>
+    </ddk-example>
+
+    <div class="page-subheader">
+      <h3>Media Header Alignment</h3>
+    </div>
+
+    <p>A modifier class of <code>.media-heading-stacked</code> can be added to the <code>.media-heading</code> element. This allows the <code>.media-label</code> to stack above (or below) the header text.</p>
+
+    <ddk-example>
+      <div class="media">
+        <div class="media-img-wrapper">
+          <div class="media-object-default img-circle media-object img-size-5">
+          </div>
+        </div>
+
+        <div class="media-body">
+          <h3 class="media-heading media-heading-stacked">
+            <span class="media-label">
+              <span class="label label-default">LABEL</span>
+            </span> Jane Doe
+          </h3>
+
+          <p class="media-meta">1.0 MI</p>
+
+          <span>1234 Main St.<br>
+          City, ST 56789</span>
+        </div>
+      </div>
+    </ddk-example>
+  </div>
+</div>
