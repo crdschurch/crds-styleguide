@@ -6,7 +6,7 @@ import { AppModule } from '../app.module';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 import { AssetsRoutingModule } from './assets-routing.module';
 import { AssetsComponent } from './assets.component';
-import { LogoComponent } from './logo/logo.component';
+import { LogosComponent } from './logos/logos.component';
 import { ExampleModule } from '../shared/example/example.module';
 
 @NgModule({
@@ -21,8 +21,7 @@ import { ExampleModule } from '../shared/example/example.module';
   ],
   declarations: [
     AssetsComponent,
-
-    LogoComponent
+    LogosComponent
   ]
 })
 export class AssetsModule { }
