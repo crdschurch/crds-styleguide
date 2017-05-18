@@ -19,7 +19,7 @@ import { DevelopersModule } from './developers/developers.module';
 import { UiComponentsModule } from './ui-components/ui-components.module';
 
 import { AssetsModule } from './assets/assets.module';
-import { LogoComponent } from './assets/logo/logo.component';
+import { LogosComponent } from './assets/logos/logos.component';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
