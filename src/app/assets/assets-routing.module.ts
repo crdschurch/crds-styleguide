@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AssetsComponent } from './assets.component';
 
-import { LogoComponent } from './logo/logo.component';
+import { LogosComponent } from './logos/logos.component';
 
 const assetRoutes: Routes = [
   {
@@ -10,8 +10,8 @@ const assetRoutes: Routes = [
     component: AssetsComponent,
     children: [
       {
-        path: 'logo',
-        component: LogoComponent,
+        path: 'logos',
+        component: LogosComponent,
       }
     ]
   }
