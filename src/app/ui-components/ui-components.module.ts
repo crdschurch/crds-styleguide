@@ -36,6 +36,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+import { ColorTextComponent } from './colors/colors/colors.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -129,6 +130,7 @@ import { MediaObjectsComponent } from './media-objects/media-objects.component';
     SwatchesComponent,
     ColorOverridesComponent,
     ColorBackgroundsComponent,
+    ColorTextComponent,
 
     /* utility classes */
     UtilitiesComponent,
