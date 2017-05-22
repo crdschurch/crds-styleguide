@@ -143,3 +143,15 @@ body.dark-theme {
     background: rgba($cr-white, .2);
   }
 }
+
+.link-download {
+  text-decoration: none;
+
+  & span:last-child {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
