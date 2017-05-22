@@ -4,21 +4,16 @@ import { ToastrService, ToastrConfig } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <p>Hello World</p>
-  `
+  templateUrl: './component.html'
 })
 export class AppComponent implements OnInit {
 
   constructor(private toastr: ToastrService,
-              private toastrConfig: ToastrConfig) {
-    this.toastrConfig.timeOut = 10000;
-  }
+              private toastrConfig: ToastrConfig) {}
 
-  public ngOnInit() {
-    setTimeout(() => {
-      this.toastr.success('Hello World', 'Something Else');
-    }, 2500);
-  }
+  public ngOnInit() {}
 
+  clickForToast() {
+    return this.toastr.success('Hello World', 'Something Else');
+  }
 }
