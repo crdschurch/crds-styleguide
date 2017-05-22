@@ -67,6 +67,9 @@ import { FormDatepickerComponent } from './forms/datepicker/datepicker.component
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
+
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
@@ -208,6 +211,10 @@ const uiRoutes: Routes = [
             component: IconColorsComponent
           }
         ]
+      },
+      {
+        path: 'labels',
+        component: LabelsComponent
       },
       {
         path: 'alerts',
