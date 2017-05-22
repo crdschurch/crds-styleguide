@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ToastsManager } from 'ng2-toastr';
+import { ToastrService, ToastrConfig } from 'ngx-toastr';
 
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   template: `
     <p>Hello World</p>
   `
 })
 export class AppComponent implements OnInit {
 
-  constructor(private toast: ToastsManager) {
-    console.log('Hello');
-
+  constructor(private toastr: ToastrService,
+              private toastrConfig: ToastrConfig) {
+    this.toastrConfig.timeOut = 10000;
   }
 
-  public ngOnInit(): void {
-    // console.log(this.toast);
+  public ngOnInit() {
+    setTimeout(() => {
+      this.toastr.success('Hello World', 'Something Else');
+    }, 2500);
   }
 
 }
