@@ -1,1 +1,7 @@
-<a href="javascript:void(0)" (click)="clickForToast()" class="btn btn-primary">Click For Toast!</a>
+<div class="container text-center">
+  <a (click)="showToast('success')" class="btn btn-success">Success</a>
+  <a (click)="showToast('error')" class="btn btn-danger">Error</a>
+  <a (click)="showToast('warning')" class="btn btn-warning">Warning</a>
+  <a (click)="showToast('info')" class="btn btn-secondary">Info</a>
+  <a (click)="showToast('custom')" class="btn btn-default">Custom</a>
+</div>
