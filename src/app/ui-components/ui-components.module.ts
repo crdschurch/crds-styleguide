@@ -85,6 +85,9 @@ import { FormDatepickerComponent } from './forms/datepicker/datepicker.component
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
+
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
@@ -187,6 +190,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
     VariationsComponent,
     NoImageComponent,
     VideoComponent,
+
+    /* labels */
+    LabelsComponent,
 
     /* sign in */
     SignInComponent,
