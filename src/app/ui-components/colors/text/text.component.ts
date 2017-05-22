@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  templateUrl: './colors.component.html'
+  templateUrl: './text.component.html'
 })
 export class ColorTextComponent {}
