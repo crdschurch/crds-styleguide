@@ -5,6 +5,9 @@ System.config({
   typescriptOptions: {
     emitDecoratorMetadata: true
   },
+  meta: {
+    "*.scss": { "loader": "sass" }
+  },
   paths: {
     'npm:': 'https://unpkg.com/'
   },

@@ -9,11 +9,16 @@ import { ToastrService, ToastrConfig } from 'ngx-toastr';
 export class AppComponent implements OnInit {
 
   constructor(private toastr: ToastrService,
-              private toastrConfig: ToastrConfig) {}
+              private toastrConfig: ToastrConfig) {
+    toastrConfig.tapToDismiss = false;
+    toastrConfig.timeOut = 0;
+  }
 
   public ngOnInit() {}
 
   clickForToast() {
+    console.log(this.toastrConfig);
+    console.log(this.toastr);
     return this.toastr.success('Hello World', 'Something Else');
   }
 }
