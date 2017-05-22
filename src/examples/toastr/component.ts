@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
 
-import { ToastrService, ToastrConfig } from 'ngx-toastr';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'app-root',
@@ -8,17 +8,13 @@ import { ToastrService, ToastrConfig } from 'ngx-toastr';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private toastr: ToastrService,
-              private toastrConfig: ToastrConfig) {
-    toastrConfig.tapToDismiss = false;
-    toastrConfig.timeOut = 0;
+  constructor(private toastr: ToastsManager, vRef: ViewContainerRef) {
+    this.toastr.setRootViewContainerRef(vRef);
   }
 
   public ngOnInit() {}
 
   clickForToast() {
-    console.log(this.toastrConfig);
-    console.log(this.toastr);
-    return this.toastr.success('Hello World', 'Something Else');
+    return this.toastr.success('Hello World', null, { toastLife: 100000 });
   }
 }

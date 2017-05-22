@@ -38,7 +38,7 @@ System.config({
 
     'rxjs': 'npm:rxjs',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
-    'ngx-toastr': 'npm:ngx-toastr@5.2.1/toastr.umd.js'
+    'ng2-toastr': 'npm:ng2-toastr@4.0.1'
   },
   //packages defines our app package
   packages: {
