@@ -32,7 +32,8 @@ System.config({
 
     'rxjs': 'npm:rxjs',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
-    'ng2-bootstrap': 'npm:ng2-bootstrap@1.3.3/bundles/ng2-bootstrap.umd.min.js'
+
+    'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js'
   },
   //packages defines our app package
   packages: {
