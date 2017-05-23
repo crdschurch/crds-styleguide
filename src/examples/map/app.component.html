@@ -1,22 +1,22 @@
 <sebm-google-map
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="zoom"
-  [disableDefaultUI]="disableDefaultUI"
-  [streetViewControl]="streetViewControl"
-  [scrollwheel]="scrollwheel"
-  [styles]="styles"
-  [zoomControl]="zoomControl">
+  [latitude]="options.lat"
+  [longitude]="options.lng"
+  [zoom]="options.zoom"
+  [disableDefaultUI]="options.disableDefaultUI"
+  [streetViewControl]="options.streetViewControl"
+  [scrollwheel]="options.scrollwheel"
+  [styles]="options.styles"
+  [zoomControl]="options.zoomControl">
 
   <sebm-google-map-marker
-      *ngFor="let m of markers; let i = index"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [iconUrl]="m.iconUrl">
+      *ngFor="let marker of markers; let i = index"
+      [latitude]="marker.lat"
+      [longitude]="marker.lng"
+      [iconUrl]="marker.iconUrl">
 
     <sebm-google-map-info-window>
-      <strong>{{ m.name }}</strong>
-      <p>{{ m.description }}</p>
+      <strong>{{ marker.name }}</strong>
+      <p>{{ marker.description }}</p>
     </sebm-google-map-info-window>
 
   </sebm-google-map-marker>
