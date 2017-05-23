@@ -10,46 +10,40 @@ import { Component } from '@angular/core';
   templateUrl: './component.html'
 })
 export class AppComponent {
+
   // google maps zoom level
-  zoom: number = 8;
+  zoom = 8;
 
   // initial center position for the map
-  lat: number = 51.673858;
-  lng: number = 7.815982;
+  lat = 39.159398;
+  lng = -84.423367;
 
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
+  disableDefaultUi = false;
+  zoomControl = true;
 
-  mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng
-    });
-  }
-
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
-  }
-
-  markers: marker[] = [
+  // markers: marker[] = [
+  markers = <any> [
     {
-      lat: 51.673858,
-      lng: 7.815982,
+      lat: this.lat + 0.3,
+      lng: this.lng + 0.3,
       label: 'A',
-      draggable: true
+      draggable: false
     },
     {
-      lat: 51.373858,
-      lng: 7.215982,
+      lat: this.lat - 0.3,
+      lng: this.lng - 0.3,
       label: 'B',
       draggable: false
     },
     {
-      lat: 51.723858,
-      lng: 7.895982,
+      lat: this.lat - 0.45,
+      lng: this.lng - 0.45,
       label: 'C',
-      draggable: true
+      draggable: false
     }
   ]
+
+  clickedMarker(label: string, index: number) {
+    console.log(`clicked the marker: ${label || index}`)
+  }
 }

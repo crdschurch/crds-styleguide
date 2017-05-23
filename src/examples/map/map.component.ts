@@ -12,12 +12,6 @@ interface NativeGoogMapProps {
 @Component({
   selector: 'app-map-content',
   template: ''
-  // selector: 'gmap-controller',
-  // styles: [],
-  // providers: [
-  //   GoogleMapsAPIWrapper
-  // ],
-  // templateUrl: './map.component.html'
 })
 export class MapComponent implements AfterViewInit {
 
