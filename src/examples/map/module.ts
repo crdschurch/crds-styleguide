@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AgmCoreModule } from 'angular2-google-maps/core';
-import { AppComponent } from './component';
+import { AppComponent } from './app.component';
 import { MapComponent } from './map.component';
+import { MapContentComponent } from './map-content.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { MapComponent } from './map.component';
   ],
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    MapContentComponent
   ],
   bootstrap: [
     AppComponent
