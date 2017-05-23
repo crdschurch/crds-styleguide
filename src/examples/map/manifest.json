@@ -1,7 +1,10 @@
 {
   "files": [
     "module.ts",
-    "component.ts"
+    "app.component.ts",
+    "map-options.ts",
+    "map-markers.ts",
+    "app.component.html"
   ],
   "entry": "index.html"
 }
