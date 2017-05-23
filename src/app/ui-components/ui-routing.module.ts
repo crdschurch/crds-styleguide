@@ -20,6 +20,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -66,6 +67,9 @@ import { FormDatepickerComponent } from './forms/datepicker/datepicker.component
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
+
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
@@ -74,6 +78,9 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
 
 const uiRoutes: Routes = [
   {
@@ -104,6 +111,10 @@ const uiRoutes: Routes = [
           {
             path: 'backgrounds',
             component: ColorBackgroundsComponent
+          },
+          {
+            path: 'text',
+            component: ColorTextComponent
           }
         ]
       },
@@ -203,6 +214,10 @@ const uiRoutes: Routes = [
             component: IconColorsComponent
           }
         ]
+      },
+      {
+        path: 'labels',
+        component: LabelsComponent
       },
       {
         path: 'alerts',
@@ -316,6 +331,10 @@ const uiRoutes: Routes = [
       {
         path: 'media-objects',
         component: MediaObjectsComponent
+      },
+      {
+        path: 'media-images',
+        component: MediaImgComponent
       },
     ]
   }
