@@ -26,25 +26,29 @@ export class MapComponent {
   // markers: marker[] = [
   markers = <any> [
     {
-      name: 'person',
+      name: 'Marker A',
+      description: 'Lorem ipsum dolor sit amet.',
       lat: this.lat + 0.3,
       lng: this.lng + 0.3,
       iconUrl: '//crds-cms-uploads.s3.amazonaws.com/connect/PERSON.svg'
     },
     {
-      name: 'gathering',
+      name: 'Marker B',
+      description: 'Lorem ipsum dolor sit amet.',
       lat: this.lat - 0.3,
       lng: this.lng - 0.3,
       iconUrl: '//crds-cms-uploads.s3.amazonaws.com/connect/GATHERING.svg'
     },
     {
-      name: 'site',
+      name: 'Marker C',
+      description: 'Lorem ipsum dolor sit amet.',
       lat: this.lat - 0.45,
       lng: this.lng - 0.45,
       iconUrl: '//crds-cms-uploads.s3.amazonaws.com/connect/SITE.svg'
     },
     {
-      name: 'me',
+      name: 'Marker D',
+      description: 'Lorem ipsum dolor sit amet.',
       lat: this.lat + 0.15,
       lng: this.lng - 0.25,
       iconUrl: '//crds-cms-uploads.s3.amazonaws.com/connect/ME.svg'
