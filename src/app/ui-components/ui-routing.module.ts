@@ -79,6 +79,9 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
 
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -328,6 +331,10 @@ const uiRoutes: Routes = [
       {
         path: 'media-objects',
         component: MediaObjectsComponent
+      },
+      {
+        path: 'media-images',
+        component: MediaImgComponent
       },
     ]
   }

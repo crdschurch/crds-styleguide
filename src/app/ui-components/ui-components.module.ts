@@ -98,6 +98,9 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
 
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -200,7 +203,10 @@ import { MediaObjectsComponent } from './media-objects/media-objects.component';
     AvatarGroupsComponent,
 
     /* media objects */
-    MediaObjectsComponent
+    MediaObjectsComponent,
+
+    /* media images */
+    MediaImgComponent
   ]
 })
 export class UiComponentsModule { }
