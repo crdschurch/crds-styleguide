@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
+import { ExampleModule } from '../shared/example/example.module';
+
 import { DeveloperRoutingModule } from './developers-routing.module';
 import { DevelopersComponent } from './developers.component';
 import { DevelopersIntroComponent } from './intro/intro.component';
@@ -27,6 +29,7 @@ import { MapsComponent } from './maps/maps.component';
   imports: [
     CommonModule,
     DeveloperRoutingModule,
+    ExampleModule,
     ContentBlockModule
   ],
   declarations: [
