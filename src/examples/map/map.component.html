@@ -9,11 +9,10 @@
       *ngFor="let m of markers; let i = index"
       [latitude]="m.lat"
       [longitude]="m.lng"
-      [label]="m.label"
-      [markerDraggable]="m.draggable">
+      [iconUrl]="m.iconUrl">
 
     <sebm-google-map-info-window>
-      <strong>InfoWindow content</strong>
+      <strong>{{ m.name }}</strong>
     </sebm-google-map-info-window>
 
   </sebm-google-map-marker>
