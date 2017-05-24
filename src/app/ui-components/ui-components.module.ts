@@ -58,8 +58,6 @@ import { ToastNotificationsComponent } from './feedback/toast-notifications/toas
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
-import { LoaderIconsComponent } from './loaders/icons/icons.component';
-import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -161,8 +159,6 @@ import { MediaImgComponent } from './media-img/media-img.component';
 
     /* loaders */
     LoadersComponent,
-    LoaderIconsComponent,
-    SkeletonBlocksComponent,
 
     /* buttons */
     ButtonsComponent,

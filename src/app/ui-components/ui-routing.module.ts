@@ -41,8 +41,6 @@ import { ToastNotificationsComponent } from './feedback/toast-notifications/toas
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
-import { LoaderIconsComponent } from './loaders/icons/icons.component';
-import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -243,22 +241,7 @@ const uiRoutes: Routes = [
 
       {
         path: 'loaders',
-        component: LoadersComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'icons',
-            pathMatch: 'full'
-          },
-          {
-            path: 'icons',
-            component: LoaderIconsComponent
-          },
-          {
-            path: 'skeleton-blocks',
-            component: SkeletonBlocksComponent
-          }
-        ]
+        component: LoadersComponent
       },
       {
         path: 'forms',
