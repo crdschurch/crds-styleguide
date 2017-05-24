@@ -1,6 +1,4 @@
-<div class="page-header">
-  <h2>Icon Usage</h2>
-</div>
+<h2 class="page-header">Icon Usage</h2>
 
 <p>SVG icons use the combination of <code>&lt;svg&gt;</code> and
 <code>&lt;use&gt;</code> elements. The icon is dictated by the name after the
@@ -12,17 +10,11 @@ view the options in the <a routerLink="/ui/icons/directory">icon directory</a>.<
 <div class="alert alert-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</div>
 
 <div class="row">
-
   <div class="col-sm-6" *ngFor="let icon of icons">
     <ddk-example>
-      <svg class="icon" viewBox="0 0 256 256">
-        <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
-      </svg>
-      <pre>
-&lt;svg class=&quot;icon&quot; viewBox=&quot;0 0 256 256&quot;&gt;
-  &lt;use xlink:href=&quot;&#x2F;assets&#x2F;svgs&#x2F;icons.svg#{{icon}}&quot;&gt;&lt;&#x2F;use&gt;
-&lt;&#x2F;svg&gt;</pre>
+<svg class="icon" viewBox="0 0 256 256">
+  <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
+</svg>
     </ddk-example>
   </div>
-
 </div>
