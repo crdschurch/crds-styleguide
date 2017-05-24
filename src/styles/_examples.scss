@@ -115,3 +115,9 @@ crds-example {
     border: none;
   }
 }
+
+.contrast-bg {
+  > div {
+    background-color: black;
+  }
+}
