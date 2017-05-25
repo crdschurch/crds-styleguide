@@ -89,17 +89,16 @@ module.exports = {
 
         let hash = stats.hash,
             examples = glob.sync(
-              `${stats.compilation.compiler.outputPath}/examples/**/*.html`
-            ),
-            linkTag = `<link rel="stylesheet" href="/app.${hash}.css" />`;
+              `${stats.compilation.compiler.outputPath}/examples/**/index.html`
+            );
 
         // Loop through & edit each example...
         for (let example of examples) {
           fs.readFile(example, 'utf8', function (err, data) {
             if (err) return console.log(err);
 
-            if (data.includes('[import_styles]')) {
-              let newContent = data.replace(/\[import_styles\]/g, linkTag);
+            if (data.includes('/app.css')) {
+              let newContent = data.replace(/\/app\.css/g, `/app.${hash}.css"`);
               fs.writeFile(example, newContent, 'utf8', function (err) {
                 if (err) return console.log(err);
               });
