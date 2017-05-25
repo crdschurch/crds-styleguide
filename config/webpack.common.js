@@ -4,7 +4,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 var Dotenv = require('dotenv-webpack');
 var fs = require('fs');
-var DOMParser = require('xmldom').DOMParser;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var pry = require('pryjs');
 var glob = require('glob');
@@ -88,31 +87,23 @@ module.exports = {
     function() {
       this.plugin("done", function(stats) {
 
-        let hash = stats.hash;
-        let parser = new DOMParser();
-        let examples = glob.sync(stats.compilation.compiler.outputPath + '/examples/**/*.html');
+        let hash = stats.hash,
+            examples = glob.sync(
+              `${stats.compilation.compiler.outputPath}/examples/**/*.html`
+            ),
+            linkTag = `<link rel="stylesheet" href="/app.${hash}.css" />`;
 
         // Loop through & edit each example...
         for (let example of examples) {
           fs.readFile(example, 'utf8', function (err, data) {
             if (err) return console.log(err);
 
-            // Parse contents of file to DOM
-            let doc = parser.parseFromString(data, "text/html");
-            let links = doc.getElementsByTagName('link');
-
-            for(let i=0; i<links.length; i++) {
-              let attr = links[i].getAttribute('href');
-              if(attr === '/app.css') {
-                // Append hash to included link element
-                links[i].setAttribute('href', '/app.' + stats.hash + '.css');
-              }
+            if (data.includes('[import_styles]')) {
+              let newContent = data.replace(/\[import_styles\]/g, linkTag);
+              fs.writeFile(example, newContent, 'utf8', function (err) {
+                if (err) return console.log(err);
+              });
             }
-
-            // Rewrite the example file with updated DOM
-            fs.writeFile(example, doc.toString(), 'utf8', function (err) {
-              if (err) return console.log(err);
-            });
           });
         };
       });
