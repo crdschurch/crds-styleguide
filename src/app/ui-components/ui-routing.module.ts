@@ -34,8 +34,10 @@ import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
-/* alerts */
-import { AlertsComponent } from './alerts/alerts.component';
+/* Feedback */
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AlertsComponent } from './feedback/alerts/alerts.component';
+import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
@@ -214,13 +216,29 @@ const uiRoutes: Routes = [
         ]
       },
       {
+        path: 'feedback',
+        component: FeedbackComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'alerts',
+            pathMatch: 'full'
+          },
+          {
+            path: 'alerts',
+            component: AlertsComponent
+          },
+          {
+            path: 'toast-notifications',
+            component: ToastNotificationsComponent
+          }
+        ]
+      },
+      {
         path: 'labels',
         component: LabelsComponent
       },
-      {
-        path: 'alerts',
-        component: AlertsComponent
-      },
+
       {
         path: 'loaders',
         component: LoadersComponent
