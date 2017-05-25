@@ -12,10 +12,12 @@ import { CustomNpmPackagesComponent } from './custom-npm-packages/custom-npm-pac
 import { FileStructureComponent } from './file-structure/file-structure.component';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { GridComponent } from './grid/grid.component';
-import { ImgixComponent } from './imgix/imgix.component';
 import { InstallationComponent } from './installation/installation.component';
 import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
 import { WebFontsComponent } from './web-fonts/web-fonts.component';
+
+import { ImgixComponent } from './imgix/imgix.component';
+import { MapsComponent } from './maps/maps.component';
 
 const developerRoutes: Routes = [
   {
@@ -72,17 +74,21 @@ const developerRoutes: Routes = [
         component: GridComponent
       },
       {
-        path: 'imgix',
-        component: ImgixComponent
-      },
-      {
         path: 'web-fonts',
         component: WebFontsComponent
       },
       {
         path: 'custom-npm-packages',
         component: CustomNpmPackagesComponent
-       }
+       },
+      {
+        path: 'imgix',
+        component: ImgixComponent
+      },
+      {
+        path: 'maps',
+        component: MapsComponent
+      }
     ]
   }
 ];
