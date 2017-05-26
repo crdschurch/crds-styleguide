@@ -3,6 +3,7 @@
     <li><a routerLink="/developers">Developers</a></li>
     <li class="active" *ngIf="displaySidebarNav('getting-started')">Getting Started</li>
     <li class="active" *ngIf="displaySidebarNav('learn-more')">Learn More</li>
+    <li class="active" *ngIf="displaySidebarNav('third-party-tools')">Third Party Tools</li>
   </ol><br>
 
   <div class="component">
@@ -40,13 +41,19 @@
             <a routerLink="/developers/grid">Grid System</a>
           </li>
           <li routerLinkActive="active" class="list-group-item">
-            <a routerLink="/developers/imgix">Imgix</a>
-          </li>
-          <li routerLinkActive="active" class="list-group-item">
             <a routerLink="/developers/web-fonts">Web Fonts</a>
           </li>
           <li routerLinkActive="active" class="list-group-item">
             <a routerLink="/developers/custom-npm-packages">Custom NPM Packages</a>
+          </li>
+        </ul>
+
+        <ul class="list-group" *ngIf="displaySidebarNav('third-party-tools')">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/imgix">Imgix</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/maps">Maps</a>
           </li>
         </ul>
       </nav>

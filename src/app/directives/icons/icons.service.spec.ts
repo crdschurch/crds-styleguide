@@ -8,5 +8,4 @@ describe('Service: IconService', () => {
     expect(service.icons.length).toBeGreaterThan(0);
     expect(typeof(service.icons[0])).toEqual('string');
   });
-
 });
