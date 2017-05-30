@@ -13,11 +13,6 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { CardsComponent } from './cards/cards.component';
-import { SidebarNavComponent } from './cards/sidebar-nav/sidebar-nav.component';
-import { BasicComponent } from './cards/basic/basic.component';
-import { VariationsComponent } from './cards/variations/variations.component';
-import { NoImageComponent } from './cards/no-image/no-image.component';
-import { VideoComponent } from './cards/video/video.component';
 import { ExampleModule } from '../shared/example/example.module';
 
 /* typography */
@@ -189,11 +184,6 @@ import { MediaImgComponent } from './media-img/media-img.component';
     SearchFieldComponent,
 
     CardsComponent,
-    SidebarNavComponent,
-    BasicComponent,
-    VariationsComponent,
-    NoImageComponent,
-    VideoComponent,
 
     /* labels */
     LabelsComponent,
