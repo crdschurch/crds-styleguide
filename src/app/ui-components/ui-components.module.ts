@@ -102,6 +102,9 @@ import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
+/* jumbotrons */
+import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -206,7 +209,10 @@ import { MediaImgComponent } from './media-img/media-img.component';
     MediaObjectsComponent,
 
     /* media images */
-    MediaImgComponent
+    MediaImgComponent,
+
+    /* jumbotrons */
+    JumbotronsComponent,
   ]
 })
 export class UiComponentsModule { }
