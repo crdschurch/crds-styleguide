@@ -1,8 +1,0 @@
-{
-  "files": [
-    "index.html",
-    "app.js",
-    "app.css"
-  ],
-  "entry": "index.html"
-}

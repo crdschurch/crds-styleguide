@@ -20,6 +20,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -33,13 +34,13 @@ import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
-/* alerts */
-import { AlertsComponent } from './alerts/alerts.component';
+/* Feedback */
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AlertsComponent } from './feedback/alerts/alerts.component';
+import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
-import { LoaderIconsComponent } from './loaders/icons/icons.component';
-import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -66,11 +67,20 @@ import { FormDatepickerComponent } from './forms/datepicker/datepicker.component
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/form-groups/groups.component';
 
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
+
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
 import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
+
+/* media objects */
+import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
 
 const uiRoutes: Routes = [
   {
@@ -101,6 +111,10 @@ const uiRoutes: Routes = [
           {
             path: 'backgrounds',
             component: ColorBackgroundsComponent
+          },
+          {
+            path: 'text',
+            component: ColorTextComponent
           }
         ]
       },
@@ -202,27 +216,32 @@ const uiRoutes: Routes = [
         ]
       },
       {
-        path: 'alerts',
-        component: AlertsComponent
-      },
-      {
-        path: 'loaders',
-        component: LoadersComponent,
+        path: 'feedback',
+        component: FeedbackComponent,
         children: [
           {
             path: '',
-            redirectTo: 'icons',
+            redirectTo: 'alerts',
             pathMatch: 'full'
           },
           {
-            path: 'icons',
-            component: LoaderIconsComponent
+            path: 'alerts',
+            component: AlertsComponent
           },
           {
-            path: 'skeleton-blocks',
-            component: SkeletonBlocksComponent
+            path: 'toast-notifications',
+            component: ToastNotificationsComponent
           }
         ]
+      },
+      {
+        path: 'labels',
+        component: LabelsComponent
+      },
+
+      {
+        path: 'loaders',
+        component: LoadersComponent
       },
       {
         path: 'forms',
@@ -309,6 +328,14 @@ const uiRoutes: Routes = [
       {
         path: 'avatar-groups',
         component: AvatarGroupsComponent
+      },
+      {
+        path: 'media-objects',
+        component: MediaObjectsComponent
+      },
+      {
+        path: 'media-images',
+        component: MediaImgComponent
       },
     ]
   }

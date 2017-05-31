@@ -1,0 +1,59 @@
+<h1 class="page-header">Maps</h1>
+
+<p>
+  We use <a href="https://angular-maps.com/">angular2-google-maps</a> to work
+  with map-based features.
+</p>
+
+<p>
+  Here is a basic example of a simple map with a set of markers, each with its
+  own info window.
+</p>
+
+<ddk-example id="map" height="330"></ddk-example>
+
+<div class="page-subheader">
+  <h3>Labels</h3>
+</div>
+
+<p>
+  We also support styles for on-map labels next to markers using the
+  <code>.pin-details</code> selector. Unfortunately, this functionality is not
+  currently built into angular2-google-maps. An example of one solution to
+  achieve this effect can be found in
+  <a href="https://github.com/crdschurch/crds-connect/blob/development/src/app/components/map-content/map-content.component.ts">this component</a>.
+</p>
+
+<div class="crds-example" data-processed="true">
+  <style>
+  .crds-pin-details-example--container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-image: url('//crds-cms-uploads.imgix.net/content/images/map-blank-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .crds-pin-details-example--content {
+    position: relative;
+  }
+  .crds-pin-details-example--pin-label {
+    position: relative;
+    border-style: none;
+    border-width: 0px;
+    position: absolute;
+    left: 23px;
+    top: 3px;
+    width: 100px;
+  }
+  </style>
+  <div class="crds-pin-details-example--container">
+    <div class="crds-pin-details-example--content">
+      <img src="//crds-cms-uploads.s3.amazonaws.com/connect/PERSON.svg">
+      <div class="crds-pin-details-example--pin-label pin-label">Keanu R</div>
+    </div>
+  </div>
+</div>
