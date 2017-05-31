@@ -8,59 +8,222 @@
   <div class="col-md-offset-3">
     <h2 class="page-header">Cards</h2>
 
-    <h3 class="component-header">Individual Card</h3>
+    <section>
+      <h3 class="component-header">Individual Card</h3>
 
-    <ddk-example>
+      <p>A card consists of multiple components, most often an image, header and text. On its own, individual cards will span the entire width of its containing parent.</p>
+
+      <ddk-example>
 <div class="card">
-  <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg" alt="Card image caption">
+  <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+    alt="Card image caption">
   <div class="card-block">
-    <h4 class="card-title text-uppercase">Card title</h4>
+    <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#">Go somewhere</a>
   </div>
 </div>
-    </ddk-example>
+      </ddk-example>
+    </section>
 
-    <h3 class="component-header">Card Deck</h3>
+    <section>
+      <h3 class="component-header">Card Groups</h3>
 
-    <ddk-example>
+      <p>Cards can work within Bootstrap's grid system.</p>
+
+      <ddk-example>
+<div class="row">
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 col-md-3">
+    <div class="card">
+      <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+      </ddk-example>
+    </section>
+
+    <section>
+      <h3 class="component-header">Card Deck</h3>
+
+      <p>A card deck is a group of cards which share the same height as the tallest card in the deck. Height is determined by the length of content within a card, and the card with the most content will dictate the height of the other cards in the deck.</p>
+
+      <p>On mobile-sized screens, a card deck is one row of many cards in a scrollable container. On table-sized screens and larger, every fourth card will cause the layout to wrap to a new line.</p>
+
+      <ddk-example>
 <div class="card-deck">
   <div class="card">
-    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg" alt="Card image caption">
+    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
     <div class="card-block">
-      <h4 class="card-title text-uppercase">Card title</h4>
+      <h4 class="card-title card-title--overlap text-uppercase">Card title with a long title</h4>
+      <p class="card-text">I am a card with a very lengthy amount of content. Notice how all of the cards in this deck are the same height as me? Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#">Go somewhere</a>
     </div>
   </div>
 
   <div class="card">
-    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg" alt="Card image caption">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
     <div class="card-block">
-      <h4 class="card-title text-uppercase">Card title</h4>
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#">Go somewhere</a>
     </div>
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg" alt="Card image caption">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
     <div class="card-block">
-      <h4 class="card-title text-uppercase">Card title</h4>
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#">Go somewhere</a>
     </div>
   </div>
 
   <div class="card">
-    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg" alt="Card image caption">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
     <div class="card-block">
-      <h4 class="card-title text-uppercase">Card title</h4>
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <a href="#">Go somewhere</a>
     </div>
   </div>
 </div>
-    </ddk-example>
+      </ddk-example>
+    </section>
+
+    <section>
+      <h3 class="component-header">Card Deck Carousel</h3>
+
+      <p>The <code>.card-deck--carousel</code> class is a modifier class for card decks. Instead of wrapping overflow cards to a new line on tablet-sized screens (as the default <code>.card-deck</code> does), a card deck carousel will keep all cards in one (scrollable) row regardless of screen size.</p>
+
+      <ddk-example>
+<div class="card-deck card-deck--carousel" style="margin-right:-20px;">
+  <div class="card">
+    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">I am another card with more lengthy content. All of my card friends are the same height as me! Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="card-img-top" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
+      alt="Card image caption">
+    <div class="card-block">
+      <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#">Go somewhere</a>
+    </div>
+  </div>
+</div>
+      </ddk-example>
+    </section>
   </div>
 </div>
