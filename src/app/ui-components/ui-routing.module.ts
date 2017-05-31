@@ -82,6 +82,9 @@ import { MediaObjectsComponent } from './media-objects/media-objects.component';
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
+/* jumbotrons */
+import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -337,6 +340,10 @@ const uiRoutes: Routes = [
         path: 'media-images',
         component: MediaImgComponent
       },
+      {
+        path: 'jumbotrons',
+        component: JumbotronsComponent
+      }
     ]
   }
 ];
