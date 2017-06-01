@@ -1,13 +1,29 @@
-<div class="container cards">
-  <div class="row">
-    <ddk-sidebar-nav></ddk-sidebar-nav>
+<div class="jumbotron">
+  <div class="container">
+    <crds-content-block id="UICards"></crds-content-block>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside>
+      <nav>
+        <ul class="list-group">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/ui/cards/types">Types</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/ui/cards/grid-layout">Grid Layout</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/ui/cards/card-decks">Card Decks</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
 
     <div>
-      <h1 class="page-header">Cards</h1>
-      <ddk-basic></ddk-basic>
-      <ddk-variations></ddk-variations>
-      <ddk-no-image></ddk-no-image>
-      <ddk-video></ddk-video>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

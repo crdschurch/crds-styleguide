@@ -12,12 +12,6 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { CardsComponent } from './cards/cards.component';
-import { SidebarNavComponent } from './cards/sidebar-nav/sidebar-nav.component';
-import { BasicComponent } from './cards/basic/basic.component';
-import { VariationsComponent } from './cards/variations/variations.component';
-import { NoImageComponent } from './cards/no-image/no-image.component';
-import { VideoComponent } from './cards/video/video.component';
 import { ExampleModule } from '../shared/example/example.module';
 
 /* typography */
@@ -98,6 +92,12 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* cards */
+import { CardsComponent } from './cards/cards.component';
+import { CardsTypesComponent } from './cards/types/types.component';
+import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
+import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
@@ -189,11 +189,17 @@ import { MediaImgComponent } from './media-img/media-img.component';
     SearchFieldComponent,
 
     CardsComponent,
+<<<<<<< HEAD
     SidebarNavComponent,
     BasicComponent,
     VariationsComponent,
     NoImageComponent,
     VideoComponent,
+=======
+    CardsDecksComponent,
+    CardsTypesComponent,
+    CardsGridLayoutComponent,
+>>>>>>> e4280c5... US6288 - Add cards to DDK
 
     /* labels */
     LabelsComponent,
