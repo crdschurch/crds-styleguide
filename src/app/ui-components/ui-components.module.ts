@@ -189,17 +189,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
     SearchFieldComponent,
 
     CardsComponent,
-<<<<<<< HEAD
-    SidebarNavComponent,
-    BasicComponent,
-    VariationsComponent,
-    NoImageComponent,
-    VideoComponent,
-=======
     CardsDecksComponent,
     CardsTypesComponent,
     CardsGridLayoutComponent,
->>>>>>> e4280c5... US6288 - Add cards to DDK
 
     /* labels */
     LabelsComponent,
