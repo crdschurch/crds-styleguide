@@ -12,7 +12,6 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { CardsComponent } from './cards/cards.component';
 import { ExampleModule } from '../shared/example/example.module';
 
 /* typography */
@@ -93,6 +92,12 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* cards */
+import { CardsComponent } from './cards/cards.component';
+import { CardsTypesComponent } from './cards/types/types.component';
+import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
+import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
@@ -184,6 +189,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
     SearchFieldComponent,
 
     CardsComponent,
+    CardsDecksComponent,
+    CardsTypesComponent,
+    CardsGridLayoutComponent,
 
     /* labels */
     LabelsComponent,
