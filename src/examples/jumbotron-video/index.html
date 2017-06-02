@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jumbotron Video</title>
+
+    <link rel="stylesheet" href="/app.css" />
+
+    <script src="https://use.typekit.net/ccb3vpa.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+
+  <body>
+    <style>
+      .bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -1;
+      }
+      .bg-video #player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+      }
+      .bg-video .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        margin-top: 35vh;
+        font-size: 64px;
+        text-shadow: 1px 1px 3px black;
+      }
+    </style>
+
+    <div class="bg-video">
+      <div class="overlay"></div>
+      <div id="player"></div>
+    </div>
+
+    <h1>Hello World</h1>
+
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          videoId: 'kfchvCyHmsc',
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            modestbranding: 1,
+            loop: 1,
+            playsinline: 1,
+            showinfo: 0,
+            playlist: 'kfchvCyHmsc', // See: https://stackoverflow.com/a/25781957/2241124
+            end: 5
+          },
+          events: {
+            onReady: function(e) {
+              e.target.mute();
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
