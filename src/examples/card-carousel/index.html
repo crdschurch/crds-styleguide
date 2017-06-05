@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>flickity card carousel</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta" />
 
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="/app.css" />
@@ -11,7 +12,7 @@
   </head>
 
   <body>
-    <div class="card-deck--carousel carousel" data-flickity='{ "cellAlign": "left", "contain": true, prevNextButtons: false, "pageDots": false }'>
+    <div class="card-deck--carousel carousel">
       <div class="card carousel-cell">
         <img class="card-img-top img-responsive" src="https://typeset-beta.imgix.net/rehost%2F2016%2F9%2F13%2F38af2a4d-c47b-4d75-aef0-cdc3763a59bf.jpg"
           alt="Card image caption">
@@ -134,6 +135,6 @@
     </div>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="./layout.js"></script>
+    <script src="layout.js"></script>
   </body>
 </html>
