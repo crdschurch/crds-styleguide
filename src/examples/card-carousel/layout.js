@@ -1,35 +1,40 @@
-function carousel_styles() {
-  const carousel = document.body.querySelector('.card-deck--carousel');
-  const cards = carousel.querySelectorAll('.card');
+var CRDS = window['CRDS'] || {};
 
-  if (window.matchMedia('(max-width: 769px)').matches) {
-    carousel.classList.remove('card-deck');
+CRDS.CardCarousel = (function() {
 
-    new Flickity(carousel, {
-      cellAlign: 'left',
-      contain: true,
-      prevNextButtons: false,
-      pageDots: false
-    });
+  return {
+    addStyles: function() {
+      var carousel = document.body.querySelector('.card-deck--carousel');
+      var cards = carousel.querySelectorAll('.card');
 
-    for (let card = 0; card < cards.length; card++) {
-      cards[card].classList.add('carousel-cell');
-    }
-  } else {
-    carousel.classList.add('card-deck');
+      if (window.matchMedia('(max-width: 769px)').matches) {
+        carousel.classList.remove('card-deck');
 
-    new Flickity(carousel).destroy();
+        new Flickity(carousel, {
+          cellAlign: 'left',
+          contain: true,
+          prevNextButtons: false,
+          pageDots: false
+        });
 
-    for (let card = 0; card < cards.length; card++) {
-      cards[card].classList.remove('carousel-cell');
+        for (var card = 0; card < cards.length; card++) {
+          cards[card].classList.add('carousel-cell');
+        }
+      } else {
+        carousel.classList.add('card-deck');
+
+        new Flickity(carousel).destroy();
+
+        for (var card = 0; card < cards.length; card++) {
+          cards[card].classList.remove('carousel-cell');
+        }
+      }
     }
   }
-}
 
-window.onload = function() {
-  carousel_styles();
-};
+})();
 
-window.onresize = function() {
-  carousel_styles();
-};
+("load resize".split(" ")).forEach(function(e){
+  window.addEventListener(e, CRDS.CardCarousel.addStyles, false);
+});
+
