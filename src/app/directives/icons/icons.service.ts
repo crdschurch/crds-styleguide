@@ -18,6 +18,7 @@ export class IconService {
     'github',
     'instagram',
     'menu',
+    'play-thin',
     'question-circle',
     'screwhead-crds',
     'search',
