@@ -1,0 +1,62 @@
+<div class="ddk jumbotron">
+  <div class="container">
+    <crds-content-block id="UIJumbotronsHeader"></crds-content-block>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-offset-3">
+    <h2 class="page-header">Jumbotrons</h2>
+
+    <h3 class="component-header">
+      Default
+    </h3>
+
+    <p>
+      The default jumbotron supports a title (<code>.title</code>),
+      paragraph of text (<code>p</code>),
+      a small, uppercase paragraph (<code>.small-heading</code>),
+      and a call-to-action button.
+    </p>
+
+    <ddk-example>
+<div class="jumbotron">
+  <p class="small-heading">I am a small intro heading</p>
+  <h1 class="title">the main heading</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Repudiandae quos reiciendis vitae eum.
+  </p>
+  <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
+</div>
+    </ddk-example>
+
+    <h3 class="component-header">
+      Background Image
+    </h3>
+
+    <p>
+      You can add an image by applying a background image to the jumbotron
+      container.
+    </p>
+
+    <p>
+      When you use this class, the text is white by default, as it expects
+      the background image to be dark. You can change this behavior using the
+      <a routerLink="/ui/colors/text"><code>.text-black</code> helper class</a>.
+    </p>
+
+    <ddk-example>
+<div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg');">
+  <p class="small-heading">I am a small intro heading</p>
+  <h1 class="title">the main heading</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Repudiandae quos reiciendis vitae eum.
+  </p>
+  <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
+</div>
+    </ddk-example>
+
+  </div>
+</div>
