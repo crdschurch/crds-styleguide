@@ -1,101 +1,136 @@
-// Load the YouTube iframe API and insert into the page.
+// Instantiate the global CRDS object.
+window['CRDS'] = window['CRDS'] || {};
+
+// Load the YouTube iframe API and insert into the page above the first script.
 var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
+    tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
-
   if (document.readyState != 'complete') {
     setTimeout(onYouTubeIframeAPIReady, 100);
     return true;
   }
 
-  var videoId = 'DzlH5SDGoyA',
-      playerId = 'crds-bg-video',
-      playerEl = document.getElementById(playerId),
-      playerContainerEl = playerEl.parentElement,
-      jumbotronEl = playerContainerEl.parentElement,
-      preloaderEl = jumbotronEl.querySelector('.preloader-wrapper'),
-      videoTrigger = jumbotronEl.querySelector('.video-trigger');
+  new CRDS.JumbotronVideoPlayer({
+    videoId: 'DzlH5SDGoyA',
+    playerId: 'crds-bg-video'
+  });
+}
 
-  var player = new YT.Player(playerId, {
-    videoId: videoId, // the ID of the YouTube video
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      modestbranding: 1,
-      loop: 1,
-      playsinline: 1,
-      showinfo: 0,
-      playlist: videoId // See: https://stackoverflow.com/a/25781957/2241124
-    },
+CRDS.JumbotronVideoPlayer = function(options = {}) {
+  this.videoId = options.videoId;
+  this.playerId = options.playerId;
+  this.playerEl = document.getElementById(this.playerId);
+  this.playerContainerEl = this.playerEl.parentElement;
+  this.jumbotronEl = this.playerContainerEl.parentElement;
+  this.preloaderEl = this.jumbotronEl.querySelector('.preloader-wrapper');
+  this.videoTrigger = this.jumbotronEl.querySelector('.video-trigger');
+
+  this.playerVars = {
+    autoplay: 1,
+    controls: 0,
+    modestbranding: 1,
+    loop: 1,
+    playsinline: 1,
+    showinfo: 0,
+    playlist: this.videoId // See: https://stackoverflow.com/a/25781957/2241124
+  }
+
+  return this.initVideo();
+};
+
+CRDS.JumbotronVideoPlayer.prototype.constructor = CRDS.JumbotronVideoPlayer;
+
+CRDS.JumbotronVideoPlayer.prototype.initVideo = function() {
+  var _this = this;
+  this.player = new YT.Player(this.playerId, {
+    videoId: this.videoId,
+    playerVars: this.playerVars,
     events: {
-      onReady: function(e) {
-        resizeVideo();
-        e.target.mute();
+      onReady: function(event) {
+        _this.onVideoReady(event);
       },
-      onStateChange: function(e) {
-        if (e.data == YT.PlayerState.PLAYING) {
-          preloaderEl.classList.add('loaded');
-        } else {
-          preloaderEl.classList.remove('loaded');
-        }
+      onStateChange: function(event) {
+        _this.onVideoStateChange(event);
       }
     }
   });
+  this.bindEvents();
+};
 
-  // Control the size of the player so it fills the background.
-  var resizeVideo = function() {
-    var width = jumbotronEl.offsetWidth,
-        height = jumbotronEl.offsetHeight,
-        ratio = 16 / 9;
+CRDS.JumbotronVideoPlayer.prototype.onVideoReady = function(event) {
+  this.resizePlayer();
+  event.target.mute();
+};
 
-    // If the container is wider than the desired ratio ...
-    if (width / height > ratio) {
-      // The new width should be the width of the container,
-      // while the new height maintains the aspect ratio.
-      var newWidth = width,
-          newHeight = width / ratio;
+CRDS.JumbotronVideoPlayer.prototype.onVideoStateChange = function(event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    this.preloaderEl.classList.add('loaded');
+  } else {
+    this.preloaderEl.classList.remove('loaded');
+  };
+};
 
-      // Resize the player.
-      player.setSize(newWidth, newHeight);
+CRDS.JumbotronVideoPlayer.prototype.resizePlayer = function() {
+  var width = this.jumbotronEl.offsetWidth,
+      height = this.jumbotronEl.offsetHeight,
+      ratio = 16 / 9;
 
-      // The player's container should sit at the left,
-      // and at half of its excess height.
-      playerContainerEl.style.left = 0;
-      playerContainerEl.style.top = -((newHeight - height) / 2) + 'px';
-    }
-    // If the player is higher than the aspect ratio
-    else {
-      // The new height should be the height of the container,
-      // while the new width maintains the aspect ratio.
-      var newHeight = height;
-          newWidth = height * ratio,
+  // If the container is wider than the desired ratio ...
+  if (width / height > ratio) {
+    // The new width should be the width of the container,
+    // while the new height maintains the aspect ratio.
+    var newWidth = width,
+        newHeight = width / ratio;
 
-      // Resize the player.
-      player.setSize(newWidth, newHeight);
+    // Resize the player.
+    this.player.setSize(newWidth, newHeight);
 
-      // The player's container should sit at the top,
-      // and at half of its excess width.
-      playerContainerEl.style.top = 0;
-      playerContainerEl.style.left = -((newWidth - width) / 2) + 'px';
-    }
+    // The player's container should sit at the left,
+    // and at half of its excess height.
+    this.playerContainerEl.style.left = 0;
+    this.playerContainerEl.style.top = -((newHeight - height) / 2) + 'px';
   }
+  // If the player is higher than the aspect ratio
+  else {
+    // The new height should be the height of the container,
+    // while the new width maintains the aspect ratio.
+    var newHeight = height,
+        newWidth = height * ratio;
 
-  // Watch for changes to the window's size and reset the video height.
-  window.addEventListener('resize', resizeVideo, true);
+    // Resize the player.
+    this.player.setSize(newWidth, newHeight);
 
-  // Overlay an embedded iframe player when clicking the trigger.
-  videoTrigger.addEventListener('click', function(event) {
-    event.preventDefault();
+    // The player's container should sit at the top,
+    // and at half of its excess width.
+    this.playerContainerEl.style.top = 0;
+    this.playerContainerEl.style.left = -((newWidth - width) / 2) + 'px';
+  };
+};
 
-    var embedEl = document.createElement('iframe');
-    embedEl.setAttribute('class', 'video-full-size');
-    embedEl.setAttribute('src', 'https://www.youtube.com/embed/' + videoId + '?autoplay=1');
-    embedEl.setAttribute('frameborder', '0');
+CRDS.JumbotronVideoPlayer.prototype.bindEvents = function() {
+  var _this = this;
 
-    jumbotronEl.appendChild(embedEl);
-    return true;
+  window.addEventListener('resize', function(event) {
+    _this.resizePlayer();
   }, true);
-}
+
+  this.videoTrigger.addEventListener('click', function(event) {
+    event.preventDefault();
+    _this.playForegroundVideo();
+  }, true);
+};
+
+CRDS.JumbotronVideoPlayer.prototype.playForegroundVideo = function() {
+  var embedEl = document.createElement('iframe'),
+      src = 'https://www.youtube.com/embed/' + this.videoId + '?autoplay=1';
+
+  embedEl.setAttribute('class', 'video-full-size');
+  embedEl.setAttribute('src', src);
+  embedEl.setAttribute('frameborder', '0');
+
+  this.jumbotronEl.appendChild(embedEl);
+  return true;
+};
