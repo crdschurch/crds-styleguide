@@ -1,48 +1,63 @@
-var CRDS = window['CRDS'] || {};
+window['CRDS'] = window['CRDS'] || {};
 
-CRDS.CardCarousel = (function() {
+CRDS.CardCarousel = function() {
+  return this.addEvents();
+}
 
-  return {
-    addStyles: function() {
-      var carousel = document.body.querySelector('.card-deck');
-      var cards = carousel.querySelectorAll('.card');
-      var carousel_type = carousel.dataset.carousel;
+CRDS.CardCarousel.prototype.constructor = CRDS.CardCarousel;
 
-      if (carousel_type == 'mobile-scroll') {
-        if (window.matchMedia('(max-width: 769px)').matches) {
-          carousel.classList.remove('card-deck--expanded-layout');
+CRDS.CardCarousel.prototype.getCarousel = function() {
+  return document.body.querySelector('.card-deck');
+};
 
-          for (var card = 0; card < cards.length; card++) {
-            cards[card].classList.add('carousel-cell');
-          }
+CRDS.CardCarousel.prototype.getCards = function() {
+  return this.getCarousel().querySelectorAll('.card');
+};
 
-          new Flickity(carousel, {
-            cellAlign: 'left',
-            contain: true,
-            prevNextButtons: false,
-            pageDots: false
-          });
-        } else {
-          carousel.classList.add('card-deck--expanded-layout');
+CRDS.CardCarousel.prototype.updateCardClass = function(action) {
+  for (var card = 0; card < this.getCards().length; card++) {
+    this.getCards()[card].classList[action]('carousel-cell');
+  };
+}
 
-          for (var card = 0; card < cards.length; card++) {
-            cards[card].classList.remove('carousel-cell');
-          }
+CRDS.CardCarousel.prototype.createCarousel = function() {
+  new Flickity(this.getCarousel(), {
+    cellAlign: 'left',
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
+};
 
-          new Flickity(carousel).destroy();
-        }
-      } else {
-        new Flickity(carousel, {
-          cellAlign: 'left',
-          contain: true,
-          prevNextButtons: false,
-          pageDots: false
-        });
-      }
+CRDS.CardCarousel.prototype.destroyCarousel = function() {
+  this.getCarousel().classList.add('card-deck--expanded-layout');
+  this.updateCardClass('remove');
+  new Flickity(this.getCarousel()).destroy();
+};
+
+CRDS.CardCarousel.prototype.addStyles = function() {
+  var carousel_type = this.getCarousel().dataset.carousel;
+
+  if (carousel_type === 'mobile-scroll') {
+    if (window.matchMedia('(max-width: 769px)').matches) {
+      this.getCarousel().classList.remove('card-deck--expanded-layout');
+      this.updateCardClass('add');
+      this.createCarousel();
+    } else {
+      this.destroyCarousel();
     }
+  } else {
+    this.createCarousel();
   }
-})();
+};
 
-("load resize".split(" ")).forEach(function(e){
-  window.addEventListener(e, CRDS.CardCarousel.addStyles, false);
-});
+CRDS.CardCarousel.prototype.addEvents = function() {
+  var _this = this;
+  ['load', 'resize'].forEach(function(eventName) {
+    window.addEventListener(eventName, function() {
+      _this.addStyles();
+    }, false);
+  });
+};
+
+new CRDS.CardCarousel();
