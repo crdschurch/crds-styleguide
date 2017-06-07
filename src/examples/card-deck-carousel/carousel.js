@@ -12,24 +12,24 @@ CRDS.CardCarousel = (function() {
         if (window.matchMedia('(max-width: 769px)').matches) {
           carousel.classList.remove('card-deck--expanded-layout');
 
+          for (var card = 0; card < cards.length; card++) {
+            cards[card].classList.add('carousel-cell');
+          }
+
           new Flickity(carousel, {
             cellAlign: 'left',
             contain: true,
             prevNextButtons: false,
             pageDots: false
           });
-
-          for (var card = 0; card < cards.length; card++) {
-            cards[card].classList.add('carousel-cell');
-          }
         } else {
           carousel.classList.add('card-deck--expanded-layout');
-
-          new Flickity(carousel).destroy();
 
           for (var card = 0; card < cards.length; card++) {
             cards[card].classList.remove('carousel-cell');
           }
+
+          new Flickity(carousel).destroy();
         }
       } else {
         new Flickity(carousel, {
