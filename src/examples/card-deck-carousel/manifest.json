@@ -1,0 +1,7 @@
+{
+  "files": [
+    "index.html",
+    "carousel.js"
+  ],
+  "entry": "index.html"
+}
