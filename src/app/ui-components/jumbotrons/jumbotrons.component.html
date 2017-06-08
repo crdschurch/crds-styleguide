@@ -15,13 +15,13 @@
     <p>
       The default jumbotron supports a title (<code>.title</code>),
       paragraph of text (<code>p</code>),
-      a small, uppercase paragraph (<code>.small-heading</code>),
+      a small, uppercase paragraph (<code>.small-heading.text-uppercase</code>),
       and a call-to-action button.
     </p>
 
     <ddk-example>
 <div class="jumbotron">
-  <p class="small-heading">I am a small intro heading</p>
+  <p class="small-heading text-uppercase">I am a small intro heading</p>
   <h1 class="title">the main heading</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -48,7 +48,7 @@
 
     <ddk-example>
 <div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg');">
-  <p class="small-heading">I am a small intro heading</p>
+  <p class="small-heading text-uppercase">I am a small intro heading</p>
   <h1 class="title">the main heading</h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -57,6 +57,27 @@
   <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
 </div>
     </ddk-example>
+
+    <h3 class="component-header">
+      Background Video
+    </h3>
+
+    <p>
+      Jumbotrons also support background videos. This requires adding the
+      <code>.bg-video</code> selector, the player's elements, and JavaScript
+      customization using the
+      <a href="https://developers.google.com/youtube/iframe_api_reference">
+        YouTube IFrame API.
+      </a>
+    </p>
+
+    <p>
+      If the background video has a <code>.video-trigger</code> anchor, clicking
+      it will trigger creating an embedded player on top of the jumbotron
+      content.
+    </p>
+
+    <ddk-example height="450" id="jumbotron-video"></ddk-example>
 
   </div>
 </div>
