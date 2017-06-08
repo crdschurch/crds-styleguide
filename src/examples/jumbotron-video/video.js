@@ -25,7 +25,8 @@ CRDS.JumbotronVideoPlayer = function(options = {}) {
   this.playerEl = document.getElementById(this.playerId);
   this.playerContainerEl = this.playerEl.parentElement;
   this.jumbotronEl = this.playerContainerEl.parentElement;
-  this.preloaderEl = this.jumbotronEl.querySelector('.preloader-wrapper');
+  this.preloaderContainerEl = this.jumbotronEl.querySelector('.preloader-wrapper');
+  this.preloaderEl = this.jumbotronEl.querySelector('.preloader');
   this.videoTrigger = this.jumbotronEl.querySelector('.video-trigger');
 
   this.playerVars = {
@@ -67,9 +68,9 @@ CRDS.JumbotronVideoPlayer.prototype.onVideoReady = function(event) {
 
 CRDS.JumbotronVideoPlayer.prototype.onVideoStateChange = function(event) {
   if (event.data == YT.PlayerState.PLAYING) {
-    this.preloaderEl.classList.add('loaded');
+    this.preloaderContainerEl.classList.add('loaded');
   } else {
-    this.preloaderEl.classList.remove('loaded');
+    this.preloaderContainerEl.classList.remove('loaded');
   };
 };
 
@@ -77,6 +78,9 @@ CRDS.JumbotronVideoPlayer.prototype.resizePlayer = function() {
   var width = this.jumbotronEl.offsetWidth,
       height = this.jumbotronEl.offsetHeight,
       ratio = 16 / 9;
+
+  // Put the preloader in the middle of the container.
+  this.preloaderEl.style.top = ((height / 2) - 37.5) + 'px';
 
   // If the container is wider than the desired ratio ...
   if (width / height > ratio) {
