@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UiComponentsComponent } from './ui-components.component';
 
-import { CardsComponent } from './cards/cards.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 
 /* typography */
@@ -79,8 +78,17 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
 /* media objects */
 import { MediaObjectsComponent } from './media-objects/media-objects.component';
 
+/* cards */
+import { CardsComponent } from './cards/cards.component';
+import { CardsTypesComponent } from './cards/types/types.component';
+import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
+import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
+
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
+
+/* jumbotrons */
+import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
 const uiRoutes: Routes = [
   {
@@ -319,7 +327,26 @@ const uiRoutes: Routes = [
       },
       {
         path: 'cards',
-        component: CardsComponent
+        component: CardsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'types',
+            pathMatch: 'full'
+          },
+          {
+            path: 'types',
+            component: CardsTypesComponent
+          },
+          {
+            path: 'grid-layout',
+            component: CardsGridLayoutComponent
+          },
+          {
+            path: 'card-decks',
+            component: CardsDecksComponent
+          }
+        ]
       },
       {
         path: 'sign-in',
@@ -337,6 +364,10 @@ const uiRoutes: Routes = [
         path: 'media-images',
         component: MediaImgComponent
       },
+      {
+        path: 'jumbotrons',
+        component: JumbotronsComponent
+      }
     ]
   }
 ];

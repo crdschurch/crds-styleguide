@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 var helpers = require('./helpers');
 var Dotenv = require('dotenv-webpack');
 var fs = require('fs');
@@ -80,8 +81,20 @@ module.exports = {
         context: './node_modules/crds-styles/assets/svgs/',
         from: '*.svg',
         to: 'assets/svgs'
+      },
+      {
+        from: 'node_modules/imgix.js/dist/imgix.min.js',
+        to: 'vendor/js/'
       }
     ]),
+
+    new HtmlWebpackIncludeAssetsPlugin({
+      assets: [
+        'vendor/js/imgix.min.js'
+      ],
+      append: false,
+      hash: true
+    }),
 
     // Update all ./dist/examples/*.html files to reflect /app.[hash].css
     function() {
