@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="modal.show()">{{buttonText}}</button>
+
+<div bsModal #modal="bs-modal" class="modal fade video-modal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <button type="button" class="close pull-right" (click)="modal.hide()">
+        <span>&times;</span>
+      </button>
+      <div class="modal-body">
+        <iframe [src]="videoSrc" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,10 @@
 {
   "files": [
     "module.ts",
-    "component.html",
-    "component.ts"
+    "app.component.ts",
+    "app.component.html",
+    "video-modal.component.ts",
+    "video-modal.component.html"
   ],
   "entry": "index.html"
 }
