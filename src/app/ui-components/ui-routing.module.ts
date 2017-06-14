@@ -91,7 +91,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
 /* modals */
-import { ModalsComponent } from './modals/modals.component';
+import { VideoModalsComponent } from './video-modals/video-modals.component';
 
 const uiRoutes: Routes = [
   {
@@ -372,8 +372,8 @@ const uiRoutes: Routes = [
         component: JumbotronsComponent
       },
       {
-        path: 'modals',
-        component: ModalsComponent
+        path: 'video-modals',
+        component: VideoModalsComponent
       }
     ]
   }

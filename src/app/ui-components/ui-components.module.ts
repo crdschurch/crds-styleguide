@@ -106,7 +106,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
 /* modals */
-import { ModalsComponent } from './modals/modals.component';
+import { VideoModalsComponent } from './video-modals/video-modals.component';
 
 @NgModule({
   imports: [
@@ -218,7 +218,7 @@ import { ModalsComponent } from './modals/modals.component';
     JumbotronsComponent,
 
     /* modals */
-    ModalsComponent
+    VideoModalsComponent
   ]
 })
 export class UiComponentsModule { }
