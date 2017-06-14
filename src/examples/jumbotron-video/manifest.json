@@ -1,0 +1,7 @@
+{
+  "files": [
+    "index.html",
+    "video.js"
+  ],
+  "entry": "index.html"
+}

@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation, ElementRef, Renderer, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+declare var imgix: any;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -40,6 +42,9 @@ export class AppComponent implements OnInit {
 
       // Scroll to the top of the page when on navigation change.
       window.scrollTo(0, 0);
+
+      // Initialize any data-src references in current route that haven't been already processed by Imgix
+      imgix.init();
     });
   }
 

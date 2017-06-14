@@ -1,7 +1,8 @@
 h1 {
   .page-header &,
-  .jumbotron & {
-    @extend .font-family-base-light;
+  .jumbotron.ddk & {
+    font-family: $base-font-face;
+    font-weight: 100;
   }
 }
 
@@ -132,8 +133,10 @@ body.dark-theme {
   font-weight: 600;
 }
 
-.jumbotron {
+.jumbotron.ddk {
   margin-bottom: 3em;
+  color: $cr-gray-dark;
+  text-align: left;
   .dark-theme & {
     background: $cr-gray-darker;
     border-bottom: 1px solid darken($cr-gray-dark, 10);
