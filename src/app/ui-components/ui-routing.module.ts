@@ -84,6 +84,9 @@ import { CardsTypesComponent } from './cards/types/types.component';
 import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
 
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
@@ -367,6 +370,10 @@ const uiRoutes: Routes = [
       {
         path: 'jumbotrons',
         component: JumbotronsComponent
+      },
+      {
+        path: 'countdown',
+        component: CountdownComponent
       }
     ]
   }
