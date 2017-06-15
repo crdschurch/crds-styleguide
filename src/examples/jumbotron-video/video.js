@@ -79,9 +79,6 @@ CRDS.JumbotronVideoPlayer.prototype.resizePlayer = function() {
       height = this.jumbotronEl.offsetHeight,
       ratio = 16 / 9;
 
-  // Put the preloader in the middle of the container.
-  this.preloaderEl.style.top = ((height / 2) - 37.5) + 'px';
-
   // If the container is wider than the desired ratio ...
   if (width / height > ratio) {
     // The new width should be the width of the container,
