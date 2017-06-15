@@ -99,6 +99,9 @@ import { CardsTypesComponent } from './cards/types/types.component';
 import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
 import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
@@ -201,6 +204,9 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
     /* sign in */
     SignInComponent,
+
+    /* countdown */
+    CountdownComponent,
 
     /* avatar groups */
     AvatarGroupsComponent,
