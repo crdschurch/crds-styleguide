@@ -13,18 +13,27 @@ function onYouTubeIframeAPIReady() {
     return true;
   }
 
-  new CRDS.JumbotronVideoPlayer({
-    videoId: 'DzlH5SDGoyA',
-    playerId: 'crds-bg-video'
-  });
+  var videoPlayers = document.querySelectorAll('.jumbotron.bg-video')
+
+  for (i = 0; i < videoPlayers.length; i++) {
+    new CRDS.JumbotronVideoPlayer(videoPlayers[i]);
+  }
 }
 
-CRDS.JumbotronVideoPlayer = function(options = {}) {
-  this.videoId = options.videoId;
-  this.playerId = options.playerId;
-  this.playerEl = document.getElementById(this.playerId);
-  this.playerContainerEl = this.playerEl.parentElement;
-  this.jumbotronEl = this.playerContainerEl.parentElement;
+CRDS.JumbotronVideoPlayer = function(jumbotronEl) {
+  this.jumbotronEl = jumbotronEl;
+  this.playerContainerEl = this.jumbotronEl.querySelector('.bg-video-player');
+  this.playerId = 'video-player-' + Math.random().toString(36).substr(2, 10);
+
+  this.playerEl = document.createElement('div');
+  this.playerEl.setAttribute('id', this.playerId);
+  this.playerContainerEl.appendChild(this.playerEl)
+
+  this.videoId = this.jumbotronEl.getAttribute('data-video-id');
+  if (!this.videoId) {
+    throw 'data-player-id is required on the jumbotron containing element.';
+  }
+
   this.preloaderContainerEl = this.jumbotronEl.querySelector('.preloader-wrapper');
   this.preloaderEl = this.jumbotronEl.querySelector('.preloader');
   this.videoTrigger = this.jumbotronEl.querySelector('.video-trigger');
