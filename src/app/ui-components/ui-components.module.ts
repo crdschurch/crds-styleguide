@@ -108,6 +108,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
 /* jumbotrons */
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -219,6 +222,10 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
     /* jumbotrons */
     JumbotronsComponent,
+
+    /* fauxdals */
+    FauxdalsComponent,
+
   ]
 })
 export class UiComponentsModule { }

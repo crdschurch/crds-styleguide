@@ -93,6 +93,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
 /* jumbotrons */
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -370,6 +373,10 @@ const uiRoutes: Routes = [
       {
         path: 'jumbotrons',
         component: JumbotronsComponent
+      },
+      {
+        path: 'fauxdals',
+        component: FauxdalsComponent
       },
       {
         path: 'countdown',
