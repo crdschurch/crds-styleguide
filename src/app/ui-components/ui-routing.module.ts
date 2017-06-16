@@ -96,6 +96,9 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 /* modals */
 import { VideoModalsComponent } from './video-modals/video-modals.component';
 
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -377,6 +380,10 @@ const uiRoutes: Routes = [
       {
         path: 'video-modals',
         component: VideoModalsComponent
+      },
+      {
+        path: 'fauxdals',
+        component: FauxdalsComponent
       },
       {
         path: 'countdown',

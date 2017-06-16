@@ -111,6 +111,9 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 /* modals */
 import { VideoModalsComponent } from './video-modals/video-modals.component';
 
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -224,7 +227,10 @@ import { VideoModalsComponent } from './video-modals/video-modals.component';
     JumbotronsComponent,
 
     /* modals */
-    VideoModalsComponent
+    VideoModalsComponent, 
+
+    /* fauxdals */
+    FauxdalsComponent
   ]
 })
 export class UiComponentsModule { }
