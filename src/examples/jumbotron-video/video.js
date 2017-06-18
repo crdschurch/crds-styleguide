@@ -22,60 +22,75 @@ function onYouTubeIframeAPIReady() {
 
 CRDS.JumbotronVideoPlayer = function(jumbotronEl) {
   this.jumbotronEl = jumbotronEl;
-  this.playerContainerEl = this.jumbotronEl.querySelector('.bg-video-player');
-  this.playerId = 'video-player-' + Math.random().toString(36).substr(2, 10);
+  this.bgPlayerContainerEl = this.jumbotronEl.querySelector('.bg-video-player');
+  this.bgPlayerId = 'video-player-' + Math.random().toString(36).substr(2, 10);
 
-  this.playerEl = document.createElement('div');
-  this.playerEl.setAttribute('id', this.playerId);
-  this.playerContainerEl.appendChild(this.playerEl)
+  this.bgPlayerEl = document.createElement('div');
+  this.bgPlayerEl.setAttribute('id', this.bgPlayerId);
+  this.bgPlayerContainerEl.appendChild(this.bgPlayerEl);
 
-  this.videoId = this.jumbotronEl.getAttribute('data-video-id');
-  if (!this.videoId) {
+  this.bgVideoId = this.jumbotronEl.getAttribute('data-video-id');
+  if (!this.bgVideoId) {
     throw 'data-player-id is required on the jumbotron containing element.';
   }
 
   this.preloaderContainerEl = this.jumbotronEl.querySelector('.preloader-wrapper');
   this.preloaderEl = this.jumbotronEl.querySelector('.preloader');
-  this.videoTrigger = this.jumbotronEl.querySelector('.video-trigger');
+  this.inlineVideoTrigger = this.jumbotronEl.querySelector('.video-trigger');
+  this.inlineVideoId = this.inlineVideoTrigger.getAttribute('data-video-id') ||
+                       this.bgVideoId;
 
-  this.playerVars = {
+  this.inlinePlayerContainerEl = this.jumbotronEl.querySelector('.inline-video-player');
+  this.inlinePlayerId = 'video-player-' + Math.random().toString(36).substr(2, 10);
+  this.inlinePlayerEl = document.createElement('div');
+  this.inlinePlayerEl.setAttribute('id', this.inlinePlayerId);
+  this.inlinePlayerContainerEl.appendChild(this.inlinePlayerEl);
+
+  this.bgPlayerVars = {
     autoplay: 1,
     controls: 0,
     modestbranding: 1,
     loop: 1,
     playsinline: 1,
     showinfo: 0,
-    playlist: this.videoId // See: https://stackoverflow.com/a/25781957/2241124
-  }
+    playlist: this.bgVideoId // See: https://stackoverflow.com/a/25781957/2241124
+  };
 
-  return this.initVideo();
+  this.inlinePlayerVars = {
+    autoplay: 0,
+    controls: 1,
+    modestbranding: 1,
+    showinfo: 0
+  };
+
+  return this.initBgVideo();
 };
 
 CRDS.JumbotronVideoPlayer.prototype.constructor = CRDS.JumbotronVideoPlayer;
 
-CRDS.JumbotronVideoPlayer.prototype.initVideo = function() {
+CRDS.JumbotronVideoPlayer.prototype.initBgVideo = function() {
   var _this = this;
-  this.player = new YT.Player(this.playerId, {
-    videoId: this.videoId,
-    playerVars: this.playerVars,
+  this.bgPlayer = new YT.Player(this.bgPlayerId, {
+    videoId: this.bgVideoId,
+    playerVars: this.bgPlayerVars,
     events: {
       onReady: function(event) {
-        _this.onVideoReady(event);
+        _this.onBgVideoReady(event);
       },
       onStateChange: function(event) {
-        _this.onVideoStateChange(event);
+        _this.onBgVideoStateChange(event);
       }
     }
   });
   this.bindEvents();
 };
 
-CRDS.JumbotronVideoPlayer.prototype.onVideoReady = function(event) {
+CRDS.JumbotronVideoPlayer.prototype.onBgVideoReady = function(event) {
   this.resizePlayer();
   event.target.mute();
 };
 
-CRDS.JumbotronVideoPlayer.prototype.onVideoStateChange = function(event) {
+CRDS.JumbotronVideoPlayer.prototype.onBgVideoStateChange = function(event) {
   if (event.data == YT.PlayerState.PLAYING) {
     this.preloaderContainerEl.classList.add('loaded');
   } else {
@@ -96,12 +111,12 @@ CRDS.JumbotronVideoPlayer.prototype.resizePlayer = function() {
         newHeight = width / ratio;
 
     // Resize the player.
-    this.player.setSize(newWidth, newHeight);
+    this.bgPlayer.setSize(newWidth, newHeight);
 
     // The player's container should sit at the left,
     // and at half of its excess height.
-    this.playerContainerEl.style.left = 0;
-    this.playerContainerEl.style.top = -((newHeight - height) / 2) + 'px';
+    this.bgPlayerContainerEl.style.left = 0;
+    this.bgPlayerContainerEl.style.top = -((newHeight - height) / 2) + 'px';
   }
   // If the player is higher than the aspect ratio
   else {
@@ -111,12 +126,12 @@ CRDS.JumbotronVideoPlayer.prototype.resizePlayer = function() {
         newWidth = height * ratio;
 
     // Resize the player.
-    this.player.setSize(newWidth, newHeight);
+    this.bgPlayer.setSize(newWidth, newHeight);
 
     // The player's container should sit at the top,
     // and at half of its excess width.
-    this.playerContainerEl.style.top = 0;
-    this.playerContainerEl.style.left = -((newWidth - width) / 2) + 'px';
+    this.bgPlayerContainerEl.style.top = 0;
+    this.bgPlayerContainerEl.style.left = -((newWidth - width) / 2) + 'px';
   };
 };
 
@@ -127,20 +142,41 @@ CRDS.JumbotronVideoPlayer.prototype.bindEvents = function() {
     _this.resizePlayer();
   }, true);
 
-  this.videoTrigger.addEventListener('click', function(event) {
+  this.inlineVideoTrigger.addEventListener('click', function(event) {
     event.preventDefault();
-    _this.playForegroundVideo();
+    _this.playInlineVideo();
   }, true);
 };
 
-CRDS.JumbotronVideoPlayer.prototype.playForegroundVideo = function() {
-  var embedEl = document.createElement('iframe'),
-      src = 'https://www.youtube.com/embed/' + this.videoId + '?autoplay=1';
-
-  embedEl.setAttribute('class', 'video-full-size');
-  embedEl.setAttribute('src', src);
-  embedEl.setAttribute('frameborder', '0');
-
-  this.jumbotronEl.appendChild(embedEl);
+CRDS.JumbotronVideoPlayer.prototype.initInlineVideo = function() {
+  var _this = this;
+  this.inlinePlayer = new YT.Player(this.inlinePlayerId, {
+    videoId: this.inlineVideoId,
+    playerVars: this.inlinePlayerVars,
+    events: {
+      onReady: function(event) {
+        _this.playInlineVideo(event);
+      },
+      onStateChange: function(event) {
+        _this.onInlineVideoStateChange(event);
+      }
+    }
+  });
   return true;
+};
+
+
+CRDS.JumbotronVideoPlayer.prototype.playInlineVideo = function() {
+  if (!this.inlinePlayer) {
+    this.initInlineVideo();
+    return true;
+  }
+  this.inlinePlayerContainerEl.classList.add('active');
+  this.inlinePlayer.playVideo;
+};
+
+CRDS.JumbotronVideoPlayer.prototype.onInlineVideoStateChange = function(event) {
+  if (event.data == YT.PlayerState.ENDED) {
+    this.inlinePlayerContainerEl.classList.remove('active');
+  }
 };
