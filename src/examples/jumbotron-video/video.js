@@ -146,6 +146,12 @@ CRDS.JumbotronVideoPlayer.prototype.bindEvents = function() {
     event.preventDefault();
     _this.playInlineVideo();
   }, true);
+
+  var closeTrigger = this.inlinePlayerContainerEl.querySelector('.close-video');
+  closeTrigger.addEventListener('click', function(event) {
+    event.preventDefault();
+    _this.stopInlineVideo();
+  }, true);
 };
 
 CRDS.JumbotronVideoPlayer.prototype.initInlineVideo = function() {
@@ -165,18 +171,22 @@ CRDS.JumbotronVideoPlayer.prototype.initInlineVideo = function() {
   return true;
 };
 
-
 CRDS.JumbotronVideoPlayer.prototype.playInlineVideo = function() {
   if (!this.inlinePlayer) {
     this.initInlineVideo();
     return true;
   }
   this.inlinePlayerContainerEl.classList.add('active');
-  this.inlinePlayer.playVideo;
+  this.inlinePlayer.playVideo();
+};
+
+CRDS.JumbotronVideoPlayer.prototype.stopInlineVideo = function() {
+  this.inlinePlayerContainerEl.classList.remove('active');
+  this.inlinePlayer.stopVideo();
 };
 
 CRDS.JumbotronVideoPlayer.prototype.onInlineVideoStateChange = function(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    this.inlinePlayerContainerEl.classList.remove('active');
+    this.stopInlineVideo();
   }
 };
