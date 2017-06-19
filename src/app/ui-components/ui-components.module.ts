@@ -108,6 +108,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
 /* jumbotrons */
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
+/* modals */
+import { VideoModalsComponent } from './video-modals/video-modals.component';
+
 /* fauxdals */
 import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
@@ -223,9 +226,11 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
     /* jumbotrons */
     JumbotronsComponent,
 
-    /* fauxdals */
-    FauxdalsComponent,
+    /* modals */
+    VideoModalsComponent, 
 
+    /* fauxdals */
+    FauxdalsComponent
   ]
 })
 export class UiComponentsModule { }
