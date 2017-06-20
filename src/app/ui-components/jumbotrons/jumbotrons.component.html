@@ -72,12 +72,41 @@
     </p>
 
     <p>
-      If the background video has a <code>.video-trigger</code> anchor, clicking
-      it will trigger creating an embedded player on top of the jumbotron
-      content.
+      In this example, the script uses a <code>data-video-id</code> attribute
+      on the container to know which video to load in the background.
+    </p>
+
+    <p>
+      This example also shows an icon that triggers a video to play inline with
+      the container, covering the content. This is also done using the YouTube
+      Iframe API and a <code>data-video-id</code> attribute on the trigger.
     </p>
 
     <ddk-example height="450" id="jumbotron-video"></ddk-example>
+
+    <h3 class="component-header">
+      Sizes
+    </h3>
+
+    <p>
+      You can adjust the height of the jumbotron by adding a sizing class, as
+      shown below.
+    </p>
+
+    <ddk-example>
+<div class="jumbotron jumbotron-sm">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-md">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-lg">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-xl">
+  <h1 class="title">the main heading</h1>
+</div>
+    </ddk-example>
 
   </div>
 </div>
