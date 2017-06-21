@@ -34,8 +34,8 @@ CRDS.JumbotronVideoPlayer = function(jumbotronEl) {
     throw 'data-player-id is required on the jumbotron containing element.';
   }
 
-  this.preloaderContainerEl = this.jumbotronEl.querySelector('.preloader-wrapper');
-  this.preloaderEl = this.jumbotronEl.querySelector('.preloader');
+  this.preloaderContainerEl = this.jumbotronEl.querySelector('.inline-preloader-wrapper');
+  this.preloaderEl = this.jumbotronEl.querySelector('.inline-preloader');
   this.inlineVideoTrigger = this.jumbotronEl.querySelector('.video-trigger');
   this.inlineVideoId = this.inlineVideoTrigger.getAttribute('data-video-id') ||
                        this.bgVideoId;
