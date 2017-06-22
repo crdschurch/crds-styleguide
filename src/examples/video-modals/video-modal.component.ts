@@ -11,13 +11,22 @@ export class VideoModalComponent implements OnInit {
   @Input() buttonText: string;
 
   public videoSrc: any;
+  public url: string;
 
   constructor(public sanitizer: DomSanitizer) {
     this.sanitizer = sanitizer;
   }
 
   ngOnInit() {
-    let url = `https://www.youtube.com/embed/${this.videoId}`;
-    this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.url = `https://www.youtube.com/embed/${this.videoId}`;
+    this.setVideoSrc();
+  }
+
+  public setVideoSrc() {
+    this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.url);
+  }
+
+  public clearVideoSrc() {
+    this.videoSrc = this.sanitizer.bypassSecurityTrustResourceUrl('');
   }
 }
