@@ -14,6 +14,7 @@ export class IconService {
     'circle-thin',
     'close',
     'contrast',
+    'close-thin',
     'download',
     'equalizer',
     'facebook',
