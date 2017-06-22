@@ -42,6 +42,7 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* feedback */
@@ -161,6 +162,7 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
     MarginComponent,
     PaddingComponent,
     TextComponent,
+    ButtonUtilitiesComponent,
     VerticalPositioningComponent,
 
     /* feedback */
@@ -227,7 +229,7 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
     JumbotronsComponent,
 
     /* modals */
-    VideoModalsComponent, 
+    VideoModalsComponent,
 
     /* fauxdals */
     FauxdalsComponent
