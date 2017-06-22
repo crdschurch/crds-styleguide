@@ -13,6 +13,7 @@ export class IconService {
     'chevron-up',
     'circle-thin',
     'contrast',
+    'close-thin',
     'download',
     'facebook',
     'github',
