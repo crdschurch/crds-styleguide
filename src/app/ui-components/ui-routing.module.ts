@@ -31,6 +31,7 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* Feedback */
@@ -171,6 +172,10 @@ const uiRoutes: Routes = [
           {
             path: 'text',
             component: TextComponent
+          },
+          {
+            path: 'buttons',
+            component: ButtonUtilitiesComponent
           },
           {
             path: 'vertical-positioning',
