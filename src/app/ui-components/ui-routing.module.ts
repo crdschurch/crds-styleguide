@@ -31,6 +31,7 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* Feedback */
@@ -84,11 +85,20 @@ import { CardsTypesComponent } from './cards/types/types.component';
 import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
 
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
 /* jumbotrons */
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
+/* modals */
+import { VideoModalsComponent } from './video-modals/video-modals.component';
+
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
 const uiRoutes: Routes = [
   {
@@ -162,6 +172,10 @@ const uiRoutes: Routes = [
           {
             path: 'text',
             component: TextComponent
+          },
+          {
+            path: 'buttons',
+            component: ButtonUtilitiesComponent
           },
           {
             path: 'vertical-positioning',
@@ -367,6 +381,18 @@ const uiRoutes: Routes = [
       {
         path: 'jumbotrons',
         component: JumbotronsComponent
+      },
+      {
+        path: 'video-modals',
+        component: VideoModalsComponent
+      },
+      {
+        path: 'fauxdals',
+        component: FauxdalsComponent
+      },
+      {
+        path: 'countdown',
+        component: CountdownComponent
       }
     ]
   }
