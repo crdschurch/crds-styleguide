@@ -10,8 +10,11 @@ import {Component} from '@angular/core';
       <accordion-group #group>
         <div accordion-heading>
           I can have markup, too!
-          <i class="pull-right float-xs-right glyphicon"
-            [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+          <i class="pull-right float-xs-right">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+            </svg>
+          </i>
         </div>
         This is just some content to illustrate fancy headings.
       </accordion-group>
