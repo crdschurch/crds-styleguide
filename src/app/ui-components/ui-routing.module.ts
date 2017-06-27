@@ -100,6 +100,9 @@ import { VideoModalsComponent } from './video-modals/video-modals.component';
 /* fauxdals */
 import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
+/* fauxdals */
+import { AccordionComponent } from './accordion/accordion.component';
+
 const uiRoutes: Routes = [
   {
     path: 'ui',
@@ -393,6 +396,10 @@ const uiRoutes: Routes = [
       {
         path: 'countdown',
         component: CountdownComponent
+      },
+      {
+        path: 'accordion',
+        component: AccordionComponent
       }
     ]
   }

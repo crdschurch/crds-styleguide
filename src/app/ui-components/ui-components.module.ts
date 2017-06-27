@@ -115,6 +115,9 @@ import { VideoModalsComponent } from './video-modals/video-modals.component';
 /* fauxdals */
 import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
+/* accordions */
+import { AccordionComponent } from './accordion/accordion.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -232,7 +235,10 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
     VideoModalsComponent,
 
     /* fauxdals */
-    FauxdalsComponent
+    FauxdalsComponent,
+
+    /* accordions */
+    AccordionComponent
   ]
 })
 export class UiComponentsModule { }
