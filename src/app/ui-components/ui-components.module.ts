@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { TabsModule, DatepickerModule, ButtonsModule } from 'ng2-bootstrap';
+import { TabsModule, DatepickerModule, ButtonsModule, AccordionModule } from 'ng2-bootstrap';
 
 import { AppModule } from '../app.module';
 import { UiComponentsComponent } from './ui-components.component';
@@ -126,6 +126,7 @@ import { AccordionComponent } from './accordion/accordion.component';
     TabsModule,
     DatepickerModule.forRoot(),
     ButtonsModule.forRoot(),
+    AccordionModule.forRoot(),
     ExampleModule,
     ContentBlockModule
   ],
