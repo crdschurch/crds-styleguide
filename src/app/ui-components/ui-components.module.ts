@@ -42,6 +42,7 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 /* feedback */
@@ -99,11 +100,20 @@ import { CardsTypesComponent } from './cards/types/types.component';
 import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
 import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
 
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
 /* jumbotrons */
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
+/* modals */
+import { VideoModalsComponent } from './video-modals/video-modals.component';
+
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
 @NgModule({
   imports: [
@@ -152,6 +162,7 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
     MarginComponent,
     PaddingComponent,
     TextComponent,
+    ButtonUtilitiesComponent,
     VerticalPositioningComponent,
 
     /* feedback */
@@ -202,6 +213,9 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
     /* sign in */
     SignInComponent,
 
+    /* countdown */
+    CountdownComponent,
+
     /* avatar groups */
     AvatarGroupsComponent,
 
@@ -213,6 +227,12 @@ import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
     /* jumbotrons */
     JumbotronsComponent,
+
+    /* modals */
+    VideoModalsComponent,
+
+    /* fauxdals */
+    FauxdalsComponent
   ]
 })
 export class UiComponentsModule { }
