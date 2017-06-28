@@ -20,6 +20,7 @@ export class IconService {
     'facebook',
     'github',
     'instagram',
+    'map-marker',
     'menu',
     'play-thin',
     'question-circle',
