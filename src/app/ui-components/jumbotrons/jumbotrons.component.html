@@ -76,13 +76,33 @@
       on the container to know which video to load in the background.
     </p>
 
+    <ddk-example height="550" id="jumbotron-bg-video"></ddk-example>
+
+    <h3 class="component-header">
+      Inline Video
+    </h3>
+
     <p>
-      This example also shows an icon that triggers a video to play inline with
-      the container, covering the content. This is also done using the YouTube
-      Iframe API and a <code>data-video-id</code> attribute on the trigger.
+      While you could use a button to open a video modal within a jumbotron,
+      you can also play the video inline. This example uses an
+      <code>.inline-video</code> selector, and builds out an implementation
+      using the
+      <a href="https://developers.google.com/youtube/iframe_api_reference">
+        YouTube IFrame API.
+      </a>
     </p>
 
-    <ddk-example height="450" id="jumbotron-video"></ddk-example>
+    <p>
+      Here we use a <code>data-video-id</code> attribute on the video trigger
+      to know which video to load in the foreground.
+    </p>
+
+    <p>
+      This example also shows how you can close the inline player automatically
+      when the video ends, or using the close icon.
+    </p>
+
+    <ddk-example height="550" id="jumbotron-inline-video"></ddk-example>
 
     <h3 class="component-header">
       Sizes
