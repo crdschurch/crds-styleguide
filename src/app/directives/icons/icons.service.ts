@@ -17,6 +17,7 @@ export class IconService {
     'close-thin',
     'download',
     'equalizer',
+    'exclamation-circle',
     'facebook',
     'github',
     'instagram',
