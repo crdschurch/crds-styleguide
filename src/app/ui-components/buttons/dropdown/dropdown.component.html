@@ -1,18 +1,116 @@
 <h2 class="page-header">Dropdown Menus</h2>
 
- <h3 class="component-header">Using NGX Bootstrap</h3>
+<h3 class="component-header">Button with Open Menu</h3>
+
+<ddk-example>
+<div class="dropdown open">
+  <button class="btn btn-primary dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+  <ul class="crds-list dropdown-menu">
+    <li>
+      <a href="#">Action</a>
+    </li>
+    <li>
+      <a href="#">Another action</a>
+    </li>
+    <li>
+      <a href="#">Something else here</a>
+    </li>
+  </ul>
+</div>
+<br><br><br><br><br><br>
+</ddk-example>
+
+<h3 class="component-header">Solid Buttons</h3>
+
+<ddk-example>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-secondary dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-gray dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-option dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Outlined Buttons</h3>
+
+<ddk-example>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-outline btn-primary dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-outline btn-secondary dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-outline btn-gray dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown">
+  <button dropdownToggle type="button" class="btn btn-outline btn-option dropdown-toggle">
+    Button dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Working Example</h3>
 
 <p>
   The example below shows an Angular implementation using the NGX Bootstrap
   library.
 </p>
 
-<ddk-example id="button-dropdown" height="200"></ddk-example>
+<div class="alert alert-info" role="alert">
+  The dropdown behavior requires the inclusion of
+  <a href="http://valor-software.com/ngx-bootstrap/#/"
+     target="_blank" class="alert-link">NGX Bootstrap</a> - an external
+  resource used to create Bootstrap-like elements in Angular 2 applications.
+</div>
 
-<!-- <ddk-example>
-  <a href="#" class="btn btn-primary">Link</a>
-  <button class="btn btn-secondary" type="submit">Button</button>
-  <input class="btn btn-gray" type="button" value="Input">
-  <button class="btn btn-option">Option</button>
-  <input class="btn btn-default" type="submit" value="Submit">
-</ddk-example> -->
+<ddk-example id="button-dropdown" height="200"></ddk-example>
