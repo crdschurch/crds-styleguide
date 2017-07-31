@@ -47,7 +47,6 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
-import { ButtonDropdownComponent } from './buttons/dropdown/dropdown.component';
 
 /* icons */
 import { IconsComponent } from './icons/icons.component';
@@ -208,10 +207,6 @@ const uiRoutes: Routes = [
           {
             path: 'groups',
             component: ButtonGroupsComponent
-          },
-          {
-            path: 'dropdown',
-            component: ButtonDropdownComponent
           }
         ]
       },
