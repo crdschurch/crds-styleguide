@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, ElementRef, Renderer, OnInit } from '@ang
 import { Router, NavigationEnd } from '@angular/router';
 
 declare var imgix: any;
+declare var svg4everybody: any;
 
 @Component({
   selector: 'app-root',
@@ -45,7 +46,10 @@ export class AppComponent implements OnInit {
 
       // Initialize any data-src references in current route that haven't been already processed by Imgix
       imgix.init();
+
+      svg4everybody();
     });
   }
+
 
 }
