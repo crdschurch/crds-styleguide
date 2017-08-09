@@ -13,6 +13,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { ExampleModule } from '../shared/example/example.module';
+import { JumbotronComponent } from '../shared/jumbotron/jumbotron.component';
 
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
@@ -56,7 +57,6 @@ import { LoadersComponent } from './loaders/loaders.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
-import { ButtonsJumbotronComponent } from './buttons/jumbotron/jumbotron.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
@@ -139,6 +139,8 @@ import { AccordionComponent } from './accordion/accordion.component';
     SearchBarComponent,
     ComponentListComponent,
 
+    JumbotronComponent,
+
     /* typography */
     TypographyComponent,
     TypefacesComponent,
@@ -181,7 +183,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 
     /* buttons */
     ButtonsComponent,
-    ButtonsJumbotronComponent,
     ButtonStylesComponent,
     ButtonSizesComponent,
     ButtonGroupsComponent,
