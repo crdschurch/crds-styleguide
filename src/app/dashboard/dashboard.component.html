@@ -1,13 +1,100 @@
-<div class="container">
-  <div class="page-header">
-    <h1><crds-content-block id="dashboardTitle"></crds-content-block></h1>
-  </div>
-  <crds-content-block id="dashboardIntroCopy"></crds-content-block>
-  <br>
-  <hr>
+<!-- <crds-content-block id="ddkHomepage" (contentLoaded)="loadImages()"></crds-content-block> -->
+
+<div class="jumbotron jumbotron-xl" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-jumbotron.png?w=1400&fit=crop&crop=entropy&ixlib=js-1.0.6');">
+  <h1 class="title">digital design kit</h1>
   <p>
-    <a routerLink="/designers" class="btn btn-lg btn-primary">For Designers</a>&nbsp;&nbsp;
-    <a routerLink="/developers" class="btn btn-lg btn-info">For Developers</a>&nbsp;&nbsp;
+    a style guide for creating digital things
   </p>
-  <br><br>
+</div>
+
+<div class="container text-center soft-top">
+  <div class="row soft-top">
+    <div class="col-md-8 col-md-offset-2">
+      <h3 class="text-gray-dark">who's this for anyways</h3>
+      <p class="font-size-base text-gray-dark">Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Eius, natus. Id animi labore, explicabo
+      consectetur unde sed quaerat.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container push-top">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-designers.jpg?fit=clip&w=100&h=100&auto=compress,format">
+        <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Designers</h4>
+        <p class="card-text text-gray-dark">
+          Check out the <a href="/designers/intro">intro</a> or dig into topics
+          like <a href="/designers/copy-voice">copy tone</a> or
+          <a href="/designers/prototyping">prototyping</a>.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-developers.jpg?fit=clip&w=100&h=100&auto=compress,format">
+        <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Designers</h4>
+        <p class="card-text text-gray-dark">
+          <a href="/developers/getting-started">Get started</a> with the big
+          picture or dig into the juicy details of
+          <a href="/developers/installation">installation</a> or
+          <a href="/developers/naming-conventions">naming conventions</a>.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-anyone.jpg?fit=clip&w=100&h=100&auto=compress,format">
+        <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Designers</h4>
+        <p class="card-text text-gray-dark">
+          Maybe you just need an <a href="/assets/logos">official logo</a>,
+          <a href="/ui/colors/swatches">color</a> or direction on
+          <a href="/designers/photography">picking a photo</a> for a
+          presentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-cyan-dark text-center soft-ends">
+  <div class="container bg-contain-image push-ends" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-components-bg.png?w=1400&fit=crop&crop=entropy&ixlib=js-1.0.6');">
+    <div class="row soft-ends">
+      <div class="col-md-6 col-md-offset-3 soft-ends">
+        <h2 class="text-white font-family-condensed-extra text-uppercase flush-top">
+          UI Components
+        </h2>
+        <p class="font-family-base-light">Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. In deleniti, cupiditate laborum asperiores
+        molestias hic ea ipsam quo, deserunt est voluptas perferendis autem eius
+        commodi quia, similique rerum enim veniam.</p>
+        <ul class="list-unstyled push-top">
+          <li>Recent additions:</li>
+          <li><a class="text-cyan-light" href="/ui/forms/timepicker">Forms / Timepicker</a></li>
+          <li><a class="text-cyan-light" href="/ui/accordion">Accordion</a></li>
+          <li><a class="text-cyan-light" href="/ui/video-modals">Video Modals</a></li>
+        </ul>
+
+        <div class="push-top flush-bottom">
+          <p>Know it by name?</p>
+          <p>Search form will go here ...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center soft-ends">
+  <div class="row soft-ends">
+    <div class="col-md-8 col-md-offset-2">
+      <h3 class="text-gray-dark">feature request? bug?</h3>
+      <p class="font-size-base text-gray-dark">Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Eius, natus. Id animi labore, explicabo
+      consectetur unde sed quaerat.</p>
+      <a href="https://github.com/crdschurch/crds-styles/issues/new" target="_blank" class="btn btn-primary">
+        Ask questions via GitHub
+      </a>
+    </div>
+  </div>
 </div>
