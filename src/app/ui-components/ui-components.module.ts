@@ -13,7 +13,7 @@ import { ComponentListComponent } from './component-list/component-list.componen
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { ExampleModule } from '../shared/example/example.module';
-import { JumbotronComponent } from '../shared/jumbotron/jumbotron.component';
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
 
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
@@ -129,6 +129,7 @@ import { AccordionComponent } from './accordion/accordion.component';
     ButtonsModule.forRoot(),
     AccordionModule.forRoot(),
     ExampleModule,
+    JumbotronModule,
     ContentBlockModule
   ],
   exports: [
@@ -138,8 +139,6 @@ import { AccordionComponent } from './accordion/accordion.component';
     UiComponentsComponent,
     SearchBarComponent,
     ComponentListComponent,
-
-    JumbotronComponent,
 
     /* typography */
     TypographyComponent,
