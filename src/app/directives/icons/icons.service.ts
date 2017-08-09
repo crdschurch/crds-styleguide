@@ -21,6 +21,7 @@ export class IconService {
     'facebook',
     'github',
     'instagram',
+    'link',
     'map-marker',
     'menu',
     'play-thin',
