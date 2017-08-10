@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
+
 import { DeveloperRoutingModule } from './developers-routing.module';
 
 import { DevelopersComponent } from './developers.component';
@@ -15,6 +17,7 @@ import { ThirdPartyToolsModule } from './third-party-tools/third-party-tools.mod
 @NgModule({
   imports: [
     CommonModule,
+    JumbotronModule,
     DeveloperRoutingModule,
     ContentBlockModule,
     GettingStartedModule,
