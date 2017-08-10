@@ -1,70 +1,58 @@
-<div class="page-header">
-  <h2>States</h2>
-</div>
+<h2 class="page-header">States</h2>
 
 <p>Validation states are a great way to provide visual feedback when filling out a form. Angular can use the <code>ngModel</code> directive to track the state and validity of the form.</p>
 
 <div class="alert alert-info" role="alert">Documentation for Angular 2 form validation can be found <a href="https://angular.io/docs/ts/latest/guide/forms.html" target="_blank" class="alert-link">here</a>.</div>
 
-<div class="page-subheader">
-  <h3>Input Field &mdash; Focus</h3>
-</div>
+<h3 class="component-header">Input Field &mdash; Focus</h3>
 
 <p>The following code example uses custom styles to demonstrate the <code>:focus</code> state on a <code>.form-control</code> element.</p>
 
-<div class="crds-example">
-  <div class="form-group">
-    <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control focus-example">
-  </div>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control focus-example">
 </div>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Input Field &mdash; Valid</h3>
-</div>
+<h3 class="component-header">Input Field &mdash; Valid</h3>
 
 <p>A valid input field is determined by the class <code>.ng-valid</code>. Validation is checked after a user has touched that field (indicated by the class <code>.ng-touched</code>).</p>
 
-<div class="crds-example">
-  <div class="form-group">
-    <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-valid" value="joe@dirt.com">
-  </div>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-valid" value="joe@dirt.com">
 </div>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Input Field &mdash; Invalid</h3>
-</div>
+<h3 class="component-header">Input Field &mdash; Invalid</h3>
 
 <p>An invalid state on an input field is determined by the <code>.ng-invalid</code> class. Validation is checked after a user has touched that field (indicated by the class <code>.ng-touched</code>).</p>
 
-<div class="crds-example">
-  <div class="form-group">
-    <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-invalid" value="larry@">
-  </div>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-invalid" value="larry@">
 </div>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Input Field &mdash; Invalid with Error Message</h3>
-</div>
+<h3 class="component-header">Input Field &mdash; Invalid with Error Message</h3>
 
-<div class="crds-example">
-  <div class="form-group">
-    <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-invalid" value="larry@">
-    <p class="error help-block">Email address required</p>
-  </div>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control ng-touched ng-invalid" value="larry@">
+  <p class="error help-block">Email address required</p>
 </div>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Input Field &mdash; Default with Helper Text</h3>
-</div>
+<h3 class="component-header">Input Field &mdash; Default with Helper Text</h3>
 
-<div class="crds-example">
-  <div class="form-group">
-    <label for="email" class="sr-only">Email</label>
-    <input type="email" name="email" value="" placeholder="Email" class="form-control">
-    <p class="help-block">Separate additional addresses with a comma</p>
-  </div>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control">
+  <p class="help-block">Separate additional addresses with a comma</p>
 </div>
+</ddk-example>

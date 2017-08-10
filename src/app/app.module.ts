@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +10,7 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/boot
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
+import { ExampleModule } from './shared/example/example.module';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +19,7 @@ import { DevelopersModule } from './developers/developers.module';
 import { UiComponentsModule } from './ui-components/ui-components.module';
 
 import { AssetsModule } from './assets/assets.module';
-import { LogoComponent } from './assets/logo/logo.component';
+import { LogosComponent } from './assets/logos/logos.component';
 
 import { SearchComponent } from './shared/search/search.component';
 
@@ -37,6 +39,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     HttpModule,
     CollapseModule,
@@ -45,6 +48,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     UiComponentsModule,
     AssetsModule,
     AppRoutingModule,
+    ExampleModule,
     ContentBlockModule.forRoot({ endpoint: process.env.CRDS_CMS_ENDPOINT, categories: Array('ddk') })
   ],
   exports: [

@@ -1,9 +1,13 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 var helpers = require('./helpers');
 var Dotenv = require('dotenv-webpack');
+var fs = require('fs');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var pry = require('pryjs');
+var glob = require('glob');
 
 module.exports = {
   entry: {
@@ -66,15 +70,56 @@ module.exports = {
 
     new CopyWebpackPlugin([
       {
-      from: 'src/assets',
-      to: 'assets',
+        from: 'src/assets',
+        to: 'assets',
+      },
+      {
+        from: 'src/examples',
+        to: 'examples',
       },
       {
         context: './node_modules/crds-styles/assets/svgs/',
         from: '*.svg',
         to: 'assets/svgs'
+      },
+      {
+        from: 'node_modules/imgix.js/dist/imgix.min.js',
+        to: 'vendor/js/'
       }
-    ], { ignore: ['mock-data/*'] })
+    ]),
+
+    new HtmlWebpackIncludeAssetsPlugin({
+      assets: [
+        'vendor/js/imgix.min.js'
+      ],
+      append: false,
+      hash: true
+    }),
+
+    // Update all ./dist/examples/*.html files to reflect /app.[hash].css
+    function() {
+      this.plugin("done", function(stats) {
+
+        let hash = stats.hash,
+            examples = glob.sync(
+              `${stats.compilation.compiler.outputPath}/examples/**/index.html`
+            );
+
+        // Loop through & edit each example...
+        for (let example of examples) {
+          fs.readFile(example, 'utf8', function (err, data) {
+            if (err) return console.log(err);
+
+            if (data.includes('/app.css')) {
+              let newContent = data.replace(/\/app\.css/g, `/app.${hash}.css"`);
+              fs.writeFile(example, newContent, 'utf8', function (err) {
+                if (err) return console.log(err);
+              });
+            }
+          });
+        };
+      });
+    }
 
   ]
 };

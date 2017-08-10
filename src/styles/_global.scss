@@ -1,7 +1,8 @@
 h1 {
   .page-header &,
-  .jumbotron & {
-    @extend .font-family-base-light;
+  .jumbotron.ddk & {
+    font-family: $base-font-face;
+    font-weight: 100;
   }
 }
 
@@ -22,6 +23,20 @@ aside > nav {
     .list-group-item {
       background: darken($cr-gray-dark, 15);
       border-color: darken($cr-gray-dark, 20);
+
+      &.active,
+      &.active:hover,
+      &.active:focus {
+        background: $cr-gray-darker;
+        border-color: $cr-gray-darker;
+      }
+    }
+  }
+
+  .inverted & {
+    .list-group-item {
+      background: rgba($cr-gray-dark, .4);
+      border-color: rgba($cr-gray-dark, .4);
 
       &.active,
       &.active:hover,
@@ -62,6 +77,28 @@ body.dark-theme {
   }
 }
 
+.breadcrumb {
+  .inverted & {
+    background: rgba($cr-white, .6);
+
+    a {
+      color: $cr-gray-light;
+
+      &:hover {
+        color: darken($cr-gray-light, 30);
+      }
+    }
+
+    > li + li:before {
+      color: darken($cr-gray-dark, 30);
+    }
+
+    > .active {
+      color: darken($cr-gray-dark, 30);
+    }
+  }
+}
+
 .page-header {
   &:first-child {
     &, h2 {
@@ -96,78 +133,28 @@ body.dark-theme {
   font-weight: 600;
 }
 
-.jumbotron {
+.jumbotron.ddk {
   margin-bottom: 3em;
+  color: $cr-gray-dark;
+  text-align: left;
   .dark-theme & {
     background: $cr-gray-darker;
     border-bottom: 1px solid darken($cr-gray-dark, 10);
   }
-}
 
-code {
-  .dark-theme & {
-    background: $cr-gray;
-    color: $cr-gray-darker;
+  .inverted & {
+    background: rgba($cr-white, .2);
   }
 }
 
-.crds-example {
-  position: relative;
-  border: 1px solid;
-  margin-top: 1em;
-  margin-bottom: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+.link-download {
+  text-decoration: none;
 
-  &, & + figure.highlight > pre {
-    border-color: $cr-gray-lighter;
-    padding: 1.25em;
+  & span:last-child {
+    vertical-align: middle;
   }
 
-
-  .dark-theme & {
-    &, & + figure.highlight > pre {
-      border-color: darken($cr-gray-dark, 10);
-    }
-  }
-
-  &:not(.crds-text-example) {
-    padding-top: 3.25em;
-    &:after {
-      content: 'Example';
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 90%;
-      position: absolute;
-      top: 1.25em;
-      left: 1.5em;
-      color: $gray-light;
-    }
-  }
-
-  &[data-label]:after {
-    content: attr(data-label);
-  }
-
-  & + figure.highlight > pre {
-    margin-top: 0;
-    border-top: none;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    padding-left: 2em;
-  }
-
-  .typeface-example & {
-    border-radius: 5px;
-    font-size: 160%;
-    word-wrap: break-word;
-    &::after {
-      @extend .font-family-base-bold;
-      font-style: normal;
-      font-size: 56%;
-      position: absolute;
-      top: 2.25em;
-      left: 2.5em;
-    }
+  &:hover {
+    text-decoration: none;
   }
 }

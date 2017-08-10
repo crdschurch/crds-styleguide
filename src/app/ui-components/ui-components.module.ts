@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { TabsModule, DatepickerModule, ButtonsModule } from 'ng2-bootstrap';
+import { TabsModule, DatepickerModule, ButtonsModule, AccordionModule } from 'ng2-bootstrap';
 
 import { AppModule } from '../app.module';
 import { UiComponentsComponent } from './ui-components.component';
@@ -12,12 +12,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
-import { CardsComponent } from './cards/cards.component';
-import { SidebarNavComponent } from './cards/sidebar-nav/sidebar-nav.component';
-import { BasicComponent } from './cards/basic/basic.component';
-import { VariationsComponent } from './cards/variations/variations.component';
-import { NoImageComponent } from './cards/no-image/no-image.component';
-import { VideoComponent } from './cards/video/video.component';
+import { ExampleModule } from '../shared/example/example.module';
 
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
@@ -35,6 +30,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -46,15 +42,17 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
-/* alerts */
-import { AlertsComponent } from './alerts/alerts.component';
+/* feedback */
+import { FeedbackComponent } from './feedback/feedback.component';
+import { FeedbackJumbotronComponent } from './feedback/jumbotron/jumbotron.component';
+import { AlertsComponent } from './feedback/alerts/alerts.component';
+import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
-import { LoaderIconsComponent } from './loaders/icons/icons.component';
-import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -81,14 +79,45 @@ import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/controls/form-controls.component';
 import { FormStatesComponent } from './forms/states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/groups/groups.component';
+
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
 
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
 import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
+
+/* media objects */
+import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* cards */
+import { CardsComponent } from './cards/cards.component';
+import { CardsTypesComponent } from './cards/types/types.component';
+import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
+import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
+
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
+
+/* jumbotrons */
+import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
+/* modals */
+import { VideoModalsComponent } from './video-modals/video-modals.component';
+
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
+/* accordions */
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
   imports: [
@@ -98,6 +127,8 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     TabsModule,
     DatepickerModule.forRoot(),
     ButtonsModule.forRoot(),
+    AccordionModule.forRoot(),
+    ExampleModule,
     ContentBlockModule
   ],
   exports: [
@@ -124,6 +155,7 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     SwatchesComponent,
     ColorOverridesComponent,
     ColorBackgroundsComponent,
+    ColorTextComponent,
 
     /* utility classes */
     UtilitiesComponent,
@@ -135,15 +167,17 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     MarginComponent,
     PaddingComponent,
     TextComponent,
+    ButtonUtilitiesComponent,
     VerticalPositioningComponent,
 
-    /* alerts */
+    /* feedback */
+    FeedbackComponent,
+    FeedbackJumbotronComponent,
     AlertsComponent,
+    ToastNotificationsComponent,
 
     /* loaders */
     LoadersComponent,
-    LoaderIconsComponent,
-    SkeletonBlocksComponent,
 
     /* buttons */
     ButtonsComponent,
@@ -170,21 +204,44 @@ import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
     FormControlsComponent,
     FormStatesComponent,
     FormDatepickerComponent,
+    FormTimepickerComponent,
     FormGroupsComponent,
     SearchFieldComponent,
 
     CardsComponent,
-    SidebarNavComponent,
-    BasicComponent,
-    VariationsComponent,
-    NoImageComponent,
-    VideoComponent,
+    CardsDecksComponent,
+    CardsTypesComponent,
+    CardsGridLayoutComponent,
+
+    /* labels */
+    LabelsComponent,
 
     /* sign in */
     SignInComponent,
 
+    /* countdown */
+    CountdownComponent,
+
     /* avatar groups */
-    AvatarGroupsComponent
+    AvatarGroupsComponent,
+
+    /* media objects */
+    MediaObjectsComponent,
+
+    /* media images */
+    MediaImgComponent,
+
+    /* jumbotrons */
+    JumbotronsComponent,
+
+    /* modals */
+    VideoModalsComponent,
+
+    /* fauxdals */
+    FauxdalsComponent,
+
+    /* accordions */
+    AccordionComponent
   ]
 })
 export class UiComponentsModule { }

@@ -7,6 +7,9 @@
   > li {
     position: static;
   }
+  a.active {
+    color: $cr-gray;
+  }
 }
 
 .navbar {
@@ -45,6 +48,11 @@
         color: $cr-cyan;
       }
     }
+
+    .inverted & {
+      background-color: rgba($cr-white, .6);
+      border-bottom: none;
+    }
   }
 
   @media (min-width: $screen-sm) {
@@ -72,6 +80,11 @@
         background: $cr-gray-darker;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.75);
       }
+
+      .inverted & {
+        background: #333333;
+        margin-top: 0;
+      }
     }
   }
 
@@ -82,6 +95,7 @@
 
 
 .mega-menu {
+
   &_title {
     padding-left: 15px;
     padding-right: 15px;
@@ -90,8 +104,14 @@
   &_inner {
     border: none;
     border-radius: 0;
-    padding: 1em 0 2em;
+    padding: 1em 0 4em;
     width: 100%;
+
+    .col-md-12 > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   &_list {
@@ -99,6 +119,10 @@
 
     @media (min-width: $screen-sm) {
       @include make-sm-column(4);
+    }
+
+    > p {
+      cursor: default;
     }
 
     ul {

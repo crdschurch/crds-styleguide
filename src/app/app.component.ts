@@ -1,15 +1,19 @@
-import { Component, ViewEncapsulation, AfterViewChecked, ElementRef, Renderer } from '@angular/core';
+import { Component, ViewEncapsulation, ElementRef, Renderer, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
-let Prism = require('prismjs');
+declare var imgix: any;
+declare var svg4everybody: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent implements AfterViewChecked {
+export class AppComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef, private renderer: Renderer) {
+  constructor(private elementRef: ElementRef,
+              private renderer: Renderer,
+              private router: Router) {
     this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
       if (event.target.closest('.crds-example')) {
         if (event.target.nodeName === 'A' || event.target.classList.contains('btn')) {
@@ -19,47 +23,33 @@ export class AppComponent implements AfterViewChecked {
     });
   }
 
-  ngAfterViewChecked() {
-    let examples = document.getElementsByClassName('crds-example');
-    for (let i = 0; i < examples.length; i++) {
-      if (!examples[i].getAttribute('data-processed')) {
-        this.buildExample(examples[i]);
+  public ngOnInit() {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
       }
-    }
 
-    let preformatted = document.querySelectorAll('.language-markup, .language-javascript');
+      /**
+       * This is an example of how we could track history if we want to don't
+       * want to scroll to the top of the page when going back to the previous
+       * page. It requires having a `routeHistory` array attribute on the class.
+       *
+       * this.routeHistory.push(evt.urlAfterRedirects);
+       * if (this.routeHistory.length > 3) {
+       *   this.routeHistory.splice(0, this.routeHistory.length - 3);
+       * }
+       * if (!this.routeHistory[2] || this.routeHistory[2] !== this.routeHistory[0]) {}
+       */
 
-    for (let j = 0; j < preformatted.length; j++) {
-      if (!preformatted[j].getAttribute('data-processed')) {
-        this.addSyntaxHighlighting(preformatted[j]);
-      }
-    }
+      // Scroll to the top of the page when on navigation change.
+      window.scrollTo(0, 0);
+
+      // Initialize any data-src references in current route that haven't been already processed by Imgix
+      imgix.init();
+
+      svg4everybody();
+    });
   }
 
-  private addSyntaxHighlighting(el) {
-    el.setAttribute('data-processed', 'true');
-    Prism.highlightElement(el);
-  }
 
-  private buildExample(el) {
-    if (el.getAttribute('data-processed')) {
-      return;
-    }
-    el.setAttribute('data-processed', 'true');
-
-    let html = el.innerHTML.replace(/^\n+|\n+$/g, '');
-    let node = document.createTextNode(html);
-    let pre = document.createElement('pre');
-        pre.classList.add('language-markup');
-        pre.appendChild(node);
-    let figure = document.createElement('figure');
-        figure.classList.add('highlight');
-        figure.appendChild(pre);
-    this.insertAfter(figure, el);
-    Prism.highlightElement(pre);
-  }
-
-  private insertAfter(newNode, referenceNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
 }

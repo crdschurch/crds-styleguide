@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UiComponentsComponent } from './ui-components.component';
 
-import { CardsComponent } from './cards/cards.component';
 import { ComponentListComponent } from './component-list/component-list.component';
 
 /* typography */
@@ -20,6 +19,7 @@ import { ColorsComponent } from './colors/colors.component';
 import { SwatchesComponent } from './colors/swatches/swatches.component';
 import { ColorOverridesComponent } from './colors/overrides/overrides.component';
 import { ColorBackgroundsComponent } from './colors/backgrounds/backgrounds.component';
+import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
@@ -31,15 +31,16 @@ import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
 import { TextComponent } from './utilities/text/text.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
-/* alerts */
-import { AlertsComponent } from './alerts/alerts.component';
+/* Feedback */
+import { FeedbackComponent } from './feedback/feedback.component';
+import { AlertsComponent } from './feedback/alerts/alerts.component';
+import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
 /* loaders */
 import { LoadersComponent } from './loaders/loaders.component';
-import { LoaderIconsComponent } from './loaders/icons/icons.component';
-import { SkeletonBlocksComponent } from './loaders/skeleton-blocks/skeleton-blocks.component';
 
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
@@ -63,14 +64,45 @@ import { FormsComponent } from './forms/forms.component';
 import { FormControlsComponent } from './forms/controls/form-controls.component';
 import { FormStatesComponent } from './forms/states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
+import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
 import { SearchFieldComponent } from './forms/search/search.component';
 import { FormGroupsComponent } from './forms/groups/groups.component';
+
+/* labels */
+import { LabelsComponent } from './labels/labels.component';
 
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
 
 /* avatar groups */
 import { AvatarGroupsComponent } from './avatar-groups/avatar-groups.component';
+
+/* media objects */
+import { MediaObjectsComponent } from './media-objects/media-objects.component';
+
+/* cards */
+import { CardsComponent } from './cards/cards.component';
+import { CardsTypesComponent } from './cards/types/types.component';
+import { CardsDecksComponent } from './cards/card-decks/card-decks.component';
+import { CardsGridLayoutComponent } from './cards/grid-layout/grid-layout.component';
+
+/* countdown */
+import { CountdownComponent } from './countdown/countdown.component';
+
+/* media images */
+import { MediaImgComponent } from './media-img/media-img.component';
+
+/* jumbotrons */
+import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
+
+/* modals */
+import { VideoModalsComponent } from './video-modals/video-modals.component';
+
+/* fauxdals */
+import { FauxdalsComponent } from './fauxdals/fauxdals.component';
+
+/* fauxdals */
+import { AccordionComponent } from './accordion/accordion.component';
 
 const uiRoutes: Routes = [
   {
@@ -101,6 +133,10 @@ const uiRoutes: Routes = [
           {
             path: 'backgrounds',
             component: ColorBackgroundsComponent
+          },
+          {
+            path: 'text',
+            component: ColorTextComponent
           }
         ]
       },
@@ -140,6 +176,10 @@ const uiRoutes: Routes = [
           {
             path: 'text',
             component: TextComponent
+          },
+          {
+            path: 'buttons',
+            component: ButtonUtilitiesComponent
           },
           {
             path: 'vertical-positioning',
@@ -202,27 +242,32 @@ const uiRoutes: Routes = [
         ]
       },
       {
-        path: 'alerts',
-        component: AlertsComponent
-      },
-      {
-        path: 'loaders',
-        component: LoadersComponent,
+        path: 'feedback',
+        component: FeedbackComponent,
         children: [
           {
             path: '',
-            redirectTo: 'icons',
+            redirectTo: 'alerts',
             pathMatch: 'full'
           },
           {
-            path: 'icons',
-            component: LoaderIconsComponent
+            path: 'alerts',
+            component: AlertsComponent
           },
           {
-            path: 'skeleton-blocks',
-            component: SkeletonBlocksComponent
+            path: 'toast-notifications',
+            component: ToastNotificationsComponent
           }
         ]
+      },
+      {
+        path: 'labels',
+        component: LabelsComponent
+      },
+
+      {
+        path: 'loaders',
+        component: LoadersComponent
       },
       {
         path: 'forms',
@@ -244,6 +289,10 @@ const uiRoutes: Routes = [
           {
             path: 'datepicker',
             component: FormDatepickerComponent
+          },
+          {
+            path: 'timepicker',
+            component: FormTimepickerComponent
           },
           {
             path: 'search',
@@ -300,7 +349,26 @@ const uiRoutes: Routes = [
       },
       {
         path: 'cards',
-        component: CardsComponent
+        component: CardsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'types',
+            pathMatch: 'full'
+          },
+          {
+            path: 'types',
+            component: CardsTypesComponent
+          },
+          {
+            path: 'grid-layout',
+            component: CardsGridLayoutComponent
+          },
+          {
+            path: 'card-decks',
+            component: CardsDecksComponent
+          }
+        ]
       },
       {
         path: 'sign-in',
@@ -310,6 +378,34 @@ const uiRoutes: Routes = [
         path: 'avatar-groups',
         component: AvatarGroupsComponent
       },
+      {
+        path: 'media-objects',
+        component: MediaObjectsComponent
+      },
+      {
+        path: 'media-images',
+        component: MediaImgComponent
+      },
+      {
+        path: 'jumbotrons',
+        component: JumbotronsComponent
+      },
+      {
+        path: 'video-modals',
+        component: VideoModalsComponent
+      },
+      {
+        path: 'fauxdals',
+        component: FauxdalsComponent
+      },
+      {
+        path: 'countdown',
+        component: CountdownComponent
+      },
+      {
+        path: 'accordion',
+        component: AccordionComponent
+      }
     ]
   }
 ];

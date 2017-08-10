@@ -1,13 +1,14 @@
-<div class="page-header">
-  <h2>Search Field</h2>
-</div>
+<h2 class="page-header">Search Fields</h2>
+
+<h3 class="component-header">Default Search</h3>
 
 <p>
   The search field uses input button groups. See
   <a routerLink="/ui/forms/groups">the groups docs</a> for more information.
 </p>
 
-<div class="crds-example">
+<ddk-example>
+<form class="searchbar">
   <div class="input-group">
     <input type="text" class="form-control" placeholder="Search ...">
     <span class="input-group-btn">
@@ -18,4 +19,39 @@
       </button>
     </span>
   </div>
-</div>
+</form>
+</ddk-example>
+
+<h3 class="component-header">Search with Clickable Addon</h3>
+
+<ddk-example>
+<form class="searchbar" action=".">
+  <div class="input-group">
+    <input class="form-control" type="search" placeholder="Search me">
+    <div class="searchbar-wrapper"></div>
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#close-thin" />
+        </svg>
+      </button>
+    </span>
+
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#equalizer" />
+        </svg>
+      </button>
+    </span>
+
+    <span class="input-group-btn">
+      <button class="btn btn-secondary" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#search" />
+        </svg>
+      </button>
+    </span>
+  </div>
+</form>
+</ddk-example>

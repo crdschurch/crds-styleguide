@@ -1,16 +1,12 @@
-<div class="page-header">
-  <h2>Groups</h2>
-</div>
+<h2 class="page-header">Groups</h2>
 
 <div class="alert alert-info">
   <p>For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank" class="alert-link">class binding</a>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank" class="alert-link">NgClass directive</a>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
 </div>
 
-<div class="page-subheader">
-  <h3>Button Group - Horizontal</h3>
-</div>
+<h3 class="component-header">Button Group - Horizontal</h3>
 
-<div class="crds-example" data-processed="true">
+<ddk-example>
   <div class="btn-group">
     <button *ngFor="let button of buttons"
             type="button"
@@ -18,22 +14,18 @@
             [class.active]="button === selectedButton"
             (click)="onSelect(button)">{{ button.label }}</button>
   </div>
-</div>
-<figure class="highlight">
-  <pre class="language-markup">
-&lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-option btn-outline">Option 1&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-outline">Option 2&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-outline">Option 3&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-outline">Option 4&lt;/button>
-&lt;/div></pre>
-</figure>
+  <pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-option btn-outline">Option 1</button>
+  <button type="button" class="btn btn-option btn-outline">Option 2</button>
+  <button type="button" class="btn btn-option btn-outline">Option 3</button>
+  <button type="button" class="btn btn-option btn-outline">Option 4</button>
+</div></pre>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Button Group - Vertical</h3>
-</div>
+<h3 class="component-header">Button Group - Vertical</h3>
 
-<div class="crds-example" data-processed="true">
+<ddk-example>
   <div class="btn-group-vertical">
     <button *ngFor="let button of verticalButtons"
             type="button"
@@ -41,22 +33,18 @@
             [class.active]="button === selectedButton"
             (click)="onSelect(button)">{{ button.label }}</button>
   </div>
-</div>
-<figure class="highlight">
-  <pre class="language-markup">
-&lt;div class="btn-group-vertical">
-  &lt;button type="button" class="btn btn-primary">First Option&lt;/button>
-  &lt;button type="button" class="btn btn-secondary">Second Option&lt;/button>
-  &lt;button type="button" class="btn btn-outline btn-gray">Third Option&lt;/button>
-  &lt;button type="button" class="btn btn-link btn-default">Fourth Option&lt;/button>
-&lt;/div></pre>
-</figure>
+  <pre>
+<div class="btn-group-vertical">
+  <button type="button" class="btn btn-primary">First Option</button>
+  <button type="button" class="btn btn-secondary">Second Option</button>
+  <button type="button" class="btn btn-outline btn-gray">Third Option</button>
+  <button type="button" class="btn btn-link btn-default">Fourth Option</button>
+</div></pre>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Flexbox Button Group - Horizontal</h3>
-</div>
+<h3 class="component-header">Flexbox Button Group - Horizontal</h3>
 
-<div class="crds-example" data-processed="true">
+<ddk-example>
   <div class="btn-group btn-group-row">
     <button *ngFor="let button of flexButtons"
             type="button"
@@ -64,24 +52,20 @@
             [class.active]="button === selectedButton"
             (click)="onSelect(button)">{{ button.label }}</button>
   </div>
-</div>
-<figure class="highlight">
-  <pre class="language-markup">
-&lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 1&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 2&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 3&lt;/button>
-  &lt;button type="button" class="btn btn-option btn-flex btn-outline">Option 4&lt;/button>
-&lt;/div></pre>
-</figure>
+  <pre>
+<div class="btn-group">
+  <button type="button" class="btn btn-option btn-flex btn-outline">Option 1</button>
+  <button type="button" class="btn btn-option btn-flex btn-outline">Option 2</button>
+  <button type="button" class="btn btn-option btn-flex btn-outline">Option 3</button>
+  <button type="button" class="btn btn-option btn-flex btn-outline">Option 4</button>
+</div></pre>
+</ddk-example>
 
-<div class="page-subheader">
-  <h3>Toggle Button Group</h3>
-</div>
+<h3 class="component-header">Toggle Button Group</h3>
 
 <div class="alert alert-info" role="alert">This button group component requires the inclusion of <a href="https://github.com/valor-software/ng2-bootstrap" target="_blank" class="alert-link">NG-2 Bootstrap</a> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <a href="http://valor-software.com/ng2-bootstrap/#/buttons#radio" target="_blank" class="alert-link">this documentation</a> when customizing this component.</div>
 
-<div class="crds-example" data-processed="true">
+<ddk-example>
   <div class="btn-group btn-group-toggle btn-group-teal">
     <label class="btn btn-option"
           [(ngModel)]="radioModel"
@@ -90,9 +74,7 @@
           [(ngModel)]="radioModel"
           btnRadio="option_b">Option B</label>
   </div>
-</div>
-<figure class="highlight">
-  <pre class="language-markup">
+  <pre>
 &lt;div class="btn-group btn-group-toggle btn-group-teal">
   &lt;label class="btn btn-option"
         &#91;(ngModel)]="radioModel"
@@ -101,4 +83,4 @@
         &#91;(ngModel)]="radioModel"
         btnRadio="option_b">Option B&lt;/label>
 &lt;/div></pre>
-</figure>
+</ddk-example>
