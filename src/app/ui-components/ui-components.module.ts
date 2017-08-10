@@ -35,7 +35,6 @@ import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
-import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
 import { BordersComponent } from './utilities/borders/borders.component';
 import { CornersComponent } from './utilities/corners/corners.component';
 import { DisplayComponent } from './utilities/display/display.component';
@@ -48,7 +47,6 @@ import { VerticalPositioningComponent } from './utilities/vertical-positioning/v
 
 /* feedback */
 import { FeedbackComponent } from './feedback/feedback.component';
-import { FeedbackJumbotronComponent } from './feedback/jumbotron/jumbotron.component';
 import { AlertsComponent } from './feedback/alerts/alerts.component';
 import { ToastNotificationsComponent } from './feedback/toast-notifications/toast-notifications.component';
 
@@ -71,11 +69,9 @@ import { IconColorsComponent } from './icons/colors/colors.component';
 
 /* tables */
 import { TablesComponent } from './tables/tables.component';
-import { TablesJumbotronComponent } from './tables/jumbotron/jumbotron.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
-import { FormsJumbotronComponent } from './forms/jumbotron/jumbotron.component';
 import { FormControlsComponent } from './forms/form-controls/form-controls.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
@@ -160,7 +156,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 
     /* utility classes */
     UtilitiesComponent,
-    UtilitiesJumbotronComponent,
     BordersComponent,
     CornersComponent,
     DisplayComponent,
@@ -173,7 +168,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 
     /* feedback */
     FeedbackComponent,
-    FeedbackJumbotronComponent,
     AlertsComponent,
     ToastNotificationsComponent,
 
@@ -196,11 +190,9 @@ import { AccordionComponent } from './accordion/accordion.component';
 
     /* tables */
     TablesComponent,
-    TablesJumbotronComponent,
 
     /* forms */
     FormsComponent,
-    FormsJumbotronComponent,
     FormControlsComponent,
     FormStatesComponent,
     FormDatepickerComponent,

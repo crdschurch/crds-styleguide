@@ -7,6 +7,8 @@ import { AppModule } from '../app.module';
 import { DesignersComponent } from './designers.component';
 import { DesignersRoutingModule } from './designers-routing.module';
 
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
+
 /* guidelines */
 import { GuidelinesComponent } from './guidelines/guidelines.component';
 import { IntroComponent } from './guidelines/intro/intro.component';
@@ -26,7 +28,8 @@ import { ResponsiveWebDesignComponent } from './getting-started/responsive-web-d
   imports: [
     CommonModule,
     DesignersRoutingModule,
-    ContentBlockModule
+    ContentBlockModule,
+    JumbotronModule
   ],
   exports: [
     DesignersComponent

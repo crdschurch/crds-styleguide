@@ -23,7 +23,6 @@ import { ColorTextComponent } from './colors/text/text.component';
 
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
-import { UtilitiesJumbotronComponent } from './utilities/jumbotron/jumbotron.component';
 import { BordersComponent } from './utilities/borders/borders.component';
 import { CornersComponent } from './utilities/corners/corners.component';
 import { DisplayComponent } from './utilities/display/display.component';

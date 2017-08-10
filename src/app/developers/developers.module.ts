@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { ExampleModule } from '../shared/example/example.module';
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
 
 import { DeveloperRoutingModule } from './developers-routing.module';
 import { DevelopersComponent } from './developers.component';
@@ -30,6 +31,7 @@ import { MapsComponent } from './maps/maps.component';
     CommonModule,
     DeveloperRoutingModule,
     ExampleModule,
+    JumbotronModule,
     ContentBlockModule
   ],
   declarations: [
