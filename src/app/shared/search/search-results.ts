@@ -1,258 +1,495 @@
 export const SEARCH_RESULTS = [
   {
-    'url': '/ui/typography/address/',
-    'name': 'Address'
+    'path': 'ui-components/accordion',
+    'name': 'Accordion',
+    'headings': []
   },
   {
-    'url': '/ui/alerts/',
-    'name': 'Alerts'
+    'path': 'ui-components/typography/address',
+    'name': 'Address',
+    'headings': []
   },
   {
-    'url': '/ui/avatar-groups/',
-    'name': 'Avatar Groups'
+    'path': 'ui-components/feedback/alerts',
+    'name': 'Alerts',
+    'headings': []
   },
   {
-    'url': '/ui/colors/backgrounds/',
-    'name': 'Backgrounds'
+    'path': 'ui-components/avatar-groups',
+    'name': 'Avatar Groups',
+    'headings': []
   },
   {
-    'url': '/ui/cards/basic/',
-    'name': 'Basic'
+    'path': 'ui-components/colors/backgrounds',
+    'name': 'Backgrounds',
+    'headings': []
   },
   {
-    'url': '/ui/typography/blockquote/',
-    'name': 'Blockquote'
+    'path': 'ui-components/typography/blockquote',
+    'name': 'Blockquote',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/borders/',
-    'name': 'Borders'
+    'path': 'ui-components/utilities/borders',
+    'name': 'Borders',
+    'headings': []
   },
   {
-    'url': '/ui/buttons/',
-    'name': 'Buttons'
+    'path': 'developers/built-on-bootstrap',
+    'name': 'Built On Bootstrap',
+    'headings': []
   },
   {
-    'url': '/ui/cards/',
-    'name': 'Cards'
+    'path': 'ui-components/buttons',
+    'name': 'Buttons',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/color-usage/',
-    'name': 'Color Usage'
+    'path': 'ui-components/utilities/buttons',
+    'name': 'Buttons',
+    'headings': []
   },
   {
-    'url': '/ui/colors/',
-    'name': 'Colors'
+    'path': 'ui-components/cards/card-decks',
+    'name': 'Card Decks',
+    'headings': [
+      'Default Card Deck',
+      'Card Deck Carousel'
+    ]
   },
   {
-    'url': '/ui/icons/colors/',
-    'name': 'Colors'
+    'path': 'ui-components/cards',
+    'name': 'Cards',
+    'headings': []
   },
   {
-    'url': '/ui/component-list/',
-    'name': 'Component List'
+    'path': 'developers/coding-style',
+    'name': 'Coding Style',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/copy-voice/',
-    'name': 'Copy Voice'
+    'path': 'designers/guidelines/color-usage',
+    'name': 'Color Usage',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/corners/',
-    'name': 'Corners'
+    'path': 'ui-components/icons/colors',
+    'name': 'Colors',
+    'headings': []
   },
   {
-    'url': '/ui/icons/css-svg/',
-    'name': 'Css Svg'
+    'path': 'ui-components/colors',
+    'name': 'Colors',
+    'headings': []
   },
   {
-    'url': '/ui/forms/datepicker/',
-    'name': 'Datepicker'
+    'path': 'ui-components/component-list',
+    'name': 'Component List',
+    'headings': [
+      '{{ component.heading }}'
+    ]
   },
   {
-    'url': '/ui/icons/directory/',
-    'name': 'Directory'
+    'path': 'developers/contribution-tips',
+    'name': 'Contribution Tips',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/display/',
-    'name': 'Display'
+    'path': 'designers/guidelines/copy-voice',
+    'name': 'Copy Voice',
+    'headings': []
   },
   {
-    'url': '/ui/typography/font-scaling/',
-    'name': 'Font Scaling'
+    'path': 'ui-components/utilities/corners',
+    'name': 'Corners',
+    'headings': []
   },
   {
-    'url': '/ui/forms/controls/',
-    'name': 'Form Controls'
+    'path': 'ui-components/countdown',
+    'name': 'Countdown',
+    'headings': [
+      'Countdown (Time)',
+      'Countdown (Live)'
+    ]
   },
   {
-    'url': '/ui/forms/states/',
-    'name': 'Form States'
+    'path': 'developers/css-sass',
+    'name': 'Css Sass',
+    'headings': []
   },
   {
-    'url': '/ui/forms/',
-    'name': 'Forms'
+    'path': 'ui-components/icons/css-svg',
+    'name': 'Css Svg',
+    'headings': [
+      'CSS SVG Icons'
+    ]
   },
   {
-    'url': '/designers/getting-started/',
-    'name': 'Getting Started'
+    'path': 'developers/custom-npm-packages',
+    'name': 'Custom Npm Packages',
+    'headings': []
   },
   {
-    'url': '/ui/forms/groups/',
-    'name': 'Groups'
+    'path': 'ui-components/forms/datepicker',
+    'name': 'Datepicker',
+    'headings': []
   },
   {
-    'url': '/ui/buttons/groups/',
-    'name': 'Groups'
+    'path': 'designers',
+    'name': 'Designers',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/',
-    'name': 'Guidelines'
+    'path': 'developers',
+    'name': 'Developers',
+    'headings': []
   },
   {
-    'url': '/ui/loaders/icons/',
-    'name': 'Icons'
+    'path': 'ui-components/icons/directory',
+    'name': 'Directory',
+    'headings': []
   },
   {
-    'url': '/ui/icons/',
-    'name': 'Icons'
+    'path': 'ui-components/utilities/display',
+    'name': 'Display',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/images/',
-    'name': 'Images'
+    'path': 'ui-components/fauxdals',
+    'name': 'Fauxdals',
+    'headings': [
+      'Fauxdals'
+    ]
   },
   {
-    'url': '/ui/icons/inline-svg/',
-    'name': 'Inline Svg'
+    'path': 'ui-components/feedback',
+    'name': 'Feedback',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/intro/',
-    'name': 'Intro'
+    'path': 'developers/file-structure',
+    'name': 'File Structure',
+    'headings': []
   },
   {
-    'url': '/ui/typography/lists/',
-    'name': 'Lists'
+    'path': 'ui-components/typography/font-scaling',
+    'name': 'Font Scaling',
+    'headings': []
   },
   {
-    'url': '/ui/loaders/',
-    'name': 'Loaders'
+    'path': 'ui-components/forms/controls',
+    'name': 'Form Controls',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/logos/',
-    'name': 'Logos'
+    'path': 'ui-components/forms/states',
+    'name': 'Form States',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/margin/',
-    'name': 'Margin'
+    'path': 'ui-components/forms',
+    'name': 'Forms',
+    'headings': []
   },
   {
-    'url': '/designers/getting-started/mobile-first/',
-    'name': 'Mobile First'
+    'path': 'designers/getting-started',
+    'name': 'Getting Started',
+    'headings': []
   },
   {
-    'url': '/ui/cards/no-image/',
-    'name': 'No Image'
+    'path': 'developers/getting-started',
+    'name': 'Getting Started',
+    'headings': []
   },
   {
-    'url': '/ui/colors/overrides/',
-    'name': 'Overrides'
+    'path': 'developers/grid',
+    'name': 'Grid',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/padding/',
-    'name': 'Padding'
+    'path': 'ui-components/cards/grid-layout',
+    'name': 'Grid Layout',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/photography/',
-    'name': 'Photography'
+    'path': 'ui-components/buttons/groups',
+    'name': 'Groups',
+    'headings': []
   },
   {
-    'url': '/designers/getting-started/prototyping/',
-    'name': 'Prototyping'
+    'path': 'ui-components/forms/groups',
+    'name': 'Groups',
+    'headings': []
   },
   {
-    'url': '/ui/icons/resize-svg/',
-    'name': 'Resize Svg'
+    'path': 'designers/guidelines',
+    'name': 'Guidelines',
+    'headings': []
   },
   {
-    'url': '/designers/getting-started/responsive-web-design/',
-    'name': 'Responsive Web Design'
+    'path': 'ui-components/icons',
+    'name': 'Icons',
+    'headings': []
   },
   {
-    'url': '/ui/forms/search/',
-    'name': 'Search'
+    'path': 'ui-components/utilities/images',
+    'name': 'Images',
+    'headings': []
   },
   {
-    'url': '/ui/search-bar/',
-    'name': 'Search Bar'
+    'path': 'developers/imgix',
+    'name': 'Imgix',
+    'headings': []
   },
   {
-    'url': '/ui/cards/sidebar-nav/',
-    'name': 'Sidebar Nav'
+    'path': 'ui-components/icons/inline-svg',
+    'name': 'Inline Svg',
+    'headings': []
   },
   {
-    'url': '/ui/sign-in/',
-    'name': 'Sign In'
+    'path': 'developers/installation',
+    'name': 'Installation',
+    'headings': []
   },
   {
-    'url': '/ui/buttons/sizes/',
-    'name': 'Sizes'
+    'path': 'designers/guidelines/intro',
+    'name': 'Intro',
+    'headings': []
   },
   {
-    'url': '/ui/loaders/skeleton-blocks/',
-    'name': 'Skeleton Blocks'
+    'path': 'ui-components/jumbotrons',
+    'name': 'Jumbotrons',
+    'headings': [
+      'Jumbotrons',
+      'Default',
+      'Background Image',
+      'Background Video',
+      'Inline Video',
+      'Sizes'
+    ]
   },
   {
-    'url': '/ui/buttons/styles/',
-    'name': 'Styles'
+    'path': 'ui-components/labels',
+    'name': 'Labels',
+    'headings': [
+      'Labels'
+    ]
   },
   {
-    'url': '/ui/colors/swatches/',
-    'name': 'Swatches'
+    'path': 'ui-components/typography/lists',
+    'name': 'Lists',
+    'headings': []
   },
   {
-    'url': '/ui/tables/',
-    'name': 'Tables'
+    'path': 'ui-components/loaders',
+    'name': 'Loaders',
+    'headings': [
+      'Initial Load'
+    ]
   },
   {
-    'url': '/ui/utilities/text/',
-    'name': 'Text'
+    'path': 'assets/logos',
+    'name': 'Logos',
+    'headings': [
+      'Logos',
+      'Crossroads Word Mark',
+      'Screwhead Logo'
+    ]
   },
   {
-    'url': '/ui/typography/typefaces/',
-    'name': 'Typefaces'
+    'path': 'designers/guidelines/logos',
+    'name': 'Logos',
+    'headings': []
   },
   {
-    'url': '/ui/typography/typesetting/',
-    'name': 'Typesetting'
+    'path': 'developers/maps',
+    'name': 'Maps',
+    'headings': [
+      'Labels'
+    ]
   },
   {
-    'url': '/ui/typography/',
-    'name': 'Typography'
+    'path': 'ui-components/utilities/margin',
+    'name': 'Margin',
+    'headings': []
   },
   {
-    'url': '/designers/guidelines/typography/',
-    'name': 'Typography'
+    'path': 'ui-components/media-img',
+    'name': 'Media Img',
+    'headings': [
+      'Media Images',
+      'Media Image - Default',
+      'Media Image - Overlay',
+      'Media Image - Sizing'
+    ]
   },
   {
-    'url': '/ui/typography/typography-list/',
-    'name': 'Typography List'
+    'path': 'ui-components/media-objects',
+    'name': 'Media Objects',
+    'headings': [
+      'Media Objects',
+      'Default Media Object',
+      'Media Header Alignment'
+    ]
   },
   {
-    'url': '/ui/utilities/',
-    'name': 'Utilities'
+    'path': 'designers/getting-started/mobile-first',
+    'name': 'Mobile First',
+    'headings': []
   },
   {
-    'url': '/ui/cards/variations/',
-    'name': 'Variations'
+    'path': 'developers/naming-conventions',
+    'name': 'Naming Conventions',
+    'headings': []
   },
   {
-    'url': '/ui/utilities/vertical-positioning/',
-    'name': 'Vertical Positioning'
+    'path': 'ui-components/colors/overrides',
+    'name': 'Overrides',
+    'headings': []
   },
   {
-    'url': '/ui/cards/video/',
-    'name': 'Video'
+    'path': 'ui-components/utilities/padding',
+    'name': 'Padding',
+    'headings': []
   },
   {
-    'url': '/ui/typography/web-fonts/',
-    'name': 'Web Fonts'
+    'path': 'designers/guidelines/photography',
+    'name': 'Photography',
+    'headings': []
+  },
+  {
+    'path': 'designers/getting-started/prototyping',
+    'name': 'Prototyping',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/icons/resize-svg',
+    'name': 'Resize Svg',
+    'headings': []
+  },
+  {
+    'path': 'designers/getting-started/responsive-web-design',
+    'name': 'Responsive Web Design',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/forms/search',
+    'name': 'Search',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/search-bar',
+    'name': 'Search Bar',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/sign-in',
+    'name': 'Sign In',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/buttons/sizes',
+    'name': 'Sizes',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/buttons/styles',
+    'name': 'Styles',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/colors/swatches',
+    'name': 'Swatches',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/tables',
+    'name': 'Tables',
+    'headings': [
+      'Table',
+      'Schedule Table'
+    ]
+  },
+  {
+    'path': 'ui-components/colors/text',
+    'name': 'Text',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/utilities/text',
+    'name': 'Text',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/forms/timepicker',
+    'name': 'Timepicker',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/feedback/toast-notifications',
+    'name': 'Toast Notifications',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/typography/typefaces',
+    'name': 'Typefaces',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/cards/types',
+    'name': 'Types',
+    'headings': [
+      'Default Card',
+      'Card with Overlapping Header',
+      'Card with Caption Label',
+      'Cards and Utility Classes'
+    ]
+  },
+  {
+    'path': 'ui-components/typography/typesetting',
+    'name': 'Typesetting',
+    'headings': []
+  },
+  {
+    'path': 'designers/guidelines/typography',
+    'name': 'Typography',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/typography',
+    'name': 'Typography',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/typography/typography-list',
+    'name': 'Typography List',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/utilities',
+    'name': 'Utilities',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/utilities/vertical-positioning',
+    'name': 'Vertical Positioning',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/video-modals',
+    'name': 'Video Modals',
+    'headings': [
+      'Video Modals'
+    ]
+  },
+  {
+    'path': 'developers/web-fonts',
+    'name': 'Web Fonts',
+    'headings': []
+  },
+  {
+    'path': 'ui-components/typography/web-fonts',
+    'name': 'Web Fonts',
+    'headings': []
   }
 ];
