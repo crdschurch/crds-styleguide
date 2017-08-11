@@ -26,7 +26,33 @@
   }
 
   ul a {
-    display: inline-block;
+    display: block;
     padding: 0.5rem 1rem;
+    transition: background-color 0.25s ease;
+
+    &:hover {
+      text-decoration: none;
+      background-color: rgba($cr-gray-lighter, 0.45);
+    }
+
+    .breadcrumbs {
+      display: block;
+      color: gray;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    span.breadcrumbs > span {
+      display: inline-block;
+      margin-right: 0.25rem;
+      &:after {
+        display: inline-block;
+        margin-left: 0.25rem;
+        content: '/';
+      }
+      &:last-child:after {
+        content: none;
+      }
+    }
   }
 }

@@ -6,8 +6,11 @@
   <ul class="list-unstyled">
     <li [ngClass]="{ hide: !result.active }"
         *ngFor="let result of _searchResults">
-      <a routerLink="{{ result.url }}" class="font-size-large">
-        {{ result.name }}
+      <a routerLink="{{ result.path }}" class="font-size-large">
+        <span class="component-name">{{ result.name }}</span>
+        <span class="breadcrumbs">
+          <span *ngFor="let crumb of result.breadcrumbs">{{ crumb }}</span>
+        </span>
       </a>
     </li>
   </ul>

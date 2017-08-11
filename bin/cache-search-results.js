@@ -62,6 +62,7 @@ CRDS.SearchResults.prototype.fileLoop = function(files) {
     this.readFile(file, (err, data) => {
       this.results.push({
         path: url.toFriendlyDDK(),
+        breadcrumbs: url.breadcrumbs(),
         name: url.componentName(),
         headings: this.headings(data)
       });
@@ -98,21 +99,9 @@ CRDS.SearchResults.prototype.writeFile = function() {
 
 // ------------------------------------------------- | Helpers
 
-// CRDS.SearchResults.prototype.getSegmentFromUrl = function(segment) {
-//   switch (segment) {
-//     case 'ui-components':
-//       return 'ui';
-//   }
-//   return segment;
-// }
-
 CRDS.SearchResults.prototype.sortByName = function(a, b) {
-  if (a.name < b.name) {
-    return -1;
-  }
-  if (a.name > b.name) {
-    return 1;
-  }
+  if (a.name < b.name) { return -1 }
+  if (a.name > b.name) { return 1 }
   return 0;
 }
 
@@ -145,6 +134,11 @@ URL.prototype.ignored = function(ignoredDirs) {
 
 URL.prototype.toFriendlyDDK = function() {
   return this.segments().slice(2, this.segments().length - 1).join('/');
+}
+
+URL.prototype.breadcrumbs = function() {
+  var segments = this.toFriendlyDDK().split('/')
+  return segments.slice(0, segments.length - 1);
 }
 
 // ------------------------------------------------- | Monkeypatches
