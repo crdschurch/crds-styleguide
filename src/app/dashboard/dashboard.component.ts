@@ -10,6 +10,10 @@ export class DashboardComponent {
 
   public loadImages() {
     imgix.init();
+
+    let searchForm = document.getElementById('ddk-homepage-search-form');
+    let container = document.getElementById('ddk-home-search-placeholder');
+    container.appendChild(searchForm);
   }
 
 }

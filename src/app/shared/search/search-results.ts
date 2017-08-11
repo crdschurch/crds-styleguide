@@ -123,18 +123,18 @@ export const SEARCH_RESULTS = [
     'headings': []
   },
   {
-    'path': 'ui-components/colors',
+    'path': 'ui-components/icons/colors',
     'breadcrumbs': [
-      'ui-components'
+      'ui-components',
+      'icons'
     ],
     'name': 'Colors',
     'headings': []
   },
   {
-    'path': 'ui-components/icons/colors',
+    'path': 'ui-components/colors',
     'breadcrumbs': [
-      'ui-components',
-      'icons'
+      'ui-components'
     ],
     'name': 'Colors',
     'headings': []
@@ -735,18 +735,18 @@ export const SEARCH_RESULTS = [
     'headings': []
   },
   {
-    'path': 'designers/guidelines/typography',
+    'path': 'ui-components/typography',
     'breadcrumbs': [
-      'designers',
-      'guidelines'
+      'ui-components'
     ],
     'name': 'Typography',
     'headings': []
   },
   {
-    'path': 'ui-components/typography',
+    'path': 'designers/guidelines/typography',
     'breadcrumbs': [
-      'ui-components'
+      'designers',
+      'guidelines'
     ],
     'name': 'Typography',
     'headings': []
@@ -788,18 +788,18 @@ export const SEARCH_RESULTS = [
     ]
   },
   {
-    'path': 'ui-components/typography/web-fonts',
+    'path': 'developers/web-fonts',
     'breadcrumbs': [
-      'ui-components',
-      'typography'
+      'developers'
     ],
     'name': 'Web Fonts',
     'headings': []
   },
   {
-    'path': 'developers/web-fonts',
+    'path': 'ui-components/typography/web-fonts',
     'breadcrumbs': [
-      'developers'
+      'ui-components',
+      'typography'
     ],
     'name': 'Web Fonts',
     'headings': []
