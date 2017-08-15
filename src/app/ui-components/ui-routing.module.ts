@@ -105,7 +105,7 @@ import { AccordionComponent } from './accordion/accordion.component';
 
 const uiRoutes: Routes = [
   {
-    path: 'ui',
+    path: 'ui-components',
     component: UiComponentsComponent,
     children: [
       {

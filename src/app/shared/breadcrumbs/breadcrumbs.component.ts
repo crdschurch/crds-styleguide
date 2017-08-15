@@ -21,7 +21,7 @@ export class BreadcrumbsComponent implements OnInit {
     url.split('/').forEach((segment) => {
       if (segment) {
         path += '/' + segment;
-        this.urlSegments.push({ path: path, label: segment });
+        this.urlSegments.push({ path: path, label: segment.replace('-', ' ') });
       }
     });
     this.urlSegments.splice(-1, 1);
