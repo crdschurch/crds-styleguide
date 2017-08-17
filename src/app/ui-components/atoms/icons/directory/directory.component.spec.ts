@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { IconDirectoryComponent } from './directory.component';
-import { IconService } from '../../../directives/icons/icons.service';
+import { IconService } from '../../../../directives/icons/icons.service';
 
 describe('Component: IconDirectory', () => {
 

@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { IconService } from '../../../directives/icons/icons.service';
+import { IconService } from '../../../../directives/icons/icons.service';
 
 @Component({
-  templateUrl: './inline-svg.component.html',
+  templateUrl: './css-svg.component.html',
   providers: [IconService]
 })
-
-export class IconInlineComponent implements OnInit {
+export class IconCssComponent implements OnInit {
 
   icons = [];
 
