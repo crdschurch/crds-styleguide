@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { UiComponentsComponent } from './ui-components.component';
 
-import { ComponentListComponent } from './component-list/component-list.component';
+import { MoleculesComponent } from './molecules.component';
 
 /* sign-in */
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -34,14 +34,15 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 /* fauxdals */
 import { AccordionComponent } from './accordion/accordion.component';
 
-const uiRoutes: Routes = [
+const learnMoreRoutes: Routes = [
   {
-    path: 'ui-components',
-    component: UiComponentsComponent,
+    path: 'ui-components/molecules',
+    component: MoleculesComponent,
     children: [
       {
         path: '',
-        component: ComponentListComponent
+        redirectTo: 'cards',
+        pathMatch: 'full'
       },
       {
         path: 'cards',
@@ -104,10 +105,10 @@ const uiRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(uiRoutes)
+    RouterModule.forRoot(learnMoreRoutes)
   ],
   exports: [
     RouterModule
   ]
 })
-export class UiRoutingModule {}
+export class MoleculesRoutingModule {}

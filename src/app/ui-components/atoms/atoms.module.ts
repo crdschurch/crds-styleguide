@@ -56,7 +56,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
 @NgModule({
   imports: [
     AtomsRoutingModule,
-    ButtonsModule,
+    ButtonsModule.forRoot(),
     CommonModule,
     ContentBlockModule,
     ExampleModule,
