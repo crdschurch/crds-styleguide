@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './media-objects.component.html'
 })
 
-export class MediaObjectsComponent {
-}
+export class MediaObjectsComponent {}
