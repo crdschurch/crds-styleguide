@@ -26,6 +26,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
 /* icons */
 import { IconsComponent } from './icons/icons.component';
@@ -67,6 +68,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
     AlertsComponent,
     AtomsComponent,
     ButtonGroupsComponent,
+    ButtonPlacementComponent,
     ButtonsComponent,
     ButtonSizesComponent,
     ButtonStylesComponent,
