@@ -1,13 +1,11 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse"
-        data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <a class="mobile-nav-trigger collapsed" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <svg class="icon icon-1" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#menu"></use>
+        </svg>
+      </a>
       <theme-toggle-switch class="visible-xs-block"></theme-toggle-switch>
 
       <a class="logo-ddk" routerLink="/">
