@@ -15,6 +15,8 @@
 
 .navbar {
   margin-bottom: 0;
+  border-bottom: none;
+
   h3 {
     font-size: 2rem;
   }
@@ -92,6 +94,8 @@
   .open > .dropdown-toggle > .icon {
     transform: rotate(-180deg);
   }
+
+  .mobile-nav-trigger {}
 }
 
 
@@ -148,4 +152,20 @@
 
 .navbar-brand svg {
   @include size(8.125rem, 1.1875rem);
+}
+
+.theme-toggle-switch,
+.mobile-nav-trigger {
+  color: $cr-gray;
+  float: right;
+  padding: 10px 15px 15px;
+
+  &:hover {
+    color: darken($cr-gray, 10);
+  }
+
+  .dark-theme & {
+    color: $cr-white;
+    border-left: 1px solid darken($cr-gray-dark, 10);
+  }
 }
