@@ -1,1 +1,33 @@
-<crds-content-block id="DevelopersGetStarted"></crds-content-block>
+<ddk-jumbotron id="ddkDevelopersGettingStartedJumbotron"></ddk-jumbotron>
+
+<div class="container">
+  <div class="component">
+    <aside>
+      <nav>
+        <ul class="list-group">
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/intro">What is the DDK?</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/installation">Installation</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/coding-style">Coding Style</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/file-structure">File Structure</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/naming-conventions">Naming Conventions</a>
+          </li>
+          <li routerLinkActive="active" class="list-group-item">
+            <a routerLink="/developers/getting-started/contribution-tips">Contribution Tips</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

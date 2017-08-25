@@ -1,0 +1,5 @@
+<ol class="breadcrumb ddk">
+  <li *ngFor="let segment of urlSegments">
+    <a [routerLink]="segment.path">{{segment.label}}</a>
+  </li>
+</ol>

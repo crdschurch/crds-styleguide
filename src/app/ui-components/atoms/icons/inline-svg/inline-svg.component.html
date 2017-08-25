@@ -1,0 +1,20 @@
+<h2 class="page-header">Icon Usage</h2>
+
+<p>SVG icons use the combination of <code>&lt;svg&gt;</code> and
+<code>&lt;use&gt;</code> elements. The icon is dictated by the name after the
+hash in the <code>&lt;use&gt;</code> element's <code>href</code>. You can
+view the options in the <a routerLink="/ui-components/icons/directory">icon directory</a>.</p>
+
+<p>It's imperative that you include the <code>viewBox</code> attribute as shown below.</p>
+
+<div class="alert alert-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</div>
+
+<div class="row">
+  <div class="col-sm-6" *ngFor="let icon of icons">
+    <ddk-example>
+<svg class="icon" viewBox="0 0 256 256">
+  <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
+</svg>
+    </ddk-example>
+  </div>
+</div>

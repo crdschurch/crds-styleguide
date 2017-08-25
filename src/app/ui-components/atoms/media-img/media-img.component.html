@@ -1,0 +1,85 @@
+<ddk-jumbotron id="MediaImgHeader"></ddk-jumbotron>
+
+<div class="container">
+  <div class="col-sm-offset-0 col-md-offset-3">
+    <h2 class="page-header">Media Images</h2>
+
+    <p>Media images are used with the <a href="/ui-components/media-objects" target="_blank">media objects</a> component.</p>
+
+    <p>This element works by overlaying two <code>.media-object</code> divs directly atop one another. If an overlay image exists, it replaces the default image. Conversely, if there an overlay image doesn't exist or its url is invalid, the default image with appear.</p>
+
+    <h3 class="component-header">Media Image - Default</h3>
+
+    <p>If no overlay image has been uploaded, the <code>.media-img-wrapper</code> will show the default image associated with <code>.media-object-default</code>.</p>
+
+    <ddk-example>
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('[some url here]');"></div>
+  </div>
+</div>
+    </ddk-example>
+
+    <h3 class="component-header">Media Image - Overlay</h3>
+
+    <p>Overlay images are created using an inline style setting the <code>background-image</code> of that object. The class <code>.media-object-overlay</code> positions the image.</p>
+
+    <p>The class <code>.media-object-overlay</code> positions the overlay image.</p>
+
+    <ddk-example>
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+</div>
+    </ddk-example>
+
+    <h3 class="component-header">Media Image - Sizing</h3>
+
+    <p>Image sizing can be manipulated using the class <code>.img-size-*</code>, where <code>*</code> can be any number 1 - 6. Note that both <code>.media-object</code> divs <strong>must</strong> have the same sizing class applied.</p>
+
+    <ddk-example>
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-1 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-1 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-2 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-2 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-3 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-3 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-4 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-4 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-5 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-5 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://eonli.ne/2qMPd1b');"></div>
+  </div>
+</div>
+    </ddk-example>
+  </div>
+</div>
