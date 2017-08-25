@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   templateUrl: './guidelines.component.html'
 })
 
-export class GuidelinesComponent {
-}
+export class GuidelinesComponent {}
