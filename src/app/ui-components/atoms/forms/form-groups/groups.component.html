@@ -1,0 +1,211 @@
+<h2 class="page-header">Groups</h2>
+
+<h3 class="component-header">Input Addon</h3>
+
+<ddk-example>
+<div class="form-group">
+  <label for="customAmount" class="sr-only">Amount (in dollars)</label>
+  <div class="input-group input-group-block input-group-left">
+    <span class="input-group-addon">
+      <svg class="icon" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#usd"></use>
+      </svg>
+    </span>
+    <input type="customAmount" name="customAmount" value="" placeholder="Enter Amount" class="form-control">
+  </div>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Input Button</h3>
+
+<ddk-example>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="First Name">
+  <span class="input-group-btn">
+    <button type="submit" class="btn btn-secondary">
+      Submit
+    </button>
+  </span>
+</div>
+<hr>
+<div class="input-group">
+  <input type="text" class="form-control" placeholder="Search">
+  <span class="input-group-btn">
+    <button type="submit" class="btn btn-secondary">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+</ddk-example>
+
+<h3 class="component-header">2-Column Input Row</h3>
+
+<ddk-example>
+<div class="row">
+  <div class="form-group col-xs-6">
+    <label for="first_name" class="sr-only">First Name</label>
+    <input type="first_name" name="first_name" value="" placeholder="First Name" class="form-control">
+  </div>
+
+  <div class="form-group col-xs-6">
+    <label for="last_name" class="sr-only">Last Name</label>
+    <input type="last_name" name="last_name" value="" placeholder="Last Name" class="form-control">
+  </div>
+</div>
+</ddk-example>
+
+<h3 class="component-header">3-Column Input Row</h3>
+
+<ddk-example>
+<div class="row">
+  <div class="form-group col-xs-4">
+    <label for="cc_exp" class="sr-only">Month/Year</label>
+    <input type="cc_exp" name="cc_exp" value="" placeholder="MM/YY" class="form-control">
+  </div>
+
+  <div class="form-group col-xs-4">
+    <label for="cc_ccv" class="sr-only">CVV Number</label>
+    <input type="cc_ccv" name="cc_ccv" value="" placeholder="CVV" class="form-control">
+  </div>
+
+  <div class="form-group col-xs-4">
+    <label for="cc_zip" class="sr-only">Zip Code</label>
+    <input type="cc_zip" name="cc_zip" value="" placeholder="Zip Code" class="form-control">
+  </div>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Radio Button Group with Header</h3>
+
+<ddk-example>
+<h3 class="control-label">Frequency:</h3>
+<div class="radio radio-inline">
+  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn1" value="option1" checked>
+  <label for="inlineRadioBtn1">
+    Option 1
+  </label>
+  <div class="check" tabindex="0"></div>
+</div>
+<div class="radio radio-inline">
+  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn2" value="option2">
+  <label for="inlineRadioBtn2">
+    Option 2
+  </label>
+  <div class="check" tabindex="0"></div>
+</div>
+<div class="radio radio-inline disabled">
+  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn3" value="option3" disabled>
+  <label for="inlineRadioBtn3">
+    Option 3 (disabled)
+  </label>
+  <div class="check" tabindex="0"></div>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Button Form Group</h3>
+
+<ddk-example>
+<div class="btn-group btn-group-block">
+  <button *ngFor="let button of vert_buttons"
+          type="button"
+          class="btn btn-option btn-flex btn-outline"
+          [class.active]="(button === selectedButton) && !customInputSelected"
+          (click)="onSelect(button)">
+    <div class="row">
+      <div class="btn-group-label">
+        <span class="btn-group-icons">
+          <svg class="icon circle-thin" viewBox="0 0 256 256">
+            <use height="256" width="256" xlink:href="/assets/svgs/icons.svg#circle-thin"></use>
+          </svg>
+
+          <svg class="icon check-circle" viewBox="0 0 256 256">
+            <use height="256" width="256" xlink:href="/assets/svgs/icons.svg#check-circle"></use>
+          </svg>
+        </span>
+        {{ button.label }}:</div>
+      <div class="text-right push-quarter-top">{{ button.amount | currency: "USD": true }}</div>
+    </div>
+  </button>
+
+  <button type="button"
+          class="btn btn-option btn-flex btn-outline"
+          (click)="selectedCustom()"
+          [ngClass]="{ active: (customInputSelected) }">
+    <div class="row">
+      <div class="text-left">Custom Option:</div>
+    </div>
+  </button>
+
+  <div class="custom-input" *ngIf="customInputSelected">
+      <form class="custom-input-field"
+            action="/">
+        <div class="form-group flush-bottom">
+          <label class="sr-only" for="custom-input">Custom Input</label>
+          <div class="input-group input-group-block input-group-left">
+            <span class="input-group-addon">$</span>
+            <input type="text"
+                  class="form-control"
+                  placeholder="Enter Custom Input"
+                  id="custom-input"
+                  maxlength="9">
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
+<pre>
+&lt;div class="btn-group btn-group-block">
+  &lt;button type="button"
+            class="btn btn-option btn-flex btn-outline active"
+            (click)="onSelect(button)">
+  &lt;div class="row">
+    &lt;div>...&lt;/div>
+    &lt;div>...&lt;/div>
+  &lt;/div>
+&lt;/button>
+
+&lt;button type="button"
+        class="btn btn-option btn-flex btn-outline"
+        (click)="onSelect(button)">
+  &lt;div class="row">
+    &lt;div>...&lt;/div>
+    &lt;div>...&lt;/div>
+  &lt;/div>
+&lt;/button>
+
+&lt;button type="button"
+        class="btn btn-option btn-flex btn-outline"
+        (click)="onSelect(button)">
+  &lt;div class="row">
+    &lt;div>...&lt;/div>
+    &lt;div>...&lt;/div>
+  &lt;/div>
+&lt;/button>
+
+&lt;button type="button"
+        class="btn btn-option btn-flex btn-outline"
+        (click)="selectedCustom()">
+  &lt;div class="row">
+    &lt;div class="text-left">...&lt;/div>
+  &lt;/div>
+&lt;/button>
+
+&lt;div class="custom-input">
+    &lt;form class="custom-input-field" action="/">
+      &lt;div class="form-group">
+        &lt;label class="sr-only" for="custom-input">...&lt;/label>
+        &lt;div class="input-group input-group-block input-group-left">
+          &lt;span class="input-group-addon">$&lt;/span>
+          &lt;input type="text"
+                class="form-control"
+                placeholder="..."
+                id="custom-input"
+                maxlength="9">
+        &lt;/div>
+      &lt;/div>
+    &lt;/form>
+  &lt;/div>
+&lt;/div></pre>
+</ddk-example>

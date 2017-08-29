@@ -4,6 +4,10 @@ h1 {
     font-family: $base-font-face;
     font-weight: 100;
   }
+
+  .dark-theme .jumbotron.ddk & {
+    color: $cr-white;
+  }
 }
 
 aside > nav {
@@ -84,6 +88,7 @@ body.dark-theme {
     a {
       color: $cr-gray-light;
 
+
       &:hover {
         color: darken($cr-gray-light, 30);
       }
@@ -135,15 +140,16 @@ body.dark-theme {
 
 .jumbotron.ddk {
   margin-bottom: 3em;
-  color: $cr-gray-dark;
-  text-align: left;
-  .dark-theme & {
-    background: $cr-gray-darker;
-    border-bottom: 1px solid darken($cr-gray-dark, 10);
+
+  h1 {
+    font-family: $condensed-extra-font-face;
+    font-size: 4rem;
+    margin-top: 0;
+    text-transform: uppercase;
   }
 
-  .inverted & {
-    background: rgba($cr-white, .2);
+  p {
+    font-size: 19px;
   }
 }
 
@@ -156,5 +162,38 @@ body.dark-theme {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+
+
+
+
+.breadcrumb.ddk {
+  background: transparent;
+  margin: 0;
+
+  a {
+    color: $cr-white;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: $cr-white;
+    }
+  }
+
+  > li:before {
+    content: none;
+  }
+
+  > li:after {
+    content: '/';
+    padding: 0 6px 0 4px;
+    opacity: .8;
+  }
+
+  > li:last-child:after {
+    padding-right: 0;
   }
 }

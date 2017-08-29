@@ -7,14 +7,17 @@ import { ContentBlockModule } from 'crds-ng2-content-block';
 import { AssetsRoutingModule } from './assets-routing.module';
 import { AssetsComponent } from './assets.component';
 import { LogosComponent } from './logos/logos.component';
+
 import { ExampleModule } from '../shared/example/example.module';
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
 
 @NgModule({
   imports: [
     CommonModule,
     AssetsRoutingModule,
     ContentBlockModule,
-    ExampleModule
+    ExampleModule,
+    JumbotronModule
   ],
   exports: [
     AssetsComponent
