@@ -80,28 +80,24 @@
 <h3 class="component-header">Radio Button Group with Header</h3>
 
 <ddk-example>
-<h3 class="control-label">Frequency:</h3>
-<div class="radio radio-inline">
-  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn1" value="option1" checked>
-  <label for="inlineRadioBtn1">
+<h3 class="control-label flush-bottom">Frequency:</h3>
+<form class="controls-inline flush-top">
+  <label class="control radio">
+    <input id="radio1" name="radio" type="radio" checked="checked">
+    <span class="control-indicator"></span>
     Option 1
   </label>
-  <div class="check" tabindex="0"></div>
-</div>
-<div class="radio radio-inline">
-  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn2" value="option2">
-  <label for="inlineRadioBtn2">
+  <label class="control radio">
+    <input id="radio2" name="radio" type="radio">
+    <span class="control-indicator"></span>
     Option 2
   </label>
-  <div class="check" tabindex="0"></div>
-</div>
-<div class="radio radio-inline disabled">
-  <input type="radio" name="inlineRadioBtns" id="inlineRadioBtn3" value="option3" disabled>
-  <label for="inlineRadioBtn3">
+  <label class="control radio disabled">
+    <input id="radio3" name="radio" type="radio" disabled="disabled">
+    <span class="control-indicator"></span>
     Option 3 (disabled)
   </label>
-  <div class="check" tabindex="0"></div>
-</div>
+</form>
 </ddk-example>
 
 <h3 class="component-header">Button Form Group</h3>
