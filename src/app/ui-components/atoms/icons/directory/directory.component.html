@@ -1,0 +1,15 @@
+<h2 class="page-header">Icon Directory</h2>
+
+<p>Below is a full list of the approved icons. See <a routerLink="/ui-components/icons/inline-svg">the usage docs</a> for more info.</p>
+<p>
+  In order to add a new icon to the directory, <a href="#">send a request</a> to Communications with the proposed new SVG.
+</p>
+
+<ul class="list-unstyled push-top soft-top icon-directory-list">
+  <li *ngFor="let icon of icons">
+    <svg class="icon icon-1" viewBox="0 0 256 256">
+      <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
+    </svg>
+    <span class="soft-half-left">{{icon}}</span>
+  </li>
+</ul>
