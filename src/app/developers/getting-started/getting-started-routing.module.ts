@@ -11,7 +11,13 @@ import { FileStructureComponent } from './file-structure/file-structure.componen
 import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
 import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
 
+
 const gettingStartedRoutes: Routes = [
+  {
+    path: 'developers',
+    redirectTo: 'developers/getting-started',
+    pathMatch: 'full'
+  },
   {
     path: 'developers/getting-started',
     component: GettingStartedComponent,
