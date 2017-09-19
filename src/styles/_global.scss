@@ -197,3 +197,46 @@ body.dark-theme {
     padding-right: 0;
   }
 }
+
+.callout {
+  border: 1px solid rgba($cr-gray-light, .25);
+  border-left: 6px solid rgba($cr-gray-light, .25);
+  border-radius: 0;
+  color: $cr-gray-light;
+  font-family: $accent-font-face;
+  font-size: $font-size-small;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.43;
+  padding: 15px 21px;
+
+  &.callout-info {
+    border-left-color: $alert-info;
+  }
+
+  &.callout-success {
+    border-left-color: $alert-success;
+  }
+
+  &.callout-warning {
+    border-left-color: $alert-warning;
+  }
+
+  &.callout-danger {
+    border-left-color: $alert-danger;
+  }
+
+  .callout-link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  code {
+    font-family: $accent-font-face;
+    font-size: $font-size-small;
+  }
+}
