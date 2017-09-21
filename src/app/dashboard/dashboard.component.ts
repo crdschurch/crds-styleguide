@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SearchService } from '../shared/search/search.service';
+
 declare var imgix: any;
 
 @Component({
@@ -8,12 +10,16 @@ declare var imgix: any;
 })
 export class DashboardComponent {
 
+  constructor(private search: SearchService) {}
+
   public loadImages() {
     imgix.init();
 
+    this.search.loadResults();
+
     let searchForm = document.getElementById('ddk-homepage-search-form');
     let container = document.getElementById('ddk-home-search-placeholder');
-    container.appendChild(searchForm);
+    if (container) { container.appendChild(searchForm); }
   }
 
 }
