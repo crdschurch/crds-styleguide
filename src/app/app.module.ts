@@ -10,6 +10,7 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/boot
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
+
 import { ExampleModule } from './shared/example/example.module';
 
 import { AppComponent } from './app.component';

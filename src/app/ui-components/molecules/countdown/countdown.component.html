@@ -1,0 +1,46 @@
+<ddk-jumbotron id="UICountdownHeader"></ddk-jumbotron>
+
+<div class="container">
+  <div class="col-md-offset-3">
+
+    <h3 class="component-header">Countdown (Time)</h3>
+    <ddk-example>
+<section class="container-fluid">
+  <div class="countdown time">
+    <span class="countdown-header">Join the live stream in...</span>
+    <ul class="countdown-timer list-inline">
+      <li class="countdown-days">03</li>
+      <li class="countdown-hours">00</li>
+      <li class="countdown-minutes">42</li>
+      <li class="countdown-seconds">37</li>
+    </ul>
+  </div>
+  <div class="countdown live hide in-progress">
+    <span class="countdown-header push-right">Live stream in progress...</span>
+    <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
+  </div>
+</section>
+    </ddk-example>
+
+    <h3 class="component-header">Countdown (Live)</h3>
+    <p>When the countdown expires, we remove the <code>.hide</code> class from
+    <code>.live</code> and add it to <code>.time</code>.</p>
+    <ddk-example>
+<section class="container-fluid">
+  <div class="countdown time hide">
+    <span class="countdown-header">Join the live stream in...</span>
+    <ul class="countdown-timer list-inline">
+      <li class="countdown-days">03</li>
+      <li class="countdown-hours">00</li>
+      <li class="countdown-minutes">42</li>
+      <li class="countdown-seconds">37</li>
+    </ul>
+  </div>
+  <div class="countdown live in-progress">
+    <span class="countdown-header push-right">Live stream in progress...</span>
+    <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
+  </div>
+</section>
+    </ddk-example>
+  </div>
+</div>

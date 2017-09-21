@@ -6,14 +6,12 @@ import { HttpModule } from '@angular/http';
 import { TabsModule, DatepickerModule, ButtonsModule, AccordionModule } from 'ng2-bootstrap';
 
 import { AppModule } from '../app.module';
-import { UiComponentsComponent } from './ui-components.component';
-import { UiRoutingModule } from './ui-routing.module';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { ComponentListComponent } from './component-list/component-list.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { ExampleModule } from '../shared/example/example.module';
+import { JumbotronModule } from '../shared/jumbotron/jumbotron.module';
 
+<<<<<<< HEAD
 /* typography */
 import { TypographyComponent } from './typography/typography.component';
 import { TypefacesComponent } from './typography/typefaces/typefaces.component';
@@ -118,130 +116,28 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 
 /* accordions */
 import { AccordionComponent } from './accordion/accordion.component';
+=======
+import { CoreModule } from './core/core.module';
+import { AtomsModule } from './atoms/atoms.module';
+import { MoleculesModule } from './molecules/molecules.module';
+>>>>>>> development
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    UiRoutingModule,
     TabsModule,
     DatepickerModule.forRoot(),
     ButtonsModule.forRoot(),
     AccordionModule.forRoot(),
     ExampleModule,
-    ContentBlockModule
+    JumbotronModule,
+    ContentBlockModule,
+    CoreModule,
+    AtomsModule,
+    MoleculesModule
   ],
-  exports: [
-    UiComponentsComponent
-  ],
-  declarations: [
-    UiComponentsComponent,
-    SearchBarComponent,
-    ComponentListComponent,
-
-    /* typography */
-    TypographyComponent,
-    TypefacesComponent,
-    FontScalingComponent,
-    TypographyJumbotronComponent,
-    TypesettingComponent,
-    AddressComponent,
-    BlockquoteComponent,
-    ListsComponent,
-    WebFontsComponent,
-
-    /* colors */
-    ColorsComponent,
-    SwatchesComponent,
-    ColorOverridesComponent,
-    ColorBackgroundsComponent,
-    ColorTextComponent,
-
-    /* utility classes */
-    UtilitiesComponent,
-    UtilitiesJumbotronComponent,
-    BordersComponent,
-    CornersComponent,
-    DisplayComponent,
-    ImagesComponent,
-    MarginComponent,
-    PaddingComponent,
-    TextComponent,
-    ButtonUtilitiesComponent,
-    VerticalPositioningComponent,
-
-    /* feedback */
-    FeedbackComponent,
-    FeedbackJumbotronComponent,
-    AlertsComponent,
-    ToastNotificationsComponent,
-
-    /* loaders */
-    LoadersComponent,
-
-    /* buttons */
-    ButtonsComponent,
-    ButtonsJumbotronComponent,
-    ButtonStylesComponent,
-    ButtonSizesComponent,
-    ButtonGroupsComponent,
-
-    /* icons */
-    IconsComponent,
-    IconDirectoryComponent,
-    IconInlineComponent,
-    IconCssComponent,
-    IconResizeComponent,
-    IconColorsComponent,
-
-    /* tables */
-    TablesComponent,
-    TablesJumbotronComponent,
-
-    /* forms */
-    FormsComponent,
-    FormsJumbotronComponent,
-    FormControlsComponent,
-    FormStatesComponent,
-    FormDatepickerComponent,
-    FormTimepickerComponent,
-    FormGroupsComponent,
-    SearchFieldComponent,
-
-    CardsComponent,
-    CardsDecksComponent,
-    CardsTypesComponent,
-    CardsGridLayoutComponent,
-
-    /* labels */
-    LabelsComponent,
-
-    /* sign in */
-    SignInComponent,
-
-    /* countdown */
-    CountdownComponent,
-
-    /* avatar groups */
-    AvatarGroupsComponent,
-
-    /* media objects */
-    MediaObjectsComponent,
-
-    /* media images */
-    MediaImgComponent,
-
-    /* jumbotrons */
-    JumbotronsComponent,
-
-    /* modals */
-    VideoModalsComponent,
-
-    /* fauxdals */
-    FauxdalsComponent,
-
-    /* accordions */
-    AccordionComponent
-  ]
+  exports: [],
+  declarations: []
 })
 export class UiComponentsModule { }

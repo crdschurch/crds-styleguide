@@ -7,13 +7,16 @@
   > li {
     position: static;
   }
+
   a.active {
-    color: $cr-gray;
+    color: $cr-black;
   }
 }
 
 .navbar {
   margin-bottom: 0;
+  border-bottom: none;
+
   h3 {
     font-size: 2rem;
   }
@@ -91,6 +94,8 @@
   .open > .dropdown-toggle > .icon {
     transform: rotate(-180deg);
   }
+
+  .mobile-nav-trigger {}
 }
 
 
@@ -104,8 +109,12 @@
   &_inner {
     border: none;
     border-radius: 0;
-    padding: 1em 0 4em;
+    padding: 1rem 0 2rem;
     width: 100%;
+
+    @media (min-width: $screen-sm) {
+      padding-bottom: 4rem;
+    }
 
     .col-md-12 > a {
       &:hover {
@@ -115,8 +124,6 @@
   }
 
   &_list {
-    @include make-xs-column(12);
-
     @media (min-width: $screen-sm) {
       @include make-sm-column(4);
     }
@@ -130,9 +137,35 @@
       margin: 0;
       padding: 0;
     }
+
+    li {
+      line-height: 1.75;
+    }
   }
+}
+
+.mega-menu_subheader {
+  color: $cr-gray-light;
+  font-size: $base-font-size;
+  font-weight: 400;
 }
 
 .navbar-brand svg {
   @include size(8.125rem, 1.1875rem);
+}
+
+.theme-toggle-switch,
+.mobile-nav-trigger {
+  color: $cr-gray;
+  float: right;
+  padding: 10px 15px 15px;
+
+  &:hover {
+    color: darken($cr-gray, 10);
+  }
+
+  .dark-theme & {
+    color: $cr-white;
+    border-left: 1px solid darken($cr-gray-dark, 10);
+  }
 }

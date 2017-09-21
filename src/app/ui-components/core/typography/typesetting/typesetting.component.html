@@ -1,0 +1,138 @@
+<h2 class="page-header">Typesetting</h2>
+
+<p class="callout callout-warning">In order to achieve a balance of both readability &amp; relative scale across the entire codebase, we've selected a base-font size of <code>16px</code> since that is the number most commonly associated with modern browser defaults, e.g. <code>16px = 1rem</code>. Accordingly, this value has been used to override Bootstrap's <code>$font-size-base</code> variable.</p>
+
+<h3 id="headings" class="component-header">Headings</h3>
+
+<div class="selector">
+  <p>Use <code>.page-header</code> for page headings</p>
+  <ddk-example>
+    <p class="page-header">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.section-header</code> for headers on sub-sections</p>
+  <ddk-example>
+    <p class="section-header">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.title</code> for item titles</p>
+  <ddk-example>
+    <p class="title">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.control-label</code> for form or button group labels</p>
+  <ddk-example>
+    <p class="control-label">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.collection-header</code> for collections header</p>
+  <ddk-example>
+    <p class="collection-header">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.component-header</code> for headers on cards, media objects and widgets</p>
+  <ddk-example>
+    <p class="component-header">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.list-header</code> for list headers</p>
+  <ddk-example>
+    <p class="list-header">reachout: the outlet</p>
+  </ddk-example>
+</div>
+
+<h3 class="component-header">Body Content</h3>
+
+<div class="selector">
+  <p>To provide the best possible reading experience for any content-heavy pages, we recommend rendering most copy with a font-size of <code>19px</code>. To ensure any copy (whether encapsulated with <code>&lt;p&gt;</code> or not) is rendered at this size,
+    simply wrap the main content area of your page with <code>&lt;main&gt;</code> or apply <code>.main</code> to the parent element.</p>
+
+  <ddk-example>
+    <main>
+      <p>Build relationships with the homeless in our city by hanging out at The Outlet at City Gospel Mission, a place where they can recharge and connect with people who care about them by providing positive interpersonal relationships.</p>
+    </main>
+
+    <div class="main">
+      Whether it’s playing cards, shooting pool or just sharing stories, friendships are built and hope is transferred at The Outlet. And through the relationships established there, the homeless are then encouraged to enter into long-term recovery programs.
+    </div>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>You can highlight a block of content by applying the <code>.lead</code> selector to the containing parent element. </p>
+  <ddk-example>
+    <p class="lead">Build relationships with the homeless in our city by hanging out at The Outlet at City Gospel Mission, a place where they can recharge and connect with people who care about them by providing positive interpersonal relationships. Whether it’s playing
+      cards, shooting pool or just sharing stories, friendships are built and hope is transferred at The Outlet. And through the relationships established there, the homeless are then encouraged to enter into long-term recovery programs.</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use the <code>.quiet</code> selector when you want to decrease the prominence of a certain block of copy.</p>
+  <ddk-example>
+    <p class="quiet">Build relationships with the homeless in our city by hanging out at The Outlet at City Gospel Mission, a place where they can recharge and connect with people who care about them by providing positive interpersonal relationships. Whether it’s playing
+      cards, shooting pool or just sharing stories, friendships are built and hope is transferred at The Outlet. And through the relationships established there, the homeless are then encouraged to enter into long-term recovery programs.</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.metadata</code> for secondary, related content...</p>
+  <ddk-example>
+    <p class="metadata">Runs: November 14 - December 25</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.subtitle</code> to boost the prominence of certain content elements...</p>
+  <ddk-example>
+    <p class="subtitle">Find Freedom</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Use <code>.tagline</code> for accented copy...</p>
+  <ddk-example>
+    <p class="tagline">Experience our live stream</p>
+  </ddk-example>
+</div>
+
+<h3 class="component-header">Links</h3>
+
+<div class="selector">
+  <p>Standalone <code>a</code> tags are used for actions that don't warrant a button, yet are of next highest priority/utility.</p>
+
+  <ddk-example class="main">
+    <p>Crossroads is <a href="#">one church</a> happening in multiple locations.</p>
+  </ddk-example>
+</div>
+
+<div class="selector">
+  <p>Applying a class of <code>.secondary</code> to an <code>a</code> tag created a link that signifies a minor priority/utility. These links are also found beside a button or button group to Cancel an action.</p>
+
+  <ddk-example class="main">
+    <p>Crossroads is <a href="#" class="secondary">one church</a> happening in multiple locations.</p>
+  </ddk-example>
+</div>
+
+<p class="callout callout-info" role="alert">All link styles can be combined with other utility classes, i.e., <code>.pull-right</code> or <code>.font-size-small</code> to alter look or layout.</p>
+
+<ddk-example>
+  <div class="clearfix">
+    <a href="#" class="secondary font-size-small pull-right">Forgot password?</a>
+    <br>
+    <a href="#" class="secondary font-size-small pull-right">Need help?</a>
+  </div>
+  <hr>
+  <a href="#" class="font-size-small">Register an account</a>
+</ddk-example>
