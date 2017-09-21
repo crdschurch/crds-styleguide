@@ -25,15 +25,16 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
 
+  ul li.focused a,
+  ul a:hover {
+    text-decoration: none;
+    background-color: rgba($cr-gray-lighter, 0.45);
+  }
+
   ul a {
     display: block;
     padding: 0.5rem 1rem;
     transition: background-color 0.25s ease;
-
-    &:hover {
-      text-decoration: none;
-      background-color: rgba($cr-gray-lighter, 0.45);
-    }
 
     .breadcrumbs {
       display: block;

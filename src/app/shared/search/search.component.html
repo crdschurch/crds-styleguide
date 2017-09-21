@@ -4,8 +4,7 @@
          (keydown)="validateChar($event)" [value]="searchValue">
 
   <ul class="list-unstyled">
-    <li [ngClass]="{ hide: !result.active }"
-        *ngFor="let result of search.results">
+    <li [ngClass]="{ hide: !result.active, focused: result.focused }" *ngFor="let result of search.results">
       <a routerLink="{{ result.path }}" class="font-size-large">
         <span class="component-name">{{ result.name }}</span>
         <span class="breadcrumbs">

@@ -3,6 +3,8 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { SearchService } from './search.service';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'search-form',
   templateUrl: './search.component.html',
@@ -27,10 +29,41 @@ export class SearchComponent implements OnInit {
     this.setAllInactive();
   }
 
-  @HostListener('window:keyup', ['$event'])
-  focusOnSearch($event) {
+  @HostListener('window:keyup', ['$event']) searchKeypress($event) {
     if ($event.key === '/') {
       document.getElementById('ddk-search').focus();
+    }
+    if ($event.key === 'ArrowDown') {
+      let activeResults = _.filter(this.search.results, (r) => { return r.active; });
+      let focusedResult = _.filter(activeResults, (r) => { return r.focused; })[0];
+      let idx = _.indexOf(activeResults, focusedResult);
+
+      if (focusedResult && activeResults.length > idx + 1) {
+        activeResults[idx + 1].focused = true;
+      } else if(!focusedResult) {
+        activeResults[0].focused = true;
+      }
+
+      if (focusedResult) { focusedResult.focused = false; }
+    }
+    if ($event.key === 'ArrowUp') {
+      let activeResults = _.filter(this.search.results, (r) => { return r.active; });
+      let focusedResult = _.filter(activeResults, (r) => { return r.focused; })[0];
+      let idx = _.indexOf(activeResults, focusedResult);
+
+      if (focusedResult && idx > 0) {
+        activeResults[idx - 1].focused = true;
+      }
+
+      if (focusedResult) { focusedResult.focused = false; }
+    }
+    if ($event.key === 'Enter') {
+      let activeResults = _.filter(this.search.results, (r) => { return r.active; });
+      let focusedResult = _.filter(activeResults, (r) => { return r.focused; })[0];
+
+      if (focusedResult) {
+        this.router.navigate([focusedResult.path]);
+      }
     }
   }
 

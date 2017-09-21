@@ -19,7 +19,7 @@ export class DashboardComponent {
 
     let searchForm = document.getElementById('ddk-homepage-search-form');
     let container = document.getElementById('ddk-home-search-placeholder');
-    if (container) { container.appendChild(searchForm); }
+    if (searchForm && container) { container.appendChild(searchForm); }
   }
 
 }
