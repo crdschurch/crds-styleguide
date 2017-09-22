@@ -1,6 +1,6 @@
 <div class="ddk-search-form">
   <input #searchQ id="ddk-search" class="form-control" placeholder="Search"
-         type="text" (keyup)="updateSearchResults(searchQ.value)"
+         type="text" (keyup)="searchKeyup($event, searchQ.value)"
          (keydown)="validateChar($event)" [value]="searchValue">
 
   <ul class="list-unstyled">

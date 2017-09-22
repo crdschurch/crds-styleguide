@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
   searchValue: string;
 
   constructor(private router: Router, private search: SearchService) {
-
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.searchValue = null;
@@ -34,6 +33,10 @@ export class SearchComponent implements OnInit {
     if ($event.key === '/') {
       document.getElementById('ddk-search').focus();
     }
+  }
+
+  public searchKeyup($event, value: string) {
+    this.updateSearchResults(value);
     if ($event.key === 'ArrowDown') {
       let activeResults = _.filter(this.search.results, (r) => { return r.active; });
       let focusedResult = _.filter(activeResults, (r) => { return r.focused; })[0];
@@ -41,7 +44,7 @@ export class SearchComponent implements OnInit {
 
       if (focusedResult && activeResults.length > idx + 1) {
         activeResults[idx + 1].focused = true;
-      } else if(!focusedResult) {
+      } else if (!focusedResult) {
         activeResults[0].focused = true;
       }
 
