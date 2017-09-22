@@ -12,6 +12,7 @@ import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/the
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { SearchComponent } from './shared/search/search.component';
+import { SearchService } from './shared/search/search.service';
 
 
 describe('App: CrdsDdk', () => {
@@ -29,6 +30,9 @@ describe('App: CrdsDdk', () => {
         ContentBlockModule.forRoot({ endpoint: 'https://contentint.crossroads.net/', categories: Array('ddk') }),
         HttpModule,
         RouterTestingModule.withRoutes([])
+      ],
+      providers: [
+        SearchService
       ]
     });
   });
