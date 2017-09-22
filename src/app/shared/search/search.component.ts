@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.search.loadResults();
     this.searchValue = null;
     this.setAllInactive();
   }
@@ -63,6 +64,7 @@ export class SearchComponent implements OnInit {
 
       if (focusedResult) {
         this.router.navigate([focusedResult.path]);
+        document.getElementById('ddk-search').blur();
       }
     }
   }
