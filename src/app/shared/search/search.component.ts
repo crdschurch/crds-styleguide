@@ -63,7 +63,9 @@ export class SearchComponent implements OnInit {
       let focusedResult = _.filter(activeResults, (r) => { return r.focused; })[0];
 
       if (focusedResult) {
-        this.router.navigate([focusedResult.path]);
+        let options = {};
+        if (focusedResult.fragment) { options['fragment'] = focusedResult.fragment; }
+        this.router.navigate([focusedResult.path], options);
         document.getElementById('ddk-search').blur();
       }
     }
