@@ -1,5 +1,7 @@
 <h2 class="page-header">Icon Usage</h2>
 
+<h3 class="component-header">Rendering An Icon</h3>
+
 <p>SVG icons use the combination of <code>&lt;svg&gt;</code> and
 <code>&lt;use&gt;</code> elements. The icon is dictated by the name after the
 hash in the <code>&lt;use&gt;</code> element's <code>href</code>. You can
@@ -7,14 +9,39 @@ view the options in the <a routerLink="/ui-components/atoms/icons/directory">ico
 
 <p>It's imperative that you include the <code>viewBox</code> attribute as shown below.</p>
 
-<div class="alert alert-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</div>
+<p class="callout callout-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</p>
 
-<div class="row">
-  <div class="col-sm-6" *ngFor="let icon of icons">
-    <ddk-example>
+<ddk-example>
 <svg class="icon" viewBox="0 0 256 256">
-  <use attr.xlink:href="/assets/svgs/icons.svg#{{icon}}"></use>
+  <use xlink:href="/assets/svgs/icons.svg#check-circle"></use>
 </svg>
-    </ddk-example>
-  </div>
-</div>
+</ddk-example>
+
+<h3 class="component-header">Icon Sprite File</h3>
+
+<p>
+  Notice in the usage instructions above the icon source file is referenced as
+  <code>/assets/svgs/icons.svg</code>. It's ideal to have this file local to
+  your project, as there are limitations to working with the
+  <code>&lt;use&gt;</code> element while referencing an external file.
+</p>
+
+<p>
+  There are instructions on using Webpack to load assets into your project
+  <a href="https://github.com/crdschurch/crds-styles#svgs">here</a>.
+</p>
+
+<p>
+  If you'd like to access the assets externally, they are uploaded to S3 with
+  each release. They are named with their version number. For example, the
+  icon sprite file for <code>0.14.0</code> is available at
+  <a href="https://d1tmclqz61gqwd.cloudfront.net/images/icons-0.14.0.svg">https://d1tmclqz61gqwd.cloudfront.net/images/icons-0.14.0.svg</a>.
+</p>
+
+<h3 class="component-header">Generating New Icons</h3>
+
+<p>
+  New icons are generated using the source Sketch file. This process is
+  documented in <a href="https://github.com/crdschurch/crds-styles/tree/development/src/assets/svgs#svg-support"><code>src/assets/svgs/README.md</code>
+  in the <code>crds-styles</code> project.</a>
+</p>

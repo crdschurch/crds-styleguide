@@ -60,17 +60,40 @@
 
     <p>
       Jumbotrons also support background videos. This requires adding the
-      <code>.bg-video</code> selector, the player's elements, and JavaScript
-      customization using the
-      <a href="https://developers.google.com/youtube/iframe_api_reference">
-        YouTube IFrame API.
-      </a>
+      <code>.bg-video</code> selector, a nested <code>video</code> tag with
+      the selectors <code>.bg-jumbotron-video .hide</code>, and JavaScript
+      customization.
     </p>
 
     <p>
-      In this example, the script uses a <code>data-video-id</code> attribute
-      on the container to know which video to load in the background.
+      There are also a number of attributes that need to be considered when
+      adding background video to the jumbotron.
     </p>
+    <ul>
+      <li>
+        <code>data-aspect-ratio</code> should be added to the <code>
+        div.jumbotron.bg-video</code> element when the aspect ratio
+        of the provided video is anything other than 16/9.
+        <code>data-aspect-ratio</code> accepts numbers with decimals.
+      </li>
+      <li>
+        The <code>video</code> tag has a class of <code>.hide</code> on it.
+        This is because the video element gets hidden from view until the
+        video has finished loading. Once loaded, JavaScript dynamically removes
+        that class from the <code>video</code> element.
+      </li>
+      <li>
+        The attributes <code>autoplay</code>, <code>loop</code>, <code>muted</code>,
+        and <code>playsinline</code> are necessary to cause the video to start playing
+        after loading for all devices, both desktop and mobile.
+      </li>
+      <li>
+        The <code>src</code> tag needs to point to an absolute url of where the video
+        is stored, and, according to 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">HTML5 video tag documentation</a>,
+        that url should end with a common video extension, such as .mp4.
+      </li>
+    </ul>
 
     <ddk-example height="550" id="jumbotron-bg-video"></ddk-example>
 
@@ -99,6 +122,20 @@
     </p>
 
     <ddk-example height="550" id="jumbotron-inline-video"></ddk-example>
+
+    <h3 class="component-header">
+      Combinations
+    </h3>
+
+    <p>
+      At times, you may want to combine functionality between default, image,
+      background video, and inline video jumbotrons. This is possible, but can be a
+      bit tricky. An example of background video and inline video combined below
+      should function as a template on how to combine functionality successfully to
+      produce the desired result. 
+    </p>
+
+    <ddk-example height="550" id="jumbotron-combo"></ddk-example>
 
     <h3 class="component-header">
       Sizes
