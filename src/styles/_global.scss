@@ -11,44 +11,22 @@ h1 {
 }
 
 aside > nav {
-  .list-group-item {
-    &.active,
-    &.active:hover,
-    &.active:focus {
-      background: $gray;
-      border-color: darken($gray, 10);
-    }
-    > a:focus {
-      text-decoration: none;
-      color: $brand-primary;
-    }
-  }
-  .dark-theme & {
-    .list-group-item {
-      background: darken($cr-gray-dark, 15);
-      border-color: darken($cr-gray-dark, 20);
+  li {
+    padding: 7px 0;
 
-      &.active,
-      &.active:hover,
-      &.active:focus {
-        background: $cr-gray-darker;
-        border-color: $cr-gray-darker;
-      }
+    &:first-child {
+      padding-top: 0;
     }
   }
 
-  .inverted & {
-    .list-group-item {
-      background: rgba($cr-gray-dark, .4);
-      border-color: rgba($cr-gray-dark, .4);
+  .active > a {
+    color: $text-color;
+  }
 
-      &.active,
-      &.active:hover,
-      &.active:focus {
-        background: $cr-gray-darker;
-        border-color: $cr-gray-darker;
-      }
-    }
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
   }
 }
 
