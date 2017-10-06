@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 import { SearchService } from './search.service';
@@ -12,13 +12,17 @@ import * as _ from 'lodash';
 
 export class SearchComponent implements OnInit {
 
-  searchValue: string;
+  @Input() hideForPaths: Array<string> = [];
+
+  public searchValue: string;
+  public visible = true;
 
   constructor(private router: Router, private search: SearchService) {
     router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
         this.searchValue = null;
         this.setAllInactive();
+        this.verifyVisibility();
       }
     });
   }
@@ -27,6 +31,7 @@ export class SearchComponent implements OnInit {
     this.search.loadResults();
     this.searchValue = null;
     this.setAllInactive();
+
   }
 
   @HostListener('window:keyup', ['$event']) searchKeypress($event) {
@@ -101,4 +106,12 @@ export class SearchComponent implements OnInit {
     });
   }
 
+  private verifyVisibility() {
+    this.visible = true;
+    _.forEach(this.hideForPaths, (path) => {
+      if (this.router.url === path) {
+        this.visible = false;
+      }
+    });
+  }
 }

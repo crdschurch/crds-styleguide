@@ -1,4 +1,4 @@
-<div class="ddk-search-form">
+<div class="ddk-search-form" *ngIf="visible">
   <input #searchQ id="ddk-search" class="form-control" placeholder="Search"
          type="text" (keyup)="searchKeyup($event, searchQ.value)"
          (keydown)="validateChar($event)" [value]="searchValue">
