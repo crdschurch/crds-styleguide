@@ -22,6 +22,9 @@ import { UiComponentsModule } from './ui-components/ui-components.module';
 import { AssetsModule } from './assets/assets.module';
 import { LogosComponent } from './assets/logos/logos.component';
 
+import { SearchComponent } from './shared/search/search.component';
+import { SearchService } from './shared/search/search.service';
+
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -33,6 +36,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     DashboardComponent,
     BootstrapDropdownDirective,
+    SearchComponent,
     ThemeToggleSwitchComponent
   ],
   imports: [
@@ -53,7 +57,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RouterModule
   ],
   providers: [
-    BootstrapDropdownService
+    BootstrapDropdownService,
+    SearchService
   ],
   bootstrap: [AppComponent]
 })

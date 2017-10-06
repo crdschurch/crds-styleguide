@@ -11,6 +11,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
+import { SearchComponent } from './shared/search/search.component';
+import { SearchService } from './shared/search/search.service';
+
 
 describe('App: CrdsDdk', () => {
   beforeEach(() => {
@@ -19,13 +22,17 @@ describe('App: CrdsDdk', () => {
         AppComponent,
         HeaderComponent,
         FooterComponent,
-        ThemeToggleSwitchComponent
+        ThemeToggleSwitchComponent,
+        SearchComponent
       ],
       imports: [
         CollapseModule,
         ContentBlockModule.forRoot({ endpoint: 'https://contentint.crossroads.net/', categories: Array('ddk') }),
         HttpModule,
         RouterTestingModule.withRoutes([])
+      ],
+      providers: [
+        SearchService
       ]
     });
   });
