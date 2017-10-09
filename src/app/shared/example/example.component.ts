@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
@@ -9,6 +9,8 @@ let Clipboard = require('clipboard/dist/clipboard');
 let uuidv4 = require('uuid/v4');
 
 import 'prismjs/components/prism-typescript';
+
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'ddk-example',
@@ -36,8 +38,13 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   @Input() height = '100';
   @ViewChild('contentRef') contentRef;
 
-  constructor(private sanitizer: DomSanitizer, private http: Http, private elementRef: ElementRef) {
+  constructor(private sanitizer: DomSanitizer,
+              private http: Http,
+              private elementRef: ElementRef,
+              private toastr: ToastsManager,
+              private vRef: ViewContainerRef) {
     this.el = <Element>this.elementRef.nativeElement;
+    this.toastr.setRootViewContainerRef(vRef);
   }
 
   ngOnInit() {
@@ -152,6 +159,12 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       text: (trigger) => {
         return this.clippableHTML;
       }
+    });
+
+    clippable.on('success', (event) => {
+      let options = { toastLife: 3000 };
+      let message = 'Code copied to clipboard!';
+      this.toastr.success(message, null, options);
     });
   }
 }

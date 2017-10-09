@@ -29,6 +29,16 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { ToastModule, ToastOptions } from 'ng2-toastr/ng2-toastr';
+
+export class CustomOptions extends ToastOptions {
+  animate = 'fade';
+  dismiss = 'auto';
+  showCloseButton = true;
+  newestOnTop = true;
+  enableHTML = true;
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +61,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AssetsModule,
     AppRoutingModule,
     ExampleModule,
+    ToastModule.forRoot(),
     ContentBlockModule.forRoot({ endpoint: process.env.CRDS_CMS_ENDPOINT, categories: Array('ddk') })
   ],
   exports: [
@@ -58,7 +69,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   providers: [
     BootstrapDropdownService,
-    SearchService
+    SearchService,
+    {
+      provide: ToastOptions,
+      useClass: CustomOptions
+    }
   ],
   bootstrap: [AppComponent]
 })
