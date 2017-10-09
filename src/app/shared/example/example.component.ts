@@ -20,6 +20,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
   public clippableUUID: string;
   public clippableHTML: string;
+  public clippableMoved = false;
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -89,6 +90,8 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       this.markup = data['_body'];
       this.clippableHTML = data['_body'];
       this.addSyntaxHighlighting(filetype);
+      let el = document.getElementById('markup-' + this.clippableUUID);
+      this.moveClippable(el);
     });
   }
 
@@ -173,10 +176,11 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     let clippable = document.getElementById(this.clippableUUID);
     if (clippable === null) {
       setTimeout(() => {
-        this.moveClippable(el)
+        this.moveClippable(el);
       }, 500);
       return;
     }
     el.appendChild(clippable);
+    this.clippableMoved = true;
   }
 }

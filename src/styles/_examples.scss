@@ -104,6 +104,7 @@ crds-example {
   }
   .markup {
     @include make-sm-column(9);
+    position: relative;
     padding: 0;
     border-left: 1px solid darken($gray, 10);
   }
