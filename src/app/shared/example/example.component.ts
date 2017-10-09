@@ -5,7 +5,8 @@ import { Http, Response } from '@angular/http';
 let Prism = require('prismjs');
 let path = require('path');
 let entities = new (require('html-entities').Html5Entities)();
-
+let Clipboard = require('clipboard/dist/clipboard');
+let uuidv4 = require('uuid/v4');
 
 import 'prismjs/components/prism-typescript';
 
@@ -14,6 +15,9 @@ import 'prismjs/components/prism-typescript';
   templateUrl: 'example.component.html'
 })
 export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked {
+
+  public clippableUUID: string;
+  public clippableHTML: string;
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -122,6 +126,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     el.setAttribute('data-processed', 'true');
     if (el.children.length > 0) {
       let html = entities.decode(this.preformattedMarkup || el.innerHTML).replace(/^\n+|\n+$/g, '');
+      this.clippableHTML = html;
       let node = document.createTextNode(html);
       let pre = document.createElement('pre');
           pre.classList.add('language-markup');
@@ -131,10 +136,20 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
           figure.appendChild(pre);
       this.insertAfter(figure, el);
       Prism.highlightElement(pre);
+      this.initClippable();
     }
   }
 
   private insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+  private initClippable() {
+    this.clippableUUID = 'clippable-' + uuidv4();
+    let clippable = new Clipboard('#' + this.clippableUUID, {
+      text: (trigger) => {
+        return this.clippableHTML;
+      }
+    });
   }
 }

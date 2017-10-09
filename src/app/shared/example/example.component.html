@@ -1,5 +1,7 @@
 <div #contentRef class="crds-example crds-inline-markup" [hidden]="!markupInline"><ng-content></ng-content></div>
 
+<button type="button" class="btn btn-secondary" id="{{clippableUUID}}">Copy</button>
+
 <div class="crds-example crds-embedded-markup" [hidden]="markupInline">
   <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true"></iframe>
   <div class="example-row">
