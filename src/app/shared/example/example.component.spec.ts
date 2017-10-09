@@ -2,15 +2,23 @@ import { HttpModule } from '@angular/http';
 import { TestBed, async } from '@angular/core/testing';
 import { ExampleComponent } from './example.component';
 
-describe('Component: IconCss', () => {
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
+
+let mockToast;
+
+describe('Component: ExampleComponent', () => {
 
   beforeEach(() => {
+    mockToast = jasmine.createSpyObj<ToastsManager>('toast', ['info', 'setRootViewContainerRef']);
     TestBed.configureTestingModule({
       imports: [
         HttpModule
       ],
       declarations: [
         ExampleComponent
+      ],
+      providers: [
+        { provide: ToastsManager, useValue: mockToast }
       ]
     });
     this.fixture = TestBed.createComponent(ExampleComponent);
