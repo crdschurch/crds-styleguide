@@ -9,6 +9,7 @@ import { LearnMoreRoutingModule } from './learn-more-routing.module';
 
 import { LearnMoreComponent } from './learn-more.component';
 
+import { BrowserSupportComponent } from './browser-support/browser-support.component';
 import { BuiltOnBootstrapComponent } from './built-on-bootstrap/built-on-bootstrap.component';
 import { CssSassComponent } from './css-sass/css-sass.component';
 import { GridComponent } from './grid/grid.component';
@@ -24,6 +25,7 @@ import { CustomNpmPackagesComponent } from './custom-npm-packages/custom-npm-pac
   ],
   declarations: [
     LearnMoreComponent,
+    BrowserSupportComponent,
     BuiltOnBootstrapComponent,
     CssSassComponent,
     GridComponent,
