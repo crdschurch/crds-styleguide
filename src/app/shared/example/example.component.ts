@@ -5,7 +5,7 @@ import { Http, Response } from '@angular/http';
 let Prism = require('prismjs');
 let path = require('path');
 let entities = new (require('html-entities').Html5Entities)();
-let Clipboard = require('clipboard/dist/clipboard');
+let Clipboard = require('clipboard');
 let uuidv4 = require('uuid/v4');
 
 import 'prismjs/components/prism-typescript';
@@ -146,6 +146,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       this.insertAfter(figure, el);
       Prism.highlightElement(pre);
       this.initClippable();
+      this.moveClippable(figure);
     }
   }
 
@@ -166,5 +167,16 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       let message = 'Code copied to clipboard!';
       this.toastr.success(message, null, options);
     });
+  }
+
+  private moveClippable(el) {
+    let clippable = document.getElementById(this.clippableUUID);
+    if (clippable === null) {
+      setTimeout(() => {
+        this.moveClippable(el)
+      }, 500);
+      return;
+    }
+    el.appendChild(clippable);
   }
 }
