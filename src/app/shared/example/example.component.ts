@@ -73,12 +73,14 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
     let url = `${this.path}${this.manifest.entry}`;
     this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.initClippable();
   }
 
   getMarkup(url) {
     this.http.get(url).subscribe((data: Response) => {
       let filetype = this.getFileType(url);
       this.markup = data['_body'];
+      this.clippableHTML = data['_body'];
       this.addSyntaxHighlighting(filetype);
     });
   }
