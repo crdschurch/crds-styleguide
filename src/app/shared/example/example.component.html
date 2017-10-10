@@ -1,5 +1,7 @@
 <div #contentRef class="crds-example crds-inline-markup" [hidden]="!markupInline"><ng-content></ng-content></div>
 
+<button type="button" class="btn btn-option btn-sm clippable" id="{{clippableUUID}}" [class.hidden]="!clippableMoved">Copy</button>
+
 <div class="crds-example crds-embedded-markup" [hidden]="markupInline">
   <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true"></iframe>
   <div class="example-row">
@@ -8,7 +10,7 @@
         <a href="#" *ngFor="let file of files" class="list-group-item" (click)="onClick(file)" [ngClass]="{ 'active': manifest.active === file }">{{file}}</a>
       </div>
     </div>
-    <div class="markup">
+    <div class="markup" id="markup-{{clippableUUID}}">
       <pre [innerHTML]="markup"></pre>
     </div>
   </div>

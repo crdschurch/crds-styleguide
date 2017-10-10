@@ -18,6 +18,9 @@ code {
     padding: 1.25em;
   }
 
+  & + figure.highlight {
+    position: relative;
+  }
 
   .dark-theme & {
     &, & + figure.highlight > pre {
@@ -101,6 +104,7 @@ crds-example {
   }
   .markup {
     @include make-sm-column(9);
+    position: relative;
     padding: 0;
     border-left: 1px solid darken($gray, 10);
   }
@@ -120,4 +124,13 @@ crds-example {
   > div {
     background-color: black;
   }
+}
+
+.clippable {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  border-radius: 0;
 }
