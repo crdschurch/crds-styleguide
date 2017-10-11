@@ -1,6 +1,10 @@
 <div #contentRef class="crds-example crds-inline-markup" [hidden]="!markupInline"><ng-content></ng-content></div>
 
-<button type="button" class="btn btn-option btn-sm clippable" id="{{clippableUUID}}" [class.hidden]="!clippableMoved">Copy</button>
+<button type="button" class="btn btn-option btn-sm clippable" id="{{clippableUUID}}" [class.hidden]="!clippableMoved">
+  <svg class="icon icon-1" viewBox="0 0 256 256">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#copy"></use>
+  </svg>
+</button>
 
 <div class="crds-example crds-embedded-markup" [hidden]="markupInline">
   <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true"></iframe>
