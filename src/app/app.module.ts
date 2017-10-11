@@ -24,6 +24,7 @@ import { LogosComponent } from './assets/logos/logos.component';
 
 import { SearchComponent } from './shared/search/search.component';
 import { SearchService } from './shared/search/search.service';
+import { LinkableHeaderService } from './services/linkable-header.service';
 
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -58,6 +59,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   providers: [
     BootstrapDropdownService,
+    LinkableHeaderService,
     SearchService
   ],
   bootstrap: [AppComponent]

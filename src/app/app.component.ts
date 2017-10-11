@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation, ElementRef, Renderer, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { LinkableHeaderService } from './services/linkable-header.service';
 
 declare var imgix: any;
 declare var svg4everybody: any;
@@ -13,7 +14,8 @@ export class AppComponent implements OnInit {
 
   constructor(private elementRef: ElementRef,
               private renderer: Renderer,
-              private router: Router) {
+              private router: Router,
+              private headers:LinkableHeaderService) {
     this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
       if (event.target.closest('.crds-example')) {
         if (event.target.nodeName === 'A' || event.target.classList.contains('btn')) {
@@ -48,6 +50,8 @@ export class AppComponent implements OnInit {
       imgix.init();
 
       svg4everybody();
+
+      this.headers.init();
     });
   }
 
