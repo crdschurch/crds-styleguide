@@ -1,19 +1,26 @@
-import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
 let Prism = require('prismjs');
 let path = require('path');
 let entities = new (require('html-entities').Html5Entities)();
-
+let Clipboard = require('clipboard');
+let uuidv4 = require('uuid/v4');
 
 import 'prismjs/components/prism-typescript';
+
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 @Component({
   selector: 'ddk-example',
   templateUrl: 'example.component.html'
 })
 export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked {
+
+  public clippableUUID: string;
+  public clippableHTML: string;
+  public clippableMoved = false;
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -32,8 +39,13 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   @Input() height = '100';
   @ViewChild('contentRef') contentRef;
 
-  constructor(private sanitizer: DomSanitizer, private http: Http, private elementRef: ElementRef) {
+  constructor(private sanitizer: DomSanitizer,
+              private http: Http,
+              private elementRef: ElementRef,
+              private toastr: ToastsManager,
+              private vRef: ViewContainerRef) {
     this.el = <Element>this.elementRef.nativeElement;
+    this.toastr.setRootViewContainerRef(vRef);
   }
 
   ngOnInit() {
@@ -69,13 +81,17 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
     let url = `${this.path}${this.manifest.entry}`;
     this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.initClippable();
   }
 
   getMarkup(url) {
     this.http.get(url).subscribe((data: Response) => {
       let filetype = this.getFileType(url);
       this.markup = data['_body'];
+      this.clippableHTML = data['_body'];
       this.addSyntaxHighlighting(filetype);
+      let el = document.getElementById('markup-' + this.clippableUUID);
+      this.moveClippable(el);
     });
   }
 
@@ -122,6 +138,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     el.setAttribute('data-processed', 'true');
     if (el.children.length > 0) {
       let html = entities.decode(this.preformattedMarkup || el.innerHTML).replace(/^\n+|\n+$/g, '');
+      this.clippableHTML = html;
       let node = document.createTextNode(html);
       let pre = document.createElement('pre');
           pre.classList.add('language-markup');
@@ -131,10 +148,39 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
           figure.appendChild(pre);
       this.insertAfter(figure, el);
       Prism.highlightElement(pre);
+      this.initClippable();
+      this.moveClippable(figure);
     }
   }
 
   private insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+  }
+
+  private initClippable() {
+    this.clippableUUID = 'clippable-' + uuidv4();
+    let clippable = new Clipboard('#' + this.clippableUUID, {
+      text: (trigger) => {
+        return this.clippableHTML;
+      }
+    });
+
+    clippable.on('success', (event) => {
+      let options = { toastLife: 3000 };
+      let message = 'Code copied to clipboard!';
+      this.toastr.success(message, null, options);
+    });
+  }
+
+  private moveClippable(el) {
+    let clippable = document.getElementById(this.clippableUUID);
+    if (clippable === null) {
+      setTimeout(() => {
+        this.moveClippable(el);
+      }, 500);
+      return;
+    }
+    el.appendChild(clippable);
+    this.clippableMoved = true;
   }
 }

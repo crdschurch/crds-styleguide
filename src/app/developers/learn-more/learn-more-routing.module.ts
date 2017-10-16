@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LearnMoreComponent } from './learn-more.component';
 
+import { BrowserSupportComponent } from './browser-support/browser-support.component';
 import { BuiltOnBootstrapComponent } from './built-on-bootstrap/built-on-bootstrap.component';
 import { CssSassComponent } from './css-sass/css-sass.component';
 import { GridComponent } from './grid/grid.component';
@@ -19,6 +20,10 @@ const learnMoreRoutes: Routes = [
         path: '',
         redirectTo: 'built-on-bootstrap',
         pathMatch: 'full'
+      },
+      {
+        path: 'browser-support',
+        component: BrowserSupportComponent
       },
       {
         path: 'built-on-bootstrap',

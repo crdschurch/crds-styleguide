@@ -1,0 +1,59 @@
+.ddk-search-form {
+  position: relative;
+
+  input {
+    background-color: $cr-white !important;
+    border-color: $cr-gray-lighter !important;
+    box-shadow: none !important;
+    margin: 0;
+  }
+
+  button {
+    margin: 0;
+    border-radius: 0 !important;
+  }
+
+  ul {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    background-color: $cr-white;
+    z-index: 3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  ul li.focused a,
+  ul a:hover {
+    text-decoration: none;
+    background-color: rgba($cr-gray-lighter, 0.45);
+  }
+
+  ul a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.25s ease;
+
+    .breadcrumbs {
+      display: block;
+      color: gray;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    span.breadcrumbs > span {
+      display: inline-block;
+      margin-right: 0.25rem;
+      &:after {
+        display: inline-block;
+        margin-left: 0.25rem;
+        content: '/';
+      }
+      &:last-child:after {
+        content: none;
+      }
+    }
+  }
+}
