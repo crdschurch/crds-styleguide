@@ -14,7 +14,7 @@ import { InstallationComponent } from './installation/installation.component';
 import { CodingStyleComponent } from './coding-style/coding-style.component';
 import { FileStructureComponent } from './file-structure/file-structure.component';
 import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
-import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
+import { ContributionsComponent } from './contributions/contributions.component';
 
 @NgModule({
   imports: [
@@ -30,7 +30,7 @@ import { ContributionTipsComponent } from './contribution-tips/contribution-tips
     CodingStyleComponent,
     FileStructureComponent,
     NamingConventionsComponent,
-    ContributionTipsComponent
+    ContributionsComponent
   ]
 })
 export class GettingStartedModule {}

@@ -9,7 +9,7 @@ import { InstallationComponent } from './installation/installation.component';
 import { CodingStyleComponent } from './coding-style/coding-style.component';
 import { FileStructureComponent } from './file-structure/file-structure.component';
 import { NamingConventionsComponent } from './naming-conventions/naming-conventions.component';
-import { ContributionTipsComponent } from './contribution-tips/contribution-tips.component';
+import { ContributionsComponent } from './contributions/contributions.component';
 
 
 const gettingStartedRoutes: Routes = [
@@ -48,8 +48,8 @@ const gettingStartedRoutes: Routes = [
         component: NamingConventionsComponent
       },
       {
-        path: 'contribution-tips',
-        component: ContributionTipsComponent
+        path: 'contributions',
+        component: ContributionsComponent
       }
     ]
   }
