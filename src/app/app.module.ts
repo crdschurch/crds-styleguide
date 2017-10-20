@@ -10,6 +10,7 @@ import { BootstrapDropdownDirective } from './directives/bootstrap-dropdown/boot
 import { BootstrapDropdownService } from './directives/bootstrap-dropdown/bootstrap-dropdown.service';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
+import { ScrollToModule } from 'ng2-scroll-to';
 
 import { ExampleModule } from './shared/example/example.module';
 
@@ -52,7 +53,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AssetsModule,
     AppRoutingModule,
     ExampleModule,
-    ContentBlockModule.forRoot({ endpoint: process.env.CRDS_CMS_ENDPOINT, categories: Array('ddk') })
+    ContentBlockModule.forRoot({ endpoint: process.env.CRDS_CMS_ENDPOINT, categories: Array('ddk') }),
+    ScrollToModule.forRoot()
   ],
   exports: [
     RouterModule

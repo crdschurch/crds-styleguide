@@ -218,3 +218,23 @@ body.dark-theme {
     font-size: $font-size-small;
   }
 }
+
+.linkable {
+  position: relative;
+  > a {
+    position: absolute;
+    margin-left: -3em;
+    padding: 0.5em;
+    padding-right: 2.25em;
+    font-size: 90%;
+    color: $cr-blue-light;
+    visibility: hidden;
+    .icon {
+      height: 24px;
+      background-size: 24px;
+    }
+  }
+  &:hover > a {
+    visibility: visible;
+  }
+}
