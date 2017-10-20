@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
         }
       }
 
-      var openMenu = document.querySelector('.ddk-navbar li.open');
+      let openMenu = document.querySelector('.ddk-navbar li.open');
 
       if (openMenu) {
         openMenu.classList.remove('open');

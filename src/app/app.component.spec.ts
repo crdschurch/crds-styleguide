@@ -13,7 +13,7 @@ import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { SearchComponent } from './shared/search/search.component';
 import { SearchService } from './shared/search/search.service';
-
+import { LinkableHeaderService } from './services/linkable-header.service';
 
 describe('App: CrdsDdk', () => {
   beforeEach(() => {
@@ -32,7 +32,8 @@ describe('App: CrdsDdk', () => {
         RouterTestingModule.withRoutes([])
       ],
       providers: [
-        SearchService
+        SearchService,
+        LinkableHeaderService
       ]
     });
   });
