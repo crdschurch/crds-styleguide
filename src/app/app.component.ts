@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(private elementRef: ElementRef,
               private renderer: Renderer,
               private router: Router,
-              private headers:LinkableHeaderService) {
+              private headers: LinkableHeaderService) {
     this.renderer.listen(this.elementRef.nativeElement, 'click', (event) => {
       if (event.target.closest('.crds-example')) {
         if (event.target.nodeName === 'A' || event.target.classList.contains('btn')) {
