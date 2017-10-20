@@ -6,15 +6,19 @@ export class IconService {
 
   icons = [
     'calendar',
+    'camera',
+    'caret-down',
     'check-circle',
     'chevron-down',
     'chevron-left',
     'chevron-right',
     'chevron-up',
     'circle-thin',
+    'clock-o',
     'close',
-    'contrast',
     'close-thin',
+    'contrast',
+    'copy',
     'download',
     'equalizer',
     'exclamation-circle',
@@ -28,6 +32,7 @@ export class IconService {
     'question-circle',
     'screwhead-crds',
     'search',
+    'share',
     'twitter',
     'usd',
     'youtube'
