@@ -10,6 +10,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
 import { ContentBlockModule } from 'crds-ng2-content-block';
+import { ScrollToModule } from 'ng2-scroll-to';
 
 import { SearchComponent } from './shared/search/search.component';
 import { SearchService } from './shared/search/search.service';
@@ -28,6 +29,7 @@ describe('App: CrdsDdk', () => {
       imports: [
         CollapseModule,
         ContentBlockModule.forRoot({ endpoint: 'https://contentint.crossroads.net/', categories: Array('ddk') }),
+        ScrollToModule.forRoot(),
         HttpModule,
         RouterTestingModule.withRoutes([])
       ],
