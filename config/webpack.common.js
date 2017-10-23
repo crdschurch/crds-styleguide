@@ -8,6 +8,7 @@ var fs = require('fs');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var pry = require('pryjs');
 var glob = require('glob');
+var shell = require('shelljs');
 
 module.exports = {
   entry: {
@@ -50,6 +51,15 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'styles': {
+          'version': JSON.stringify(shell.exec('npm view crds-styles version', { silent: true }).stdout),
+          'date': JSON.stringify(shell.exec('npm view crds-styles time.modified | cut -d T -f 1', { silent: true }).stdout)
+        },
+      }
+    }),
+
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'polyfills']
     }),

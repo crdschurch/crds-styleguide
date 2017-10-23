@@ -3,6 +3,7 @@ const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var Dotenv = require('dotenv-webpack');
+var shell = require('shelljs');
 const ENV = process.env.ENV = process.env.NODE_ENV = 'test';
 
 module.exports = function(options) {
@@ -65,6 +66,14 @@ module.exports = function(options) {
       }),
       new DefinePlugin({
         'ENV': JSON.stringify(ENV)
+      }),
+      new DefinePlugin({
+        'process.env': {
+          'styles': {
+            'version': JSON.stringify('1.0.0'),
+            'date': JSON.stringify('10-13-2017')
+          },
+        }
       }),
     ],
 
