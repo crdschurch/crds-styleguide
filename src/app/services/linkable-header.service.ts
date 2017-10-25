@@ -13,6 +13,12 @@ export class LinkableHeaderService {
     let els = document.querySelectorAll('.component h2, .component h3, h3.component-header, .component h4, .component h5, .component h6');
     [].forEach.call(els, function(el) {
       if (!el.hasAttribute('data-linked')) {
+        let x = el;
+        while (x = x.parentElement) {
+          if (x.nodeName.toLowerCase() === 'ddk-example') {
+            return;
+          }
+        }
         el.setAttribute('data-linked', date.toString());
         let parent = el.parentNode;
         let id = this.parameterize(el.innerHTML);
