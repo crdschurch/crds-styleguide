@@ -58,10 +58,19 @@
 </ddk-example>
 
 <h3 class="component-header">Input Field &mdash; Disabled</h3>
-<p>Disabled inputs appear lighter in color and adds a <code>not-allowed</code> cursor.</p>
+<p>Disabled inputs prevent users interactions and appear lighter in color and add a <code>not-allowed</code> cursor.</p>
 <ddk-example>
 <div class="form-group">
   <label for="email" class="sr-only">Email</label>
-  <input type="email" disabled name="email" value="" placeholder="Email" class="form-control">
+  <input type="email" name="email" value="" placeholder="Email" class="form-control" disabled>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Input Field &mdash; Read-only</h3>
+<p>Read-only inputs prevent modification of the input's value. Read-only inputs appear lighter, but keep the standard cursor.</p>
+<ddk-example>
+<div class="form-group">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" name="email" value="" placeholder="Email" class="form-control" readonly>
 </div>
 </ddk-example>
