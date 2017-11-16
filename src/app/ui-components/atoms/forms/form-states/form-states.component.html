@@ -47,6 +47,17 @@
 </div>
 </ddk-example>
 
+<h3 class="component-header">Input Field &mdash; Search</h3>
+<p>Adding a <code>.searchbar</code> class to an input's parent container will disable validation states on that input. In this example, we've included the class <code>.ng-invalid</code> to show how <code>.searchbar</code> will override the invalidation styles.</p>
+<ddk-example>
+<form class="searchbar" action=".">
+  <div class="form-group">
+    <label for="search" class="sr-only">Email</label>
+    <input type="text" name="search" value="" placeholder="Search" class="form-control ng-touched ng-invalid">
+  </div>
+</form>
+</ddk-example>
+
 <h3 class="component-header">Input Field &mdash; Default with Helper Text</h3>
 
 <ddk-example>
