@@ -22,6 +22,8 @@ export class IconService {
     'download',
     'equalizer',
     'exclamation-circle',
+    'eye',
+    'eye-slash',
     'facebook',
     'github',
     'instagram',

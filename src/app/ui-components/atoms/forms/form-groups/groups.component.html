@@ -221,3 +221,67 @@
 &lt;/div>
 </pre>
 </ddk-example>
+
+<h3 class="component-header">Input with Clickable Addon</h3>
+
+<p>In some cases, an input may need to have interactive elements (like buttons) nested within itself. These elements are expected to share the same validation and focus states of its input parent. To achieve this effect, a class of <code>.with-icon-btn</code> is added to the <code>.input-group</code> component.</p>
+
+<ddk-example>
+<form class="input-group-flex" action=".">
+  <div class="input-group with-icon-btn">
+    <input class="form-control" type="search" placeholder="Location">
+    <div class="icon-btn-wrapper"></div>
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#close-thin" />
+        </svg>
+      </button>
+    </span>
+
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#equalizer" />
+        </svg>
+      </button>
+    </span>
+  </div>
+</form>
+</ddk-example>
+
+<h3 class="component-header">Input with Clickable Addon and Input Button</h3>
+
+<p>The component above can be expanded upon, including a commonly used Bootstrap element called an <code>.input-group-btn</code>, which is a nice way to say "a button that looks like it's attached to an input." But because this element is already doing some funky stuff with the embedded icon buttons, a class of <code>.with-input-group-btn</code> needs to be added with the <code>.with-icon-btn</code> class to ensure the appropriate layout is rendered.</p>
+
+<ddk-example>
+<form class="input-group-flex" action=".">
+  <div class="input-group with-icon-btn with-input-group-btn">
+    <input class="form-control" type="text" placeholder="Keyword">
+    <div class="icon-btn-wrapper"></div>
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#close-thin" />
+        </svg>
+      </button>
+    </span>
+
+    <span class="addon-btn">
+      <button type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#equalizer" />
+        </svg>
+      </button>
+    </span>
+
+    <span class="input-group-btn">
+      <button class="btn btn-secondary" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-1" viewBox="0 0 256 256">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#search" />
+        </svg>
+      </button>
+    </span>
+  </div>
+</form>
+</ddk-example>
