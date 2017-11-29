@@ -24,7 +24,7 @@ import { LoadersComponent } from './loaders/loaders.component';
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
-import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
@@ -70,7 +70,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
     ButtonGroupsComponent,
     ButtonPlacementComponent,
     ButtonsComponent,
-    ButtonSizesComponent,
+    ButtonStatesComponent,
     ButtonStylesComponent,
     FeedbackComponent,
     FormControlsComponent,

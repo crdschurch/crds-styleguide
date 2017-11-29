@@ -15,7 +15,7 @@ import { LoadersComponent } from './loaders/loaders.component';
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
-import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
@@ -69,8 +69,8 @@ const learnMoreRoutes: Routes = [
             component: ButtonStylesComponent
           },
           {
-            path: 'sizes',
-            component: ButtonSizesComponent
+            path: 'states',
+            component: ButtonStatesComponent
           },
           {
             path: 'groups',
