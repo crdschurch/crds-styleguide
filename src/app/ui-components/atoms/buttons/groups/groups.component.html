@@ -1,9 +1,69 @@
-<h2 class="page-header">Groups</h2>
+<h2 class="page-header flush-top">Groups</h2>
 
-<p class="callout callout-info">For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank" class="callout-link">class binding</a>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank" class="callout-link">NgClass directive</a>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
+<p>By default, button groups use <code>.btn-default</code> to control their color. This class is interchangeable and extendable when used with any previously defined button style defined in the <a href="/ui-components/atoms/buttons/styles">Styles section</a> of this component.</p>
+
+<section>
+  <h3 class="component-header">Pills</h3>
+
+  <ddk-example>
+
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Pills Link</h3>
+
+  <ddk-example>
+
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Pills Bar</h3>
+
+  <ddk-example>
+
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Pills Block</h3>
+
+  <ddk-example>
+
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Dropdown</h3>
+
+  <p>
+    The example below shows an Angular implementation of a button dropdown using
+    the NGX Bootstrap library.
+  </p>
+
+  <p>
+    Note that the various button styles shown above are supported by the button
+    dropdown.
+  </p>
+
+  <p class="callout callout-info" role="alert">The dropdown behavior requires the inclusion of
+    <a href="http://valor-software.com/ngx-bootstrap/#/"
+        target="_blank" class="callout-link">NGX Bootstrap</a> - an external
+    resource used to create Bootstrap-like elements in Angular 2 applications.</p>
+
+  <ddk-example id="button-dropdown" height="200"></ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Button Input</h3>
+
+  <ddk-example>
+
+  </ddk-example>
+</section>
 
 <h3 class="component-header">Button Group - Horizontal</h3>
-
 <ddk-example>
   <div class="btn-group">
     <button *ngFor="let button of buttons"
