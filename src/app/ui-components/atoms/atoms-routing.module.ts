@@ -16,7 +16,6 @@ import { LoadersComponent } from './loaders/loaders.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonStatesComponent } from './buttons/states/states.component';
-import { ButtonDropdownsComponent } from './buttons/dropdowns/dropdowns.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
@@ -76,10 +75,6 @@ const learnMoreRoutes: Routes = [
           {
             path: 'groups',
             component: ButtonGroupsComponent
-          },
-          {
-            path: 'dropdowns',
-            component: ButtonDropdownsComponent
           },
           {
             path: 'placement',
