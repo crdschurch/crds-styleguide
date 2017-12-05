@@ -41,7 +41,9 @@ import { TablesComponent } from './tables/tables.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
-import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormInputsComponent } from './forms/inputs/inputs.component';
+import { FormRadiosComponent } from './forms/radios/radios.component';
+import { FormCheckboxesComponent } from './forms/checkboxes/checkboxes.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
@@ -73,7 +75,9 @@ import { MediaImgComponent } from './media-img/media-img.component';
     ButtonStatesComponent,
     ButtonStylesComponent,
     FeedbackComponent,
-    FormControlsComponent,
+    FormInputsComponent,
+    FormRadiosComponent,
+    FormCheckboxesComponent,
     FormDatepickerComponent,
     FormGroupsComponent,
     FormsComponent,

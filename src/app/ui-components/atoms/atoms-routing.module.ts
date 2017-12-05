@@ -32,7 +32,9 @@ import { TablesComponent } from './tables/tables.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
-import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormInputsComponent } from './forms/inputs/inputs.component';
+import { FormRadiosComponent } from './forms/radios/radios.component';
+import { FormCheckboxesComponent } from './forms/checkboxes/checkboxes.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
@@ -147,12 +149,20 @@ const learnMoreRoutes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'controls',
+            redirectTo: 'inputs',
             pathMatch: 'full'
           },
           {
-            path: 'controls',
-            component: FormControlsComponent
+            path: 'inputs',
+            component: FormInputsComponent
+          },
+          {
+            path: 'radios',
+            component: FormRadiosComponent
+          },
+          {
+            path: 'checkboxes',
+            component: FormCheckboxesComponent
           },
           {
             path: 'states',
