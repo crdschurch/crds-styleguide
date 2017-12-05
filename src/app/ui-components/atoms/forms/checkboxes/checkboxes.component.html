@@ -1,25 +1,111 @@
 <h2 class="page-header flush-top">Checkboxes</h2>
 
+<p>Select none, one or multiple options. No option is preselected by default. Once an option is touched, a user can return to the unselected state of the component.</p>
+
 <section>
-  <h3 class="component-header">Checkboxes</h3>
+  <h3 class="component-header">Checkbox</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
 
   <ddk-example>
-<div class="controls-stacked">
-  <label class="control checkbox">
-    <input type="checkbox" checked="checked">
-    <span class="control-indicator" tabindex="0"></span>
-    Option one is selected
-  </label>
-  <label class="control checkbox">
-    <input type="checkbox">
-    <span class="control-indicator" tabindex="0"></span>
-    Option two can also be selected
-  </label>
-  <label class="control checkbox disabled">
-    <input type="checkbox" disabled="disabled">
-    <span class="control-indicator" tabindex="0"></span>
-    Option three is disabled
-  </label>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-stacked">
+    <label class="control checkbox">
+      <input type="checkbox" checked="checked">
+      <span class="control-indicator" tabindex="0"></span>
+      Option one is selected
+    </label>
+    <label class="control checkbox">
+      <input type="checkbox">
+      <span class="control-indicator" tabindex="0"></span>
+      Option two can also be selected
+    </label>
+    <label class="control checkbox disabled">
+      <input type="checkbox" disabled="disabled">
+      <span class="control-indicator" tabindex="0"></span>
+      Option three is disabled
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox bar</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div class="btn-group btn-group-bar" role="group" aria-label="...">
+    <button type="button" class="btn btn-default active">Default</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox bar (flexbox)</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    <button type="button" class="btn btn-default active">Default</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox pills</h3>
+
+  <p>Use with many options when horizontal space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default active">Default</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default active">Default</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
 </div>
   </ddk-example>
 </section>

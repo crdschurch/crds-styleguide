@@ -1,49 +1,138 @@
-<h2 class="page-header flush-top">Base Controls</h2>
+<h2 class="page-header flush-top">Radios</h2>
+
+<p>One (and only one) option must be selected. No option is pre-selected by default. Pnce an option is touched, a user cannot return to the unselected state of the component.</p>
 
 <section>
-  <h3 class="component-header">Radio Buttons &mdash; Block</h3>
+  <h3 class="component-header">Default radio (stacked)</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
 
   <ddk-example>
-<form class="controls-stacked">
-  <label class="control radio">
-    <input id="radio1" name="radio" type="radio" checked="checked">
-    <span class="control-indicator"></span>
-    Option one is selected
-  </label>
-  <label class="control radio">
-    <input id="radio2" name="radio" type="radio">
-    <span class="control-indicator"></span>
-    Option two will deselect option one
-  </label>
-  <label class="control radio disabled">
-    <input id="radio3" name="radio" type="radio" disabled="disabled">
-    <span class="control-indicator"></span>
-    Option three is disabled
-  </label>
-</form>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-stacked">
+    <label class="control radio">
+      <input id="radio1" name="radio" type="radio" checked="checked">
+      <span class="control-indicator"></span>
+      Option one is selected
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
+      Option two will deselect option one
+    </label>
+    <label class="control radio disabled">
+      <input id="radio3" name="radio" type="radio" disabled="disabled">
+      <span class="control-indicator"></span>
+      Option three is disabled
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
   </ddk-example>
 </section>
 
 <section>
-  <h3 class="component-header">Radio Buttons &mdash; Inline</h3>
+  <h3 class="component-header">Radio (inline)</h3>
 
   <ddk-example>
-<form class="controls-inline">
-  <label class="control radio">
-    <input id="radio1" name="radio" type="radio" checked="checked">
-    <span class="control-indicator"></span>
-    Option 1
-  </label>
-  <label class="control radio">
-    <input id="radio2" name="radio" type="radio">
-    <span class="control-indicator"></span>
-    Option 2
-  </label>
-  <label class="control radio disabled">
-    <input id="radio3" name="radio" type="radio" disabled="disabled">
-    <span class="control-indicator"></span>
-    Option 3 (disabled)
-  </label>
-</form>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-inline">
+    <label class="control radio">
+      <input id="radio1" name="radio" type="radio" checked="checked">
+      <span class="control-indicator"></span>
+      Option one is selected
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
+      Option two will deselect option one
+    </label>
+    <label class="control radio disabled">
+      <input id="radio3" name="radio" type="radio" disabled="disabled">
+      <span class="control-indicator"></span>
+      Option three is disabled
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio bar</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div class="btn-group btn-group-bar" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">$25</button>
+    <button type="button" class="btn btn-default">$50</button>
+    <button type="button" class="btn btn-default">$100</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio bar (flexbox)</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">$25</button>
+    <button type="button" class="btn btn-default">$50</button>
+    <button type="button" class="btn btn-default">$100</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills</h3>
+
+  <p>Use with many options when horizontal space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">Seeing friends</button>
+    <button type="button" class="btn btn-default">Music</button>
+    <button type="button" class="btn btn-default">Videos/Media</button>
+    <button type="button" class="btn btn-default">Message</button>
+    <button type="button" class="btn btn-default">I love it all (seriously)</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default active">Default</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default">Label</button>
+  </div>
+  <p class="help-block">Help text if needed</p>
+</div>
   </ddk-example>
 </section>
