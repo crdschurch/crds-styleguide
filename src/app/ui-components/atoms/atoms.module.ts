@@ -44,6 +44,8 @@ import { FormsComponent } from './forms/forms.component';
 import { FormInputsComponent } from './forms/inputs/inputs.component';
 import { FormRadiosComponent } from './forms/radios/radios.component';
 import { FormCheckboxesComponent } from './forms/checkboxes/checkboxes.component';
+import { FormTogglesComponent } from './forms/toggles/toggles.component';
+import { FormNestedFormsComponent } from './forms/nested-forms/nested-forms.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
@@ -78,6 +80,8 @@ import { MediaImgComponent } from './media-img/media-img.component';
     FormInputsComponent,
     FormRadiosComponent,
     FormCheckboxesComponent,
+    FormTogglesComponent,
+    FormNestedFormsComponent,
     FormDatepickerComponent,
     FormGroupsComponent,
     FormsComponent,
