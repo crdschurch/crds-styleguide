@@ -2,6 +2,8 @@
 
 <p>One (and only one) option must be selected. No option is pre-selected by default. Pnce an option is touched, a user cannot return to the unselected state of the component.</p>
 
+<p class="callout callout-info">The button groups featured in this section have radio button behaviour associated with them. This is achieved by using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#radio-button" target="_blank">NGX Bootstrap</a> and adding <code> [(ngModel)]="radioModel" btnRadio="*"</code> to each button within a group.</p>
+
 <section>
   <h3 class="component-header">Default radio (stacked)</h3>
 
@@ -12,7 +14,7 @@
   <ddk-example>
 <div class="form-group">
   <label class="control-label block">Label</label>
-  <div class="controls-stacked">
+  <form class="controls-stacked flush-ends">
     <label class="control radio">
       <input id="radio1" name="radio" type="radio" checked="checked">
       <span class="control-indicator"></span>
@@ -28,8 +30,8 @@
       <span class="control-indicator"></span>
       Option three is disabled
     </label>
-  </div>
-  <p class="help-block">Helper text if needed</p>
+  </form>
+  <p class="help-block hard-top">Helper text if needed</p>
 </div>
   </ddk-example>
 </section>
@@ -40,7 +42,7 @@
   <ddk-example>
 <div class="form-group">
   <label class="control-label block">Label</label>
-  <div class="controls-inline">
+  <div class="controls-inline flush-ends">
     <label class="control radio">
       <input id="radio1" name="radio" type="radio" checked="checked">
       <span class="control-indicator"></span>
@@ -57,7 +59,7 @@
       Option three is disabled
     </label>
   </div>
-  <p class="help-block">Helper text if needed</p>
+  <p class="help-block hard-top">Helper text if needed</p>
 </div>
   </ddk-example>
 </section>
@@ -71,9 +73,9 @@
 <div class="form-group">
   <label class="control-label block">How much?</label>
   <div class="btn-group btn-group-bar" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">$25</button>
-    <button type="button" class="btn btn-default">$50</button>
-    <button type="button" class="btn btn-default">$100</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_one">$25</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_two">$50</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_three">$100</button>
   </div>
   <p class="help-block">Helper text if needed</p>
 </div>
@@ -89,9 +91,9 @@
 <div class="form-group">
   <label class="control-label block">How much?</label>
   <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">$25</button>
-    <button type="button" class="btn btn-default">$50</button>
-    <button type="button" class="btn btn-default">$100</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_one">$25</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_two">$50</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_three">$100</button>
   </div>
   <p class="help-block">Helper text if needed</p>
 </div>
@@ -107,11 +109,11 @@
 <div class="form-group">
   <label class="control-label block">Best part of the weekend experience?</label>
   <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default">Seeing friends</button>
-    <button type="button" class="btn btn-default">Music</button>
-    <button type="button" class="btn btn-default">Videos/Media</button>
-    <button type="button" class="btn btn-default">Message</button>
-    <button type="button" class="btn btn-default">I love it all (seriously)</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_one">Seeing friends</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_two">Music</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_three">Videos/Media</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_four">Message</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_five">I love it all (seriously)</button>
   </div>
   <p class="help-block">Helper text if needed</p>
 </div>
@@ -127,10 +129,11 @@
 <div class="form-group">
   <label class="control-label block">Best part of the weekend experience?</label>
   <div class="btn-group btn-group-block" role="group" aria-label="...">
-    <button type="button" class="btn btn-default active">Default</button>
-    <button type="button" class="btn btn-default">Label</button>
-    <button type="button" class="btn btn-default">Label</button>
-    <button type="button" class="btn btn-default">Label</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">Seeing friends</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">Music</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">Videos/Media</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Message</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_five">I love it all (seriously)</button>
   </div>
   <p class="help-block">Help text if needed</p>
 </div>
