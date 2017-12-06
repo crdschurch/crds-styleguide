@@ -3,4 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   templateUrl: './nested-forms.component.html'
 })
-export class FormNestedFormsComponent {}
+export class FormNestedFormsComponent {
+  public visible: boolean = false;
+
+  toggle() {
+    this.visible = true;
+  }
+}
