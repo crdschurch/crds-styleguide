@@ -2,12 +2,16 @@
 
 <p>A few examples of collecting follow up data within a single view.</p>
 
+<p class="callout callout-info">The purpose of this page is to illustrate expected behaviour. It's by no means prescriptive in how you should implement a given component.</p>
+
 <section>
   <h3 class="component-header">Radio</h3>
 
   <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
 
   <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <p class="callout callout-info">The combined use of <code>[(ngModel)]="radioInputGroup" value="radio*"</code> and <code>*ngIf</code> elements throughout this example provide this example with the expected functionality. They aren't necessarily required in your implementation.</p>
 
   <ddk-example>
 <div class="form-group">
@@ -115,6 +119,8 @@
   <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
 
   <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <p class="callout callout-info">The combined use of <code>[(ngModel)]="checkboxInputGroup*"</code> and <code>*ngIf</code> elements throughout this example provide this example with the expected functionality. They aren't necessarily required in your implementation.</p>
 
   <ddk-example>
 <div class="form-group">
