@@ -4,9 +4,17 @@ import { Component } from '@angular/core';
   templateUrl: './nested-forms.component.html'
 })
 export class FormNestedFormsComponent {
-  public visible: boolean = false;
+  selected: boolean = false;
 
-  toggle() {
-    this.visible = true;
+  public selectedInput() {
+    let inputs = document.body.getElementsByTagName('input');
+
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked = true) {
+        this.selected = true;
+      } else {
+        this.selected = false;
+      }
+    }
   }
 }
