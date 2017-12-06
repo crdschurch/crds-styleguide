@@ -57,14 +57,14 @@
         </div>
 
         <div class="row">
-          <div class="form-group col-sm-6">
+          <div class="form-group col-sm-6 flush-bottom">
             <label class="sr-only" for="">State</label>
             <select class="form-control">
               <option disabled="" selected="">State</option>
             </select>
           </div>
 
-          <div class="form-group col-sm-6">
+          <div class="form-group col-sm-6 flush-bottom">
             <label class="sr-only" for="">Zip code</label>
             <input class="form-control" name="" placeholder="Zip" type="number" maxlength="10" id="">
           </div>
@@ -91,11 +91,15 @@
     <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">At work</button>
     <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Somewhere else</button>
 
-    <div class="border-left border-width-3 clear">
-      <div class="push-half-left">
-        <div class="form-group">
-          <label class="sr-only" for="">Location name</label>
-          <input class="form-control" name="" placeholder="Like where?" type="text" id="">
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Location name</label>
+              <input class="form-control" name="" placeholder="Like where?" type="text" id="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -227,44 +231,60 @@
   <div class="btn-group btn-group-block" role="group" aria-label="...">
     <button type="button" class="btn btn-default" btnCheckbox>Anything active</button>
 
-    <div class="border-left border-width-3 clear">
-      <div class="push-half-left">
-        <div class="form-group">
-          <label class="sr-only" for="">Activity</label>
-          <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Activity</label>
+              <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <button type="button" class="btn btn-default" btnCheckbox>Be entertained</button>
 
-    <div class="border-left border-width-3 clear">
-      <div class="push-half-left">
-        <div class="form-group">
-          <label class="sr-only" for="">Entertainment</label>
-          <input class="form-control" name="" placeholder="By what?" type="text" id="">
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Entertainment</label>
+              <input class="form-control" name="" placeholder="By what?" type="text" id="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <button type="button" class="btn btn-default" btnCheckbox>Stay at home</button>
 
-    <div class="border-left border-width-3 clear">
-      <div class="push-half-left">
-        <div class="form-group">
-          <label class="sr-only" for="">Stay home</label>
-          <input class="form-control" name="" placeholder="And do what?" type="text" id="">
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Stay home</label>
+              <input class="form-control" name="" placeholder="And do what?" type="text" id="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <button type="button" class="btn btn-default" btnCheckbox>Other</button>
 
-    <div class="border-left border-width-3 clear">
-      <div class="push-half-left">
-        <div class="form-group">
-          <label class="sr-only" for="">Other</label>
-          <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Other</label>
+              <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            </div>
+          </div>
         </div>
       </div>
     </div>
