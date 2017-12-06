@@ -4,17 +4,10 @@ import { Component } from '@angular/core';
   templateUrl: './nested-forms.component.html'
 })
 export class FormNestedFormsComponent {
-  selected: boolean = false;
-
-  public selectedInput() {
-    let inputs = document.body.getElementsByTagName('input');
-
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].checked = true) {
-        this.selected = true;
-      } else {
-        this.selected = false;
-      }
-    }
-  }
+  radioInputGroup: string;
+  checkboxInputGroup1: string;
+  checkboxInputGroup2: string;
+  checkboxInputGroup3: string;
+  checkboxInputGroup4: string;
+  checkboxInputGroup5: string;
 }
