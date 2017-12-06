@@ -1,0 +1,67 @@
+<h2 class="page-header flush-top">Toggles</h2>
+
+<p>Select one option or the other. No option is pre-selected by default. Once an option is touched, a user can return to the unselected state of the component.</p>
+
+<p class="callout callout-info">To illustrate functionality, we're using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#radio-button" target="_blank">NGX Bootstrap</a> and adding the attribute <code>uncheckable</code> to each button element.</p>
+
+<section>
+  <h3 class="component-header">Radio bar</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Kids welcome?</label>
+  <div class="btn-group btn-group-bar" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_one" uncheckable>Yes</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_two" uncheckable>No</button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio bar (flexbox)</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Kids welcome?</label>
+  <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_one" uncheckable>Yes</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_two" uncheckable>No</button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills</h3>
+
+  <p>Use with many options when horizontal space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Show</label>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_one" uncheckable>Locations only</button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Show</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one" uncheckable>Locations only</button>
+  </div>
+</div>
+  </ddk-example>
+</section>
