@@ -1,0 +1,286 @@
+<h2 class="page-header flush-top">Dropdowns</h2>
+
+<p class="callout callout-info">Barring the first example, all other code examples on this page are strictly to illustrate the effect each <code>.btn-*</code> class has on the input element.</p>
+
+<section>
+  <h3 class="component-header">Button Dropdown</h3>
+
+  <p>
+    The example below shows an Angular implementation of a button dropdown using
+    the NGX Bootstrap library.
+  </p>
+
+  <p>
+    Note that the various button styles shown above are supported by the button
+    dropdown.
+  </p>
+
+  <p class="callout callout-info" role="alert">The dropdown behavior requires the inclusion of
+    <a href="http://valor-software.com/ngx-bootstrap/#/"
+       target="_blank" class="callout-link">NGX Bootstrap</a> - an external
+    resource used to create Bootstrap-like elements in Angular 2 applications.</p>
+
+  <ddk-example id="button-dropdown" height="200"></ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Solid Color Options</h3>
+  <p>Use the <code>.btn-*</code> classes on any element with a <code>.btn</code> class to change that button element's color.</p>
+
+  <p class="callout callout-info">For obvious reasons, the <code>.btn-white</code> style button works best on a dark background. All of the following white button examples have been given a wrapper with a dark background (and some minor padding for aesthetic reasons).</p>
+
+  <ddk-example>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-blue dropdown-toggle">
+    Blue Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-cyan dropdown-toggle">
+    Cyan Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray dropdown-toggle">
+    Gray Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray-light dropdown-toggle">
+    Gray Light Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="block bg-charcoal soft-quarter">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-white dropdown-toggle">
+      White Primary Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Disabled Solid Color Options</h3>
+
+  <ddk-example>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-blue disabled dropdown-toggle">
+    Blue Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-cyan disabled dropdown-toggle">
+    Cyan Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray disabled dropdown-toggle">
+    Gray Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray-light disabled dropdown-toggle">
+    Gray Light Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="block bg-charcoal soft-quarter">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-white disabled dropdown-toggle">
+      White Primary Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Outline Color Options</h3>
+  <p>Adding a class of <code>.btn-outline</code> to any <code>.btn</code> element will invert the text and background colors, creating an outline effect.</p>
+
+  <ddk-example>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-blue btn-outline dropdown-toggle">
+    Blue Secondary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-cyan btn-outline dropdown-toggle">
+    Cyan Secondary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray btn-outline dropdown-toggle">
+    Gray Secondary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray-light btn-outline dropdown-toggle">
+    Gray Light Secondary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="block bg-charcoal soft-quarter">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-white btn-outline dropdown-toggle">
+      White Secondary Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Disabled Outline Color Options</h3>
+
+  <ddk-example>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-blue btn-outline disabled dropdown-toggle">
+    Blue Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-cyan btn-outline disabled dropdown-toggle">
+    Cyan Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray btn-outline disabled dropdown-toggle">
+    Gray Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="dropdown" dropdown>
+  <button dropdownToggle type="button" class="btn btn-gray-light btn-outline disabled dropdown-toggle">
+    Gray Light Primary Dropdown
+    <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+    </svg>
+  </button>
+</div>
+<div class="block bg-charcoal soft-quarter">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-white btn-outline disabled dropdown-toggle">
+      White Primary Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Sizes</h3>
+  <p>Adding <code>.btn-lg</code> or <code>.btn-sm</code> will increase or decrease your button element.</p>
+
+  <ddk-example>
+<div class="block">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue btn-lg dropdown-toggle">
+      Large Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue btn-outline btn-lg dropdown-toggle">
+      Large Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+<div class="block">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue dropdown-toggle">
+      Default Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue btn-outline dropdown-toggle">
+      Default Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+<div class="block">
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue btn-sm dropdown-toggle">
+      Small Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="dropdown" dropdown>
+    <button dropdownToggle type="button" class="btn btn-blue btn-outline btn-sm dropdown-toggle">
+      Small Dropdown
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+  </ddk-example>
+</section>
