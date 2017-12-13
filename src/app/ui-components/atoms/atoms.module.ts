@@ -24,7 +24,7 @@ import { LoadersComponent } from './loaders/loaders.component';
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
-import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
@@ -44,7 +44,11 @@ import { TooltipsComponent } from './tooltips/tooltips.component';
 
 /* forms */
 import { FormsComponent } from './forms/forms.component';
-import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormInputsComponent } from './forms/inputs/inputs.component';
+import { FormRadiosComponent } from './forms/radios/radios.component';
+import { FormCheckboxesComponent } from './forms/checkboxes/checkboxes.component';
+import { FormTogglesComponent } from './forms/toggles/toggles.component';
+import { FormNestedFormsComponent } from './forms/nested-forms/nested-forms.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
@@ -73,10 +77,14 @@ import { MediaImgComponent } from './media-img/media-img.component';
     ButtonGroupsComponent,
     ButtonPlacementComponent,
     ButtonsComponent,
-    ButtonSizesComponent,
+    ButtonStatesComponent,
     ButtonStylesComponent,
     FeedbackComponent,
-    FormControlsComponent,
+    FormInputsComponent,
+    FormRadiosComponent,
+    FormCheckboxesComponent,
+    FormTogglesComponent,
+    FormNestedFormsComponent,
     FormDatepickerComponent,
     FormGroupsComponent,
     FormsComponent,

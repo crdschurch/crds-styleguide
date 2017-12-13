@@ -12,3 +12,13 @@ textarea {
 datepicker {
   display: block;
 }
+
+.btn-group-block {
+  .row {
+    display: none;
+  }
+
+  .active + .row {
+    display: block;
+  }
+}
