@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>flickity card carousel</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta" />
 
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="/app.css" />
+<head>
+  <title>flickity card carousel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta" />
 
-    <script src="https://use.typekit.net/ccb3vpa.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  </head>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="stylesheet" href="/app.css" />
 
-  <body>
-    <div class="card-deck carousel" data-carousel="mobile-scroll">
+  <script src="https://use.typekit.net/ccb3vpa.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+
+  </script>
+</head>
+
+<body>
+  <div class="card-deck carousel" data-carousel="mobile-scroll">
+    <div class="feature-cards card-deck--expanded-layout">
       <div class="card carousel-cell">
         <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
           alt="Card image caption">
@@ -20,8 +29,9 @@
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -40,8 +50,9 @@
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -54,14 +65,14 @@
       </div>
 
       <div class="card carousel-cell">
-        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
-          alt="Card image caption">
+        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" alt="Card image caption">
         <div class="card-block">
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -74,14 +85,14 @@
       </div>
 
       <div class="card carousel-cell">
-        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
-          alt="Card image caption">
+        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" alt="Card image caption">
         <div class="card-block">
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -94,14 +105,14 @@
       </div>
 
       <div class="card carousel-cell">
-        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
-          alt="Card image caption">
+        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" alt="Card image caption">
         <div class="card-block">
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -114,14 +125,14 @@
       </div>
 
       <div class="card carousel-cell">
-        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
-          alt="Card image caption">
+        <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" alt="Card image caption">
         <div class="card-block">
           <h4 class="card-title card-title--overlap text-uppercase">Card Title</h4>
           <div class="card-text">
             <address>
-              1632 Doubloon Cove<br>
-              Astoria, OR 19840 (<a href="#">Map</a>)
+              1632 Doubloon Cove
+              <br> Astoria, OR 19840 (
+              <a href="#">Map</a>)
             </address>
 
             <strong>Service Times:</strong>
@@ -133,9 +144,16 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://unpkg.com/imgix.js@3.3.0/dist/imgix.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="/examples/card-deck-default/carousel.js"></script>
-  </body>
+  <script src="//unpkg.com/imgix.js@3.3.0/dist/imgix.min.js"></script>
+  <script src="//unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-card-carousel-v0.1.0.min.js"></script>
+
+  <script>
+    (function () { new CRDS.CardCarousels(); })();
+  </script>
+
+</body>
+
 </html>
