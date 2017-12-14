@@ -60,6 +60,9 @@ import { LabelsComponent } from './labels/labels.component';
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
+/* progres bar */
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+
 @NgModule({
   imports: [
     AtomsRoutingModule,
@@ -102,7 +105,8 @@ import { MediaImgComponent } from './media-img/media-img.component';
     MediaImgComponent,
     SearchFieldComponent,
     TablesComponent,
-    ToastNotificationsComponent
+    ToastNotificationsComponent,
+    ProgressBarComponent
   ]
 })
 export class AtomsModule {}

@@ -51,6 +51,9 @@ import { LabelsComponent } from './labels/labels.component';
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
 
+/* progress bar */
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+
 const learnMoreRoutes: Routes = [
   {
     path: 'ui-components/atoms',
@@ -213,6 +216,10 @@ const learnMoreRoutes: Routes = [
       {
         path: 'media-images',
         component: MediaImgComponent
+      },
+      {
+        path: 'progress-bar',
+        component: ProgressBarComponent
       }
     ]
   }
