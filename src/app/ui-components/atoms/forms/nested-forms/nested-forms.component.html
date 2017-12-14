@@ -175,6 +175,32 @@
   </div>
   <p class="help-block">Help text if needed</p>
 </div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Where do you mostly pray?&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">At home&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">On the go&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">At work&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Somewhere else&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Location name&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like where?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;p class="help-block">Help text if needed&lt;/p>
+&lt;/div>
+</pre>
   </ddk-example>
 </section>
 
@@ -387,5 +413,74 @@
 
   <p class="help-block">Helper text if needed</p>
 </div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">How do you spend free time? (All that apply)&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Anything active&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Activity&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Be entertained&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Entertainment&lt;/label>
+              &lt;input class="form-control" name="" placeholder="By what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Stay at home&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Stay home&lt;/label>
+              &lt;input class="form-control" name="" placeholder="And do what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Other&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Other&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
   </ddk-example>
 </section>
