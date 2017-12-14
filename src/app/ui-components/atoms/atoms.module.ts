@@ -26,6 +26,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
 import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+import { ButtonInputsComponent } from './buttons/button-inputs/button-inputs.component';
+import { ButtonDropdownsComponent } from './buttons/dropdowns/dropdowns.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
 /* icons */
@@ -76,6 +78,8 @@ import { MediaImgComponent } from './media-img/media-img.component';
     ButtonsComponent,
     ButtonStatesComponent,
     ButtonStylesComponent,
+    ButtonInputsComponent,
+    ButtonDropdownsComponent,
     FeedbackComponent,
     FormInputsComponent,
     FormRadiosComponent,
