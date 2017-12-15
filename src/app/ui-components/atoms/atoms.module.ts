@@ -41,6 +41,9 @@ import { IconColorsComponent } from './icons/colors/colors.component';
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 
+/* tooltips */
+import { TooltipsComponent } from './tooltips/tooltips.component';
+
 /* forms */
 import { FormsComponent } from './forms/forms.component';
 import { FormInputsComponent } from './forms/inputs/inputs.component';
@@ -106,7 +109,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
     SearchFieldComponent,
     TablesComponent,
     ToastNotificationsComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    TooltipsComponent
   ]
 })
 export class AtomsModule {}
