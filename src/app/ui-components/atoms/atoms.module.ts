@@ -41,6 +41,9 @@ import { IconColorsComponent } from './icons/colors/colors.component';
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 
+/* tooltips */
+import { TooltipsComponent } from './tooltips/tooltips.component';
+
 /* forms */
 import { FormsComponent } from './forms/forms.component';
 import { FormInputsComponent } from './forms/inputs/inputs.component';
@@ -102,6 +105,7 @@ import { MediaImgComponent } from './media-img/media-img.component';
     MediaImgComponent,
     SearchFieldComponent,
     TablesComponent,
+    TooltipsComponent,
     ToastNotificationsComponent
   ]
 })
