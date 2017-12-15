@@ -32,6 +32,9 @@ import { IconColorsComponent } from './icons/colors/colors.component';
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 
+/* tooltips */
+import { TooltipsComponent } from './tooltips/tooltips.component';
+
 /* forms */
 import { FormsComponent } from './forms/forms.component';
 import { FormInputsComponent } from './forms/inputs/inputs.component';
@@ -209,6 +212,10 @@ const learnMoreRoutes: Routes = [
       {
         path: 'tables',
         component: TablesComponent
+      },
+      {
+        path: 'tooltips',
+        component: TooltipsComponent
       },
       {
         path: 'media-images',
