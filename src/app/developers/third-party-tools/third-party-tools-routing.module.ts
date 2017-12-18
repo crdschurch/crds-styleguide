@@ -6,6 +6,7 @@ import { ThirdPartyToolsComponent } from './third-party-tools.component';
 
 import { ImgixComponent } from './imgix/imgix.component';
 import { MapsComponent } from './maps/maps.component';
+import { NgxChartsComponent } from './ngx-charts/ngx-charts.component';
 
 const learnMoreRoutes: Routes = [
   {
@@ -24,6 +25,10 @@ const learnMoreRoutes: Routes = [
       {
         path: 'maps',
         component: MapsComponent
+      },
+      {
+        path: 'ngx-charts',
+        component: NgxChartsComponent
       }
     ]
   }
