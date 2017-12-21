@@ -5,7 +5,6 @@
 
     <link rel="stylesheet" href="/app.css" />
 
-    <script src="/examples/jumbotron-bg-video/bg-video.js"></script>
     <script src="https://use.typekit.net/ccb3vpa.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
@@ -29,8 +28,12 @@
       </div>
     </div>
 
+    <script src="//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-jumbotron-video-v0.1.0.min.js"></script>
+
     <script>
-      new CRDS.JumbotronVideoPlayers();
+      (function () {
+        new CRDS.JumbotronVideos();
+      })();
     </script>
 
   </body>

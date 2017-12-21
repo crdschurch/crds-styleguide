@@ -15,8 +15,10 @@ import { LoadersComponent } from './loaders/loaders.component';
 /* buttons */
 import { ButtonsComponent } from './buttons/buttons.component';
 import { ButtonStylesComponent } from './buttons/styles/styles.component';
-import { ButtonSizesComponent } from './buttons/sizes/sizes.component';
+import { ButtonStatesComponent } from './buttons/states/states.component';
 import { ButtonGroupsComponent } from './buttons/groups/groups.component';
+import { ButtonInputsComponent } from './buttons/button-inputs/button-inputs.component';
+import { ButtonDropdownsComponent } from './buttons/dropdowns/dropdowns.component';
 import { ButtonPlacementComponent } from './buttons/placement/placement.component';
 
 /* icons */
@@ -30,9 +32,16 @@ import { IconColorsComponent } from './icons/colors/colors.component';
 /* tables */
 import { TablesComponent } from './tables/tables.component';
 
+/* tooltips */
+import { TooltipsComponent } from './tooltips/tooltips.component';
+
 /* forms */
 import { FormsComponent } from './forms/forms.component';
-import { FormControlsComponent } from './forms/form-controls/form-controls.component';
+import { FormInputsComponent } from './forms/inputs/inputs.component';
+import { FormRadiosComponent } from './forms/radios/radios.component';
+import { FormCheckboxesComponent } from './forms/checkboxes/checkboxes.component';
+import { FormTogglesComponent } from './forms/toggles/toggles.component';
+import { FormNestedFormsComponent } from './forms/nested-forms/nested-forms.component';
 import { FormStatesComponent } from './forms/form-states/form-states.component';
 import { FormDatepickerComponent } from './forms/datepicker/datepicker.component';
 import { FormTimepickerComponent } from './forms/timepicker/timepicker.component';
@@ -44,6 +53,9 @@ import { LabelsComponent } from './labels/labels.component';
 
 /* media images */
 import { MediaImgComponent } from './media-img/media-img.component';
+
+/* progress bar */
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 const learnMoreRoutes: Routes = [
   {
@@ -69,12 +81,20 @@ const learnMoreRoutes: Routes = [
             component: ButtonStylesComponent
           },
           {
-            path: 'sizes',
-            component: ButtonSizesComponent
+            path: 'states',
+            component: ButtonStatesComponent
           },
           {
             path: 'groups',
             component: ButtonGroupsComponent
+          },
+          {
+            path: 'dropdowns',
+            component: ButtonDropdownsComponent
+          },
+          {
+            path: 'button-inputs',
+            component: ButtonInputsComponent
           },
           {
             path: 'placement',
@@ -147,12 +167,28 @@ const learnMoreRoutes: Routes = [
         children: [
           {
             path: '',
-            redirectTo: 'controls',
+            redirectTo: 'inputs',
             pathMatch: 'full'
           },
           {
-            path: 'controls',
-            component: FormControlsComponent
+            path: 'inputs',
+            component: FormInputsComponent
+          },
+          {
+            path: 'radios',
+            component: FormRadiosComponent
+          },
+          {
+            path: 'checkboxes',
+            component: FormCheckboxesComponent
+          },
+          {
+            path: 'toggles',
+            component: FormTogglesComponent
+          },
+          {
+            path: 'nested-forms',
+            component: FormNestedFormsComponent
           },
           {
             path: 'states',
@@ -181,8 +217,16 @@ const learnMoreRoutes: Routes = [
         component: TablesComponent
       },
       {
+        path: 'tooltips',
+        component: TooltipsComponent
+      },
+      {
         path: 'media-images',
         component: MediaImgComponent
+      },
+      {
+        path: 'progress-bar',
+        component: ProgressBarComponent
       }
     ]
   }

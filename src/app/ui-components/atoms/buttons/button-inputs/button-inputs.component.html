@@ -1,0 +1,258 @@
+<h2 class="page-header flush-top">Button Inputs</h2>
+
+<section>
+  <h3 class="component-header">Button Input</h3>
+
+  <p>Use the <code>.btn-*</code> classes on any element with a <code>.btn</code> class to change that button element's color.</p>
+
+  <p class="callout callout-info">For obvious reasons, the <code>.btn-white</code> style button works best on a dark background. All of the following white button examples have been given a wrapper with a dark background (and some minor padding for aesthetic reasons).</p>
+
+  <p class="callout callout-info">It should be noted that the input background color also changes when the <code>.btn-white</code> class is used. To get the appropriate colors, also add <code>.input-group-white</code> to the wrapper class.</p>
+
+  <ddk-example>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-blue" type="submit">
+      Blue
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-cyan" type="submit">
+      Cyan
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-gray" type="submit">
+      Gray
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-gray-light" type="submit">
+      Gray Light
+    </button>
+  </span>
+</div>
+<div class="bg-charcoal soft-quarter">
+  <div class="input-group input-group-white">
+    <input class="form-control" placeholder="Placeholder" type="text">
+    <span class="input-group-btn">
+      <button class="btn btn-white" type="submit">
+        White
+      </button>
+    </span>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Button Input (Disabled)</h3>
+
+  <p>To create a disabled Button Input Group, add an attribute of <code>disabled</code> to the input tag <strong>and</strong> a <code>.disabled</code> class to the button tag.</p>
+
+  <ddk-example>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-blue disabled" type="submit">
+      Blue
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-cyan disabled" type="submit">
+      Cyan
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-gray disabled" type="submit">
+      Gray
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-gray-light disabled" type="submit">
+      Gray Light
+    </button>
+  </span>
+</div>
+<div class="bg-charcoal soft-quarter">
+  <div class="input-group input-group-white">
+    <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+    <span class="input-group-btn">
+      <button class="btn btn-white disabled" type="submit">
+        White
+      </button>
+    </span>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Button Input &mdash; Icon Only</h3>
+
+  <ddk-example>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-blue" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-cyan" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-gray" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-gray-light" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="bg-charcoal soft-quarter">
+  <div class="input-group input-group-white">
+    <input class="form-control" placeholder="Placeholder" type="text">
+    <span class="input-group-btn">
+      <button class="btn btn-white" type="submit">
+        <svg class="icon icon-1" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#search"></use>
+        </svg>
+      </button>
+    </span>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Button Input &mdash; Icon Only (Disabled)</h3>
+
+  <ddk-example>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-blue disabled" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-cyan disabled" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-gray disabled" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+  <span class="input-group-btn">
+    <button class="btn btn-gray-light disabled" type="submit">
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xlink:href="/assets/svgs/icons.svg#search"></use>
+      </svg>
+    </button>
+  </span>
+</div>
+<div class="bg-charcoal soft-quarter">
+  <div class="input-group input-group-white">
+    <input class="form-control" placeholder="Placeholder" type="text" disabled="disabled">
+    <span class="input-group-btn">
+      <button class="btn btn-white disabled" type="submit">
+        <svg class="icon icon-1" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#search"></use>
+        </svg>
+      </button>
+    </span>
+  </div>
+</div>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Button Input Sizes</h3>
+
+  <p>Adding <code>.input-group-lg</code> or <code>.input-group-sm</code> will increase or decrease your input group element.</p>
+
+  <ddk-example>
+<div class="input-group input-group-lg">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-blue" type="submit">
+      Large Button Input
+    </button>
+  </span>
+</div>
+<div class="input-group">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-blue" type="submit">
+      Default Button Input
+    </button>
+  </span>
+</div>
+<div class="input-group input-group-sm">
+  <input class="form-control" placeholder="Placeholder" type="text">
+  <span class="input-group-btn">
+    <button class="btn btn-blue" type="submit">
+      Small Button Input
+    </button>
+  </span>
+</div>
+  </ddk-example>
+</section>

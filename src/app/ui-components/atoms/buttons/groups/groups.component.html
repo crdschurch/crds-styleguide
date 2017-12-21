@@ -1,106 +1,125 @@
-<h2 class="page-header">Groups</h2>
+<h2 class="page-header flush-top">Groups</h2>
 
-<p class="callout callout-info">For a button to have an active state, the class <code>active</code> must be added to the selector. This can be done using either <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#class-binding" target="_blank" class="callout-link">class binding</a>, .e.g. <code>&#91;class.active&#93;="isActive"</code>, or with the <a href="https://angular.io/docs/ts/latest/guide/template-syntax.html#!#ngClass" target="_blank" class="callout-link">NgClass directive</a>, e.g. <code>&#91;ngClass&#93;="&#123;'active'&#125;"</code>.</p>
+<p>By default, button groups use <code>.btn-default</code> to control their color. This class is interchangeable and extendable when used with any previously defined solid button styles found in the <a href="/ui-components/atoms/buttons/styles">Styles section</a> of this component.</p>
 
-<h3 class="component-header">Button Group - Horizontal</h3>
+<section>
+  <h3 class="component-header">Pills</h3>
 
-<ddk-example>
-  <div class="btn-group">
-    <button *ngFor="let button of buttons"
-            type="button"
-            class="btn btn-option btn-outline"
-            [class.active]="button === selectedButton"
-            (click)="onSelect(button)">{{ button.label }}</button>
-  </div>
-  <pre>
-<div class="btn-group">
-  <button type="button" class="btn btn-option btn-outline">Option 1</button>
-  <button type="button" class="btn btn-option btn-outline">Option 2</button>
-  <button type="button" class="btn btn-option btn-outline">Option 3</button>
-  <button type="button" class="btn btn-option btn-outline">Option 4</button>
-</div></pre>
-</ddk-example>
+  <ddk-example>
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
 
-<h3 class="component-header">Button Group - Vertical</h3>
+<section>
+  <h3 class="component-header">Pills Link</h3>
 
-<ddk-example>
-  <div class="btn-group-vertical">
-    <button *ngFor="let button of verticalButtons"
-            type="button"
-            ngClass="{{button.class}}" class="btn"
-            [class.active]="button === selectedButton"
-            (click)="onSelect(button)">{{ button.label }}</button>
-  </div>
-  <pre>
-<div class="btn-group-vertical">
-  <button type="button" class="btn btn-primary">First Option</button>
-  <button type="button" class="btn btn-secondary">Second Option</button>
-  <button type="button" class="btn btn-outline btn-gray">Third Option</button>
-  <button type="button" class="btn btn-link btn-default">Fourth Option</button>
-</div></pre>
-</ddk-example>
+  <ddk-example>
+<div class="btn-group btn-group-link" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
 
-<h3 class="component-header">Flexbox Button Group - Horizontal</h3>
+<section>
+  <h3 class="component-header">Pills Bar</h3>
 
-<ddk-example>
-  <div class="btn-group btn-group-row">
-    <button *ngFor="let button of flexButtons"
-            type="button"
-            class="btn btn-option btn-flex btn-outline"
-            [class.active]="button === selectedButton"
-            (click)="onSelect(button)">{{ button.label }}</button>
-  </div>
-  <pre>
-<div class="btn-group">
-  <button type="button" class="btn btn-option btn-flex btn-outline">Option 1</button>
-  <button type="button" class="btn btn-option btn-flex btn-outline">Option 2</button>
-  <button type="button" class="btn btn-option btn-flex btn-outline">Option 3</button>
-  <button type="button" class="btn btn-option btn-flex btn-outline">Option 4</button>
-</div></pre>
-</ddk-example>
+  <ddk-example>
+<div class="btn-group btn-group-bar" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
 
-<h3 class="component-header">Full-Width Toggle Button Group</h3>
+<section>
+  <h3 class="component-header">Pills Bar (Flexbox)</h3>
 
-<p class="callout callout-info" role="alert">This button group component requires the inclusion of <a href="https://github.com/valor-software/ngx-bootstrap" target="_blank" class="callout-link">NG-2 Bootstrap</a> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <a href="http://valor-software.com/ngx-bootstrap/#/buttons#radio" target="_blank" class="callout-link">this documentation</a> when customizing this component.</p>
+  <ddk-example>
+<div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
 
-<ddk-example>
-  <div class="btn-group btn-group-toggle btn-block btn-group-teal">
-    <label class="btn btn-option"
-          [(ngModel)]="radioModel"
-          btnRadio="option_a">Option A</label>
-    <label class="btn btn-option"
-          [(ngModel)]="radioModel"
-          btnRadio="option_b">Option B</label>
-  </div>
-  <pre>
-<div class="btn-group btn-group-toggle btn-block btn-group-teal">
-  <label class="btn btn-option"
-        [(ngModel)]="radioModel"
-        btnRadio="option_a">Option A</label>
-  <label class="btn btn-option"
-        [(ngModel)]="radioModel"
-        btnRadio="option_b">Option B</label>
-</div></pre>
-</ddk-example>
+<section>
+  <h3 class="component-header">Pills Block</h3>
 
-<h3 class="component-header">Toggle Button Group</h3>
+  <ddk-example>
+<div class="btn-group btn-group-block" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
 
-<ddk-example>
-  <div class="btn-group btn-group-toggle btn-group-primary">
-    <label class="btn btn-option"
-          [(ngModel)]="radioModel"
-          btnRadio="option_a">Option A</label>
-    <label class="btn btn-option"
-          [(ngModel)]="radioModel"
-          btnRadio="option_b">Option B</label>
-  </div>
-  <pre>
-<div class="btn-group btn-group-toggle btn-group-primary">
-  <label class="btn btn-option"
-        [(ngModel)]="radioModel"
-        btnRadio="option_a">Option A</label>
-  <label class="btn btn-option"
-        [(ngModel)]="radioModel"
-        btnRadio="option_b">Option B</label>
-</div></pre>
-</ddk-example>
+<section>
+  <h3 class="component-header">Pills Group Sizes</h3>
+
+  <ddk-example>
+<div class="btn-group btn-group-lg" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+<br>
+<div class="btn-group btn-group-sm" role="group" aria-label="...">
+  <button type="button" class="btn btn-default active">Default</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+  <button type="button" class="btn btn-default">Label</button>
+</div>
+  </ddk-example>
+</section>
