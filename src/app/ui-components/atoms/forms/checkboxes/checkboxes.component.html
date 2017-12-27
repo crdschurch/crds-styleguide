@@ -1,0 +1,201 @@
+<h2 class="page-header flush-top">Checkboxes</h2>
+
+<p>Select none, one or multiple options. No option is preselected by default. Once an option is touched, a user can return to the unselected state of the component.</p>
+
+<p class="callout callout-info">The button groups featured in this section have radio button behaviour associated with them. This is achieved by using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#checkbox" target="_blank">NGX Bootstrap</a> and adding a <code>btnCheckbox</code> attribute to each button within a group.</p>
+
+<section>
+  <h3 class="component-header">Checkbox</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-stacked flush-ends">
+    <label class="control checkbox">
+      <input type="checkbox" checked="checked">
+      <span class="control-indicator" tabindex="0"></span>
+      Option one is selected
+    </label>
+    <label class="control checkbox">
+      <input type="checkbox">
+      <span class="control-indicator" tabindex="0"></span>
+      Option two can also be selected
+    </label>
+    <label class="control checkbox disabled">
+      <input type="checkbox" disabled="disabled">
+      <span class="control-indicator" tabindex="0"></span>
+      Option three is disabled
+    </label>
+  </div>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Label&lt;/label>
+  &lt;div class="controls-stacked flush-ends">
+    &lt;label class="control checkbox">
+      &lt;input type="checkbox" checked="checked">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Option one is selected
+    &lt;/label>
+    &lt;label class="control checkbox">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Option two can also be selected
+    &lt;/label>
+    &lt;label class="control checkbox disabled">
+      &lt;input type="checkbox" disabled="disabled">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Option three is disabled
+    &lt;/label>
+  &lt;/div>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox bar</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div class="btn-group btn-group-bar" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" btnCheckbox>Morning</button>
+    <button type="button" class="btn btn-default" btnCheckbox>Afternoon</button>
+    <button type="button" class="btn btn-default" btnCheckbox>Evening</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">What times are you available?&lt;/label>
+  &lt;div class="btn-group btn-group-bar" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Morning&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Afternoon&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Evening&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox bar (flexbox)</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" btnCheckbox>Morning</button>
+    <button type="button" class="btn btn-default" btnCheckbox>Afternoon</button>
+    <button type="button" class="btn btn-default" btnCheckbox>Evening</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">What times are you available?&lt;/label>
+  &lt;div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Morning&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Afternoon&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Evening&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox pills</h3>
+
+  <p>Use with many options when horizontal space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" btnCheckbox>Middle school</button>
+    <button type="button" class="btn btn-default" btnCheckbox>High school</button>
+    <button type="button" class="btn btn-default" btnCheckbox>College</button>
+    <button type="button" class="btn btn-default" btnCheckbox>20s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>30s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>40s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>50s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>60s+</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Age range&lt;/label>
+  &lt;div class="btn-group" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Middle school&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>High school&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>College&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>20s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>30s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>40s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>50s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>60s+&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" btnCheckbox>Middle school</button>
+    <button type="button" class="btn btn-default" btnCheckbox>High school</button>
+    <button type="button" class="btn btn-default" btnCheckbox>College</button>
+    <button type="button" class="btn btn-default" btnCheckbox>20s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>30s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>40s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>50s</button>
+    <button type="button" class="btn btn-default" btnCheckbox>60s+</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Age range&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Middle school&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>High school&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>College&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>20s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>30s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>40s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>50s&lt;/button>
+    &lt;button type="button" class="btn btn-default" btnCheckbox>60s+&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>

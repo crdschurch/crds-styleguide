@@ -1,0 +1,486 @@
+<h2 class="page-header flush-top">Nested Forms</h2>
+
+<p>A few examples of collecting follow up data within a single view.</p>
+
+<p class="callout callout-warning">The purpose of this page is to illustrate expected behaviour. It's by no means prescriptive in how you should implement a given component.</p>
+
+<section>
+  <h3 class="component-header">Radio</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Where do you want to meet?</label>
+  <form class="controls-stacked flush-ends">
+    <label class="control radio push-quarter-bottom">
+      <input id="radio1" name="radio" type="radio" [(ngModel)]="radioInputGroup" value="radio1">
+      <span class="control-indicator"></span>
+      My home
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>The place where you live.</p>
+    </div>
+
+    <label class="control radio push-quarter-bottom">
+      <input id="radio2" name="radio" type="radio" [(ngModel)]="radioInputGroup" value="radio2">
+      <span class="control-indicator"></span>
+      Somewhere else
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>Meeting places can be anywhere &mdash; your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.</p>
+    </div>
+
+    <div *ngIf="radioInputGroup == 'radio2'" class="form-group border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label class="sr-only" for="">Location name</label>
+            <input class="form-control" name="" placeholder="Location name" type="text" id="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label class="sr-only" for="">Address</label>
+            <input class="form-control" name="" placeholder="Address" type="text" id="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-xs-12">
+            <label class="sr-only" for="">City</label>
+            <input class="form-control" name="" placeholder="City" type="text" id="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6 flush-bottom">
+            <label class="sr-only" for="">State</label>
+            <select class="form-control">
+              <option disabled="" selected="">State</option>
+            </select>
+          </div>
+
+          <div class="form-group col-sm-6 flush-bottom">
+            <label class="sr-only" for="">Zip code</label>
+            <input class="form-control" name="" placeholder="Zip" type="text" maxlength="10" id="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Where do you want to meet?&lt;/label>
+  &lt;form class="controls-stacked flush-ends">
+    &lt;label class="control radio push-quarter-bottom">
+      &lt;input id="radio1" name="radio" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      My home
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>The place where you live.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control radio push-quarter-bottom">
+      &lt;input id="radio2" name="radio" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      Somewhere else
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>Meeting places can be anywhere &mdash; your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.&lt;/p>
+    &lt;/div>
+
+    &lt;div class="form-group border-left border-width-3 push-left">
+      &lt;div class="push-half-left">
+        &lt;div class="row">
+          &lt;div class="form-group col-xs-12">
+            &lt;label class="sr-only" for="">Location name&lt;/label>
+            &lt;input class="form-control" name="" placeholder="Location name" type="text" id="">
+          &lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="form-group col-xs-12">
+            &lt;label class="sr-only" for="">Address&lt;/label>
+            &lt;input class="form-control" name="" placeholder="Address" type="text" id="">
+          &lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="form-group col-xs-12">
+            &lt;label class="sr-only" for="">City&lt;/label>
+            &lt;input class="form-control" name="" placeholder="City" type="text" id="">
+          &lt;/div>
+        &lt;/div>
+
+        &lt;div class="row">
+          &lt;div class="form-group col-sm-6 flush-bottom">
+            &lt;label class="sr-only" for="">State&lt;/label>
+            &lt;select class="form-control">
+              &lt;option disabled="" selected="">State&lt;/option>
+            &lt;/select>
+          &lt;/div>
+
+          &lt;div class="form-group col-sm-6 flush-bottom">
+            &lt;label class="sr-only" for="">Zip code&lt;/label>
+            &lt;input class="form-control" name="" placeholder="Zip" type="text" maxlength="10" id="">
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/form>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Where do you mostly pray?</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">At home</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">On the go</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">At work</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Somewhere else</button>
+
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Location name</label>
+              <input class="form-control" name="" placeholder="Like where?" type="text" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="help-block">Help text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Where do you mostly pray?&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">At home&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">On the go&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">At work&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Somewhere else&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Location name&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like where?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;p class="help-block">Help text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Select up to two</label>
+  <div class="controls-stacked flush-ends">
+    <label class="control checkbox push-quarter-bottom">
+      <input type="checkbox" [(ngModel)]="checkboxInputGroup1">
+      <span class="control-indicator" tabindex="0"></span>
+      Interest
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.</p>
+    </div>
+
+    <div *ngIf="checkboxInputGroup1" class="border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="form-group">
+          <label class="sr-only" for="">Interest</label>
+          <input class="form-control" name="" placeholder="Ex. Boxing" type="text" id="">
+        </div>
+      </div>
+    </div>
+
+    <label class="control checkbox push-quarter-bottom">
+      <input type="checkbox" [(ngModel)]="checkboxInputGroup2">
+      <span class="control-indicator" tabindex="0"></span>
+      Neighborhoods
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>Your group is primarily focused on building community with the people who live closet together in your town, zip code or on your street.</p>
+    </div>
+
+    <div *ngIf="checkboxInputGroup2" class="border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="form-group">
+          <label class="sr-only" for="">Neighborhoods</label>
+          <input class="form-control" name="" placeholder="Ex. Western Hills" type="text" id="">
+        </div>
+      </div>
+    </div>
+
+    <label class="control checkbox push-quarter-bottom">
+      <input type="checkbox" [(ngModel)]="checkboxInputGroup3">
+      <span class="control-indicator" tabindex="0"></span>
+      Spiritual growth
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>Grow together through Huddle, reading a book or studying the Bible and applying what you learn to your everyday life.</p>
+    </div>
+
+    <div *ngIf="checkboxInputGroup3" class="border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="form-group">
+          <label class="sr-only" for="">Spiritual growth</label>
+          <input class="form-control" name="" placeholder="Ex. Seeker" type="text" id="">
+        </div>
+      </div>
+    </div>
+
+    <label class="control checkbox push-quarter-bottom">
+      <input type="checkbox" [(ngModel)]="checkboxInputGroup4">
+      <span class="control-indicator" tabindex="0"></span>
+      Life stages
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>For people in a similar life stage like empty nesters, singles, foster parents, moms, young married couples, etc.</p>
+    </div>
+
+    <div *ngIf="checkboxInputGroup4" class="border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="form-group">
+          <label class="sr-only" for="">Life stage</label>
+          <input class="form-control" name="" placeholder="Ex. Newlyweds" type="text" id="">
+        </div>
+      </div>
+    </div>
+
+    <label class="control checkbox push-quarter-bottom">
+      <input type="checkbox" [(ngModel)]="checkboxInputGroup5">
+      <span class="control-indicator" tabindex="0"></span>
+      Healing
+    </label>
+
+    <div class="flush-bottom hard-top help-block text-muted push-left">
+      <p>For people looking for healing and recovery in an area of life.</p>
+    </div>
+
+    <div *ngIf="checkboxInputGroup5" class="border-left border-width-3 push-left">
+      <div class="push-half-left">
+        <div class="form-group">
+          <label class="sr-only" for="">Healing</label>
+          <input class="form-control" name="" placeholder="Ex. Addiction" type="text" id="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Select up to two&lt;/label>
+  &lt;div class="controls-stacked flush-ends">
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Interest
+    &lt;/label>
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.&lt;/p>
+    &lt;/div>
+    &lt;div class="border-left border-width-3 push-left">
+      &lt;div class="push-half-left">
+        &lt;div class="form-group">
+          &lt;label class="sr-only" for="">Interest&lt;/label>
+          &lt;input class="form-control" name="" placeholder="Ex. Boxing" type="text" id="">
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    ...
+  &lt;/div>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Checkbox pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">How do you spend free time? (All that apply)</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" btnCheckbox>Anything active</button>
+
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Activity</label>
+              <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-default" btnCheckbox>Be entertained</button>
+
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Entertainment</label>
+              <input class="form-control" name="" placeholder="By what?" type="text" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-default" btnCheckbox>Stay at home</button>
+
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Stay home</label>
+              <input class="form-control" name="" placeholder="And do what?" type="text" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-default" btnCheckbox>Other</button>
+
+    <div class="row">
+      <div class="col-xs-12 clear">
+        <div class="border-left border-width-3">
+          <div class="push-half-left">
+            <div class="form-group push-quarter-ends">
+              <label class="sr-only" for="">Other</label>
+              <input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">How do you spend free time? (All that apply)&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Anything active&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Activity&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Be entertained&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Entertainment&lt;/label>
+              &lt;input class="form-control" name="" placeholder="By what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Stay at home&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Stay home&lt;/label>
+              &lt;input class="form-control" name="" placeholder="And do what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button type="button" class="btn btn-default" btnCheckbox>Other&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Other&lt;/label>
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>

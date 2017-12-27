@@ -1,0 +1,241 @@
+<h2 class="page-header flush-top">Radios</h2>
+
+<p>One (and only one) option must be selected. No option is pre-selected by default. Once an option is touched, a user cannot return to the unselected state of the component.</p>
+
+<p class="callout callout-info">The button groups featured in this section have radio button behaviour associated with them. This is achieved by using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#radio-button" target="_blank">NGX Bootstrap</a> and adding <code>[(ngModel)]="radioModel" btnRadio="*"</code> to each button within a group.</p>
+
+<section>
+  <h3 class="component-header">Default radio (stacked)</h3>
+
+  <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+  <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <form class="controls-stacked flush-ends">
+    <label class="control radio">
+      <input id="radio1" name="radio" type="radio" checked="checked">
+      <span class="control-indicator"></span>
+      Option one is selected
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
+      Option two will deselect option one
+    </label>
+    <label class="control radio disabled">
+      <input id="radio3" name="radio" type="radio" disabled="disabled">
+      <span class="control-indicator"></span>
+      Option three is disabled
+    </label>
+  </form>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Label&lt;/label>
+  &lt;form class="controls-stacked flush-ends">
+    &lt;label class="control radio">
+      &lt;input id="radio1" name="radio" type="radio" checked="checked">
+      &lt;span class="control-indicator">&lt;/span>
+      Option one is selected
+    &lt;/label>
+    &lt;label class="control radio">
+      &lt;input id="radio2" name="radio" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      Option two will deselect option one
+    &lt;/label>
+    &lt;label class="control radio disabled">
+      &lt;input id="radio3" name="radio" type="radio" disabled="disabled">
+      &lt;span class="control-indicator">&lt;/span>
+      Option three is disabled
+    &lt;/label>
+  &lt;/form>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio (inline)</h3>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-inline flush-ends">
+    <label class="control radio">
+      <input id="radio1" name="radio" type="radio" checked="checked">
+      <span class="control-indicator"></span>
+      Option 1
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
+      Option 2
+    </label>
+    <label class="control radio disabled">
+      <input id="radio3" name="radio" type="radio" disabled="disabled">
+      <span class="control-indicator"></span>
+      Option 3 (disabled)
+    </label>
+  </div>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Label&lt;/label>
+  &lt;div class="controls-inline flush-ends">
+    &lt;label class="control radio">
+      &lt;input id="radio1" name="radio" type="radio" checked="checked">
+      &lt;span class="control-indicator">&lt;/span>
+      Option 1
+    &lt;/label>
+    &lt;label class="control radio">
+      &lt;input id="radio2" name="radio" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      Option 2
+    &lt;/label>
+    &lt;label class="control radio disabled">
+      &lt;input id="radio3" name="radio" type="radio" disabled="disabled">
+      &lt;span class="control-indicator">&lt;/span>
+      Option 3 (disabled)
+    &lt;/label>
+  &lt;/div>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio bar</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div class="btn-group btn-group-bar" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_one">$25</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_two">$50</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_three">$100</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">How much?&lt;/label>
+  &lt;div class="btn-group btn-group-bar" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_one">$25&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_two">$50&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rb_three">$100&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio bar (flexbox)</h3>
+
+  <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_one">$25</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_two">$50</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_three">$100</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">How much?&lt;/label>
+  &lt;div class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_one">$25&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_two">$50&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rbf_three">$100&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills</h3>
+
+  <p>Use with many options when horizontal space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_one">Seeing friends</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_two">Music</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_three">Videos/Media</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_four">Message</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_five">I love it all (seriously)</button>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Best part of the weekend experience?&lt;/label>
+  &lt;div class="btn-group" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_one">Seeing friends&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_two">Music&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_three">Videos/Media&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_four">Message&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rp_five">I love it all (seriously)&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
+
+<section>
+  <h3 class="component-header">Radio pills (block)</h3>
+
+  <p>Use when vertical space allows.</p>
+
+  <ddk-example>
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div class="btn-group btn-group-block" role="group" aria-label="...">
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">Seeing friends</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">Music</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">Videos/Media</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Message</button>
+    <button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_five">I love it all (seriously)</button>
+  </div>
+  <p class="help-block">Help text if needed</p>
+</div>
+
+<pre>
+&lt;div class="form-group">
+  &lt;label class="control-label block">Best part of the weekend experience?&lt;/label>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="...">
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_one">Seeing friends&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_two">Music&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_three">Videos/Media&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_four">Message&lt;/button>
+    &lt;button type="button" class="btn btn-default" [(ngModel)]="radioModel" btnRadio="rpb_five">I love it all (seriously)&lt;/button>
+  &lt;/div>
+  &lt;p class="help-block">Help text if needed&lt;/p>
+&lt;/div>
+</pre>
+  </ddk-example>
+</section>
