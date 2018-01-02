@@ -1,3 +1,9 @@
+<div class="row mb-3">
+  <div class="col-xs-12 text-center">
+    <a href="javascript:void(0)" class="btn btn-primary" (click)="changeColor()">Change Color</a>
+  </div>
+</div>
+
 <svg id="my-chart" viewBox="0 0 750 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
     <!-- Grid Lines -->
@@ -16,20 +22,13 @@
       <text y="29">Thing #5</text>
     </g>
     <!-- Bars -->
-    <g fill="#57AFA9" transform="translate(82, 0)">
-      <path id="thing_1_path"></path>
-      <path id="thing_2_path"></path>
-      <path id="thing_3_path"></path>
-      <path id="thing_4_path"></path>
-      <path id="thing_5_path"></path>
+    <g id="bar-group" fill="#57AFA9" transform="translate(82, 0)">
+      <path id="thing1-path"></path>
+      <path id="thing2-path"></path>
+      <path id="thing3-path"></path>
+      <path id="thing4-path"></path>
+      <path id="thing5-path"></path>
     </g>
-    <!-- <g fill="#57AFA9">
-      <path id="thing_1_path" [attr.d]="barPath('thing_1', 228, 206)"></path>
-      <path id="thing_2_path" [attr.d]="barPath('thing_2', 171, 206)"></path>
-      <path id="thing_3_path" [attr.d]="barPath('thing_3', 114, 206)"></path>
-      <path id="thing_4_path" [attr.d]="barPath('thing_4', 57, 206)"></path>
-      <path id="thing_5_path" [attr.d]="barPath('thing_5', 0, 206)"></path>
-    </g> -->
     <!-- X-Axis Labels -->
     <g transform="translate(81.5, 310)" fill="#737373" font-size="14" font-weight="300" text-anchor="middle">
       <text x="0">0</text>

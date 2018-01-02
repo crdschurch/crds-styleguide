@@ -9,29 +9,32 @@ declare const SVG;
 export class ChartComponent implements OnInit {
 
   bars = {
-    thing_1: {
+    thing1: {
       value: 2.7,
       top: 228
     },
-    thing_2: {
+    thing2: {
       value: 2.4,
       top: 171
     },
-    thing_3: {
+    thing3: {
       value: 1.8,
       top: 114
     },
-    thing_4: {
+    thing4: {
       value: 1.2,
       top: 57
     },
-    thing_5: {
+    thing5: {
       value: 0.6,
       top: 0
     }
   };
 
   svg: any;
+
+  colors = ['#3B6E8F', '#0095D9', '#57AFA9', '#C05C04', '#E09E06'];
+  currentColor = '#57AFA9';
 
   constructor() {}
 
@@ -40,7 +43,16 @@ export class ChartComponent implements OnInit {
     this.initBarPaths();
   }
 
-  public initBarPaths() {
+  public changeColor() {
+    let newColor = this.getRandomColor();
+    while (newColor === this.currentColor) {
+      newColor = this.getRandomColor();
+    }
+    this.currentColor = newColor;
+    this.svg.select('#bar-group').animate(250).attr({ fill: this.currentColor });
+  }
+
+  private initBarPaths() {
     for (let name in this.bars) {
       if (name) {
         const bar = this.bars[name];
@@ -51,7 +63,7 @@ export class ChartComponent implements OnInit {
     }
   }
 
-  public getPathArray(bar, value = bar.value) {
+  private getPathArray(bar, value = bar.value) {
     const right = (value * 206) - 4;
     const top = bar.top;
     return new SVG.PathArray([
@@ -66,7 +78,12 @@ export class ChartComponent implements OnInit {
   }
 
   private getBar(name) {
-    return this.svg.select(`#${name}_path`);
+    return this.svg.select(`#${name}-path`);
+  }
+
+  private getRandomColor() {
+    const idx = Math.floor(Math.random() * this.colors.length);
+    return this.colors[idx];
   }
 
 }
