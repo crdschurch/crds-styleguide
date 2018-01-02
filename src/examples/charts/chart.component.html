@@ -1,3 +1,34 @@
-<p>
-  This will be the chart ...
-</p>
+<svg viewBox="0 0 750 313" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <!-- Grid Lines -->
+    <g transform="translate(81.5, 0.5)" stroke="#E7E7E7" stroke-linecap="square">
+      <path d="M0,0 L0,276.6"></path>
+      <path d="M206,0 L206,276.6"></path>
+      <path d="M412,0 L412,276.6"></path>
+      <path d="M618,0 L618,276.6"></path>
+    </g>
+    <!-- Y-Axis Labels -->
+    <g transform="translate(64, 0)" font-size="14" fill="#737373" font-weight="300" text-anchor="end">
+      <text y="257">Thing #1</text>
+      <text y="200">Thing #2</text>
+      <text y="143">Thing #3</text>
+      <text y="86">Thing #4</text>
+      <text y="29">Thing #5</text>
+    </g>
+    <!-- Bars -->
+    <g fill="#57AFA9">
+      <path [attr.d]="barPath('spiritual', 228, 206)"></path>
+      <path [attr.d]="barPath('relational', 171, 206)"></path>
+      <path [attr.d]="barPath('physical', 114, 206)"></path>
+      <path [attr.d]="barPath('intellectual', 57, 206)"></path>
+      <path [attr.d]="barPath('financial', 0, 206)"></path>
+    </g>
+    <!-- X-Axis Labels -->
+    <g transform="translate(81.5, 310)" fill="#737373" font-size="14" font-weight="300" text-anchor="middle">
+      <text x="0">0</text>
+      <text x="206">1</text>
+      <text x="412">2</text>
+      <text x="618">3</text>
+    </g>
+  </g>
+</svg>
