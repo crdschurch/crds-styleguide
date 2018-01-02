@@ -34,6 +34,9 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 /* fauxdals */
 import { AccordionComponent } from './accordion/accordion.component';
 
+// Charts
+import { ChartsComponent } from './charts/charts.component';
+
 const learnMoreRoutes: Routes = [
   {
     path: 'ui-components/molecules',
@@ -70,6 +73,10 @@ const learnMoreRoutes: Routes = [
       {
         path: 'sign-in',
         component: SignInComponent
+      },
+      {
+        path: 'charts',
+        component: ChartsComponent
       },
       {
         path: 'avatar-groups',

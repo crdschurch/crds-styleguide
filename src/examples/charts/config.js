@@ -34,30 +34,7 @@ System.config({
     '@angular/router/testing': 'npm:@angular/router@4.4.5/bundles/router-testing.umd.js',
 
     'rxjs': 'npm:rxjs',
-    'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
-    // '@swimlane/ngx-charts': 'npm:@swimlane/ngx-charts@7.0.1',
-    '@swimlane/ngx-charts': 'npm:@swimlane/ngx-charts@5.3.1',
-
-    'd3-array': 'npm:d3-array',
-    'd3-brush': 'npm:d3-brush',
-    'd3-shape': 'npm:d3-shape',
-    'd3-selection': 'npm:d3-selection',
-    'd3-color': 'npm:d3-color',
-    'd3-drag': 'npm:d3-drag',
-    'd3-transition': 'npm:d3-transition',
-    'd3-format': 'npm:d3-format',
-    'd3-force': 'npm:d3-force',
-    'd3-dispatch': 'npm:d3-dispatch',
-    'd3-path': 'npm:d3-path',
-    'd3-ease': 'npm:d3-ease',
-    'd3-timer': 'npm:d3-timer',
-    'd3-quadtree': 'npm:d3-quadtree',
-    'd3-interpolate': 'npm:d3-interpolate',
-    'd3-scale': 'npm:d3-scale',
-    'd3-time': 'npm:d3-time',
-    'd3-collection': 'npm:d3-collection',
-    'd3-time-format': 'npm:d3-time-format',
-    'd3-hierarchy': 'npm:d3-hierarchy'
+    'typescript': 'npm:typescript@2.0.2/lib/typescript.js'
   },
   //packages defines our app package
   packages: {

@@ -12,7 +12,6 @@ import { ThirdPartyToolsComponent } from './third-party-tools.component';
 
 import { ImgixComponent } from './imgix/imgix.component';
 import { MapsComponent } from './maps/maps.component';
-import { NgxChartsComponent } from './ngx-charts/ngx-charts.component';
 
 @NgModule({
   imports: [
@@ -25,8 +24,7 @@ import { NgxChartsComponent } from './ngx-charts/ngx-charts.component';
   declarations: [
     ThirdPartyToolsComponent,
     ImgixComponent,
-    MapsComponent,
-    NgxChartsComponent
+    MapsComponent
   ]
 })
 export class ThirdPartyToolsModule {}

@@ -1,9 +1,0 @@
-{
-  "files": [
-    "module.ts",
-    "component.ts",
-    "component.html",
-    "data.ts"
-  ],
-  "entry": "index.html"
-}
