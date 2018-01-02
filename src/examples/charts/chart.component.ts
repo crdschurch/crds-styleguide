@@ -33,23 +33,11 @@ export class ChartComponent implements OnInit {
 
   svg: any;
 
-  colors = ['#3B6E8F', '#0095D9', '#57AFA9', '#C05C04', '#E09E06'];
-  currentColor = '#57AFA9';
-
   constructor() {}
 
   ngOnInit() {
     this.svg = SVG.get('my-chart');
     this.initBarPaths();
-  }
-
-  public changeColor() {
-    let newColor = this.getRandomColor();
-    while (newColor === this.currentColor) {
-      newColor = this.getRandomColor();
-    }
-    this.currentColor = newColor;
-    this.svg.select('#bar-group').animate(250).attr({ fill: this.currentColor });
   }
 
   private initBarPaths() {
@@ -80,10 +68,4 @@ export class ChartComponent implements OnInit {
   private getBar(name) {
     return this.svg.select(`#${name}-path`);
   }
-
-  private getRandomColor() {
-    const idx = Math.floor(Math.random() * this.colors.length);
-    return this.colors[idx];
-  }
-
 }
