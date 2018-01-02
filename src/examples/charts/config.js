@@ -34,7 +34,9 @@ System.config({
     '@angular/router/testing': 'npm:@angular/router@4.4.5/bundles/router-testing.umd.js',
 
     'rxjs': 'npm:rxjs',
-    'typescript': 'npm:typescript@2.0.2/lib/typescript.js'
+    'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
+
+    // 'kute': 'npm:kute.js@1.6.5/kute.js'
   },
   //packages defines our app package
   packages: {
