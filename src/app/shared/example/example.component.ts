@@ -2,6 +2,8 @@ import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
+import { ThemeToggleSwitchService } from '../../directives/theme-toggle-switch/theme-toggle-switch.service';
+
 let Prism = require('prismjs');
 let path = require('path');
 let entities = new (require('html-entities').Html5Entities)();
@@ -21,6 +23,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   public clippableUUID: string;
   public clippableHTML: string;
   public clippableMoved = false;
+  public iframeId: string;
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -43,7 +46,8 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
               private http: Http,
               private elementRef: ElementRef,
               private toastr: ToastsManager,
-              private vRef: ViewContainerRef) {
+              private vRef: ViewContainerRef,
+              private toggleSwitchService: ThemeToggleSwitchService) {
     this.el = <Element>this.elementRef.nativeElement;
     this.toastr.setRootViewContainerRef(vRef);
   }
@@ -54,6 +58,16 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       this.markup = '<html></html>';
       this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
     }
+    this.iframeId = `iframe-example-${uuidv4()}`;
+
+    this.toggleSwitchService.getState().subscribe(state => {
+      const iframe = document.getElementById(this.iframeId)
+      if (iframe) {
+        const iframeWindow = iframe['contentWindow'];
+        const themeClass = state === 'on' ? 'dark-theme' : 'light-theme';
+        iframeWindow.postMessage(themeClass, '*');
+      }
+    });
   }
 
   ngAfterViewChecked() {

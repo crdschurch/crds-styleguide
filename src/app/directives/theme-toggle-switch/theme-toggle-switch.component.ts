@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output  } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { ThemeToggleSwitchService } from './theme-toggle-switch.service';
 
 @Component({
   selector: 'theme-toggle-switch',
@@ -16,7 +18,7 @@ export class ThemeToggleSwitchComponent {
 
   @Output() stateChange = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private toggleSwitchService: ThemeToggleSwitchService) {
     this.body = document.getElementsByTagName('body')[0];
   }
 
@@ -34,5 +36,6 @@ export class ThemeToggleSwitchComponent {
     } else {
       this.body.classList.remove(this.selector);
     }
+    this.toggleSwitchService.toggleState(this.state);
   }
 }
