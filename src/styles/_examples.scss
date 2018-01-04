@@ -92,10 +92,24 @@ crds-example {
 }
 
 .crds-embedded-markup {
+  padding: 0;
+
   .example-row {
     @include clearfix;
-    background: $gray;
+    background-color: $example-bg;
     border: 1px solid darken($gray, 10);
+    pre {
+      background: none;
+    }
+  }
+  iframe {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    + .example-row {
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
   }
   .tree {
     @include make-sm-column(3);
@@ -111,8 +125,23 @@ crds-example {
   pre {
     font-size: 80%;
   }
+  .list-group {
+    background: $cr-white;
+  }
   .list-group-item:first-child,
   .list-group-item:last-child,
+  .list-group-item {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+    margin: 0;
+    &.active {
+      background-color: $cr-blue;
+      color: $cr-white;
+    }
+  }
   .list-group,
   pre {
     border-radius: 0;
