@@ -23,7 +23,6 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   public clippableUUID: string;
   public clippableHTML: string;
   public clippableMoved = false;
-  public iframeId: string;
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
@@ -41,6 +40,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   @Input() width = '100%';
   @Input() height = '100';
   @ViewChild('contentRef') contentRef;
+  @ViewChild('iframe') iframe;
 
   constructor(private sanitizer: DomSanitizer,
               private http: Http,
@@ -58,15 +58,9 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       this.markup = '<html></html>';
       this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
     }
-    this.iframeId = `iframe-example-${uuidv4()}`;
 
     this.toggleSwitchService.getState().subscribe(state => {
-      const iframe = document.getElementById(this.iframeId)
-      if (iframe) {
-        const iframeWindow = iframe['contentWindow'];
-        const themeClass = state === 'on' ? 'dark-theme' : 'light-theme';
-        iframeWindow.postMessage(themeClass, '*');
-      }
+      this.matchTheme();
     });
   }
 
@@ -85,6 +79,12 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
         this.preformattedMarkup = pre.innerHTML;
         pre.remove();
       }
+    }
+  }
+
+  iframeLoaded() {
+    if (this.iframe) {
+      this.matchTheme();
     }
   }
 
@@ -196,5 +196,13 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     }
     el.appendChild(clippable);
     this.clippableMoved = true;
+  }
+
+  private matchTheme() {
+    if (this.iframe) {
+      const iframeWindow = this.iframe.nativeElement['contentWindow'];
+      const themeClass = this.toggleSwitchService.currentState === 'on' ? 'dark-theme' : 'light-theme';
+      iframeWindow.postMessage(themeClass, '*');
+    }
   }
 }
