@@ -6,11 +6,13 @@ import { Subject } from 'rxjs/Subject';
 export class ThemeToggleSwitchService {
 
   public currentState: String = 'off';
+  public themeClass: String = 'light-theme';
 
   private state = new Subject<any>();
 
   toggleState() {
     this.currentState = this.currentState === 'on' ? 'off' : 'on';
+    this.themeClass = this.currentState === 'on' ? 'dark-theme' : 'light-theme';
     this.state.next(this.currentState);
   }
 

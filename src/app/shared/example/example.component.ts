@@ -26,6 +26,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
+  private iframeHidden = true;
   private manifest: any;
   private rootPath = '/examples/';
   private path: string;
@@ -85,6 +86,13 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   iframeLoaded() {
     if (this.iframe) {
       this.matchTheme();
+
+      // The toggle has an animation attached to it, so if the dark theme is
+      // active, there will be a flash of white background. So we delay until
+      // the animation has had time to complete.
+      setTimeout(() => {
+        this.iframeHidden = false;
+      }, 250);
     }
   }
 
@@ -199,10 +207,9 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   }
 
   private matchTheme() {
-    if (this.iframe) {
-      const iframeWindow = this.iframe.nativeElement['contentWindow'];
-      const themeClass = this.toggleSwitchService.currentState === 'on' ? 'dark-theme' : 'light-theme';
-      iframeWindow.postMessage(themeClass, '*');
-    }
+    if (!this.iframe) { return; }
+    const iframeWindow = this.iframe.nativeElement['contentWindow'];
+    if (!iframeWindow) { return; }
+    iframeWindow.postMessage(this.toggleSwitchService.themeClass, '*');
   }
 }
