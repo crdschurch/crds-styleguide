@@ -92,10 +92,24 @@ crds-example {
 }
 
 .crds-embedded-markup {
+  padding: 0;
+
   .example-row {
     @include clearfix;
-    background: $gray;
+    background-color: $example-bg;
     border: 1px solid darken($gray, 10);
+    pre {
+      background: none;
+    }
+  }
+  iframe {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+    + .example-row {
+      border-right: none;
+      border-bottom: none;
+      border-left: none;
+    }
   }
   .tree {
     @include make-sm-column(3);
@@ -111,8 +125,27 @@ crds-example {
   pre {
     font-size: 80%;
   }
+  .list-group {
+    background: $cr-white;
+  }
   .list-group-item:first-child,
   .list-group-item:last-child,
+  .list-group-item {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $example-list-border-color;
+    color: #555;
+    margin: 0;
+    &.active {
+      background-color: $cr-blue;
+      color: $cr-white;
+      border-bottom-color: $example-list-border-color;
+    }
+    &:hover:not(.active) {
+      background-color: $example-list-hover-bg;
+    }
+  }
   .list-group,
   pre {
     border-radius: 0;
@@ -135,5 +168,26 @@ crds-example {
   border-radius: 0;
   &.btn.btn-sm {
     padding: 6px;
+  }
+}
+
+.dark-theme .crds-embedded-markup {
+  .example-row {
+    background-color: $example-bg-dark-theme;
+    border-top-color: $example-border-color-dark-theme;
+  }
+  .markup {
+    border-left-color: $example-border-color-dark-theme;
+  }
+  .list-group {
+    background: none;
+  }
+  .list-group-item:first-child,
+  .list-group-item:last-child,
+  .list-group-item {
+    border-bottom-color: $example-border-color-dark-theme;
+    &.active {
+      background-color: $cr-black;
+    }
   }
 }
