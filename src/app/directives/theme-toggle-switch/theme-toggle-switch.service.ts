@@ -5,10 +5,13 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class ThemeToggleSwitchService {
 
+  public currentState: String = 'off';
+
   private state = new Subject<any>();
 
-  toggleState(value: String) {
-    this.state.next(value);
+  toggleState() {
+    this.currentState = this.currentState === 'on' ? 'off' : 'on';
+    this.state.next(this.currentState);
   }
 
   getState(): Observable<any> {

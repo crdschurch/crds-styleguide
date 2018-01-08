@@ -13,7 +13,6 @@ import { ThemeToggleSwitchService } from './theme-toggle-switch.service';
 export class ThemeToggleSwitchComponent {
 
   private body;
-  private state: String = 'off';
   private selector: String = 'dark-theme';
 
   @Output() stateChange = new EventEmitter<any>();
@@ -23,19 +22,15 @@ export class ThemeToggleSwitchComponent {
   }
 
   onSwitch() {
-    this.state = this.state === 'on' ? 'off' : 'on';
-    this.stateChange.emit({
-      value: this.state
-    });
+    this.toggleSwitchService.toggleState();
     this.toggleClass();
   }
 
   toggleClass() {
-    if (this.state === 'on') {
+    if (this.toggleSwitchService.currentState === 'on') {
       this.body.classList.add(this.selector);
     } else {
       this.body.classList.remove(this.selector);
     }
-    this.toggleSwitchService.toggleState(this.state);
   }
 }
