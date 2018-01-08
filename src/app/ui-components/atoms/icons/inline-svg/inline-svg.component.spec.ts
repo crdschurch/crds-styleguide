@@ -5,6 +5,8 @@ import { IconService } from '../../../../directives/icons/icons.service';
 import { HttpModule } from '@angular/http';
 import { ExampleModule } from '../../../../shared/example/example.module';
 
+import { ThemeToggleSwitchService } from '../../../../directives/theme-toggle-switch/theme-toggle-switch.service';
+
 describe('Component: IconInline', () => {
 
   beforeEach(() => {
@@ -17,7 +19,8 @@ describe('Component: IconInline', () => {
         IconInlineComponent
       ],
       providers: [
-        IconService
+        IconService,
+        ThemeToggleSwitchService
       ]
     });
     this.fixture = TestBed.createComponent(IconInlineComponent);

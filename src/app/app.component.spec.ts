@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ThemeToggleSwitchComponent } from './directives/theme-toggle-switch/theme-toggle-switch.component';
+import { ThemeToggleSwitchService } from './directives/theme-toggle-switch/theme-toggle-switch.service';
 import { ContentBlockModule } from 'crds-ng2-content-block';
 
 import { SearchComponent } from './shared/search/search.component';
@@ -33,7 +34,8 @@ describe('App: CrdsDdk', () => {
       ],
       providers: [
         SearchService,
-        LinkableHeaderService
+        LinkableHeaderService,
+        ThemeToggleSwitchService
       ]
     });
   });

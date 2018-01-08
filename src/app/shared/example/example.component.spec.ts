@@ -4,6 +4,8 @@ import { ExampleComponent } from './example.component';
 
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
+import { ThemeToggleSwitchService } from '../../directives/theme-toggle-switch/theme-toggle-switch.service';
+
 let mockToast;
 
 describe('Component: ExampleComponent', () => {
@@ -18,7 +20,8 @@ describe('Component: ExampleComponent', () => {
         ExampleComponent
       ],
       providers: [
-        { provide: ToastsManager, useValue: mockToast }
+        { provide: ToastsManager, useValue: mockToast },
+        ThemeToggleSwitchService
       ]
     });
     this.fixture = TestBed.createComponent(ExampleComponent);
