@@ -43,6 +43,9 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 /* accordions */
 import { AccordionComponent } from './accordion/accordion.component';
 
+/* charts */
+import { ChartsComponent } from './charts/charts.component';
+
 @NgModule({
   imports: [
     ButtonsModule,
@@ -60,6 +63,7 @@ import { AccordionComponent } from './accordion/accordion.component';
     CardsDecksComponent,
     CardsGridLayoutComponent,
     CardsTypesComponent,
+    ChartsComponent,
     CountdownComponent,
     FauxdalsComponent,
     JumbotronsComponent,
