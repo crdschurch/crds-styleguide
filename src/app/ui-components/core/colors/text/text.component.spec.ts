@@ -3,6 +3,8 @@ import { ColorTextComponent } from './text.component';
 import { ExampleModule } from '../../../../shared/example/example.module';
 import { HttpModule } from '@angular/http';
 
+import { ThemeToggleSwitchService } from '../../../../directives/theme-toggle-switch/theme-toggle-switch.service';
+
 describe('Component: ColorTextComponent', () => {
 
   let component;
@@ -11,7 +13,8 @@ describe('Component: ColorTextComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ExampleModule, HttpModule],
-      declarations: [ColorTextComponent]
+      declarations: [ColorTextComponent],
+      providers: [ThemeToggleSwitchService]
     });
     this.fixture = TestBed.createComponent(ColorTextComponent);
     this.component = this.fixture.componentInstance;

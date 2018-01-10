@@ -7,7 +7,7 @@
 </button>
 
 <div class="crds-example crds-embedded-markup" [hidden]="markupInline">
-  <iframe [src]="iframeSrc" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true"></iframe>
+  <iframe #iframe [src]="iframeSrc" [hidden]="iframeHidden" *ngIf="iframeSrc !== undefined" width="{{width}}" height="{{height}}" frameborder="0" allowTransparency="true" (load)="iframeLoaded()"></iframe>
   <div class="example-row">
     <div class="tree">
       <div class="list-group">

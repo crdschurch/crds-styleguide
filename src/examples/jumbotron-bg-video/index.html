@@ -1,40 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jumbotron Video</title>
 
-    <link rel="stylesheet" href="/app.css" />
+<head>
+  <title>Jumbotron Video</title>
 
-    <script src="https://use.typekit.net/ccb3vpa.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  </head>
-  <body>
+  <link rel="stylesheet" href="/app.css" />
 
-    <div class="jumbotron bg-video jumbotron-xl" data-aspect-ratio="2.34615">
-      <div class="bg-video-player">
-        <video height="240" width="360" class="bg-jumbotron-video hide" autoplay="autoplay" loop="loop" muted playsinline src="https://s3.amazonaws.com/crds-cms-uploads/media/video/loop-video.mp4">
-        </video>
-      </div>
-      <div class="jumbotron-content">
-        <h1 class="title">the main heading</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Repudiandae quos reiciendis vitae eum.
-        </p>
-        <p class="text-center">
-          <a class="btn btn-primary" href="#">Primary CTA</a>
-          <a class="btn btn-gray" href="#">Secondary CTA</a>
-        </p>
-      </div>
+  <script src="https://use.typekit.net/ccb3vpa.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+
+  </script>
+
+  <script src="/examples/_shared/theme_toggler.js"></script>
+</head>
+
+<body>
+
+  <div class="jumbotron bg-video jumbotron-xl" data-aspect-ratio="2.34615">
+    <div class="bg-video-player">
+      <video height="240" width="360" class="bg-jumbotron-video hide" autoplay="autoplay" loop="loop" muted playsinline src="https://s3.amazonaws.com/crds-cms-uploads/media/video/loop-video.mp4">
+      </video>
     </div>
+    <div class="jumbotron-content">
+      <h1 class="title">the main heading</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quos reiciendis vitae eum.
+      </p>
+      <p class="text-center">
+        <a class="btn btn-primary" href="#">Primary CTA</a>
+        <a class="btn btn-gray" href="#">Secondary CTA</a>
+      </p>
+    </div>
+  </div>
 
-    <script src="//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-jumbotron-video-v0.1.0.min.js"></script>
+  <script src="//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-jumbotron-video-v0.1.0.min.js"></script>
 
-    <script>
-      (function () {
-        new CRDS.JumbotronVideos();
-      })();
-    </script>
+  <script>
+    (function () {
+      new CRDS.JumbotronVideos();
+    })();
 
-  </body>
+  </script>
+
+</body>
+
 </html>
+
