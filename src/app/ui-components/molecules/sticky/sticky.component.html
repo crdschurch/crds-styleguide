@@ -4,21 +4,19 @@
   <div class="col-md-offset-3">
     <h2 class="page-header">Sticky Headers</h2>
 
-    <p>
-     Headers with a <code>sticky-header</code> class will be relative to the elements around it until it reaches the top of the page. At the top of the page, it acts like a fixed element and will stay in place until replaced by another element with a <code>sticky-header</code> class or scrolled back up above the element.
-    </p>
-    <p class="callout callout-info" role="alert">For more information about <code>position: sticky;</code>, please see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank" class="callout-link">this documentation</a></p>
+    <p>Headers with a <code>sticky-top</code> class will be relative to the elements around it until it reaches the top of the page.</p>
+    <p>At the top of the page, it acts like a fixed element and will stay in place until replaced by another element with a <code>sticky-top</code> class or scrolled back up above the element.</p>
 
-    <ddk-example class="sticky-example">
+    <ddk-example>
       <div class="sticky-example-wrapper">
-        <div class="sticky-headers">
+        <div>
           <section class="push">
             <p>I am text above whatever it is you want to be sticky.</p>
             <p>Start scrolling to see how the sticky element will become a header.</p>
             <p>Scroll back up here if you want to see the sticky header move from the top.</p>
           </section>
 
-          <section class="page-header bg-cyan sticky-header">
+          <section class="page-header bg-cyan sticky-top">
               <div class="container">
                 <h1 class="title text-cyan-light soft-left">I'm Sticky!</h1>
               </div>
