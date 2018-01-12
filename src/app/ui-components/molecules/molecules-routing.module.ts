@@ -34,8 +34,11 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 /* fauxdals */
 import { AccordionComponent } from './accordion/accordion.component';
 
-// Charts
+/* charts */
 import { ChartsComponent } from './charts/charts.component';
+
+/* sticky headers */
+import { StickyComponent } from './sticky/sticky.component';
 
 const learnMoreRoutes: Routes = [
   {
@@ -105,6 +108,10 @@ const learnMoreRoutes: Routes = [
       {
         path: 'accordion',
         component: AccordionComponent
+      },
+      {
+        path: 'sticky',
+        component: StickyComponent
       }
     ]
   }
