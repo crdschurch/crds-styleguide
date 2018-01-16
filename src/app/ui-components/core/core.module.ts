@@ -31,13 +31,14 @@ import { ColorTextComponent } from './colors/text/text.component';
 /* utility classes */
 import { UtilitiesComponent } from './utilities/utilities.component';
 import { BordersComponent } from './utilities/borders/borders.component';
+import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { CornersComponent } from './utilities/corners/corners.component';
 import { DisplayComponent } from './utilities/display/display.component';
 import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
+import { StickyComponent } from './utilities/sticky/sticky.component';
 import { TextComponent } from './utilities/text/text.component';
-import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
 
 @NgModule({
@@ -65,6 +66,7 @@ import { VerticalPositioningComponent } from './utilities/vertical-positioning/v
     ListsComponent,
     MarginComponent,
     PaddingComponent,
+    StickyComponent,
     SwatchesComponent,
     TextComponent,
     TypefacesComponent,
