@@ -46,6 +46,9 @@ import { AccordionComponent } from './accordion/accordion.component';
 /* charts */
 import { ChartsComponent } from './charts/charts.component';
 
+/* sticky headers */
+import { StickyComponent } from './sticky/sticky.component';
+
 @NgModule({
   imports: [
     ButtonsModule,
@@ -70,7 +73,8 @@ import { ChartsComponent } from './charts/charts.component';
     MediaObjectsComponent,
     MoleculesComponent,
     SignInComponent,
-    VideoModalsComponent
+    VideoModalsComponent,
+    StickyComponent
   ]
 })
 export class MoleculesModule {}
