@@ -37,9 +37,6 @@ import { AccordionComponent } from './accordion/accordion.component';
 /* charts */
 import { ChartsComponent } from './charts/charts.component';
 
-/* sticky headers */
-import { StickyComponent } from './sticky/sticky.component';
-
 const learnMoreRoutes: Routes = [
   {
     path: 'ui-components/molecules',
@@ -108,10 +105,6 @@ const learnMoreRoutes: Routes = [
       {
         path: 'accordion',
         component: AccordionComponent
-      },
-      {
-        path: 'sticky',
-        component: StickyComponent
       }
     ]
   }
