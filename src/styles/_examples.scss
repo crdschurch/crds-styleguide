@@ -172,6 +172,9 @@ crds-example {
 }
 
 .dark-theme .crds-embedded-markup {
+  pre {
+    color: $example-default-color-dark-theme;
+  }
   .example-row {
     background-color: $example-bg-dark-theme;
     border-top-color: $example-border-color-dark-theme;

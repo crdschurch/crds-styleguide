@@ -2,6 +2,8 @@ import { Component, Input, OnInit, AfterViewInit, AfterViewChecked, ElementRef, 
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Http, Response } from '@angular/http';
 
+import { ThemeToggleSwitchService } from '../../directives/theme-toggle-switch/theme-toggle-switch.service';
+
 let Prism = require('prismjs');
 let path = require('path');
 let entities = new (require('html-entities').Html5Entities)();
@@ -24,6 +26,7 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
 
   private el: Element;
   private iframeSrc: SafeResourceUrl;
+  private iframeHidden = true;
   private manifest: any;
   private rootPath = '/examples/';
   private path: string;
@@ -38,12 +41,14 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
   @Input() width = '100%';
   @Input() height = '100';
   @ViewChild('contentRef') contentRef;
+  @ViewChild('iframe') iframe;
 
   constructor(private sanitizer: DomSanitizer,
               private http: Http,
               private elementRef: ElementRef,
               private toastr: ToastsManager,
-              private vRef: ViewContainerRef) {
+              private vRef: ViewContainerRef,
+              private toggleSwitchService: ThemeToggleSwitchService) {
     this.el = <Element>this.elementRef.nativeElement;
     this.toastr.setRootViewContainerRef(vRef);
   }
@@ -54,6 +59,10 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
       this.markup = '<html></html>';
       this.http.get(`${this.path}manifest.json`).subscribe(this.parseManifest.bind(this));
     }
+
+    this.toggleSwitchService.getState().subscribe(state => {
+      this.matchTheme();
+    });
   }
 
   ngAfterViewChecked() {
@@ -71,6 +80,19 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
         this.preformattedMarkup = pre.innerHTML;
         pre.remove();
       }
+    }
+  }
+
+  iframeLoaded() {
+    if (this.iframe) {
+      this.matchTheme();
+
+      // The toggle has an animation attached to it, so if the dark theme is
+      // active, there will be a flash of white background. So we delay until
+      // the animation has had time to complete.
+      setTimeout(() => {
+        this.iframeHidden = false;
+      }, 250);
     }
   }
 
@@ -182,5 +204,12 @@ export class ExampleComponent implements OnInit, AfterViewInit, AfterViewChecked
     }
     el.appendChild(clippable);
     this.clippableMoved = true;
+  }
+
+  private matchTheme() {
+    if (!this.iframe) { return; }
+    const iframeWindow = this.iframe.nativeElement['contentWindow'];
+    if (!iframeWindow) { return; }
+    iframeWindow.postMessage(this.toggleSwitchService.themeClass, '*');
   }
 }

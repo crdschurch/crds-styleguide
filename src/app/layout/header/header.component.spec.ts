@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { HeaderComponent } from './header.component';
 import { ThemeToggleSwitchComponent } from '../../directives/theme-toggle-switch/theme-toggle-switch.component';
+import { ThemeToggleSwitchService } from '../../directives/theme-toggle-switch/theme-toggle-switch.service';
 import { SearchComponent } from '../../shared/search/search.component';
 import { SearchService } from '../../shared/search/search.service';
 import { CollapseModule } from 'ng2-bootstrap';
@@ -24,7 +25,8 @@ describe('Component: Header', () => {
         HttpModule
       ],
       providers: [
-        SearchService
+        SearchService,
+        ThemeToggleSwitchService
       ]
     });
   });
