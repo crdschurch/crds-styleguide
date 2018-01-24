@@ -1,0 +1,15 @@
+/* Class exists to override Bootstrap modal behaviour */
+.modal-example {
+  display: block;
+  position: relative;
+
+  .modal.fade {
+    display: block;
+    position: relative;
+    opacity: 1;
+
+    .modal-dialog {
+      transform: translate(0,0);
+    }
+  }
+}
