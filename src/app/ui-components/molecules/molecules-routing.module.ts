@@ -26,7 +26,10 @@ import { CountdownComponent } from './countdown/countdown.component';
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
 /* modals */
-import { VideoModalsComponent } from './video-modals/video-modals.component';
+import { ModalsComponent } from './modals/modals.component';
+import { DefaultModalComponent } from './modals/default/default-modal.component';
+import { FullPageModalComponent } from './modals/full-page/full-page-modal.component';
+import { VideoModalComponent } from './modals/video/video-modal.component';
 
 /* fauxdals */
 import { FauxdalsComponent } from './fauxdals/fauxdals.component';
@@ -91,8 +94,27 @@ const learnMoreRoutes: Routes = [
         component: JumbotronsComponent
       },
       {
-        path: 'video-modals',
-        component: VideoModalsComponent
+        path: 'modals',
+        component: ModalsComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'default',
+            pathMatch: 'full'
+          },
+          {
+            path: 'default',
+            component: DefaultModalComponent
+          },
+          {
+            path: 'full-page',
+            component: FullPageModalComponent
+          },
+          {
+            path: 'video',
+            component: VideoModalComponent
+          }
+        ]
       },
       {
         path: 'fauxdals',

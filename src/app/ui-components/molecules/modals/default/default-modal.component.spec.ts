@@ -1,10 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { ElementRef, Renderer } from '@angular/core';
-import { VideoModalsComponent } from './video-modals.component';
+import { VideoModalComponent } from './default-modal.component';
 
 describe('Component: Jumbotrons', () => {
   it('should create an instance', () => {
-    let component = new VideoModalsComponent();
+    let component = new DefaultModalComponent();
     expect(component).toBeTruthy();
   });
 });
