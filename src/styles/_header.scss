@@ -10,6 +10,9 @@
 
   a.active {
     color: $cr-black;
+    .dark-theme & {
+      color: $cr-white;
+    }
   }
 }
 
