@@ -38,15 +38,19 @@
 </section
 >
 <section>
-  <h3 class="component-header">Card with Caption Label</h3>
+  <h3 class="component-header">Card with Image Caption Label</h3>
 
-  <p>The class <code>.card-caption</code> can be applied the the <code>.card-block</code> div, enabling a caption overlay on the card image.</p>
+  <p>The class <code>.card-img-caption</code> should wrap the card's image and a <code>.img-caption</code> element to enable a caption overlay on the card image. The caption's content should be placed inside the <code>.img-caption</code> element.</p>
+
+  <p>For left alignment on cards, adding a <code>.img-caption--left</code> to the <code>.img-caption</code> element will align the caption to the left, with <code>1rem</code> of padding.</p>
 
   <ddk-example>
 <div class="card">
-  <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
-    alt="Card image caption">
-  <div class="card-block text-center card-caption">
+  <div class="card-img-caption">
+    <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" alt="Card image caption">
+    <div class="img-caption">Card image caption</div>
+  </div>
+  <div class="card-block text-center">
     <h4 class="card-title">Card title</h4>
     <h5 class="card-subtitle">Card subtitle</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
