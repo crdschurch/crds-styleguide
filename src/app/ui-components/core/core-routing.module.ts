@@ -29,6 +29,7 @@ import { DisplayComponent } from './utilities/display/display.component';
 import { ImagesComponent } from './utilities/images/images.component';
 import { MarginComponent } from './utilities/margin/margin.component';
 import { PaddingComponent } from './utilities/padding/padding.component';
+import { StickyComponent } from './utilities/sticky/sticky.component';
 import { TextComponent } from './utilities/text/text.component';
 import { ButtonUtilitiesComponent } from './utilities/buttons/buttons.component';
 import { VerticalPositioningComponent } from './utilities/vertical-positioning/vertical-positioning.component';
@@ -84,6 +85,10 @@ const learnMoreRoutes: Routes = [
             component: BordersComponent
           },
           {
+            path: 'buttons',
+            component: ButtonUtilitiesComponent
+          },
+          {
             path: 'corners',
             component: CornersComponent
           },
@@ -104,12 +109,12 @@ const learnMoreRoutes: Routes = [
             component: PaddingComponent
           },
           {
-            path: 'text',
-            component: TextComponent
+            path: 'sticky',
+            component: StickyComponent
           },
           {
-            path: 'buttons',
-            component: ButtonUtilitiesComponent
+            path: 'text',
+            component: TextComponent
           },
           {
             path: 'vertical-positioning',

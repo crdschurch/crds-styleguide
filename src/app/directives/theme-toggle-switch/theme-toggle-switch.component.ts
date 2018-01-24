@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output  } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { ThemeToggleSwitchService } from './theme-toggle-switch.service';
 
 @Component({
   selector: 'theme-toggle-switch',
@@ -11,25 +13,21 @@ import { Component, EventEmitter, Input, Output  } from '@angular/core';
 export class ThemeToggleSwitchComponent {
 
   private body;
-  private state: String = 'off';
   private selector: String = 'dark-theme';
 
   @Output() stateChange = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private toggleSwitchService: ThemeToggleSwitchService) {
     this.body = document.getElementsByTagName('body')[0];
   }
 
   onSwitch() {
-    this.state = this.state === 'on' ? 'off' : 'on';
-    this.stateChange.emit({
-      value: this.state
-    });
+    this.toggleSwitchService.toggleState();
     this.toggleClass();
   }
 
   toggleClass() {
-    if (this.state === 'on') {
+    if (this.toggleSwitchService.currentState === 'on') {
       this.body.classList.add(this.selector);
     } else {
       this.body.classList.remove(this.selector);

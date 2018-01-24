@@ -34,7 +34,7 @@ import { FauxdalsComponent } from './fauxdals/fauxdals.component';
 /* fauxdals */
 import { AccordionComponent } from './accordion/accordion.component';
 
-// Charts
+/* charts */
 import { ChartsComponent } from './charts/charts.component';
 
 const learnMoreRoutes: Routes = [
