@@ -1,10 +1,10 @@
 <button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
 
-<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+<div class="modal modal-promo fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
      tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header modal-header-promo">
+      <div class="modal-header">
         <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
           <span aria-hidden="true">&times;</span>
         </button>
