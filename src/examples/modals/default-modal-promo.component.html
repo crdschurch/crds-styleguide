@@ -1,1 +1,23 @@
 <button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header modal-header-promo">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Do life together</h4>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile">
+          <button class="btn btn-cyan btn-lg" type="submit">Find out how</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
