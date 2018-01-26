@@ -2,7 +2,7 @@
 
 <div class="modal modal-video fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
      tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" (onShow)="setVideoSrc()" (onHidden)="clearVideoSrc()">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
