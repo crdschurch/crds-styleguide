@@ -1,23 +1,14 @@
-<ddk-jumbotron id="UIVideoModalsHeader"></ddk-jumbotron>
+<ddk-jumbotron id="UIModalsHeader"></ddk-jumbotron>
 
 <div class="container">
-  <!-- <div class="col-md-offset-3"> -->
-    <h2 class="page-header">Modals</h2>
+  <h2 class="page-header">Modals</h2>
 
-    <p class="callout callout-info" role="alert">Angular 2+ apps should use the
-      <a href="http://valor-software.com/ngx-bootstrap/#/" class="callout-link">ngx-bootstrap library</a> for implementing modal windows.</p>
+  <p class="callout callout-info" role="alert">The following modal examples use the
+      <a href="http://valor-software.com/ngx-bootstrap/#/" class="callout-link">ngx-bootstrap library</a> to illustrate expected styles and behaviour in an Angular 2+ project. Each examples' html tab is applicable to non-Angular projects using Bootstrap and jQuery as a dependency.</p>
 
-    <!-- <p>
-      Modal windows displaying a video as its only content should include a
-      <code>.video-modal</code> selector on its container.
-    </p>
+  <p>There are three distinct styles of modal available in the DDK: a default modal, a video modal, and a full-screen modal. Implementing any desired type is easy - just add a modifying class to the modal's wrapping <code>&lt;div&gt;</code> (this contains a class of <code>.modal</code>).</p>
 
-    <p>
-      Here is an example of a video modal implementation within an Angular
-      4.1.2 application.
-    </p> -->
+  <p>Full-screen modals slightly deviate from this pattern in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>.</p>
 
-    <ddk-example height="450" id="modals"></ddk-example>
-
-  <!-- </div> -->
+  <ddk-example height="450" id="modals"></ddk-example>
 </div>
