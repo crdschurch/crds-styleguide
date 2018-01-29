@@ -1,25 +1,23 @@
 <ddk-jumbotron id="UIVideoModalsHeader"></ddk-jumbotron>
 
 <div class="container">
-  <div class="component">
-    <aside class="mobile-push-bottom">
-      <nav>
-        <ul class="list-unstyled">
-          <li routerLinkActive="active">
-            <a routerLink="/ui-components/molecules/modals/default">Default</a>
-          </li>
-          <li routerLinkActive="active">
-            <a routerLink="/ui-components/molecules/modals/full-page">Full Page</a>
-          </li>
-          <li routerLinkActive="active">
-            <a routerLink="/ui-components/molecules/modals/video">Video</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
+  <!-- <div class="col-md-offset-3"> -->
+    <h2 class="page-header">Modals</h2>
 
-    <div>
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+    <p class="callout callout-info" role="alert">Angular 2+ apps should use the
+      <a href="http://valor-software.com/ngx-bootstrap/#/" class="callout-link">ngx-bootstrap library</a> for implementing modal windows.</p>
+
+    <!-- <p>
+      Modal windows displaying a video as its only content should include a
+      <code>.video-modal</code> selector on its container.
+    </p>
+
+    <p>
+      Here is an example of a video modal implementation within an Angular
+      4.1.2 application.
+    </p> -->
+
+    <ddk-example height="450" id="modals"></ddk-example>
+
+  <!-- </div> -->
 </div>
