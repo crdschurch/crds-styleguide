@@ -1,0 +1,30 @@
+<button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
+
+<div class="modal modal-splash fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-full">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h4 class="modal-title">Try this</h4>
+              <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile text-center">
+          <button class="btn btn-cyan btn-lg" type="button">Sounds great</button>
+          <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

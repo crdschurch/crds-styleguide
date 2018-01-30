@@ -1,0 +1,20 @@
+{
+  "files": [
+    "module.ts",
+    "app.component.ts",
+    "app.component.html",
+    "default-modal.component.ts",
+    "default-modal.component.html",
+    "default-modal-form.component.ts",
+    "default-modal-form.component.ts",
+    "default-modal-promo.component.html",
+    "default-modal-promo.component.html",
+    "full-modal.component.html",
+    "full-modal.component.html",
+    "full-modal-form.component.html",
+    "full-modal-form.component.html",
+    "video-modal.component.ts",
+    "video-modal.component.html"
+  ],
+  "entry": "index.html"
+}

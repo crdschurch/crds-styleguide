@@ -1,0 +1,42 @@
+<button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
+
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Tell us more</h4>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+        <form>
+          <div class="form-group">
+            <p class="font-size-large soft-half-top">Nullam id dolor id nibh?</p>
+            <label class="sr-only" for="input">Input</label>
+            <input class="form-control" name="input" placeholder="Placeholder" type="text" value="">
+          </div>
+
+          <div class="form-group">
+            <p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?</p>
+            <label class="sr-only">Default button group</label>
+            <div class="btn-group btn-group-block" role="group" aria-label="...">
+              <button type="button" class="btn btn-default" btnCheckbox>Default</button>
+              <button type="button" class="btn btn-default" btnCheckbox>Label</button>
+              <button type="button" class="btn btn-default" btnCheckbox>Label</button>
+              <button type="button" class="btn btn-default" btnCheckbox>Label</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile">
+          <button class="btn btn-cyan btn-lg" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
