@@ -1,7 +1,6 @@
 <button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
 
-<div class="modal modal-video fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
-     tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" (onShow)="setVideoSrc()" (onHidden)="clearVideoSrc()">
+<div class="modal modal-video fade" bsModal #staticModal="bs-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" (onShow)="setVideoSrc()" (onHidden)="clearVideoSrc()">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
