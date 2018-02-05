@@ -35,7 +35,7 @@ import { CountdownComponent } from './countdown/countdown.component';
 import { JumbotronsComponent } from './jumbotrons/jumbotrons.component';
 
 /* modals */
-import { VideoModalsComponent } from './video-modals/video-modals.component';
+import { ModalsComponent } from './modals/modals.component';
 
 /* fauxdals */
 import { FauxdalsComponent } from './fauxdals/fauxdals.component';
@@ -70,7 +70,7 @@ import { ChartsComponent } from './charts/charts.component';
     MediaObjectsComponent,
     MoleculesComponent,
     SignInComponent,
-    VideoModalsComponent
+    ModalsComponent
   ]
 })
 export class MoleculesModule {}
