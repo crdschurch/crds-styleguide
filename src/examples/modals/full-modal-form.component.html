@@ -1,0 +1,79 @@
+<button class="btn btn-default" type="button" role="button" (click)="staticModal.show()">{{buttonText}}</button>
+
+<div class="modal modal-splash fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-full">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h4 class="modal-title">Do this</h4>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+          </div>
+          <div class="row push-half-top soft-top">
+            <div class="col-md-6 col-md-offset-3">
+                <form>
+                  <div class="form-group">
+                    <label class="sr-only" for="input">Address 1</label>
+                    <input class="form-control" name="input" placeholder="Address 1" type="text" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="sr-only" for="input">Address 2</label>
+                    <input class="form-control" name="input" placeholder="Address 2" type="text" value="">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="sr-only" for="input">City</label>
+                    <input class="form-control" name="input" placeholder="City" type="text" value="">
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="sr-only" for="input">State</label>
+                        <select class="form-control">
+                          <option disabled="" selected="">State</option>
+                          <option>Ohio</option>
+                          <option>Ohio</option>
+                          <option>Ohio</option>
+                          <option>Ohio</option>
+                          <option>Ohio</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label class="sr-only" for="input">Zip</label>
+                        <input class="form-control" name="input" placeholder="Zip" type="text" value="">
+                      </div>
+                    </div>
+                  </div>
+
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="btn-block-mobile">
+                <button class="btn btn-cyan btn-lg" type="button">Add me to this</button>
+                <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
