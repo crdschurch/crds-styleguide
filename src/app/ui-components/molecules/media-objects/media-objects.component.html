@@ -6,56 +6,82 @@
 
     <p>Media objects are a commonly used UI component that feature a left- or right-aligned image alongside a block of text.</p>
 
-    <h3 class="component-header">Default Media Object</h3>
+    <h3 class="component-header">Default Media Object Label</h3>
 
-    <p>By default, the <code>.media-label</code> is in-line with the heading text.</p>
+    <p>By default, the
+      <code>.media-label</code> is in-line with the heading text.</p>
 
     <ddk-example>
-<div class="media">
-  <div class="media-img-wrapper">
-    <div class="media-object-default img-circle media-object img-size-5">
-    </div>
-  </div>
+      <div class="media">
+        <div class="media-img-wrapper">
+          <div class="media-object-default img-circle media-object img-size-5">
+          </div>
+        </div>
 
-  <div class="media-body">
-    <h3 class="media-heading">Jane Doe
-      <span class="media-label">
-        <span class="label label-default">LABEL</span>
-      </span>
-    </h3>
+        <div class="media-body">
+          <h3 class="media-heading">Jane Doe
+            <span class="media-label">
+              <span class="label label-default">LABEL</span>
+            </span>
+          </h3>
 
-    <p class="media-meta">1.0 MI</p>
+          <p class="media-meta">1.0 MI</p>
 
-    <span>1234 Main St.<br>
-    City, ST 56789</span>
-  </div>
-</div>
+          <span>1234 Main St.
+            <br> City, ST 56789</span>
+        </div>
+      </div>
     </ddk-example>
 
     <h3 class="component-header">Media Header Alignment</h3>
 
-    <p>A modifier class of <code>.media-heading-stacked</code> can be added to the <code>.media-heading</code> element. This allows the <code>.media-label</code> to stack above (or below) the header text.</p>
+    <p>A modifier class of
+      <code>.media-heading-stacked</code> can be added to the
+      <code>.media-heading</code> element. This allows the
+      <code>.media-label</code> to stack above (or below) the header text.</p>
 
     <ddk-example>
-<div class="media">
-  <div class="media-img-wrapper">
-    <div class="media-object-default img-circle media-object img-size-5">
-    </div>
-  </div>
+      <div class="media">
+        <div class="media-img-wrapper">
+          <div class="media-object-default img-circle media-object img-size-5">
+          </div>
+        </div>
 
-  <div class="media-body">
-    <h3 class="media-heading media-heading-stacked">
-      <span class="media-label">
-        <span class="label label-default">LABEL</span>
-      </span> Jane Doe
-    </h3>
+        <div class="media-body">
+          <h3 class="media-heading media-heading-stacked">
+            <span class="media-label">
+              <span class="label label-default">LABEL</span>
+            </span> Jane Doe
+          </h3>
 
-    <p class="media-meta">1.0 MI</p>
+          <p class="media-meta">1.0 MI</p>
 
-    <span>1234 Main St.<br>
-    City, ST 56789</span>
-  </div>
-</div>
+          <span>1234 Main St.
+            <br> City, ST 56789</span>
+        </div>
+      </div>
+    </ddk-example>
+
+    <h3 class="component-header">Alternate Media Object Style</h3>
+
+    <p>As shown in
+      <a href="//getbootstrap.com/docs/3.3/components/#media" target="_blank">Bootstrap</a>, media objects can use other image shapes.</p>
+    <p>Utility classes along with the
+      <code>.img-border</code> class gives the media object more flexibility.</p>
+      <p>The image in this example was made square using <a href="https://sandbox.imgix.com/create">Imgix operations</a>.</p>
+
+    <ddk-example>
+      <article>
+        <div class="media">
+          <div class="img-size-7 img-border">
+            <img src="//crds-cms-uploads.imgix.net/content/images/crossroads-anywhere-connect-map.jpg?h=112&amp;w=112&amp;fit=crop" alt="crossroads connect map" />
+          </div>
+          <div class="media-body">
+            <p class="list-header flush-bottom">Put yourself on the map</p>
+            <span>Make your mark and let people know that you&rsquo;re down to meet other Crossroads folks.</span>
+          </div>
+        </div>
+      </article>
     </ddk-example>
   </div>
 </div>
