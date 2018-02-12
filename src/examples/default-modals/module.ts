@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { DefaultModalComponent } from './default-modal.component';
 import { DefaultModalFormComponent } from './default-modal-form.component';
 import { DefaultModalPromoComponent } from './default-modal-promo.component';
-import { FullModalComponent } from './full-modal.component';
-import { FullModalFormComponent } from './full-modal-form.component';
 import { VideoModalComponent } from './video-modal.component';
 
 @NgModule({
@@ -20,8 +18,6 @@ import { VideoModalComponent } from './video-modal.component';
     DefaultModalComponent,
     DefaultModalFormComponent,
     DefaultModalPromoComponent,
-    FullModalComponent,
-    FullModalFormComponent,
     VideoModalComponent
   ],
   bootstrap: [

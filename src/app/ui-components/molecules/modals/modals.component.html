@@ -1,14 +1,25 @@
 <ddk-jumbotron id="UIModalsHeader"></ddk-jumbotron>
 
 <div class="container">
-  <h2 class="page-header">Modals</h2>
+  <h2 class="page-header flush-top">Modals</h2>
 
-  <p class="callout callout-info" role="alert">The following modal examples use the
-      <a href="http://valor-software.com/ngx-bootstrap/#/" class="callout-link">ngx-bootstrap library</a> to illustrate expected styles and behaviour in an Angular 2+ project. Each examples' html tab is applicable to non-Angular projects using Bootstrap and jQuery as a dependency.</p>
+  <p>There are three distinct styles of modal available in the DDK: a default modal, a video modal, and a full-screen modal. Achieving any style is as simple as adding modifier classes to the markup as specified below.</p>
 
-  <p>There are three distinct styles of modal available in the DDK: a default modal, a video modal, and a full-screen modal. Implementing any desired type is easy - just add a modifying class to the modal's wrapping <code>&lt;div&gt;</code> (this contains a class of <code>.modal</code>).</p>
+  <p class="callout callout-info" role="alert">The following modal examples use the <a href="http://valor-software.com/ngx-bootstrap/#/" class="callout-link">ngx-bootstrap library</a> to illustrate expected styles and behaviour in an Angular 2+ project. Each examples' html tab is applicable to non-Angular projects using Bootstrap and jQuery as a dependency.</p>
 
-  <p>Full-screen modals slightly deviate from this pattern in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>. Full-screen modals also use the <code>alpha</code> class in place of the <code>fade</code> class to achieve a smoother animation.</p>
+  <section>
+    <h3 class="component-header">Default Style</h3>
 
-  <ddk-example height="450" id="modals"></ddk-example>
+    <p>Default and video modals look and behave similarly. To get the video modal to show display properly, add <code>.modal-video</code> to the wrapping modal div.</p>
+
+    <ddk-example height="450" id="default-modals"></ddk-example>
+  </section>
+
+  <section>
+    <h3 class="component-header">Full-Screen Modals</h3>
+
+    <p>Full-screen modals slightly deviate from default modals in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>. Full-screen modals also use the <code>.alpha</code> class in place of the <code>.fade</code> class to achieve a smoother animation.</p>
+
+    <ddk-example height="450" id="fullscreen-modals"></ddk-example>
+  </section>
 </div>
