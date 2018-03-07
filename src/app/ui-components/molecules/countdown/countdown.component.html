@@ -36,15 +36,18 @@
 </section>
     </ddk-example>
 
-    <h3 class="component-header">Bar Color Variations</h3>
+    <h3 class="component-header">Color Variations</h3>
 
-    <p>You also have the option to adjust the background color of the countdown
-    bar, which will adjust the countdown elements' colors. Currently, only
-    <code>.countdown-cyan</code> is supported.</p>
+    <p>You have the option to adjust the background color of
+    the countdown bar, which will adjust the countdown elements' colors.
+    Currently, only <code>.countdown-bg-cyan</code> is supported.</p>
+
+    <p>You can also change the text color alone. Currently only
+    <code>.countdown-white</code> is supported.</p>
 
     <ddk-example>
 <section class="container-fluid">
-  <div class="countdown countdown-cyan">
+  <div class="countdown countdown-bg-cyan">
     <span class="countdown-header">The thing starts in...</span>
     <ul class="countdown-timer list-inline">
       <li class="countdown-days">03</li>
@@ -56,6 +59,23 @@
 </section>
     </ddk-example>
 
+    <h3 class="component-header">Floating Timer</h3>
+
+    <p>By wrapping the countdown timer in a <code>.countdown-border</code>
+    selector, the countdown will be centered and bordered, so it can float on
+    its own outside the context of a color bar.</p>
+
+    <ddk-example>
+<div class="countdown countdown-border">
+  <ul class="countdown-timer">
+    <li class="countdown-days">03</li>
+    <li class="countdown-hours">00</li>
+    <li class="countdown-minutes">42</li>
+    <li class="countdown-seconds">37</li>
+  </ul>
+</div>
+    </ddk-example>
+
     <h3 class="component-header">Buttons</h3>
 
     <p>On the cyan countdown bar, buttons with the <code>.countdown-btn</code>
@@ -63,7 +83,7 @@
 
     <ddk-example>
 <section class="container-fluid">
-  <div class="countdown countdown-cyan">
+  <div class="countdown countdown-bg-cyan">
     <span class="countdown-header push-right">Thing is happeneing now!</span>
     <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
   </div>
