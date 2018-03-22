@@ -1,13 +1,17 @@
 <h2 class="page-header">Grid Layout</h2>
 
-<p>Cards can be organized via Bootstrap's grid system or by using a couple handy helper classes included in <code>crds-styles</code>. For example, render cards in two columns by wrapping them with <code>.row</code> and a <code>.cards-2x</code> selector, like so...</p>
+<p>Cards can be organized via Bootstrap's grid system or by using a couple handy helper classes included in <code>crds-styles</code>.</p>
+
+<h3 class="component-header">2 Columns</h3>
+
+<p>To render cards in two columns wrap them with <code>.row</code> and a <code>.cards-2x</code> selector, like so...</p>
 
 <ddk-example>
 <div class="cards-2x">
   <div class="row">
 
     <div class="card">
-      <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -17,7 +21,7 @@
     </div>
 
     <div class="card">
-      <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -30,14 +34,16 @@
 </div>
 </ddk-example>
 
-<br><p>Want to display 4 columns on desktop screens? Just use the <code>.cards-4x</code> selector...</p>
+<h3 class="component-header">4 Columns</h3>
+
+<p>Want to display 4 columns on desktop screens? Just use the <code>.cards-4x</code> selector...</p>
 
 <ddk-example>
 <div class="cards-4x">
   <div class="row">
 
     <div class="card">
-      <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -47,7 +53,7 @@
     </div>
 
     <div class="card">
-      <img class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -57,7 +63,7 @@
     </div>
 
     <div class="card">
-      <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -67,7 +73,41 @@
     </div>
 
     <div class="card">
-      <img class="card-img-top" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</ddk-example>
+
+<h3 class="component-header">Card Image Heights</h3>
+
+<p>Card images are set to <code>200px</code> tall, cropped, and centered by default. This normalizes card sizes without need for the user to maintain consistent dimensions with their uploads.</p>
+
+<p>You can override this behavior by adding a <code>.card-img-unrestrained</code> selector to the image(s). The example below shows the effect of these selectors.</p>
+
+<ddk-example>
+<div class="cards-2x">
+  <div class="row">
+
+    <div class="card">
+      <img class="card-img-unrestrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+        alt="Card image caption">
+      <div class="card-block">
+        <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="card-img-unrestrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-student-ministry-header2.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
