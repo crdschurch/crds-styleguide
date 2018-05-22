@@ -30,7 +30,7 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http@4.1.2/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@4.1.2/bundles/router-testing.umd.js',
 
-    'rxjs': 'npm:rxjs',
+    'rxjs': 'npm:rxjs@5.0.3',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
 
     'angular2-google-maps/core': 'npm:angular2-google-maps@0.17.0/core/core.umd.js'
