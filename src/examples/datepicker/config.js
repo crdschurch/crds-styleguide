@@ -30,7 +30,7 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http@2.0.0//bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@2.0.0//bundles/router-testing.umd.js',
 
-    'rxjs': 'npm:rxjs',
+    'rxjs': 'npm:rxjs@5.0.3',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
     'ng2-bootstrap': 'npm:ng2-bootstrap@1.3.3/bundles/ng2-bootstrap.umd.min.js'
   },
