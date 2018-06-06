@@ -88,16 +88,16 @@
 
 <h3 class="component-header">Card Image Heights</h3>
 
-<p>Card images are set to <code>200px</code> tall, cropped, and centered by default. This normalizes card sizes without need for the user to maintain consistent dimensions with their uploads.</p>
+<p>By default, card images will inherit height of the image added. This can result in a non-uniform layout. If you would like your card images to have a consistent height, apply the class <code>.card-img-constrained</code> selector to the image(s). The example below shows the effect of these selectors.</p>
 
-<p>You can override this behavior by adding a <code>.card-img-unrestrained</code> selector to the image(s). The example below shows the effect of these selectors.</p>
+<p class="callout callout-info"><code>.card-img-constrained</code> sets images to 200px in height, and crops and centers them.</p>
 
 <ddk-example>
 <div class="cards-2x">
   <div class="row">
 
     <div class="card">
-      <img class="card-img-unrestrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+      <img class="card-img-constrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
@@ -107,7 +107,7 @@
     </div>
 
     <div class="card">
-      <img class="card-img-unrestrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-student-ministry-header2.jpg"
+      <img class="card-img-constrained" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-student-ministry-header2.jpg"
         alt="Card image caption">
       <div class="card-block">
         <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>

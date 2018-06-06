@@ -36,7 +36,7 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http@4.1.2/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@4.1.2/bundles/router-testing.umd.js',
 
-    'rxjs': 'npm:rxjs',
+    'rxjs': 'npm:rxjs@5.0.3',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
     'ng2-toastr': 'npm:ng2-toastr@4.0.1'
   },

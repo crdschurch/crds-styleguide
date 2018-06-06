@@ -33,7 +33,7 @@ System.config({
     '@angular/http/testing': 'npm:@angular/http@4.4.5/bundles/http-testing.umd.js',
     '@angular/router/testing': 'npm:@angular/router@4.4.5/bundles/router-testing.umd.js',
 
-    'rxjs': 'npm:rxjs',
+    'rxjs': 'npm:rxjs@5.0.3',
     'typescript': 'npm:typescript@2.0.2/lib/typescript.js',
 
     // 'kute': 'npm:kute.js@1.6.5/kute.js'
