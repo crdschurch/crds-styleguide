@@ -31,6 +31,7 @@ export class IconService {
     'location-arrow',
     'map-marker',
     'media-article',
+    'media-music',
     'media-podcast',
     'media-video',
     'menu',
