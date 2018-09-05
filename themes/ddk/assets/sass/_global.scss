@@ -1,0 +1,240 @@
+h1 {
+  .page-header &,
+  .jumbotron.ddk & {
+    font-family: $base-font-face;
+    font-weight: 100;
+  }
+
+  .dark-theme .jumbotron.ddk & {
+    color: $cr-white;
+  }
+}
+
+aside > nav {
+  li {
+    padding: 7px 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .active > a {
+    color: $text-color;
+  }
+
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+}
+
+body.dark-theme {
+  transition: all 0.3s;
+}
+
+.component {
+  @include make-row;
+
+  aside {
+    @include make-sm-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(3);
+    }
+  }
+  > div {
+    @include make-sm-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(9);
+    }
+  }
+}
+
+.tbd {
+  a {
+    color: $gray;
+  }
+}
+
+.breadcrumb {
+  .inverted & {
+    background: rgba($cr-white, .6);
+
+    a {
+      color: $cr-gray-light;
+
+
+      &:hover {
+        color: darken($cr-gray-light, 30);
+      }
+    }
+
+    > li + li:before {
+      color: darken($cr-gray-dark, 30);
+    }
+
+    > .active {
+      color: darken($cr-gray-dark, 30);
+    }
+  }
+}
+
+.page-header {
+  &:first-child {
+    &, h2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.page-subheader {
+  margin: 3em 0 1em;
+
+  h3 {
+    @extend .font-family-condensed;
+    font-size: 180%;
+  }
+}
+
+.selector {
+  margin-bottom: 3em;
+  > code {
+    margin-bottom: 0.5em;
+  }
+  > .annotation {
+    margin-top: 0.5em;
+  }
+  p > code {
+    margin-bottom: 0;
+  }
+}
+
+.annotation {
+  font-weight: 600;
+}
+
+.jumbotron.ddk {
+  margin-bottom: 3em;
+
+  h1 {
+    font-family: $condensed-extra-font-face;
+    font-size: 4rem;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 19px;
+  }
+}
+
+.link-download {
+  text-decoration: none;
+
+  & span:last-child {
+    vertical-align: middle;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+.breadcrumb.ddk {
+  background: transparent;
+  margin: 0;
+
+  a {
+    color: $cr-white;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      color: $cr-white;
+    }
+  }
+
+  > li:before {
+    content: none;
+  }
+
+  > li:after {
+    content: '/';
+    padding: 0 6px 0 4px;
+    opacity: .8;
+  }
+
+  > li:last-child:after {
+    padding-right: 0;
+  }
+}
+
+.callout {
+  border: 1px solid rgba($cr-gray-light, .25);
+  border-left: 6px solid rgba($cr-gray-light, .25);
+  border-radius: 0;
+  color: $cr-gray-light;
+  font-family: $accent-font-face;
+  font-size: $font-size-small;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.43;
+  padding: 15px 21px;
+
+  &.callout-info {
+    border-left-color: $alert-info;
+  }
+
+  &.callout-success {
+    border-left-color: $alert-success;
+  }
+
+  &.callout-warning {
+    border-left-color: $alert-warning;
+  }
+
+  &.callout-danger {
+    border-left-color: $alert-danger;
+  }
+
+  .callout-link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  code {
+    font-family: $accent-font-face;
+    font-size: $font-size-small;
+  }
+}
+
+.linkable {
+  position: relative;
+  > a {
+    position: absolute;
+    margin-left: -3em;
+    padding: 0.5em;
+    padding-right: 2.25em;
+    font-size: 90%;
+    color: $cr-blue-light;
+    visibility: hidden;
+    .icon {
+      height: 24px;
+      background-size: 24px;
+    }
+  }
+  &:hover > a {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html"  . }}
+</head>
+<body>
+  {{ partial "header.html" . }}
+
+  <div class="jumbotron jumbotron-xl inverted mobile-soft-sides" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-jumbotron.png?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+    <h1 class="title">{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 mobile-push-top">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>
