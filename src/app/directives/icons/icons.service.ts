@@ -19,6 +19,7 @@ export class IconService {
     'close',
     'contrast',
     'copy',
+    'credit-card',
     'download',
     'equalizer',
     'exclamation-circle',
@@ -43,6 +44,7 @@ export class IconService {
     'search',
     'share',
     'twitter',
+    'university',
     'usd',
     'youtube'
   ];
