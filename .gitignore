@@ -2,6 +2,7 @@ _site
 .DS*
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 .env
 .vscode
 node_modules
