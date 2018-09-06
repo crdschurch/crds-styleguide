@@ -41,7 +41,6 @@ defaults:
   - scope:
       path: ""
     values:
-      js_manifest: application_deferredimage_sizes:
       js_manifest: application_deferred
 
 image_sizes:
