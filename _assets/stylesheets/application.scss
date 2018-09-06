@@ -1,3 +1,15 @@
 @import "crds-styles-sprockets";
-@import "fonts";
-@import "global";
+@import "fonts"
+, "global"
+, "colors"
+, "component-list"
+, "document"
+, "example"
+, "fonts"
+, "forms"
+, "homepage"
+, "icons"
+, "loaders"
+, "modals"
+, "typography"
+;
