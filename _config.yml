@@ -8,9 +8,6 @@ url: "https://design.crossroads.net/" # the base hostname & protocol for your si
 # Build settings
 markdown: kramdown
 
-plugins:
-  - jekyll-feed
-
 # Include in processing.
 # Redirects needed to be declared for Netlify
 include:
