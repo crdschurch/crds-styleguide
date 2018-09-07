@@ -3,13 +3,10 @@ email: design@crossroads.net
 description: >- # this means to ignore newlines until "baseurl:"
   Crossroads Digital Design Kit, or DDK, is the official pattern library for Crossroads.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://crds-styleguide.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://design.crossroads.net/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
-
-plugins:
-  - jekyll-feed
 
 # Include in processing.
 # Redirects needed to be declared for Netlify
@@ -24,6 +21,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - dist
 
 # Assets declared for jekyll-assets gem
 assets:
@@ -36,13 +34,6 @@ assets:
     - _assets/javascripts
 
 typekit_url: https://use.typekit.net/ccb3vpa.css
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      js_manifest: application_deferredimage_sizes:
-      js_manifest: application_deferred
 
 image_sizes:
   cards_3x: "(min-width: 1200px) 360px, (min-width: 992px) 294px, (min-width: 768px) 720px, 100vw"
