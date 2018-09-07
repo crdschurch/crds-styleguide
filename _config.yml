@@ -3,7 +3,7 @@ email: design@crossroads.net
 description: >- # this means to ignore newlines until "baseurl:"
   Crossroads Digital Design Kit, or DDK, is the official pattern library for Crossroads.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://crds-styleguide.netlify.com/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://design.crossroads.net/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
