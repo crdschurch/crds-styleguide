@@ -5,5 +5,3 @@ _site
 .jekyll-cache
 .env
 .vscode
-node_modules
-dist

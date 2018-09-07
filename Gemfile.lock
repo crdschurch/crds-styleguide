@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/crdschurch/crds-styles.git
   revision: 444ed3820911b730c3be54f86132f205b3d2a31f
+  tag: v3.0.4
   specs:
     crds-styles (3.0.4)
       bootstrap-sass (~> 3.3)
@@ -110,7 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  crds-styles (~> 3.0.4)!
+  crds-styles!
   jekyll (~> 3.7.3)
   jekyll-assets
   jekyll-feed (~> 0.6)
