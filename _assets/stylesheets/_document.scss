@@ -1,0 +1,18 @@
+.component {
+  @include make-row;
+
+  aside {
+    @include make-sm-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(3);
+    }
+  }
+  > div {
+    @include make-sm-column(12);
+
+    @media (min-width: $screen-sm) {
+      @include make-sm-column(9);
+    }
+  }
+}

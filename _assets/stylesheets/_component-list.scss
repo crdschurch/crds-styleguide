@@ -1,0 +1,90 @@
+.search-bar {
+  margin-bottom: 3em;
+
+  .form-control {
+    border-radius: 25px;
+  }
+
+  .input-group-btn {
+    .btn {
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+    }
+  }
+}
+
+.media:not(:last-child) {
+  margin-bottom: 1em;
+
+  @media (min-width: $screen-xs) {
+    margin-bottom: 3em;
+  }
+}
+
+.media-image {
+  margin-bottom: .5em;
+
+  @media (min-width: $screen-xs) {
+    margin-bottom: 0;
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 1em;
+  }
+
+  @media (min-width: $screen-md) {
+    padding-right: 3em;
+  }
+}
+
+.media-body {
+  width: auto;
+}
+
+#toast-example-container > div.toast.toast-error, #toast-example-container > div.toast.toast-custom.toast-error {
+  background-color: #d96f62;
+  border-color: #d96f62;
+  color: white;
+}
+
+#toast-example-container > div.toast{
+  height: 4rem;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  border: none;
+  color: white;
+  background-image: none !important;
+  font-size: .875rem;
+  line-height: 1.125rem;
+  font-family: "lexia", serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+#toast-example-container > div.toast p:last-child {
+  margin-bottom: 0;
+}
+
+#toast-example-container > div.toast .toast-close-button {
+  float: right;
+  font-size: 2rem;
+}
+
+.fauxdal-example .crds-example {
+  position: relative;
+  height: 400px;
+
+  .fauxdal-wrapper {
+    position: absolute;
+  }
+
+  .fauxdal {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.sticky-example-wrapper {
+  max-height: 330px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
