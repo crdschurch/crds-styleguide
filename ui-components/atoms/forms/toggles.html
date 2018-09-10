@@ -1,0 +1,221 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>FORMS</li>
+    </ol>
+    <h1>UI Components / Forms</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/forms/inputs">Inputs</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/radios">Radios</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/checkboxes">Checkboxes</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/forms/toggles">Toggles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/nested-forms">Nested Forms</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/datepicker">Datepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/timepicker">Timepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/search">Search Field</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/groups">Groups</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="toggles" name="toggles" href="/ui-components/atoms/forms/toggles#toggles" fragment="toggles" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 13:13:21 GMT-0400 (EDT)">Toggles</h2>
+      </div>
+
+      <p>Select one option or the other. No option is pre-selected by default. Once an option is touched, a user can return to the unselected state of the component.</p>
+
+      <p class="callout callout-info">To illustrate functionality, we're using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#radio-button" target="_blank">NGX Bootstrap</a> and adding the attribute <code>uncheckable</code> to each button element.</p>
+
+      <section>
+        <div class="linkable">
+          <a id="radio-bar" name="radio-bar" href="/ui-components/atoms/forms/toggles#radio-bar" fragment="radio-bar" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:13:21 GMT-0400 (EDT)">Radio bar</h3>
+        </div>
+
+        <p>Best for limited options, utilizing a single horizontal row.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Kids welcome?</label>
+            <div aria-label="..." class="btn-group btn-group-bar" role="group">
+              <button class="btn btn-default" type="button" uncheckable="">Yes</button>
+              <button class="btn btn-default" type="button" uncheckable="">No</button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Kids welcome?&lt;/label>
+  &lt;div aria-label="..." class="btn-group btn-group-bar" role="group">
+    &lt;button class="btn btn-default" type="button" uncheckable="">Yes&lt;/button>
+    &lt;button class="btn btn-default" type="button" uncheckable="">No&lt;/button>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-3496a2ad-4952-4341-b318-118080a8bebf">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="radio-bar-flexbox)" name="radio-bar-flexbox)" href="/ui-components/atoms/forms/toggles#radio-bar-flexbox)" fragment="radio-bar-flexbox)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:13:21 GMT-0400 (EDT)">Radio bar (flexbox)</h3>
+        </div>
+
+        <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Kids welcome?</label>
+            <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group">
+              <button class="btn btn-default" type="button" uncheckable="">Yes</button>
+              <button class="btn btn-default" type="button" uncheckable="">No</button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Kids welcome?&lt;/label>
+  &lt;div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group">
+    &lt;button class="btn btn-default" type="button" uncheckable="">Yes&lt;/button>
+    &lt;button class="btn btn-default" type="button" uncheckable="">No&lt;/button>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-f43febcc-4aff-4b51-a710-8680e21e32c0">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="radio-pills" name="radio-pills" href="/ui-components/atoms/forms/toggles#radio-pills" fragment="radio-pills" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:13:21 GMT-0400 (EDT)">Radio pills</h3>
+        </div>
+
+        <p>Use with many options when horizontal space allows.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Show</label>
+            <div aria-label="..." class="btn-group" role="group">
+              <button class="btn btn-default" type="button" uncheckable="">Locations only</button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Show&lt;/label>
+  &lt;div aria-label="..." class="btn-group" role="group">
+    &lt;button class="btn btn-default" type="button" uncheckable="">Locations only&lt;/button>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c292bfdc-14d4-4b8b-acd8-c567bf35244e">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="radio-pills-block)" name="radio-pills-block)" href="/ui-components/atoms/forms/toggles#radio-pills-block)" fragment="radio-pills-block)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:13:21 GMT-0400 (EDT)">Radio pills (block)</h3>
+        </div>
+
+        <p>Use when vertical space allows.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Show</label>
+            <div aria-label="..." class="btn-group btn-group-block" role="group">
+              <button class="btn btn-default" type="button" uncheckable="">Locations only</button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Show&lt;/label>
+  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
+    &lt;button class="btn btn-default" type="button" uncheckable="">Locations only&lt;/button>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-871a246a-0ba9-492e-aeae-fb673b6b7ece">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>

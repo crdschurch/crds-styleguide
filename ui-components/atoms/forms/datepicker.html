@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>FORMS</li>
+    </ol>
+    <h1>UI Components / Forms</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/forms/inputs">Inputs</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/radios">Radios</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/checkboxes">Checkboxes</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/toggles">Toggles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/nested-forms">Nested Forms</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/forms/datepicker">Datepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/timepicker">Timepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/search">Search Field</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/groups">Groups</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="datepicker" name="datepicker" href="/ui-components/atoms/forms/datepicker#datepicker" fragment="datepicker" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 14:07:31 GMT-0400 (EDT)">Datepicker</h2>
+      </div>
+
+      <p class="callout callout-info" role="alert">The <code>&lt;datepicker&gt;</code> element requires the inclusion of <a class="callout-link" href="https://github.com/valor-software/ngx-bootstrap" target="_blank">NG-2 Bootstrap</a> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <a class="callout-link" href="http://valor-software.com/ngx-bootstrap/#/datepicker" target="_blank">this documentation</a> when customizing this component.</p>
+
+      <div class="crds-example crds-embedded-markup">
+        <iframe allowtransparency="true" src="/examples/datepicker/index.html" width="100%" height="330" frameborder="0"></iframe>
+
+        <div class="example-row">
+          <div class="tree">
+            <div class="list-group">
+              <a class="list-group-item active" href="#" >module.ts</a>
+              <a class="list-group-item" href="#">component.ts</a>
+            </div>
+          </div>
+          <div class="markup" id="markup-clippable-893105d7-f548-485a-b090-b1cf4d665fb7">
+            <pre>
+              <span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> DatepickerModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ng2-bootstrap'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>BrowserModule<span class=&quot;token punctuation&quot;>,</span> DatepickerModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span><span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> DatepickerModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ng2-bootstrap'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./component'</span><span class="token punctuation">;</span>
+
+              @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>BrowserModule<span class="token punctuation">,</span> DatepickerModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+            </pre>
+            <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-893105d7-f548-485a-b090-b1cf4d665fb7">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
