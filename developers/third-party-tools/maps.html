@@ -1,0 +1,114 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>DEVELOPERS</li>
+      <li>THIRD PARTY-TOOLS</li>
+    </ol>
+    <h1>Third-Party Tools</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li class="active">
+            <a href="/developers/third-party-tools/imgix">Imgix</a>
+          </li>
+          <li>
+            <a href="/developers/third-party-tools/maps">Maps</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header">Maps</h1>
+
+      <p>
+        We use <a href="https://angular-maps.com/">angular2-google-maps</a> to work
+        with map-based features.
+      </p>
+
+      <p>
+        Here is a basic example of a simple map with a set of markers, each with its
+        own info window.
+      </p>
+
+      <div class="crds-example crds-embedded-markup">
+        <iframe allowtransparency="true" src="/examples/map/index.html" width="100%" height="330" frameborder="0"></iframe>
+        <div class="example-row">
+          <div class="tree">
+            <div class="list-group">
+              <a class="list-group-item active" href="#">module.ts</a>
+              <a class="list-group-item" href="#">app.component.ts</a>
+              <a class="list-group-item" href="#">map-options.ts</a>
+              <a class="list-group-item" href="#">map-markers.ts</a>
+              <a class="list-group-item" href="#">app.component.html</a>
+            </div>
+          </div>
+          <div class="markup" id="markup-clippable-e31a3208-ae5e-4001-8aad-5bf22286cc7a">
+            <pre>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> AgmCoreModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'angular2-google-maps/core'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
+
+  @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      BrowserModule<span class="token punctuation">,</span>
+      AgmCoreModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        apiKey<span class="token punctuation">:</span> <span class="token string">'AIzaSyArKsBK97N0Wi-69x10OL7Sx57Fwlmu6Cs'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      AppComponent
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      AppComponent
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre>
+            <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-e31a3208-ae5e-4001-8aad-5bf22286cc7a">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-subheader">
+        <div class="linkable">
+          <a id="labels" name="labels" href="/developers/third-party-tools/maps#labels" fragment="labels" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 data-linked="Tue Sep 11 2018 16:21:43 GMT-0400 (EDT)">Labels</h3>
+        </div>
+      </div>
+
+      <p>
+        We also support styles for on-map labels next to markers using the
+        <code >.pin-details</code> selector. Unfortunately, this functionality is not
+        currently built into angular2-google-maps. An example of one solution to
+        achieve this effect can be found in
+        <a  href="https://github.com/crdschurch/crds-connect/blob/development/src/app/components/map-content/map-content.component.ts">this component</a>.
+      </p>
+
+      <div class="crds-example" data-processed="true">
+        <div class="crds-pin-details-example--container">
+          <div class="crds-pin-details-example--content">
+            <img src="//crds-cms-uploads.s3.amazonaws.com/connect/PERSON.svg">
+            <div class="crds-pin-details-example--pin-label pin-label">Keanu R</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
