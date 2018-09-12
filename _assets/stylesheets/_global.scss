@@ -71,19 +71,11 @@ $navbar-inverse-border: darken($cr-gray-dark, 10);
       fill: $cr-gray;
     }
 
-    .navbar-nav li.on > a {
-      color: $cr-cyan;
-    }
-
     .dark-theme & {
       @extend .navbar-inverse;
 
       .navbar-brand {
         fill: $cr-white;
-      }
-
-      .navbar-nav li.on > a {
-        color: $cr-cyan;
       }
     }
 
