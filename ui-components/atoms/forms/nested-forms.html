@@ -1,0 +1,511 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>FORMS</li>
+    </ol>
+    <h1>UI Components / Forms</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/forms/inputs">Inputs</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/radios">Radios</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/checkboxes">Checkboxes</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/toggles">Toggles</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/forms/nested-forms">Nested Forms</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/datepicker">Datepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/timepicker">Timepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/search">Search Field</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/groups">Groups</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="nested-forms" name="nested-forms" href="/ui-components/atoms/forms/nested-forms#nested-forms" fragment="nested-forms" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 13:23:23 GMT-0400 (EDT)">Nested Forms</h2>
+      </div>
+
+      <p>A few examples of collecting follow up data within a single view.</p>
+
+      <p class="callout callout-warning">The purpose of this page is to illustrate expected behaviour. It's by no means prescriptive in how you should implement a given component.</p>
+
+      <section>
+        <div class="linkable">
+          <a id="radio" name="radio" href="/ui-components/atoms/forms/nested-forms#radio" fragment="radio" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:23:23 GMT-0400 (EDT)">Radio</h3>
+        </div>
+
+        <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+        <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Where do you want to meet?</label>
+            <form class="controls-stacked flush-ends">
+              <label class="control radio push-quarter-bottom">
+                <input id="radio1" name="radio" value="radio1" type="radio">
+                <span class="control-indicator"></span>
+                My home
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>The place where you live.</p>
+              </div>
+
+              <label class="control radio push-quarter-bottom">
+                <input id="radio2" name="radio" value="radio2" type="radio">
+                <span class="control-indicator"></span>
+                Somewhere else
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>Meeting places can be anywhere — your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.</p>
+              </div>
+            </form>
+            <p class="help-block hard-top">Helper text if needed</p>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Where do you want to meet?&lt;/label>
+  &lt;form class="controls-stacked flush-ends">
+    &lt;label class="control radio push-quarter-bottom">
+      &lt;input id="radio1" name="radio" value="radio1" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      My home
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>The place where you live.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control radio push-quarter-bottom">
+      &lt;input id="radio2" name="radio" value="radio2" type="radio">
+      &lt;span class="control-indicator">&lt;/span>
+      Somewhere else
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>Meeting places can be anywhere — your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.&lt;/p>
+    &lt;/div>
+  &lt;/form>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-227fc607-3a74-48ab-b1ea-dde7f93374e1">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="radio-pills-block)" name="radio-pills-block)" href="/ui-components/atoms/forms/nested-forms#radio-pills-block)" fragment="radio-pills-block)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:23:23 GMT-0400 (EDT)">Radio pills (block)</h3>
+        </div>
+
+        <p>Use when vertical space allows.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Where do you mostly pray?</label>
+            <div aria-label="..." class="btn-group btn-group-block" role="group">
+              <button class="btn btn-default" type="button">At home</button>
+              <button class="btn btn-default" type="button">On the go</button>
+              <button class="btn btn-default" type="button">At work</button>
+              <button class="btn btn-default" type="button">Somewhere else</button>
+
+              <div class="row">
+                <div class="col-xs-12 clear">
+                  <div class="border-left border-width-3">
+                    <div class="push-half-left">
+                      <div class="form-group push-quarter-ends">
+                        <label class="sr-only" for="">Location name</label>
+                        <input class="form-control" id="" name="" placeholder="Like where?" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="help-block">Help text if needed</p>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Where do you mostly pray?&lt;/label>
+  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
+    &lt;button class="btn btn-default" type="button">At home&lt;/button>
+    &lt;button class="btn btn-default" type="button">On the go&lt;/button>
+    &lt;button class="btn btn-default" type="button">At work&lt;/button>
+    &lt;button class="btn btn-default" type="button">Somewhere else&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Location name&lt;/label>
+              &lt;input class="form-control" id="" name="" placeholder="Like where?" type="text">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+  &lt;p class="help-block">Help text if needed&lt;/p>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-92b62744-029e-4e9a-b626-a73f9cad7f17">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="checkbox" name="checkbox" href="/ui-components/atoms/forms/nested-forms#checkbox" fragment="checkbox" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:23:23 GMT-0400 (EDT)">Checkbox</h3>
+        </div>
+
+        <p>Being the least mobile-friendly pattern of the category, use with solid rationale.</p>
+
+        <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">Select up to two</label>
+            <div class="controls-stacked flush-ends">
+              <label class="control checkbox push-quarter-bottom">
+                <input type="checkbox">
+                <span class="control-indicator" tabindex="0"></span>
+                Interest
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.</p>
+              </div>
+
+              <label class="control checkbox push-quarter-bottom">
+                <input type="checkbox">
+                <span class="control-indicator" tabindex="0"></span>
+                Neighborhoods
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>Your group is primarily focused on building community with the people who live closet together in your town, zip code or on your street.</p>
+              </div>
+
+              <label class="control checkbox push-quarter-bottom">
+                <input type="checkbox">
+                <span class="control-indicator" tabindex="0"></span>
+                Spiritual growth
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>Grow together through Huddle, reading a book or studying the Bible and applying what you learn to your everyday life.</p>
+              </div>
+
+              <label class="control checkbox push-quarter-bottom">
+                <input type="checkbox">
+                <span class="control-indicator" tabindex="0"></span>
+                Life stages
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>For people in a similar life stage like empty nesters, singles, foster parents, moms, young married couples, etc.</p>
+              </div>
+
+              <label class="control checkbox push-quarter-bottom">
+                <input type="checkbox">
+                <span class="control-indicator" tabindex="0"></span>
+                Healing
+              </label>
+
+              <div class="flush-bottom hard-top help-block text-muted push-left">
+                <p>For people looking for healing and recovery in an area of life.</p>
+              </div>
+            </div>
+            <p class="help-block hard-top">Helper text if needed</p>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">Select up to two&lt;/label>
+  &lt;div class="controls-stacked flush-ends">
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Interest
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Neighborhoods
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>Your group is primarily focused on building community with the people who live closet together in your town, zip code or on your street.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Spiritual growth
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>Grow together through Huddle, reading a book or studying the Bible and applying what you learn to your everyday life.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Life stages
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>For people in a similar life stage like empty nesters, singles, foster parents, moms, young married couples, etc.&lt;/p>
+    &lt;/div>
+
+    &lt;label class="control checkbox push-quarter-bottom">
+      &lt;input type="checkbox">
+      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+      Healing
+    &lt;/label>
+
+    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
+      &lt;p>For people looking for healing and recovery in an area of life.&lt;/p>
+    &lt;/div>
+  &lt;/div>
+  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-a148932b-d4d1-4186-b14a-6314ebe6ec7d">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="checkbox-pills-block)" name="checkbox-pills-block)" href="/ui-components/atoms/forms/nested-forms#checkbox-pills-block)" fragment="checkbox-pills-block)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 13:23:23 GMT-0400 (EDT)">Checkbox pills (block)</h3>
+        </div>
+
+        <p>Use when vertical space allows.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="form-group">
+            <label class="control-label block">How do you spend free time? (All that apply)</label>
+            <div aria-label="..." class="btn-group btn-group-block" role="group">
+              <button class="btn btn-default" type="button">Anything active</button>
+
+              <div class="row">
+                <div class="col-xs-12 clear">
+                  <div class="border-left border-width-3">
+                    <div class="push-half-left">
+                      <div class="form-group push-quarter-ends">
+                        <label class="sr-only" for="">Activity</label>
+                        <input class="form-control" id="" name="" placeholder="Like what?" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-default" type="button">Be entertained</button>
+
+              <div class="row">
+                <div class="col-xs-12 clear">
+                  <div class="border-left border-width-3">
+                    <div class="push-half-left">
+                      <div class="form-group push-quarter-ends">
+                        <label class="sr-only" for="">Entertainment</label>
+                        <input class="form-control" id="" name="" placeholder="By what?" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-default" type="button">Stay at home</button>
+
+              <div class="row">
+                <div class="col-xs-12 clear">
+                  <div class="border-left border-width-3">
+                    <div class="push-half-left">
+                      <div class="form-group push-quarter-ends">
+                        <label class="sr-only" for="">Stay home</label>
+                        <input class="form-control" id="" name="" placeholder="And do what?" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn-default" type="button">Other</button>
+
+              <div class="row">
+                <div class="col-xs-12 clear">
+                  <div class="border-left border-width-3">
+                    <div class="push-half-left">
+                      <div class="form-group push-quarter-ends">
+                        <label class="sr-only" for="">Other</label>
+                        <input class="form-control" id="" name="" placeholder="Like what?" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="help-block">Helper text if needed</p>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="control-label block">How do you spend free time? (All that apply)&lt;/label>
+  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
+    &lt;button class="btn btn-default" type="button">Anything active&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Activity&lt;/label>
+              &lt;input class="form-control" id="" name="" placeholder="Like what?" type="text">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button class="btn btn-default" type="button">Be entertained&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Entertainment&lt;/label>
+              &lt;input class="form-control" id="" name="" placeholder="By what?" type="text">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button class="btn btn-default" type="button">Stay at home</button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Stay home&lt;/label>
+              &lt;input class="form-control" id="" name="" placeholder="And do what?" type="text">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;button class="btn btn-default" type="button">Other&lt;/button>
+
+    &lt;div class="row">
+      &lt;div class="col-xs-12 clear">
+        &lt;div class="border-left border-width-3">
+          &lt;div class="push-half-left">
+            &lt;div class="form-group push-quarter-ends">
+              &lt;label class="sr-only" for="">Other&lt;/label>
+              &lt;input class="form-control" id="" name="" placeholder="Like what?" type="text">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;p class="help-block">Helper text if needed&lt;/p>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-5fb24461-f9e2-4aaf-9c8a-89e24b78e958">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>

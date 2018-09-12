@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>FEEDBACK</li>
+    </ol>
+    <h1>UI Components / Feedback</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/feedback/alerts">Alerts</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/feedback/toast-notifications">Toast Notifications</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="toast-notifications" name="toast-notifications" href="/ui-components/atoms/feedback/toast-notifications#toast-notifications" fragment="toast-notifications" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header" data-linked="Mon Sep 10 2018 14:47:05 GMT-0400 (EDT)">Toast Notifications</h2>
+      </div>
+
+      <p>Toast Notifications requires the inclusion of <a class="alert-link" href="https://github.com/PointInside/ng2-toastr" target="_blank">ng2-toastr</a>, an external resource used to create Toast Notifications in Angular 2 applications.</p>
+
+      <p>Below is a simple Angular 4.1.2 app providing buttons to trigger each of the five toast notification options.</p>
+
+      <p>The most important piece to remember is that ng2-toastr requires importing <code>BrowserAnimationsModule</code> into the module making using of the library (for Angular 4 apps).</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true" hidden=""></div>
+      <div class="crds-example crds-embedded-markup">
+        <iframe allowtransparency="true" src="/examples/toastr/index.html" width="100%" height="225" frameborder="0"></iframe>
+        <div class="example-row">
+          <div class="tree">
+            <div class="list-group">
+              <a class="list-group-item active" href="#">module.ts</a>
+              <a class="list-group-item" href="#">component.ts</a>
+              <a class="list-group-item" href="#">component.html</a>
+            </div>
+          </div>
+          <div class="markup" id="markup-clippable-72a2842b-4668-4d7b-a6db-82ea7973eaba">
+            <pre>
+              <span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserAnimationsModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser/animations'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> ToastModule<span class=&quot;token punctuation&quot;>,</span> ToastOptions <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ng2-toastr/ng2-toastr'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>CustomOptions</span> <span class=&quot;token keyword&quot;>extends</span> <span class=&quot;token class-name&quot;>ToastOptions</span> <span class=&quot;token punctuation&quot;>{</span>&amp;#10;  animate <span class=&quot;token operator&quot;>=</span> <span class=&quot;token string&quot;>'fade'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;  dismiss <span class=&quot;token operator&quot;>=</span> <span class=&quot;token string&quot;>'auto'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;  showCloseButton <span class=&quot;token operator&quot;>=</span> <span class=&quot;token keyword&quot;>true</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;  newestOnTop <span class=&quot;token operator&quot;>=</span> <span class=&quot;token keyword&quot;>true</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;  enableHTML <span class=&quot;token operator&quot;>=</span> <span class=&quot;token keyword&quot;>true</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    BrowserModule<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    BrowserAnimationsModule<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    ToastModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  providers<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    <span class=&quot;token punctuation&quot;>{</span>&amp;#10;      provide<span class=&quot;token punctuation&quot;>:</span> ToastOptions<span class=&quot;token punctuation&quot;>,</span>&amp;#10;      useClass<span class=&quot;token punctuation&quot;>:</span> CustomOptions&amp;#10;    <span class=&quot;token punctuation&quot;>}</span>&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>&amp;#10;"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserAnimationsModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser/animations'</span><span class="token punctuation">;</span>
+
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> ToastModule<span class="token punctuation">,</span> ToastOptions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ng2-toastr/ng2-toastr'</span><span class="token punctuation">;</span>
+
+              <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./component'</span><span class="token punctuation">;</span>
+
+              <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">CustomOptions</span> <span class="token keyword">extends</span> <span class="token class-name">ToastOptions</span> <span class="token punctuation">{</span>
+              animate <span class="token operator">=</span> <span class="token string">'fade'</span><span class="token punctuation">;</span>
+              dismiss <span class="token operator">=</span> <span class="token string">'auto'</span><span class="token punctuation">;</span>
+              showCloseButton <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+              newestOnTop <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+              enableHTML <span class="token operator">=</span> <span class="token keyword">true</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+
+              @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+              imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              BrowserModule<span class="token punctuation">,</span>
+              BrowserAnimationsModule<span class="token punctuation">,</span>
+              ToastModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              AppComponent
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              providers<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                provide<span class="token punctuation">:</span> ToastOptions<span class="token punctuation">,</span>
+                useClass<span class="token punctuation">:</span> CustomOptions
+              <span class="token punctuation">}</span>
+              <span class="token punctuation">]</span><span class="token punctuation">,</span>
+              bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+              AppComponent
+              <span class="token punctuation">]</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span>
+              <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+            </pre>
+            <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-72a2842b-4668-4d7b-a6db-82ea7973eaba">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
