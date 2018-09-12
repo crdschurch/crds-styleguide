@@ -19,41 +19,71 @@ layout: default
   <div class="col-md-offset-3">
     <h2 class="page-header">Tooltips</h2>
 
-    <p class="callout callout-info" role="alert">This button group component requires the inclusion of <a class="callout-link" href="https://github.com/valor-software/ngx-bootstrap" target="_blank">NGX Bootstrap</a> - an external resource used to create Bootstrap-like elements in Angular 2 applications. Please refer to <a class="callout-link" href="https://valor-software.com/ngx-bootstrap/#/tooltip" target="_blank">this documentation</a> when customizing this component.</p>
+    <p class="callout callout-warning" role="alert">Tooltips must be initialized with jQuery: select the specified element and call the tooltip() method.</p>
 
-    <div class="crds-example crds-embedded-markup">
-      <iframe allowtransparency="true" src="/examples/tooltips/index.html" width="100%" height="250" frameborder="0"></iframe>
-      <div class="example-row">
-        <div class="tree">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">module.ts</a>
-            <a class="list-group-item" href="#">component.ts</a>
-            <a class="list-group-item" href="#">component.html</a>
-          </div>
-        </div>
+    <p>The following code will enable all tooltips on the document:</p>
+    <pre>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});</pre>
+    <section>
+      <div class="linkable">
+        <a id="button-tags" name="button-tags" href="/ui-components/atoms/tooltips" fragment="button-tags" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Default Tooltips</h3>
+      </div>
 
-        <div class="markup" id="markup-clippable-f7177f86-18fe-4064-b01b-e17174e0a119">
-          <pre>
-            <span class=&quot;token comment&quot;>// RECOMMENDED (doesn't work with system.js)</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> TooltipModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ngx-bootstrap'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>BrowserModule<span class=&quot;token punctuation&quot;>,</span> TooltipModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span><span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>"><span class="token comment">// RECOMMENDED (doesn't work with system.js)</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> TooltipModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ngx-bootstrap'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./component'</span><span class="token punctuation">;</span>
+      <p>Tooltips work with buttons and button links.</p>
 
-            @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-            imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>BrowserModule<span class="token punctuation">,</span> TooltipModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-            declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
-            bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span>
-            <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-          </pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-f7177f86-18fe-4064-b01b-e17174e0a119">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" data-toggle="tooltip" title="Example text giving more information.">Tooltip on button</button>
+          <button type="button" class="btn btn-link" data-toggle="tooltip" title="Example text giving more information.">Tooltip on link</button>
         </div>
       </div>
-    </div>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;div class="btn-group">
+  &lt;button type="button" class="btn btn-default" data-toggle="tooltip" title="Example text giving more information.">Tooltip on button&lt;/button>
+  &lt;button type="button" class="btn btn-link" data-toggle="tooltip" title="Example text giving more information.">Tooltip on link&lt;/button>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <div class="linkable">
+        <a id="button-tags" name="button-tags" href="/ui-components/atoms/tooltips" fragment="button-tags" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Tooltip Directions</h3>
+      </div>
+
+      <p>You can change the direction which a tooltip appears by adding a <code>data-placement</code> attribute to the button.</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default" data-placement="left"  data-toggle="tooltip" title="Tooltip on left">Tooltip on left</button>
+          <button type="button" class="btn btn-default" data-placement="right"  data-toggle="tooltip" title="Tooltip on right">Tooltip on right</button>
+          <button type="button" class="btn btn-default" data-placement="bottom"  data-toggle="tooltip" title="Tooltip on bottom">Tooltip on bottom</button>
+          <button type="button" class="btn btn-default" data-placement="top"  data-toggle="tooltip" title="Tooltip on top">Tooltip on top</button>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;div class="btn-group">
+  &lt;button type="button" class="btn btn-default" data-placement="left"  data-toggle="tooltip" title="Tooltip on left">Tooltip on left&lt;/button>
+  &lt;button type="button" class="btn btn-default" data-placement="right"  data-toggle="tooltip" title="Tooltip on right">Tooltip on right&lt;/button>
+  &lt;button type="button" class="btn btn-default" data-placement="bottom"  data-toggle="tooltip" title="Tooltip on bottom">Tooltip on bottom&lt;/button>
+  &lt;button type="button" class="btn btn-default" data-placement="top"  data-toggle="tooltip" title="Tooltip on top">Tooltip on top&lt;/button>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
   </div>
 </div>
