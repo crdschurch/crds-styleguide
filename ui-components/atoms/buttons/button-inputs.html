@@ -1,0 +1,603 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>BUTTONS</li>
+    </ol>
+    <h1>UI Components / Buttons</h1>
+    <p>Button patterns help solicit action from a user in a clean and consistent manner. These elements are commonly used to submit a form or direct a user's attention towards a primary call-to-action.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/buttons/styles">Styles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/groups">Groups</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/dropdowns">Dropdowns</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/buttons/button-inputs">Button Inputs</a>
+          </li>
+          <li>
+          <a href="/ui-components/atoms/buttons/placement">Placement</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="button-inputs" name="button-inputs" href="/ui-components/atoms/buttons/button-inputs#button-inputs" fragment="button-inputs" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Inputs</h2>
+      </div>
+
+      <section>
+        <div class="linkable">
+          <a id="button-input" name="button-input" href="/ui-components/atoms/buttons/button-inputs#button-input" fragment="button-input" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Input</h3>
+        </div>
+
+        <p>Use the <code>.btn-*</code> classes on any element with a <code>.btn</code> class to change that button element's color.</p>
+
+        <p class="callout callout-info">For obvious reasons, the <code>.btn-white</code> style button works best on a dark background. All of the following white button examples have been given a wrapper with a dark background (and some minor padding for aesthetic reasons).</p>
+
+        <p class="callout callout-info">It should be noted that the input background color also changes when the <code>.btn-white</code> class is used. To get the appropriate colors, also add <code>.input-group-white</code> to the wrapper class.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue" type="submit">
+                Blue
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-cyan" type="submit">
+                Cyan
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray" type="submit">
+                Gray
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray-light" type="submit">
+                Gray Light
+              </button>
+            </span>
+          </div>
+          <div class="bg-charcoal soft-quarter">
+            <div class="input-group input-group-white">
+              <input class="form-control" placeholder="Placeholder" type="text">
+              <span class="input-group-btn">
+                <button class="btn btn-white" type="submit">
+                  White
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue" type="submit">
+      Blue
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-cyan" type="submit">
+      Cyan
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray" type="submit">
+      Gray
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray-light" type="submit">
+      Gray Light
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="bg-charcoal soft-quarter">
+  &lt;div class="input-group input-group-white">
+    &lt;input class="form-control" placeholder="Placeholder" type="text">
+    &lt;span class="input-group-btn">
+      &lt;button class="btn btn-white" type="submit">
+        White
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-51375272-eb86-48d4-8a11-0ace83b49a68">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="button-input-disabled)" name="button-input-disabled)" href="/ui-components/atoms/buttons/button-inputs#button-input-disabled)" fragment="button-input-disabled)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Input (Disabled)</h3>
+        </div>
+
+        <p>To create a disabled Button Input Group, add an attribute of <code>disabled</code> to the input tag <strong>and</strong> a <code>.disabled</code> class to the button tag.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue disabled" type="submit">
+                Blue
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-cyan disabled" type="submit">
+                Cyan
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray disabled" type="submit">
+                Gray
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray-light disabled" type="submit">
+                Gray Light
+              </button>
+            </span>
+          </div>
+          <div class="bg-charcoal soft-quarter">
+            <div class="input-group input-group-white">
+              <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+              <span class="input-group-btn">
+                <button class="btn btn-white disabled" type="submit">
+                  White
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue disabled" type="submit">
+      Blue
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-cyan disabled" type="submit">
+      Cyan
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray disabled" type="submit">
+      Gray
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray-light disabled" type="submit">
+      Gray Light
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="bg-charcoal soft-quarter">
+  &lt;div class="input-group input-group-white">
+    &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+    &lt;span class="input-group-btn">
+      &lt;button class="btn btn-white disabled" type="submit">
+        White
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-0828c792-c839-4f30-9da4-82440dfcb1fe">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="button-input--icon-only" name="button-input--icon-only" href="/ui-components/atoms/buttons/button-inputs#button-input--icon-only" fragment="button-input--icon-only" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Input — Icon Only</h3>
+        </div>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-cyan" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray-light" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="bg-charcoal soft-quarter">
+            <div class="input-group input-group-white">
+              <input class="form-control" placeholder="Placeholder" type="text">
+              <span class="input-group-btn">
+                <button class="btn btn-white" type="submit">
+                  <svg class="icon icon-1" viewBox="0 0 256 256">
+                    <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-cyan" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray-light" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="bg-charcoal soft-quarter">
+  &lt;div class="input-group input-group-white">
+    &lt;input class="form-control" placeholder="Placeholder" type="text">
+    &lt;span class="input-group-btn">
+      &lt;button class="btn btn-white" type="submit">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+          &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-a9f5e831-1c79-49c1-a823-faf16e1cd2fa">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="button-input--icon-only-(disabled)" name="button-input--icon-only-(disabled)" href="/ui-components/atoms/buttons/button-inputs#button-input--icon-only-(disabled)" fragment="button-input--icon-only-(disabled)" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Input — Icon Only (Disabled)</h3>
+        </div>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue disabled" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-cyan disabled" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray disabled" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-gray-light disabled" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+          <div class="bg-charcoal soft-quarter">
+            <div class="input-group input-group-white">
+              <input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+              <span class="input-group-btn">
+                <button class="btn btn-white disabled" type="submit">
+                  <svg class="icon icon-1" viewBox="0 0 256 256">
+                    <use xlink:href="/assets/svgs/icons.svg#search"></use>
+                  </svg>
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue disabled" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-cyan disabled" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray disabled" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-gray-light disabled" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="bg-charcoal soft-quarter">
+  &lt;div class="input-group input-group-white">
+    &lt;input class="form-control" disabled="disabled" placeholder="Placeholder" type="text">
+    &lt;span class="input-group-btn">
+      &lt;button class="btn btn-white disabled" type="submit">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+          &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c60ddf95-87d4-40db-874e-149eaec49c3d">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="button-input-sizes" name="button-input-sizes" href="/ui-components/atoms/buttons/button-inputs#button-input-sizes" fragment="button-input-sizes" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:24:48 GMT-0400 (EDT)">Button Input Sizes</h3>
+        </div>
+
+        <p>Adding <code>.input-group-lg</code> or <code>.input-group-sm</code> will increase or decrease your input group element.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="input-group input-group-lg">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue" type="submit">
+                Large Button Input
+              </button>
+            </span>
+          </div>
+          <div class="input-group">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue" type="submit">
+                Default Button Input
+              </button>
+            </span>
+          </div>
+          <div class="input-group input-group-sm">
+            <input class="form-control" placeholder="Placeholder" type="text">
+            <span class="input-group-btn">
+              <button class="btn btn-blue" type="submit">
+                Small Button Input
+              </button>
+            </span>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="input-group input-group-lg">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue" type="submit">
+      Large Button Input
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue" type="submit">
+      Default Button Input
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;div class="input-group input-group-sm">
+  &lt;input class="form-control" placeholder="Placeholder" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-blue" type="submit">
+      Small Button Input
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+          </pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-eb762469-a9b3-48ea-86fa-8ba1f0c2f450">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>MOLECULES</li>
+    </ol>
+    <h1>Sign In Example</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3">
+      <p>Below you can see the layout for the standard sign-in form on crossroads.net and it's related properties. Implementation details for the form (submission and validation) are not included here; any related business logic should be handled by the application in which it is implemented.</p>
+      <p>For a working example in NG2, look at <a href="https://github.com/crdschurch/crds-embed/blob/development/src/app/authentication/authentication.component.html#L14-L55">crds-embed's</a> authentication component. For an example in NG1.5 see <a href="https://github.com/crdschurch/crds-angular/blob/development/crossroads.net/core/login/login_form.html#L7-L38">crds-angular</a> login form template and controller.</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <header class="page-header">
+          <h2>Sign In</h2>
+        </header>
+        <form novalidate="">
+          <div class="form-group">
+            <label class="sr-only" for="email">Email</label>
+            <input class="form-control" name="email" placeholder="Email" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAArlJREFUWAndV7+LGkEUfq6i4i/UVDF2ViKYawS7HIIIgohdejtLi6sELbTJf2ETUllYWsiJIDaCip3lkRwop4VgoaJ5b+MO7ri7t+rKQQZk5v2Y7/v27ezMaAJs1Wr1y263+4HDx8PhECCfUc1kMv1BrGeLxfJUKpV+87imI/kIiT/xQSNtFPKGIr7yIgR68nuT04MQx7HKsucS0HqUee5rnHEJRr9zLf1KXFSBD23/t4BwOAzFYhGoV2t3rUAkEgGPxwPUq7W7CsBvX+SVeiURdxWgRMj7ZAJsNhuEQiHw+Xx8HlwbOwPiHBbJ9nq9kM/nwe12w36/h2azCcPhUAxfG5OwtXpWgXg8LpJTsiAIkEgk2LxrYwxAY8AEaOTcNcQE9Pt9WK1WIhm9gna7zYivjTEAjYGpXC4fpDgttGAwCIvFApbLpeQWe62YLPEdAz/JV0zpHO8HLzIB78w1NIxCFijigb0CQ9F1gOHJ6Kf7wYcJOGr8xvYBHaJ1pTgcDigUCuByucT8Xq8HrVZLcS5W4bPhFchkMoxckZVzGiogGo1qHr0ct2gaJoCO3XQ6rcSh6RPwc6B7+80tm82C3W6HzWbDNjQ9oFSBZz2JWjmxWEw8RSmHFh2J0NsE2pGwCm96J/B5fr8fksmk6J7NZtDtdsFsNvNpqrZA/1ToHwuK+HnN68jlcmC1WkWCwWAAgUBAJoCOd9re1dq/O5NaVMF/enZQuFKpKGTJXdvtFmq1mtx5tAz7ChTRdThv3gkbjcYZTSqVAqfTKfqn0ymMRqOzHMlxs4DxeCxhsf70NjWfz2EymbAYP7hYAC7UV9rDeaBTm+4SeNKJrvV6fRqSjQnrYgGI0MHfdxkSZ9Trdc6janYuXoTHfWOhCqkzgE9PF5KniwXgvvGCEx8Q4BeVUCcfS6M5NJcwCOsveWDvbwOBJXUAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off" type="email">
+          </div>
+
+          <div class="form-group">
+            <label class="sr-only" for="password">Password</label>
+            <input class="form-control" name="password" placeholder="Password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAkCAYAAADo6zjiAAAAAXNSR0IArs4c6QAAArlJREFUWAndV7+LGkEUfq6i4i/UVDF2ViKYawS7HIIIgohdejtLi6sELbTJf2ETUllYWsiJIDaCip3lkRwop4VgoaJ5b+MO7ri7t+rKQQZk5v2Y7/v27ezMaAJs1Wr1y263+4HDx8PhECCfUc1kMv1BrGeLxfJUKpV+87imI/kIiT/xQSNtFPKGIr7yIgR68nuT04MQx7HKsucS0HqUee5rnHEJRr9zLf1KXFSBD23/t4BwOAzFYhGoV2t3rUAkEgGPxwPUq7W7CsBvX+SVeiURdxWgRMj7ZAJsNhuEQiHw+Xx8HlwbOwPiHBbJ9nq9kM/nwe12w36/h2azCcPhUAxfG5OwtXpWgXg8LpJTsiAIkEgk2LxrYwxAY8AEaOTcNcQE9Pt9WK1WIhm9gna7zYivjTEAjYGpXC4fpDgttGAwCIvFApbLpeQWe62YLPEdAz/JV0zpHO8HLzIB78w1NIxCFijigb0CQ9F1gOHJ6Kf7wYcJOGr8xvYBHaJ1pTgcDigUCuByucT8Xq8HrVZLcS5W4bPhFchkMoxckZVzGiogGo1qHr0ct2gaJoCO3XQ6rcSh6RPwc6B7+80tm82C3W6HzWbDNjQ9oFSBZz2JWjmxWEw8RSmHFh2J0NsE2pGwCm96J/B5fr8fksmk6J7NZtDtdsFsNvNpqrZA/1ToHwuK+HnN68jlcmC1WkWCwWAAgUBAJoCOd9re1dq/O5NaVMF/enZQuFKpKGTJXdvtFmq1mtx5tAz7ChTRdThv3gkbjcYZTSqVAqfTKfqn0ymMRqOzHMlxs4DxeCxhsf70NjWfz2EymbAYP7hYAC7UV9rDeaBTm+4SeNKJrvV6fRqSjQnrYgGI0MHfdxkSZ9Trdc6janYuXoTHfWOhCqkzgE9PF5KniwXgvvGCEx8Q4BeVUCcfS6M5NJcwCOsveWDvbwOBJXUAAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;" autocomplete="off" type="password">
+          </div>
+
+          <div class="row">
+            <div class="col-sm-12">
+              <p class="pull-right text-left text-block">
+                <a href="#" target="_blank">Forgot password?</a><br>
+                <a href="#" target="_blank">Need help?</a>
+              </p>
+            </div>
+          </div>
+
+          <hr>
+
+          <p class="text-block">Or <a href="#">register for an account</a></p>
+          <footer class="clearfix">
+            <input class="btn btn-primary pull-right" value="Sign In" type="submit">
+          </footer>
+        </form>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+
+        </pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-2a7af0ef-8bfc-4621-b1c6-198b15b21b0c">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+    </div>
+  </div>
+</div>

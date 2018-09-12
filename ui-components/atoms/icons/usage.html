@@ -1,0 +1,107 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>ICONS</li>
+    </ol>
+    <h1>UI Components / Icons</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/icons/directory">Directory</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/icons/inline-svg">Usage</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/icons/resize-svg">Sizes</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/icons/colors">Colors</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div>
+      <div class="linkable">
+        <a id="icon-usage" name="icon-usage" href="/ui-components/atoms/icons/inline-svg#icon-usage" fragment="icon-usage" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header" data-linked="Mon Sep 10 2018 10:25:31 GMT-0400 (EDT)">Icon Usage</h2>
+      </div>
+
+      <div class="linkable">
+        <a id="rendering-an-icon" name="rendering-an-icon" href="/ui-components/atoms/icons/inline-svg#rendering-an-icon" fragment="rendering-an-icon" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 10:25:31 GMT-0400 (EDT)">Rendering An Icon</h3>
+      </div>
+
+      <p>SVG icons use the combination of <code>&lt;svg&gt;</code> and <code>&lt;use&gt;</code> elements. The icon is dictated by the name after the hash in the <code>&lt;use&gt;</code> element's <code>href</code>. You can view the options in the  <a href="/ui-components/atoms/icons/directory">icon directory</a>.</p>
+
+      <p>It's imperative that you include the <code>viewBox</code> attribute as shown below.</p>
+
+      <p class="callout callout-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <svg class="icon" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#check-circle"></use>
+        </svg>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;svg class="icon" viewBox="0 0 256 256">
+  &lt;use xlink:href="/assets/svgs/icons.svg#check-circle">&lt;/use>
+&lt;/svg>
+        </pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-8bdc06ac-24c1-414b-acba-4078fe52d63f">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="icon-sprite-file" name="icon-sprite-file" href="/ui-components/atoms/icons/inline-svg#icon-sprite-file" fragment="icon-sprite-file" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 10:25:31 GMT-0400 (EDT)">Icon Sprite File</h3>
+      </div>
+
+      <p>Notice in the usage instructions above the icon source file is referenced as <code>/assets/svgs/icons.svg</code>. It's ideal to have this file local to your project, as there are limitations to working with the <code>&lt;use&gt;</code> element while referencing an external file.</p>
+
+      <p>There are instructions on using Angular CLI to load assets into your project <a href="https://github.com/crdschurch/crds-styles#svgs">here</a>. </p>
+
+      <p> If you'd like to access the assets externally, they are uploaded to S3 with each release. They are named with their version number. For example, the icon sprite file for <code>0.14.0</code> is available at <a href="https://d1tmclqz61gqwd.cloudfront.net/images/icons-0.14.0.svg">https://d1tmclqz61gqwd.cloudfront.net/images/icons-0.14.0.svg</a>.</p>
+
+      <div class="linkable">
+        <a id="generating-new-icons" name="generating-new-icons" href="/ui-components/atoms/icons/inline-svg#generating-new-icons" fragment="generating-new-icons" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 10:25:31 GMT-0400 (EDT)">Generating New Icons</h3>
+      </div>
+
+      <p>New icons are generated using the source Sketch file. This process is documented in <a href="https://github.com/crdschurch/crds-styles/tree/development/src/assets/svgs#svg-support"><code>src/assets/svgs/README.md</code> in the <code>crds-styles</code> project</a>.</p>
+    </div>
+  </div>
+</div>
