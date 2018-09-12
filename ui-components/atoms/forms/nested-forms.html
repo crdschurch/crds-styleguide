@@ -84,7 +84,7 @@ layout: default
             <label class="control-label block">Where do you want to meet?</label>
             <form class="controls-stacked flush-ends">
               <label class="control radio push-quarter-bottom">
-                <input id="radio1" name="radio" value="radio1" type="radio">
+                <input id="radio1" name="radio" type="radio" value="radio1">
                 <span class="control-indicator"></span>
                 My home
               </label>
@@ -94,13 +94,52 @@ layout: default
               </div>
 
               <label class="control radio push-quarter-bottom">
-                <input id="radio2" name="radio" value="radio2" type="radio">
+                <input id="radio2" name="radio" type="radio" value="radio2">
                 <span class="control-indicator"></span>
                 Somewhere else
               </label>
 
               <div class="flush-bottom hard-top help-block text-muted push-left">
-                <p>Meeting places can be anywhere — your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.</p>
+                <p>Meeting places can be anywhere &mdash; your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.</p>
+              </div>
+
+              <div class="form-group border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="row">
+                    <div class="form-group col-xs-12">
+                      <label class="sr-only" for="">Location name</label>
+                      <input class="form-control" name="" placeholder="Location name" type="text" id="">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12">
+                      <label class="sr-only" for="">Address</label>
+                      <input class="form-control" name="" placeholder="Address" type="text" id="">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-xs-12">
+                      <label class="sr-only" for="">City</label>
+                      <input class="form-control" name="" placeholder="City" type="text" id="">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="form-group col-sm-6 flush-bottom">
+                      <label class="sr-only" for="">State</label>
+                      <select class="form-control">
+                        <option disabled="" selected="">State</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-sm-6 flush-bottom">
+                      <label class="sr-only" for="">Zip code</label>
+                      <input class="form-control" name="" placeholder="Zip" type="text" maxlength="10" id="">
+                    </div>
+                  </div>
+                </div>
               </div>
             </form>
             <p class="help-block hard-top">Helper text if needed</p>
@@ -108,31 +147,8 @@ layout: default
         </div>
         <figure class="highlight">
           <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Where do you want to meet?&lt;/label>
-  &lt;form class="controls-stacked flush-ends">
-    &lt;label class="control radio push-quarter-bottom">
-      &lt;input id="radio1" name="radio" value="radio1" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
-      My home
-    &lt;/label>
 
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>The place where you live.&lt;/p>
-    &lt;/div>
-
-    &lt;label class="control radio push-quarter-bottom">
-      &lt;input id="radio2" name="radio" value="radio2" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
-      Somewhere else
-    &lt;/label>
-
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>Meeting places can be anywhere — your workplace, a park or even a coffeeshop. Getting together outside of our homes can be of great benefit to your group and local community.&lt;/p>
-    &lt;/div>
-  &lt;/form>
-  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
-&lt;/div></pre>
+          </pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-227fc607-3a74-48ab-b1ea-dde7f93374e1">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -156,11 +172,19 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">Where do you mostly pray?</label>
-            <div aria-label="..." class="btn-group btn-group-block" role="group">
-              <button class="btn btn-default" type="button">At home</button>
-              <button class="btn btn-default" type="button">On the go</button>
-              <button class="btn btn-default" type="button">At work</button>
-              <button class="btn btn-default" type="button">Somewhere else</button>
+            <div class="btn-group btn-group-block" role="group" aria-label="..." data-toggle="buttons">
+              <label for="" class="btn btn-default">
+                <input type="radio" autocomplete="off">At home
+              </label>
+              <label for="" class="btn btn-default">
+                <input type="radio" autocomplete="off">On the go
+              </label>
+              <label for="" class="btn btn-default">
+                <input type="radio" autocomplete="off">At work
+              </label>
+              <label for="" class="btn btn-default">
+                <input type="radio" autocomplete="off">Somewhere else
+              </label>
 
               <div class="row">
                 <div class="col-xs-12 clear">
@@ -168,7 +192,7 @@ layout: default
                     <div class="push-half-left">
                       <div class="form-group push-quarter-ends">
                         <label class="sr-only" for="">Location name</label>
-                        <input class="form-control" id="" name="" placeholder="Like where?" type="text">
+                        <input class="form-control" name="" placeholder="Like where?" type="text" id="">
                       </div>
                     </div>
                   </div>
@@ -182,11 +206,19 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">Where do you mostly pray?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
-    &lt;button class="btn btn-default" type="button">At home&lt;/button>
-    &lt;button class="btn btn-default" type="button">On the go&lt;/button>
-    &lt;button class="btn btn-default" type="button">At work&lt;/button>
-    &lt;button class="btn btn-default" type="button">Somewhere else&lt;/button>
+  &lt;div class="btn-group btn-group-block" role="group" aria-label="..." data-toggle="buttons">
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="radio" autocomplete="off">At home
+    &lt;/label>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="radio" autocomplete="off">On the go
+    &lt;/label>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="radio" autocomplete="off">At work
+    &lt;/label>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="radio" autocomplete="off">Somewhere else
+    &lt;/label>
 
     &lt;div class="row">
       &lt;div class="col-xs-12 clear">
@@ -194,7 +226,7 @@ layout: default
           &lt;div class="push-half-left">
             &lt;div class="form-group push-quarter-ends">
               &lt;label class="sr-only" for="">Location name&lt;/label>
-              &lt;input class="form-control" id="" name="" placeholder="Like where?" type="text">
+              &lt;input class="form-control" name="" placeholder="Like where?" type="text" id="">
             &lt;/div>
           &lt;/div>
         &lt;/div>
@@ -239,6 +271,15 @@ layout: default
                 <p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.</p>
               </div>
 
+              <div class="border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="form-group">
+                    <label class="sr-only" for="">Interest</label>
+                    <input class="form-control" name="" placeholder="Ex. Boxing" type="text" id="">
+                  </div>
+                </div>
+              </div>
+
               <label class="control checkbox push-quarter-bottom">
                 <input type="checkbox">
                 <span class="control-indicator" tabindex="0"></span>
@@ -247,6 +288,15 @@ layout: default
 
               <div class="flush-bottom hard-top help-block text-muted push-left">
                 <p>Your group is primarily focused on building community with the people who live closet together in your town, zip code or on your street.</p>
+              </div>
+
+              <div class="border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="form-group">
+                    <label class="sr-only" for="">Neighborhoods</label>
+                    <input class="form-control" name="" placeholder="Ex. Western Hills" type="text" id="">
+                  </div>
+                </div>
               </div>
 
               <label class="control checkbox push-quarter-bottom">
@@ -259,6 +309,15 @@ layout: default
                 <p>Grow together through Huddle, reading a book or studying the Bible and applying what you learn to your everyday life.</p>
               </div>
 
+              <div class="border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="form-group">
+                    <label class="sr-only" for="">Spiritual growth</label>
+                    <input class="form-control" name="" placeholder="Ex. Seeker" type="text" id="">
+                  </div>
+                </div>
+              </div>
+
               <label class="control checkbox push-quarter-bottom">
                 <input type="checkbox">
                 <span class="control-indicator" tabindex="0"></span>
@@ -267,6 +326,15 @@ layout: default
 
               <div class="flush-bottom hard-top help-block text-muted push-left">
                 <p>For people in a similar life stage like empty nesters, singles, foster parents, moms, young married couples, etc.</p>
+              </div>
+
+              <div class="border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="form-group">
+                    <label class="sr-only" for="">Life stage</label>
+                    <input class="form-control" name="" placeholder="Ex. Newlyweds" type="text" id="">
+                  </div>
+                </div>
               </div>
 
               <label class="control checkbox push-quarter-bottom">
@@ -278,67 +346,23 @@ layout: default
               <div class="flush-bottom hard-top help-block text-muted push-left">
                 <p>For people looking for healing and recovery in an area of life.</p>
               </div>
+
+              <div class="border-left border-width-3 push-left">
+                <div class="push-half-left">
+                  <div class="form-group">
+                    <label class="sr-only" for="">Healing</label>
+                    <input class="form-control" name="" placeholder="Ex. Addiction" type="text" id="">
+                  </div>
+                </div>
+              </div>
             </div>
             <p class="help-block hard-top">Helper text if needed</p>
           </div>
         </div>
         <figure class="highlight">
           <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Select up to two&lt;/label>
-  &lt;div class="controls-stacked flush-ends">
-    &lt;label class="control checkbox push-quarter-bottom">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
-      Interest
-    &lt;/label>
 
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>For people who share a common activity. From cooking to karate, motorcycles to frisbee golf, veterans or entrepreneurs, whatever your interest, we bet there's a group looking for it.&lt;/p>
-    &lt;/div>
-
-    &lt;label class="control checkbox push-quarter-bottom">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
-      Neighborhoods
-    &lt;/label>
-
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>Your group is primarily focused on building community with the people who live closet together in your town, zip code or on your street.&lt;/p>
-    &lt;/div>
-
-    &lt;label class="control checkbox push-quarter-bottom">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
-      Spiritual growth
-    &lt;/label>
-
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>Grow together through Huddle, reading a book or studying the Bible and applying what you learn to your everyday life.&lt;/p>
-    &lt;/div>
-
-    &lt;label class="control checkbox push-quarter-bottom">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
-      Life stages
-    &lt;/label>
-
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>For people in a similar life stage like empty nesters, singles, foster parents, moms, young married couples, etc.&lt;/p>
-    &lt;/div>
-
-    &lt;label class="control checkbox push-quarter-bottom">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
-      Healing
-    &lt;/label>
-
-    &lt;div class="flush-bottom hard-top help-block text-muted push-left">
-      &lt;p>For people looking for healing and recovery in an area of life.&lt;/p>
-    &lt;/div>
-  &lt;/div>
-  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
-&lt;/div></pre>
+          </pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-a148932b-d4d1-4186-b14a-6314ebe6ec7d">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -362,8 +386,10 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">How do you spend free time? (All that apply)</label>
-            <div aria-label="..." class="btn-group btn-group-block" role="group">
-              <button class="btn btn-default" type="button">Anything active</button>
+            <div class="btn-group btn-group-block" role="group" data-toggle="buttons" aria-label="...">
+              <label for="" class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Anything active
+              </label>
 
               <div class="row">
                 <div class="col-xs-12 clear">
@@ -371,14 +397,16 @@ layout: default
                     <div class="push-half-left">
                       <div class="form-group push-quarter-ends">
                         <label class="sr-only" for="">Activity</label>
-                        <input class="form-control" id="" name="" placeholder="Like what?" type="text">
+                        <input class="form-control" name="" placeholder="Like what?" type="text" id="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <button class="btn btn-default" type="button">Be entertained</button>
+              <label for="" class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Be entertained
+              </label>
 
               <div class="row">
                 <div class="col-xs-12 clear">
@@ -386,14 +414,16 @@ layout: default
                     <div class="push-half-left">
                       <div class="form-group push-quarter-ends">
                         <label class="sr-only" for="">Entertainment</label>
-                        <input class="form-control" id="" name="" placeholder="By what?" type="text">
+                        <input class="form-control" name="" placeholder="By what?" type="text" id="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <button class="btn btn-default" type="button">Stay at home</button>
+              <label for="" class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Stay at home
+              </label>
 
               <div class="row">
                 <div class="col-xs-12 clear">
@@ -401,14 +431,16 @@ layout: default
                     <div class="push-half-left">
                       <div class="form-group push-quarter-ends">
                         <label class="sr-only" for="">Stay home</label>
-                        <input class="form-control" id="" name="" placeholder="And do what?" type="text">
+                        <input class="form-control" name="" placeholder="And do what?" type="text" id="">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <button class="btn btn-default" type="button">Other</button>
+              <label for="" class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Other
+              </label>
 
               <div class="row">
                 <div class="col-xs-12 clear">
@@ -416,7 +448,7 @@ layout: default
                     <div class="push-half-left">
                       <div class="form-group push-quarter-ends">
                         <label class="sr-only" for="">Other</label>
-                        <input class="form-control" id="" name="" placeholder="Like what?" type="text">
+                        <input class="form-control" name="" placeholder="Like what?" type="text" id="">
                       </div>
                     </div>
                   </div>
@@ -431,8 +463,10 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">How do you spend free time? (All that apply)&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
-    &lt;button class="btn btn-default" type="button">Anything active&lt;/button>
+  &lt;div class="btn-group btn-group-block" role="group" data-toggle="buttons" aria-label="...">
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Anything active
+    &lt;/label>
 
     &lt;div class="row">
       &lt;div class="col-xs-12 clear">
@@ -440,14 +474,16 @@ layout: default
           &lt;div class="push-half-left">
             &lt;div class="form-group push-quarter-ends">
               &lt;label class="sr-only" for="">Activity&lt;/label>
-              &lt;input class="form-control" id="" name="" placeholder="Like what?" type="text">
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
             &lt;/div>
           &lt;/div>
         &lt;/div>
       &lt;/div>
     &lt;/div>
 
-    &lt;button class="btn btn-default" type="button">Be entertained&lt;/button>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Be entertained
+    &lt;/label>
 
     &lt;div class="row">
       &lt;div class="col-xs-12 clear">
@@ -455,14 +491,16 @@ layout: default
           &lt;div class="push-half-left">
             &lt;div class="form-group push-quarter-ends">
               &lt;label class="sr-only" for="">Entertainment&lt;/label>
-              &lt;input class="form-control" id="" name="" placeholder="By what?" type="text">
+              &lt;input class="form-control" name="" placeholder="By what?" type="text" id="">
             &lt;/div>
           &lt;/div>
         &lt;/div>
       &lt;/div>
     &lt;/div>
 
-    &lt;button class="btn btn-default" type="button">Stay at home</button>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Stay at home
+    &lt;/label>
 
     &lt;div class="row">
       &lt;div class="col-xs-12 clear">
@@ -470,14 +508,16 @@ layout: default
           &lt;div class="push-half-left">
             &lt;div class="form-group push-quarter-ends">
               &lt;label class="sr-only" for="">Stay home&lt;/label>
-              &lt;input class="form-control" id="" name="" placeholder="And do what?" type="text">
+              &lt;input class="form-control" name="" placeholder="And do what?" type="text" id="">
             &lt;/div>
           &lt;/div>
         &lt;/div>
       &lt;/div>
     &lt;/div>
 
-    &lt;button class="btn btn-default" type="button">Other&lt;/button>
+    &lt;label for="" class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Other
+    &lt;/label>
 
     &lt;div class="row">
       &lt;div class="col-xs-12 clear">
@@ -485,7 +525,7 @@ layout: default
           &lt;div class="push-half-left">
             &lt;div class="form-group push-quarter-ends">
               &lt;label class="sr-only" for="">Other&lt;/label>
-              &lt;input class="form-control" id="" name="" placeholder="Like what?" type="text">
+              &lt;input class="form-control" name="" placeholder="Like what?" type="text" id="">
             &lt;/div>
           &lt;/div>
         &lt;/div>
@@ -494,7 +534,8 @@ layout: default
   &lt;/div>
 
   &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
+&lt;/div>
+          </pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-5fb24461-f9e2-4aaf-9c8a-89e24b78e958">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
