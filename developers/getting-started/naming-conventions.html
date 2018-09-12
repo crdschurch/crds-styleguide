@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>DEVELOPERS</li>
+      <li>GETTING STARTED</li>
+    </ol>
+    <h1>Getting Started</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/developers/getting-started/intro">What is the DDK?</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/installation">Installation</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/coding-style">Coding Style</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/file-structure">File Structure</a>
+          </li>
+          <li class="active">
+            <a href="/developers/getting-started/naming-conventions">Naming Conventions</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/contributions">Contribute to DDK</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header">Naming Conventions</h1>
+
+      <p>Names for any <code>.sass</code> and/or <code>.scss</code> files should be prepended with an underscore character (e.g. <code>_variables.scss</code>). This convention tells the Sass compiler to not generate an individual copy of this file within the build directory.</p>
+
+      <p>When naming SVGs for inclusion in the compiled sprite, please follow the general conventions imposed by <a href="http://fontawesome.io/">Font-Awesome</a>. Each name should consist of a descriptor and optional modifier that provides a distinction related to direction or shape with a hyphen delimiting the two values.</p>
+
+      <p>For example, a chevron icon that points right should be called <code>chevron-right.svg</code> while a search icon should be named <code>search.svg</code> or <code>search-circle.svg</code> (to denote an icon encapsulated with a circle).</p>
+    </div>
+  </div>
+</div>
