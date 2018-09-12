@@ -62,49 +62,93 @@ layout: default
           <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Button Dropdown</h3>
         </div>
 
-        <p>The example below shows an Angular implementation of a button dropdown using
-          the NGX Bootstrap library.</p>
+        <p>The dropdown functionality illustrated below was enabled by including <code>data-toggle="dropdown"</code> to a link or button selector within the dropdown. This is a Bootstrap implementation and documentation can be found <a href="https://getbootstrap.com/docs/3.3/javascript/#dropdowns" target="_blank">here</a>.</p>
 
-        <p>Note that the various button styles shown above are supported by the button
-          dropdown.</p>
+        <p class="callout callout-info"><code>onclick="return false"</code> has been added to all link tag selectors to prevent the page from refreshing. This line of code is not necessarily needed for your project.</p>
 
-        <p class="callout callout-info" role="alert">The dropdown behavior requires the inclusion of
-          <a class="callout-link" href="http://valor-software.com/ngx-bootstrap/#/" target="_blank">NGX Bootstrap</a> - an external
-          resource used to create Bootstrap-like elements in Angular 2 applications.</p>
-
-        <div class="crds-example crds-embedded-markup">
-          <iframe allowtransparency="true" src="/examples/button-dropdown/index.html" width="100%" height="200" frameborder="0"></iframe>
-          <div class="example-row">
-            <div class="tree">
-              <div class="list-group">
-                <a class="list-group-item active" href="#">module.ts</a>
-                <a class="list-group-item" href="#">component.ts</a>
-                <a class="list-group-item" href="#">component.html</a>
-              </div>
-            </div>
-            <div class="markup" id="markup-clippable-8e14705d-edc0-494b-b12a-5e1dc99792a0">
-              <pre>
-                <span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BsDropdownModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ngx-bootstrap'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>BrowserModule<span class=&quot;token punctuation&quot;>,</span> BsDropdownModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span><span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>AppComponent<span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
-                <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
-
-                <span class="token keyword">import</span> <span class="token punctuation">{</span> BsDropdownModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ngx-bootstrap'</span><span class="token punctuation">;</span>
-                <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./component'</span><span class="token punctuation">;</span>
-
-                @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-                  imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>BrowserModule<span class="token punctuation">,</span> BsDropdownModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-                  declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span><span class="token punctuation">,</span>
-                  bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>AppComponent<span class="token punctuation">]</span>
-                <span class="token punctuation">}</span><span class="token punctuation">)</span>
-                <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-              </pre>
-              <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-8e14705d-edc0-494b-b12a-5e1dc99792a0">
-                <svg class="icon icon-1" viewBox="0 0 256 256">
-                  <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                </svg>
-              </button>
-            </div>
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown" role="presentation">
+            <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+            <ul class="crds-list dropdown-menu">
+              <li>
+                <a href="#" onclick="return false">Action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Another action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Something else here</a>
+              </li>
+            </ul>
           </div>
+          <div class="dropdown dropdown-block" role="presentation">
+            <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+            <ul class="crds-list dropdown-menu">
+              <li>
+                <a href="#" onclick="return false">Action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Another action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown" role="presentation">
+  &lt;button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+  &lt;ul class="crds-list dropdown-menu">
+    &lt;li>
+      &lt;a href="#" onclick="return false">Action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Another action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Something else here&lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;div class="dropdown dropdown-block" role="presentation">
+  &lt;button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+  &lt;ul class="crds-list dropdown-menu">
+    &lt;li>
+      &lt;a href="#" onclick="return false">Action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Another action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Something else here&lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p></pre>
+        </figure>
       </section>
 
       <section>
@@ -207,8 +251,7 @@ layout: default
       &lt;/svg>
     &lt;/button>
   &lt;/div>
-&lt;/div>
-          </pre>
+&lt;/div></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-de23c63e-f9be-4827-a21e-c732071b57d7">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -314,8 +357,7 @@ layout: default
       &lt;/svg>
     &lt;/button>
   &lt;/div>
-&lt;/div>
-          </pre>
+&lt;/div></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-3425bfbc-4001-464d-8a74-6a070637dd6d">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -422,8 +464,7 @@ layout: default
       &lt;/svg>
     &lt;/button>
   &lt;/div>
-&lt;/div>
-          </pre>
+&lt;/div></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-25b04fde-3d28-4dfb-bf8b-5ae25213de57">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -529,8 +570,7 @@ layout: default
       &lt;/svg>
     &lt;/button>
   &lt;/div>
-&lt;/div>
-          </pre>
+&lt;/div></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-2669c9ad-9518-4a9e-8f5d-9de9a9407db2">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -661,8 +701,7 @@ layout: default
       &lt;/svg>
     &lt;/button>
   &lt;/div>
-&lt;/div>
-          </pre>
+&lt;/div></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c993b3bc-c883-4032-ba0e-a96b7e02d7f5">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>

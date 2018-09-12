@@ -61,19 +61,20 @@ layout: default
         </div>
         <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
 
+        <p class="callout callout-info"><code>onclick="return false"</code> has been added to all link tag selectors to prevent the page from refreshing. This line of code is not necessarily needed for your project.</p>
+
         <div class="crds-example crds-inline-markup" data-processed="true">
-          <a class="btn btn-blue" href="#" role="button">Link</a>
+          <a class="btn btn-blue" href="#" onclick="return false" role="button">Link</a>
           <button class="btn btn-blue" type="button">Button</button>
           <input class="btn btn-blue" value="Input" type="button">
           <input class="btn btn-blue" value="Submit" type="submit">
         </div>
         <figure class="highlight">
           <pre class=" language-markup">
-&lt;a class="btn btn-blue" href="#" role="button">Link&lt;/a>
+&lt;a class="btn btn-blue" href="#"onclick="return false" role="button">Link&lt;/a>
 &lt;button class="btn btn-blue" type="button">Button&lt;/button>
 &lt;input class="btn btn-blue" value="Input" type="button">
-&lt;input class="btn btn-blue" value="Submit" type="submit">
-          </pre>
+&lt;input class="btn btn-blue" value="Submit" type="submit"></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-93cb243a-922e-4bc6-8b5f-ae180fb39c2b">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -112,8 +113,7 @@ layout: default
 &lt;button class="btn btn-gray-light" type="button">Gray Light Primary&lt;/button>
 &lt;p class="bg-charcoal soft-quarter">
   &lt;button class="btn btn-white" type="button">White Primary&lt;/button>
-&lt;/p>
-          </pre>
+&lt;/p></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7b900496-aad7-4c17-bf7a-b3245583eaee">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -150,8 +150,7 @@ layout: default
 &lt;button class="btn btn-gray-light btn-outline" type="button">Gray Light Secondary&lt;/button>
 &lt;p class="bg-charcoal soft-quarter">
   &lt;button class="btn btn-white btn-outline" type="button">White Secondary&lt;/button>
-&lt;/p>
-          </pre>
+&lt;/p></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c756bbe1-b748-45f2-8055-871df5fd9e9a">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -178,8 +177,7 @@ layout: default
         <figure class="highlight">
           <pre class=" language-markup">
 &lt;button class="btn btn-link" type="button">Link Primary&lt;/button>
-&lt;button class="btn btn-link secondary" type="button">Link Secondary&lt;/button>
-          </pre>
+&lt;button class="btn btn-link secondary" type="button">Link Secondary&lt;/button></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4080cf87-eedb-4e2b-979f-d12fb9e80fa8">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -226,8 +224,7 @@ layout: default
 &lt;p>
   &lt;button class="btn btn-blue btn-sm" type="button">Small Button&lt;/button>
   &lt;button class="btn btn-blue btn-outline btn-sm" type="button">Small Button&lt;/button>
-&lt;/p>
-          </pre>
+&lt;/p></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-f5a29935-bbff-43d1-9801-a6e4b1427f8b">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -254,8 +251,7 @@ layout: default
         <figure class="highlight">
           <pre class=" language-markup">
 &lt;button class="btn btn-blue btn-block" type="button">Button&lt;/button>
-&lt;button class="btn btn-blue btn-outline btn-block" type="button">Button&lt;/button>
-          </pre>
+&lt;button class="btn btn-blue btn-outline btn-block" type="button">Button&lt;/button></pre>
           <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4ed9b9fe-7d9c-4ea9-93dd-e3795fcb8c50">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
