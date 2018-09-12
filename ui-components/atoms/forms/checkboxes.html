@@ -63,7 +63,7 @@ layout: default
 
       <p>Select none, one or multiple options. No option is preselected by default. Once an option is touched, a user can return to the unselected state of the component.</p>
 
-      <p class="callout callout-info">The button groups featured in this section have radio button behaviour associated with them. This is achieved by using the library <a href="https://valor-software.com/ngx-bootstrap/#/buttons#checkbox" target="_blank">NGX Bootstrap</a> and adding a <code>btnCheckbox</code> attribute to each button within a group.</p>
+      <p class="callout callout-info">The button groups featured in this section have checkbox button behaviour associated with them. This is achieved by using <a href="https://getbootstrap.com/docs/3.3/javascript/#buttons-checkbox-radio" target="_blank">Bootstrap</a> and adding <code>data-toggle="buttons"</code> the <code>.btn-group</code> parent container. Adding a <code>type="checkbox"</code> to each input button creates the checkbox button effect.</p>
 
       <section>
         <div class="linkable">
@@ -148,10 +148,16 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">What times are you available?</label>
-            <div aria-label="..." class="btn-group btn-group-bar" role="group">
-              <button class="btn btn-default" type="button">Morning</button>
-              <button class="btn btn-default" type="button">Afternoon</button>
-              <button class="btn btn-default" type="button">Evening</button>
+            <div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Afternoon
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Evening
+              </label>
             </div>
             <p class="help-block">Helper text if needed</p>
           </div>
@@ -160,10 +166,16 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">What times are you available?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar" role="group">
-    &lt;button class="btn btn-default" type="button">Morning&lt;/button>
-    &lt;button class="btn btn-default" type="button">Afternoon&lt;/button>
-    &lt;button class="btn btn-default" type="button">Evening&lt;/button>
+  &lt;div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
+    &lt;label class="btn btn-default active">
+      &lt;input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Afternoon
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Evening
+    &lt;/label>
   &lt;/div>
   &lt;p class="help-block">Helper text if needed&lt;/p>
 &lt;/div></pre>
@@ -190,10 +202,16 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">What times are you available?</label>
-            <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group">
-              <button class="btn btn-default" type="button">Morning</button>
-              <button class="btn btn-default" type="button">Afternoon</button>
-              <button class="btn btn-default" type="button">Evening</button>
+            <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Afternoon
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">Evening
+              </label>
             </div>
             <p class="help-block">Helper text if needed</p>
           </div>
@@ -202,10 +220,16 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">What times are you available?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group">
-    &lt;button class="btn btn-default" type="button">Morning&lt;/button>
-    &lt;button class="btn btn-default" type="button">Afternoon&lt;/button>
-    &lt;button class="btn btn-default" type="button">Evening&lt;/button>
+  &lt;div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
+    &lt;label class="btn btn-default active">
+      &lt;input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Afternoon
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">Evening
+    &lt;/label>
   &lt;/div>
   &lt;p class="help-block">Helper text if needed&lt;/p>
 &lt;/div></pre>
@@ -232,15 +256,31 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">Age range</label>
-            <div aria-label="..." class="btn-group" role="group">
-              <button class="btn btn-default" type="button">Middle school</button>
-              <button class="btn btn-default" type="button">High school</button>
-              <button class="btn btn-default" type="button">College</button>
-              <button class="btn btn-default" type="button">20s</button>
-              <button class="btn btn-default" type="button">30s</button>
-              <button class="btn btn-default" type="button">40s</button>
-              <button class="btn btn-default" type="button">50s</button>
-              <button class="btn btn-default" type="button">60s+</button>
+            <div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">High school
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">College
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">20s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">30s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">40s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">50s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">60s+
+              </label>
             </div>
             <p class="help-block">Helper text if needed</p>
           </div>
@@ -249,15 +289,31 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">Age range&lt;/label>
-  &lt;div aria-label="..." class="btn-group" role="group">
-    &lt;button class="btn btn-default" type="button">Middle school&lt;/button>
-    &lt;button class="btn btn-default" type="button">High school&lt;/button>
-    &lt;button class="btn btn-default" type="button">College&lt;/button>
-    &lt;button class="btn btn-default" type="button">20s&lt;/button>
-    &lt;button class="btn btn-default" type="button">30s&lt;/button>
-    &lt;button class="btn btn-default" type="button">40s&lt;/button>
-    &lt;button class="btn btn-default" type="button">50s&lt;/button>
-    &lt;button class="btn btn-default" type="button">60s+&lt;/button>
+  &lt;div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
+    &lt;label class="btn btn-default active">
+      &lt;input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">High school
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">College
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">20s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">30s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">40s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">50s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">60s+
+    &lt;/label>
   &lt;/div>
   &lt;p class="help-block">Helper text if needed&lt;/p>
 &lt;/div></pre>
@@ -284,15 +340,31 @@ layout: default
         <div class="crds-example crds-inline-markup" data-processed="true">
           <div class="form-group">
             <label class="control-label block">Age range</label>
-            <div aria-label="..." class="btn-group btn-group-block" role="group">
-              <button class="btn btn-default" type="button">Middle school</button>
-              <button class="btn btn-default" type="button">High school</button>
-              <button class="btn btn-default" type="button">College</button>
-              <button class="btn btn-default" type="button">20s</button>
-              <button class="btn btn-default" type="button">30s</button>
-              <button class="btn btn-default" type="button">40s</button>
-              <button class="btn btn-default" type="button">50s</button>
-              <button class="btn btn-default" type="button">60s+</button>
+            <div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
+              <label class="btn btn-default active">
+                <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">High school
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">College
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">20s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">30s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">40s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">50s
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off">60s+
+              </label>
             </div>
             <p class="help-block">Helper text if needed</p>
           </div>
@@ -301,15 +373,31 @@ layout: default
           <pre class=" language-markup">
 &lt;div class="form-group">
   &lt;label class="control-label block">Age range&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
-    &lt;button class="btn btn-default" type="button">Middle school&lt;/button>
-    &lt;button class="btn btn-default" type="button">High school&lt;/button>
-    &lt;button class="btn btn-default" type="button">College&lt;/button>
-    &lt;button class="btn btn-default" type="button">20s&lt;/button>
-    &lt;button class="btn btn-default" type="button">30s&lt;/button>
-    &lt;button class="btn btn-default" type="button">40s&lt;/button>
-    &lt;button class="btn btn-default" type="button">50s&lt;/button>
-    &lt;button class="btn btn-default" type="button">60s+&lt;/button>
+  &lt;div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
+    &lt;label class="btn btn-default active">
+      &lt;input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">High school
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">College
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">20s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">30s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">40s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">50s
+    &lt;/label>
+    &lt;label class="btn btn-default">
+      &lt;input type="checkbox" autocomplete="off">60s+
+    &lt;/label>
   &lt;/div>
   &lt;p class="help-block">Helper text if needed&lt;/p>
 &lt;/div></pre>
