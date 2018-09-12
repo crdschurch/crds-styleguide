@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>DEVELOPERS</li>
+      <li>LEARN MORE</li>
+    </ol>
+    <h1>Learn More</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/developers/learn-more/browser-support">Browser Support</a>
+          </li>
+          <li>
+            <a href="/developers/learn-more/built-on-bootstrap">Bootstrap</a>
+          </li>
+          <li>
+            <a href="/developers/learn-more/css-sass">CSS / Sass</a>
+          </li>
+          <li class="active">
+            <a href="/developers/learn-more/grid">Grid System</a>
+          </li>
+          <li>
+            <a href="/developers/learn-more/web-fonts">Web Fonts</a>
+          </li>
+          <li>
+            <a href="/developers/learn-more/custom-npm-packages">Custom NPM Packages</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header">Grid</h1>
+
+      <p>The standard 12-column grid provided by Bootstrap is alive &amp; well and empowers us to easily create mobile-first layouts with sensible defaults across many different device-sizes. Please refer to <a href="http://getbootstrap.com/css/#grid">the documentation</a> for the finer points of manipulating columns and grid sizes.</p>
+
+      <p>Rather than use the clunky, non-semantic grid selectors like <code>.col-xs-*</code>, etc. to manipulate your columns, it is preferable to encapsulate this logic in your scss files using the provided mixins.</p><br><p>DON’T do this…</p>
+
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;div class=”row”&gt;
+  &lt;div class=”col-md-6”&gt;...&lt;/div&gt;
+  &lt;div class=”col-md-6”&gt;...&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </figure>
+      <br>
+      <p>Do this, instead…</p>
+
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;section&gt;
+  &lt;article&gt;...&lt;/article&gt;
+  &lt;aside&gt;...&lt;/aside&gt;
+&lt;/section&gt;</pre>
+      <p class="tagline text-right">template.html</p>
+      </figure>
+      <figure class="highlight">
+        <pre class="language-css">
+@import ‘crds-styles/assets/stylesheets/bootstrap’;
+
+section {
+  @include make-row;
+}
+
+article, aside {
+  @include make-md-column(6);
+}</pre>
+        <p class="tagline text-right">application.scss</p>
+      </figure>
+      <br>
+      <p>The above, recommended approach decouples the presentational markup from the page structure, which allows for more flexibility across breakpoints and easier long-term maintenance. The entire list of grid-specific mixins provided by <code>crds-styles</code> can be viewed on Github.</p>
+    </div>
+  </div>
+</div>
