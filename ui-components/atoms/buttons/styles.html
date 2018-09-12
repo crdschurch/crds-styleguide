@@ -61,15 +61,17 @@ layout: default
         </div>
         <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
 
+        <p class="callout callout-info"><code>onclick="return false"</code> has been added to all link tag selectors to prevent the page from refreshing. This line of code is not necessarily needed for your project.</p>
+
         <div class="crds-example crds-inline-markup" data-processed="true">
-          <a class="btn btn-blue" href="#" role="button">Link</a>
+          <a class="btn btn-blue" href="#" onclick="return false" role="button">Link</a>
           <button class="btn btn-blue" type="button">Button</button>
           <input class="btn btn-blue" value="Input" type="button">
           <input class="btn btn-blue" value="Submit" type="submit">
         </div>
         <figure class="highlight">
           <pre class=" language-markup">
-&lt;a class="btn btn-blue" href="#" role="button">Link&lt;/a>
+&lt;a class="btn btn-blue" href="#"onclick="return false" role="button">Link&lt;/a>
 &lt;button class="btn btn-blue" type="button">Button&lt;/button>
 &lt;input class="btn btn-blue" value="Input" type="button">
 &lt;input class="btn btn-blue" value="Submit" type="submit"></pre>
