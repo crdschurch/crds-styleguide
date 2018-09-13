@@ -16,13 +16,15 @@ module Jekyll
       formatter = Rouge::Formatters::HTML.new
       formatter = Rouge::Formatters::HTMLPygments.new(formatter, 'highlight')
 
+      clippable_id = "clippable-#{SecureRandom.uuid}"
+
       content = <<-EOF
-        <div class="crds-example crds-inline-markup">
+        <div class="crds-example crds-inline-markup" id="#{clippable_id}">
           #{source.strip}
         </div>
         <div class="crds-example-code">
           #{formatter.format(lexer.lex(source.strip))}
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-93cb243a-922e-4bc6-8b5f-ae180fb39c2b">
+          <button class="btn btn-gray-light btn-sm clippable" type="button" data-clippable="##{clippable_id}">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
