@@ -1,7 +1,7 @@
 require 'rouge'
 
 module Jekyll
-  class CodeBlock < Liquid::Block
+  class ExampleBlock < Liquid::Block
 
     def initialize(tag_name, markup, tokens)
       @language = markup.nil? ? 'html' : markup.strip
@@ -48,4 +48,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('code', Jekyll::CodeBlock)
+Liquid::Template.register_tag('example', Jekyll::ExampleBlock)
