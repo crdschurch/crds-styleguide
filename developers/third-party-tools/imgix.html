@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>DEVELOPERS</li>
+      <li>THIRD PARTY-TOOLS</li>
+    </ol>
+    <h1>Third-Party Tools</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li class="active">
+            <a href="/developers/third-party-tools/imgix">Imgix</a>
+          </li>
+          <li>
+            <a href="/developers/third-party-tools/maps">Maps</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header">Imgix</h1>
+      <p>We use <a href="https://www.imgix.com/">Imgix</a> to serve our images. This assures the correct image size is delivered to the browser based on the size of the container and viewport of the device used to view the page. It also functions as a powerful CDN for any user-generated content which means faster delivery and better caching.</p>
+      <p>Its easy to use too. Simply prefix any image uploaded to the CMS with <code>//crds-cms-uploads.imgix.net/</code> and you can immediately take advantage of the powerful features and benefits provided by Imgix.</p>
+      <p>There are lots of options for configuring and using this service so please checkout <a href="https://docs.imgix.com/">their documentation</a> when integrating this service into your application.</p>
+
+      <div class="linkable">
+        <a id="implications-on-performance" name="implications-on-performance" href="/developers/third-party-tools/imgix#implications-on-performance" fragment="implications-on-performance" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header" data-linked="Tue Sep 11 2018 16:21:37 GMT-0400 (EDT)">Implications on Performance</h2>
+      </div>
+
+      <p>When utilizing Imgix to serve images, its recommended that you leverage <a href="https://www.imgix.com/imgix-js">imgix.js</a> to help provide the best possible format &amp; filesize, optimized for each individual client.</p>
+
+      <div class="alert alert-warning">
+        <p>The API for invoking transformations is different between versions of Imgix.js. Make sure you check the documentation for the specific version available in your application / environment.</p>
+      </div>
+      <div class="alert alert-info">
+        <p>In earlier versions of imgix.js, the attribute for invoking the service is <code>data-src</code> instead of <code>ix-src</code>. While the DDK may show examples using the latter version, some legacy applications for Crossroads may require the former.</p>
+      </div>
+      <div class="alert alert-danger">
+        <p>Make sure you don't include both a <code>ix-src</code> attribute and a <code>src</code> attribute on any image as this will cause the browser to make two requests for the same image.</p>
+      </div>
+    </div>
+  </div>
+</div>
