@@ -12,139 +12,427 @@ layout: default
 </div>
 
 <div class="container">
-  <h2 class="page-header flush-top">Modals</h2>
+  <div class="col-md-offset-3">
+    <h2 class="page-header flush-top">Modals</h2>
 
-  <p>There are three distinct styles of modal available in the DDK: a default modal, a video modal, and a full-screen modal. Achieving any style is as simple as adding modifier classes to the markup as specified below.</p>
+    <p>There are three distinct styles of modal available in the DDK: a default modal, a video modal, and a full-screen modal. Achieving any style is as simple as adding modifier classes to the markup as specified below.</p>
 
-  <p class="callout callout-info" role="alert">The following modal examples use the <a class="callout-link" href="http://valor-software.com/ngx-bootstrap/#/">ngx-bootstrap library</a> to illustrate expected styles and behaviour in an Angular 2+ project. Each examples' html tab is applicable to non-Angular projects using Bootstrap and jQuery as a dependency.</p>
+    <section>
+      <div class="linkable">
+        <a id="default-modal" name="default-modal" href="/ui-components/molecules/modals#default-modal" fragment="default-modal" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Default modal</h3>
+      </div>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModal">
+          Default modal
+        </button>
 
-  <section>
-    <div class="linkable">
-      <a id="default-style" name="default-style" href="/ui-components/molecules/modals#default-style" fragment="default-style" target="_self">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
-        </svg>
-      </a>
-      <h3 class="component-header" data-linked="Mon Sep 10 2018 16:43:49 GMT-0400 (EDT)">Default Style</h3>
-    </div>
-
-    <p>Default and video modals look and behave similarly. To get the video modal to show display properly, add <code>.modal-video</code> to the wrapping modal div.</p>
-
-    <div class="crds-example crds-embedded-markup">
-      <iframe allowtransparency="true" src="/examples/default-modals/index.html" width="100%" height="450" frameborder="0"></iframe>
-      <div class="example-row">
-        <div class="tree">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">module.ts</a>
-            <a class="list-group-item" href="#">app.component.ts</a>
-            <a class="list-group-item" href="#">app.component.html</a>
-            <a class="list-group-item" href="#">default-modal.component.ts</a>
-            <a class="list-group-item" href="#">default-modal.component.html</a>
-            <a class="list-group-item" href="#">default-modal-form.component.ts</a>
-            <a class="list-group-item" href="#">default-modal-form.component.ts</a>
-            <a class="list-group-item" href="#">default-modal-promo.component.html</a>
-            <a class="list-group-item" href="#">default-modal-promo.component.html</a>
-            <a class="list-group-item" href="#">video-modal.component.ts</a>
-            <a class="list-group-item" href="#">video-modal.component.html</a>
+        <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <h4 class="modal-title">Need a reminder?</h4>
+                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+              </div>
+              <div class="modal-footer">
+                <div class="btn-block-mobile">
+                  <button type="button" class="btn btn-cyan btn-lg">Primary Action</button>
+                  <button type="button" class="btn btn-cyan btn-outline btn-lg">Secondary Action</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="markup" id="markup-clippable-cf6a137f-9bde-4c25-8977-9bc5db956e0e">
-          <pre>
-            <span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> ModalModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ngx-bootstrap'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./app.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> DefaultModalComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./default-modal.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> DefaultModalFormComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./default-modal-form.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> DefaultModalPromoComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./default-modal-promo.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> VideoModalComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./video-modal.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    BrowserModule<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    ModalModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    DefaultModalComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    DefaultModalFormComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    DefaultModalPromoComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    VideoModalComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>&amp;#10;"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> ModalModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ngx-bootstrap'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
+      </div>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModal">
+  Default modal
+&lt;/button>
 
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> DefaultModalComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./default-modal.component'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> DefaultModalFormComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./default-modal-form.component'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> DefaultModalPromoComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./default-modal-promo.component'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> VideoModalComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./video-modal.component'</span><span class="token punctuation">;</span>
+&lt;div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel">
+  &lt;div class="modal-dialog" role="document">
+    &lt;div class="modal-content">
+      &lt;div class="modal-header">
+        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+      &lt;/div>
+      &lt;div class="modal-body">
+        &lt;h4 class="modal-title">Need a reminder?&lt;/h4>
+        &lt;p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.&lt;/p>
+      &lt;/div>
+      &lt;div class="modal-footer">
+        &lt;div class="btn-block-mobile">
+          &lt;button type="button" class="btn btn-cyan btn-lg">Primary Action&lt;/button>
+          &lt;button type="button" class="btn btn-cyan btn-outline btn-lg">Secondary Action&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
 
-            @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-            imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-              BrowserModule<span class="token punctuation">,</span>
-              ModalModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-              AppComponent<span class="token punctuation">,</span>
-              DefaultModalComponent<span class="token punctuation">,</span>
-              DefaultModalFormComponent<span class="token punctuation">,</span>
-              DefaultModalPromoComponent<span class="token punctuation">,</span>
-              VideoModalComponent
-            <span class="token punctuation">]</span><span class="token punctuation">,</span>
-            bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-              AppComponent
-            <span class="token punctuation">]</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span>
-            <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-cf6a137f-9bde-4c25-8977-9bc5db956e0e">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
+    <section>
+      <div class="linkable">
+        <a id="default-modal-with-form" name="default-modal-with-form" href="/ui-components/molecules/modals#default-modal-with-form" fragment="default-modal-with-form" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Default modal with form</h3>
+      </div>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalForm">
+          Default modal with form
+        </button>
+
+        <div class="modal fade" id="defaultModalForm" tabindex="-1" role="dialog" aria-labelledby="defaultModalFormLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <h4 class="modal-title">Tell us more</h4>
+                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+                <form>
+                  <div class="form-group">
+                    <p class="font-size-large soft-half-top">Nullam id dolor id nibh?</p>
+                    <label class="sr-only" for="input">Input</label>
+                    <input class="form-control" name="input" placeholder="Placeholder" value="" type="text">
+                  </div>
+
+                  <div class="form-group">
+                    <p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?</p>
+                    <label class="sr-only">Default button group</label>
+                    <div aria-label="..." class="btn-group btn-group-block" role="group">
+                      <button btncheckbox="" class="btn btn-default" type="button">Default</button>
+                      <button btncheckbox="" class="btn btn-default" type="button">Label</button>
+                      <button btncheckbox="" class="btn btn-default" type="button">Label</button>
+                      <button btncheckbox="" class="btn btn-default" type="button">Label</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <div class="btn-block-mobile">
+                  <button type="button" class="btn btn-cyan btn-lg">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalForm">
+  Default modal with form
+&lt;/button>
 
-  <section>
-    <div class="linkable">
-      <a id="full-screen-modals" name="full-screen-modals" href="/ui-components/molecules/modals#full-screen-modals" fragment="full-screen-modals" target="_self">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
-        </svg>
-      </a>
-      <h3 class="component-header" data-linked="Mon Sep 10 2018 16:43:49 GMT-0400 (EDT)">Full-Screen Modals</h3>
-    </div>
+&lt;div class="modal fade" id="defaultModalForm" tabindex="-1" role="dialog" aria-labelledby="defaultModalFormLabel">
+  &lt;div class="modal-dialog" role="document">
+    &lt;div class="modal-content">
+      &lt;div class="modal-header">
+        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+      &lt;/div>
+      &lt;div class="modal-body">
+        &lt;h4 class="modal-title">Tell us more&lt;/h4>
+        &lt;p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p>
+        &lt;form>
+          &lt;div class="form-group">
+            &lt;p class="font-size-large soft-half-top">Nullam id dolor id nibh?&lt;/p>
+            &lt;label class="sr-only" for="input">Input&lt;/label>
+            &lt;input class="form-control" name="input" placeholder="Placeholder" value="" type="text">
+          &lt;/div>
+
+          &lt;div class="form-group">
+            &lt;p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?&lt;/p>
+            &lt;label class="sr-only">Default button group&lt;/label>
+            &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
+              &lt;button btncheckbox="" class="btn btn-default" type="button">Default&lt;/button>
+              &lt;button btncheckbox="" class="btn btn-default" type="button">Label&lt;/button>
+              &lt;button btncheckbox="" class="btn btn-default" type="button">Label&lt;/button>
+              &lt;button btncheckbox="" class="btn btn-default" type="button">Label&lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+      &lt;div class="modal-footer">
+        &lt;div class="btn-block-mobile">
+          &lt;button type="button" class="btn btn-cyan btn-lg">Submit&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <div class="linkable">
+        <a id="default-modal-with-promo" name="default-modal-with-promo" href="/ui-components/molecules/modals#default-modal-with-promo" fragment="default-modal-with-promo" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Default modal with promo</h3>
+      </div>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalPromo">
+          Default modal with promo
+        </button>
+
+        <div class="modal modal-promo fade" id="defaultModalPromo" tabindex="-1" role="dialog" aria-labelledby="defaultModalPromoLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <h4 class="modal-title">Do life together</h4>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.</p>
+              </div>
+              <div class="modal-footer">
+                <div class="btn-block-mobile">
+                  <button type="button" class="btn btn-cyan btn-lg">Find out how</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalPromo">
+  Default modal with promo
+&lt;/button>
+
+&lt;div class="modal modal-promo fade" id="defaultModalPromo" tabindex="-1" role="dialog" aria-labelledby="defaultModalPromoLabel">
+  &lt;div class="modal-dialog" role="document">
+    &lt;div class="modal-content">
+      &lt;div class="modal-header">
+        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+      &lt;/div>
+      &lt;div class="modal-body">
+        &lt;h4 class="modal-title">Do life together&lt;/h4>
+        &lt;p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.&lt;/p>
+      &lt;/div>
+      &lt;div class="modal-footer">
+        &lt;div class="btn-block-mobile">
+          &lt;button type="button" class="btn btn-cyan btn-lg">Find out how&lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
+
+    <section>
+      <div class="linkable">
+        <a id="video-modal" name="video-modal" href="/ui-components/molecules/modals#video-modal" fragment="video-modal" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Video modal</h3>
+      </div>
+
+      <p>To get the video modal to show display properly, add <code>.modal-video</code> to the wrapping modal div.</p>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
+          Video modal
+        </button>
+
+        <div class="modal modal-video fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              </div>
+              <div class="modal-body">
+                <iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class="language-markup">
+&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
+  Video modal
+&lt;/button>
+
+&lt;div class="modal modal-video fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+  &lt;div class="modal-dialog" role="document">
+    &lt;div class="modal-content">
+      &lt;div class="modal-header">
+        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+      &lt;/div>
+      &lt;div class="modal-body">
+        &lt;iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0">&lt;/iframe>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+&lt;/div>
+        </pre>
+      </figure>
+    </section>
+
+    <h2 class="page-header flush-top">Fullscreen Modals</h2>
 
     <p>Full-screen modals slightly deviate from default modals in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>. Full-screen modals also use the <code>.alpha</code> class in place of the <code>.fade</code> class to achieve a smoother animation.</p>
 
-    <div class="crds-example crds-embedded-markup">
-      <iframe allowtransparency="true" src="/examples/fullscreen-modals/index.html" width="100%" height="450" frameborder="0"></iframe>
-      <div class="example-row">
-        <div class="tree">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">module.ts</a>
-            <a class="list-group-item" href="#">app.component.ts</a>
-            <a class="list-group-item" href="#">app.component.html</a>
-            <a class="list-group-item" href="#">full-modal.component.html</a>
-            <a class="list-group-item" href="#">full-modal.component.html</a>
-            <a class="list-group-item" href="#">full-modal-form.component.html</a>
-            <a class="list-group-item" href="#">full-modal-form.component.html</a>
+    <section>
+      <div class="linkable">
+        <a id="fullscreen-modal" name="fullscreen-modal" href="/ui-components/atoms/buttons/styles#fullscreen-modal" fragment="fullscreen-modal" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Fullscreen modal</h3>
+      </div>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModal">Fullscreen Modal</button>
+        <div class="modal modal-splash alpha" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
+          <div class="modal-dialog modal-full">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button aria-label="Close" class="close pull-right" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h4 class="modal-title">Try this</h4>
+                      <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="btn-block-mobile text-center">
+                  <button class="btn btn-cyan btn-lg" type="button">Sounds great</button>
+                  <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="markup" id="markup-clippable-53db82b6-22e6-4daf-a5b0-62d53f1aaf3a">
-          <pre>
-            <span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> NgModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/core'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> BrowserModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'@angular/platform-browser'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> ModalModule <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'ngx-bootstrap'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> AppComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./app.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> FullModalComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./full-modal.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;<span class=&quot;token keyword&quot;>import</span> <span class=&quot;token punctuation&quot;>{</span> FullModalFormComponent <span class=&quot;token punctuation&quot;>}</span> <span class=&quot;token keyword&quot;>from</span> <span class=&quot;token string&quot;>'./full-modal-form.component'</span><span class=&quot;token punctuation&quot;>;</span>&amp;#10;&amp;#10;@<span class=&quot;token function&quot;>NgModule</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>{</span>&amp;#10;  imports<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    BrowserModule<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    ModalModule<span class=&quot;token punctuation&quot;>.</span><span class=&quot;token function&quot;>forRoot</span><span class=&quot;token punctuation&quot;>(</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  declarations<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    FullModalComponent<span class=&quot;token punctuation&quot;>,</span>&amp;#10;    FullModalFormComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span><span class=&quot;token punctuation&quot;>,</span>&amp;#10;  bootstrap<span class=&quot;token punctuation&quot;>:</span> <span class=&quot;token punctuation&quot;>[</span>&amp;#10;    AppComponent&amp;#10;  <span class=&quot;token punctuation&quot;>]</span>&amp;#10;<span class=&quot;token punctuation&quot;>}</span><span class=&quot;token punctuation&quot;>)</span>&amp;#10;<span class=&quot;token keyword&quot;>export</span> <span class=&quot;token keyword&quot;>class</span> <span class=&quot;token class-name&quot;>AppModule</span> <span class=&quot;token punctuation&quot;>{</span><span class=&quot;token punctuation&quot;>}</span>&amp;#10;"><span class="token keyword">import</span> <span class="token punctuation">{</span> NgModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/core'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> BrowserModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@angular/platform-browser'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> ModalModule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'ngx-bootstrap'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> AppComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./app.component'</span><span class="token punctuation">;</span>
+      </div>
+      <figure class="highlight">
+        <pre class="language-markup">
 
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> FullModalComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./full-modal.component'</span><span class="token punctuation">;</span>
-            <span class="token keyword">import</span> <span class="token punctuation">{</span> FullModalFormComponent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./full-modal-form.component'</span><span class="token punctuation">;</span>
+        </pre>
+      </figure>
+    </section>
 
-            @<span class="token function">NgModule</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-              imports<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                BrowserModule<span class="token punctuation">,</span>
-                ModalModule<span class="token punctuation">.</span><span class="token function">forRoot</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-              <span class="token punctuation">]</span><span class="token punctuation">,</span>
-              declarations<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                AppComponent<span class="token punctuation">,</span>
-                FullModalComponent<span class="token punctuation">,</span>
-                FullModalFormComponent
-              <span class="token punctuation">]</span><span class="token punctuation">,</span>
-              bootstrap<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-                AppComponent
-              <span class="token punctuation">]</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span>
-            <span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">AppModule</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-53db82b6-22e6-4daf-a5b0-62d53f1aaf3a">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
+    <section>
+      <div class="linkable">
+        <a id="fullscreen-modal-with-form" name="fullscreen-modal-with-form" href="/ui-components/atoms/buttons/styles#fullscreen-modal-with-form" fragment="fullscreen-modal-with-form" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Fullscreen modal with form</h3>
+      </div>
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModalForm">Fullscreen Modal</button>
+        <div class="modal modal-splash alpha" id="fullscreenModalForm" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
+          <div class="modal-dialog modal-full">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button aria-label="Close" class="close pull-right" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                      <h4 class="modal-title">Do this</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    </div>
+                  </div>
+                  <div class="row push-half-top soft-top">
+                    <div class="col-md-6 col-md-offset-3">
+                      <form>
+                        <div class="form-group">
+                          <label class="sr-only" for="input">Address 1</label>
+                          <input class="form-control" name="input" placeholder="Address 1" value="" type="text">
+                        </div>
+
+                        <div class="form-group">
+                          <label class="sr-only" for="input">Address 2</label>
+                          <input class="form-control" name="input" placeholder="Address 2" value="" type="text">
+                        </div>
+
+                        <div class="form-group">
+                          <label class="sr-only" for="input">City</label>
+                          <input class="form-control" name="input" placeholder="City" value="" type="text">
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="sr-only" for="input">State</label>
+                              <select class="form-control">
+                                <option disabled="" selected="">State</option>
+                                <option>Ohio</option>
+                                <option>Ohio</option>
+                                <option>Ohio</option>
+                                <option>Ohio</option>
+                                <option>Ohio</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                              <label class="sr-only" for="input">Zip</label>
+                              <input class="form-control" name="input" placeholder="Zip" value="" type="text">
+                            </div>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                      <div class="btn-block-mobile">
+                        <button class="btn btn-cyan btn-lg" type="button">Add me to this</button>
+                        <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <figure class="highlight">
+        <pre class="language-markup">
+
+        </pre>
+      </figure>
+    </section>
+  </div>
 </div>
