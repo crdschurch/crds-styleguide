@@ -1,0 +1,403 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>FORMS</li>
+    </ol>
+    <h1>UI Components / Forms</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/forms/inputs">Inputs</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/radios">Radios</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/checkboxes">Checkboxes</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/toggles">Toggles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/nested-forms">Nested Forms</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/datepicker">Datepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/timepicker">Timepicker</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/search">Search Field</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/forms/states">States</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/forms/groups">Groups</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="groups" name="groups" href="/ui-components/atoms/forms/groups#groups" fragment="groups" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">Groups</h2>
+      </div>
+
+      <div class="linkable">
+        <a id="input-addon" name="input-addon" href="/ui-components/atoms/forms/groups#input-addon" fragment="input-addon" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">Input Addon</h3>
+      </div>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="form-group">
+          <label class="sr-only" for="customAmount">Amount (in dollars)</label>
+          <div class="input-group input-group-block input-group-left">
+            <span class="input-group-addon">
+              <svg class="icon" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#usd"></use>
+              </svg>
+            </span>
+            <input class="form-control" name="customAmount" placeholder="Enter Amount" value="" type="customAmount">
+          </div>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;div class="form-group">
+  &lt;label class="sr-only" for="customAmount">Amount (in dollars)&lt;/label>
+  &lt;div class="input-group input-group-block input-group-left">
+    &lt;span class="input-group-addon">
+      &lt;svg class="icon" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#usd">&lt;/use>
+      &lt;/svg>
+    &lt;/span>
+    &lt;input class="form-control" name="customAmount" placeholder="Enter Amount" value="" type="customAmount">
+  &lt;/div>
+&lt;/div></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-555581b9-dbfc-40f9-acef-f008b8bc725d">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="input-button" name="input-button" href="/ui-components/atoms/forms/groups#input-button" fragment="input-button" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">Input Button</h3>
+      </div>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="input-group">
+          <input class="form-control" placeholder="First Name" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">
+              Submit
+            </button>
+          </span>
+        </div>
+        <hr>
+        <div class="input-group">
+          <input class="form-control" placeholder="Search" type="text">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary" type="submit">
+              <svg class="icon icon-1" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#search"></use>
+              </svg>
+            </button>
+          </span>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="First Name" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-secondary" type="submit">
+      Submit
+    &lt;/button>
+  &lt;/span>
+&lt;/div>
+&lt;hr>
+&lt;div class="input-group">
+  &lt;input class="form-control" placeholder="Search" type="text">
+  &lt;span class="input-group-btn">
+    &lt;button class="btn btn-secondary" type="submit">
+      &lt;svg class="icon icon-1" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/span>
+&lt;/div></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-e14ad70f-9b8d-4138-94e2-f2a14041aaab">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="2-column-input-row" name="2-column-input-row" href="/ui-components/atoms/forms/groups#2-column-input-row" fragment="2-column-input-row" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">2-Column Input Row</h3>
+      </div>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="row">
+          <div class="form-group col-xs-6">
+            <label class="sr-only" for="first_name">First Name</label>
+            <input class="form-control" name="first_name" placeholder="First Name" value="" type="first_name">
+          </div>
+
+          <div class="form-group col-xs-6">
+            <label class="sr-only" for="last_name">Last Name</label>
+            <input class="form-control" name="last_name" placeholder="Last Name" value="" type="last_name">
+          </div>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;div class="row">
+  &lt;div class="form-group col-xs-6">
+    &lt;label class="sr-only" for="first_name">First Name&lt;/label>
+    &lt;input class="form-control" name="first_name" placeholder="First Name" value="" type="first_name">
+  &lt;/div>
+
+  &lt;div class="form-group col-xs-6">
+    &lt;label class="sr-only" for="last_name">Last Name&lt;/label>
+    &lt;input class="form-control" name="last_name" placeholder="Last Name" value="" type="last_name">
+  &lt;/div>
+&lt;/div></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7b891e45-bf76-48ff-9979-34a9d118eba7">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="3-column-input-row" name="3-column-input-row" href="/ui-components/atoms/forms/groups#3-column-input-row" fragment="3-column-input-row" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">3-Column Input Row</h3>
+      </div>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <div class="row">
+          <div class="form-group col-xs-4">
+            <label class="sr-only" for="cc_exp">Month/Year</label>
+            <input class="form-control" name="cc_exp" placeholder="MM/YY" value="" type="cc_exp">
+          </div>
+
+          <div class="form-group col-xs-4">
+            <label class="sr-only" for="cc_ccv">CVV Number</label>
+            <input class="form-control" name="cc_ccv" placeholder="CVV" value="" type="cc_ccv">
+          </div>
+
+          <div class="form-group col-xs-4">
+            <label class="sr-only" for="cc_zip">Zip Code</label>
+            <input class="form-control" name="cc_zip" placeholder="Zip Code" value="" type="cc_zip">
+          </div>
+        </div>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;div class="row">
+  &lt;div class="form-group col-xs-4">
+    &lt;label class="sr-only" for="cc_exp">Month/Year&lt;/label>
+    &lt;input class="form-control" name="cc_exp" placeholder="MM/YY" value="" type="cc_exp">
+  &lt;/div>
+
+  &lt;div class="form-group col-xs-4">
+    &lt;label class="sr-only" for="cc_ccv">CVV Number&lt;/label>
+    &lt;input class="form-control" name="cc_ccv" placeholder="CVV" value="" type="cc_ccv">
+  &lt;/div>
+
+  &lt;div class="form-group col-xs-4">
+    &lt;label class="sr-only" for="cc_zip">Zip Code&lt;/label>
+    &lt;input class="form-control" name="cc_zip" placeholder="Zip Code" value="" type="cc_zip">
+  &lt;/div>
+&lt;/div></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-928f263a-7b69-4b63-b76c-41e385388dfa">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="input-with-clickable-addon" name="input-with-clickable-addon" href="/ui-components/atoms/forms/groups#input-with-clickable-addon" fragment="input-with-clickable-addon" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">Input with Clickable Addon</h3>
+      </div>
+
+      <p>In some cases, an input may need to have interactive elements (like buttons) nested within itself. These elements are expected to share the same validation and focus states of its input parent. To achieve this effect, a class of <code>.with-icon-btn</code> is added to the <code>.input-group</code> component.</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <form action="." class="input-group-flex">
+          <div class="input-group with-icon-btn">
+            <input class="form-control" placeholder="Location" type="search">
+            <div class="icon-btn-wrapper"></div>
+            <span class="addon-btn">
+              <button type="button">
+                <svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="/assets/svgs/icons.svg#close-thin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </span>
+
+            <span class="addon-btn">
+              <button type="button">
+                <svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="/assets/svgs/icons.svg#equalizer" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;form action="." class="input-group-flex">
+  &lt;div class="input-group with-icon-btn">
+    &lt;input class="form-control" placeholder="Location" type="search">
+    &lt;div class="icon-btn-wrapper">&lt;/div>
+    &lt;span class="addon-btn">
+      &lt;button type="button">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          &lt;use xlink:href="/assets/svgs/icons.svg#close-thin" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+
+    &lt;span class="addon-btn">
+      &lt;button type="button">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          &lt;use xlink:href="/assets/svgs/icons.svg#equalizer" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/form></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-2a93275e-d294-4588-a6ac-711f42528e12">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+
+      <div class="linkable">
+        <a id="input-with-clickable-addon-and-input-button" name="input-with-clickable-addon-and-input-button" href="/ui-components/atoms/forms/groups#input-with-clickable-addon-and-input-button" fragment="input-with-clickable-addon-and-input-button" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header" data-linked="Mon Sep 10 2018 14:33:20 GMT-0400 (EDT)">Input with Clickable Addon and Input Button</h3>
+      </div>
+
+      <p>The component above can be expanded upon, including a commonly used Bootstrap element called an <code>.input-group-btn</code>, which is a nice way to say "a button that looks like it's attached to an input." But because this element is already doing some funky stuff with the embedded icon buttons, a class of <code>.with-input-group-btn</code> needs to be added with the <code>.with-icon-btn</code> class to ensure the appropriate layout is rendered.</p>
+
+      <div class="crds-example crds-inline-markup" data-processed="true">
+        <form action="." class="input-group-flex">
+          <div class="input-group with-icon-btn with-input-group-btn">
+            <input class="form-control" placeholder="Keyword" type="text">
+            <div class="icon-btn-wrapper"></div>
+            <span class="addon-btn">
+              <button type="button">
+                <svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="/assets/svgs/icons.svg#close-thin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </span>
+
+            <span class="addon-btn">
+              <button type="button">
+                <svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="/assets/svgs/icons.svg#equalizer" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </span>
+
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="submit">
+                <svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="/assets/svgs/icons.svg#search" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <figure class="highlight">
+        <pre class=" language-markup">
+&lt;form action="." class="input-group-flex">
+  &lt;div class="input-group with-icon-btn with-input-group-btn">
+    &lt;input class="form-control" placeholder="Keyword" type="text">
+    &lt;div class="icon-btn-wrapper">&lt;/div>
+    &lt;span class="addon-btn">
+      &lt;button type="button">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          &lt;use xlink:href="/assets/svgs/icons.svg#close-thin" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+
+    &lt;span class="addon-btn">
+      &lt;button type="button">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          &lt;use xlink:href="/assets/svgs/icons.svg#equalizer" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+
+    &lt;span class="input-group-btn">
+      &lt;button class="btn btn-secondary" type="submit">
+        &lt;svg class="icon icon-1" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          &lt;use xlink:href="/assets/svgs/icons.svg#search" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+        &lt;/svg>
+      &lt;/button>
+    &lt;/span>
+  &lt;/div>
+&lt;/form></pre>
+        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7d90ba50-abbe-4f06-a64f-c70739b0898c">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </button>
+      </figure>
+    </div>
+  </div>
+</div>

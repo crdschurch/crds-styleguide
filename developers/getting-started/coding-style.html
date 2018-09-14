@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>DEVELOPERS</li>
+      <li>GETTING STARTED</li>
+    </ol>
+    <h1>Getting Started</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/developers/getting-started/intro">What is the DDK?</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/installation">Installation</a>
+          </li>
+          <li class="active">
+            <a href="/developers/getting-started/coding-style">Coding Style</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/file-structure">File Structure</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/naming-conventions">Naming Conventions</a>
+          </li>
+          <li>
+            <a href="/developers/getting-started/contributions">Contribute to DDK</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header">Coding Style</h1>
+      <p>In keeping with Bootstrap conventions, Crossroads has adopted the patterns of <a href="https://github.com/stubbornella/oocss/wiki">Object-Oriented CSS (OOCSS)</a> when developing the crds-styles package. Developed in 2008 by Nicole Sullivan, the OOCSS methodology is a modular approach to organizing your CSS by promoting composability and flexibility.</p>
+
+      <br>
+
+      <p>Consider the following example...</p>
+
+      <figure class="highlight">
+        <pre class="language-css">
+.btn-1 {
+  padding: 1em;
+  border: 1px solid #000;
+  color: blue;
+}
+
+.btn-2 {
+  padding: 1em;
+  border: 1px solid #000;
+  color: red;
+}</pre>
+      </figure>
+      <br>
+      <p>This is pretty verbose. We can make these selectors a little cleaner by refactoring them in an object-oriented fashion...</p>
+
+      <figure class="highlight">
+        <pre class="language-css">
+.btn {
+  padding: 1em;
+  border: 1px solid #000;
+}
+
+.btn-blue {
+  color: blue;
+}
+
+.btn-red {
+  color: red;
+}</pre>
+      </figure>
+
+      <br>
+      <p>The general gist of OOCSS is that common declarations are encapsulated into base selectors and then augmented by more specific ones. Given the above refactored approach, you might find an element in your HTML that looks like this...</p>
+
+      <figure class="highlight">
+        <pre class="language-markup">&lt;a href="#" class="btn btn-blue"&gt;...&lt;/a&gt;</pre>
+      </figure>
+      <h3 class="push-top component-header">Automation</h3>
+      <p>When building stable, state-of-the-art web applications, testing is key.</p>
+      <p>Crossroads has invested some considerable effort to development an automated test suite which simulates a number of critical user interactions. By running these tests after every application update, we can ensure minimal regressions and the utmost stability for our critical business processes.</p>
+      <p>To help facilitate this automation, you are encouraged to proactively implement <code>data-automation-id</code> attributes with some unique value for any critical call-to-action, web or form control within your product features.</p>
+      <p>This is as simple as making your HTML element look like the following example...</p>
+      <pre>&lt;a href="#" data-automation-id="unique-value"&gt;...&lt;/a&gt;</pre>
+      <p>With this simple approach, you can empower our automation team to make our products more stable and battle-tested, one automated test at a time.</p>
+    </div>
+  </div>
+</div>

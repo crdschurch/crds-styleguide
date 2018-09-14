@@ -1,0 +1,714 @@
+---
+layout: default
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+  <div class="container text-center">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>BUTTONS</li>
+    </ol>
+    <h1>UI Components / Buttons</h1>
+    <p>Button patterns help solicit action from a user in a clean and consistent manner. These elements are commonly used to submit a form or direct a user's attention towards a primary call-to-action.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li>
+            <a href="/ui-components/atoms/buttons/styles">Styles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/groups">Groups</a>
+          </li>
+          <li class="active">
+            <a href="/ui-components/atoms/buttons/dropdowns">Dropdowns</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/button-inputs">Button Inputs</a>
+          </li>
+          <li>
+          <a href="/ui-components/atoms/buttons/placement">Placement</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="dropdowns" name="dropdowns" href="/ui-components/atoms/buttons/dropdowns#dropdowns" fragment="dropdowns" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Dropdowns</h2>
+      </div>
+
+      <p class="callout callout-info">Barring the first example, all other code examples on this page are strictly to illustrate the effect each <code>.btn-*</code> class has on the input element.</p>
+
+      <section>
+        <div class="linkable">
+          <a id="button-dropdown" name="button-dropdown" href="/ui-components/atoms/buttons/dropdowns#button-dropdown" fragment="button-dropdown" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Button Dropdown</h3>
+        </div>
+
+        <p>The dropdown functionality illustrated below was enabled by including <code>data-toggle="dropdown"</code> to a link or button selector within the dropdown. This is a Bootstrap implementation and documentation can be found <a href="https://getbootstrap.com/docs/3.3/javascript/#dropdowns" target="_blank">here</a>.</p>
+
+        <p class="callout callout-info"><code>onclick="return false"</code> has been added to all link tag selectors to prevent the page from refreshing. This line of code is not necessarily needed for your project.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown" role="presentation">
+            <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+            <ul class="crds-list dropdown-menu">
+              <li>
+                <a href="#" onclick="return false">Action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Another action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown dropdown-block" role="presentation">
+            <button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+            <ul class="crds-list dropdown-menu">
+              <li>
+                <a href="#" onclick="return false">Action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Another action</a>
+              </li>
+              <li>
+                <a href="#" onclick="return false">Something else here</a>
+              </li>
+            </ul>
+          </div>
+          <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown" role="presentation">
+  &lt;button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+  &lt;ul class="crds-list dropdown-menu">
+    &lt;li>
+      &lt;a href="#" onclick="return false">Action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Another action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Something else here&lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;div class="dropdown dropdown-block" role="presentation">
+  &lt;button class="btn btn-blue dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+  &lt;ul class="crds-list dropdown-menu">
+    &lt;li>
+      &lt;a href="#" onclick="return false">Action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Another action&lt;/a>
+    &lt;/li>
+    &lt;li>
+      &lt;a href="#" onclick="return false">Something else here&lt;/a>
+    &lt;/li>
+  &lt;/ul>
+&lt;/div>
+&lt;p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p></pre>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="solid-color-options" name="solid-color-options" href="/ui-components/atoms/buttons/dropdowns#solid-color-options" fragment="solid-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Solid Color Options</h3>
+        </div>
+        <p>Use the <code>.btn-*</code> classes on any element with a <code>.btn</code> class to change that button element's color.</p>
+
+        <p class="callout callout-info">For obvious reasons, the <code>.btn-white</code> style button works best on a dark background. All of the following white button examples have been given a wrapper with a dark background (and some minor padding for aesthetic reasons).</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown">
+            <button class="btn btn-blue dropdown-toggle" type="button">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-cyan dropdown-toggle" type="button">
+              Cyan Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray dropdown-toggle" type="button">
+              Gray Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray-light dropdown-toggle" type="button">
+              Gray Light Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="block bg-charcoal soft-quarter">
+            <div class="dropdown">
+              <button class="btn btn-white dropdown-toggle" type="button">
+                White Primary Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown">
+  &lt;button class="btn btn-blue dropdown-toggle" type="button">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-cyan dropdown-toggle" type="button">
+    Cyan Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray dropdown-toggle" type="button">
+    Gray Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray-light dropdown-toggle" type="button">
+    Gray Light Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="block bg-charcoal soft-quarter">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-white dropdown-toggle" type="button">
+      White Primary Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div></pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-de23c63e-f9be-4827-a21e-c732071b57d7">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="disabled-solid-color-options" name="disabled-solid-color-options" href="/ui-components/atoms/buttons/dropdowns#disabled-solid-color-options" fragment="disabled-solid-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Disabled Solid Color Options</h3>
+        </div>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown">
+            <button class="btn btn-blue disabled dropdown-toggle" type="button">
+              Blue Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-cyan disabled dropdown-toggle" type="button">
+              Cyan Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray disabled dropdown-toggle" type="button">
+              Gray Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray-light disabled dropdown-toggle" type="button">
+              Gray Light Primary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="block bg-charcoal soft-quarter">
+            <div class="dropdown">
+              <button class="btn btn-white disabled dropdown-toggle" type="button">
+                White Primary Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown">
+  &lt;button class="btn btn-blue disabled dropdown-toggle" type="button">
+    Blue Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-cyan disabled dropdown-toggle" type="button">
+    Cyan Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray disabled dropdown-toggle" type="button">
+    Gray Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray-light disabled dropdown-toggle" type="button">
+    Gray Light Primary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="block bg-charcoal soft-quarter">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-white disabled dropdown-toggle" type="button">
+      White Primary Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div></pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-3425bfbc-4001-464d-8a74-6a070637dd6d">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="outline-color-options" name="outline-color-options" href="/ui-components/atoms/buttons/dropdowns#outline-color-options" fragment="outline-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Outline Color Options</h3>
+        </div>
+        <p>Adding a class of <code>.btn-outline</code> to any <code>.btn</code> element will invert the text and background colors, creating an outline effect.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown">
+            <button class="btn btn-blue btn-outline dropdown-toggle" type="button">
+              Blue Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-cyan btn-outline dropdown-toggle" type="button">
+              Cyan Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray btn-outline dropdown-toggle" type="button">
+              Gray Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray-light btn-outline dropdown-toggle" type="button">
+              Gray Light Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="block bg-charcoal soft-quarter">
+            <div class="dropdown">
+              <button class="btn btn-white btn-outline dropdown-toggle" type="button">
+                White Secondary Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown">
+  &lt;button class="btn btn-blue btn-outline dropdown-toggle" type="button">
+    Blue Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-cyan btn-outline dropdown-toggle" type="button">
+    Cyan Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray btn-outline dropdown-toggle" type="button">
+    Gray Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray-light btn-outline dropdown-toggle" type="button">
+    Gray Light Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="block bg-charcoal soft-quarter">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-white btn-outline dropdown-toggle" type="button">
+      White Secondary Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div></pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-25b04fde-3d28-4dfb-bf8b-5ae25213de57">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="disabled-outline-color-options" name="disabled-outline-color-options" href="/ui-components/atoms/buttons/dropdowns#disabled-outline-color-options" fragment="disabled-outline-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Disabled Outline Color Options</h3>
+        </div>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="dropdown">
+            <button class="btn btn-blue btn-outline disabled dropdown-toggle" type="button">
+              Blue Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-cyan btn-outline disabled dropdown-toggle" type="button">
+              Cyan Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray btn-outline disabled dropdown-toggle" type="button">
+              Gray Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-gray-light btn-outline disabled dropdown-toggle" type="button">
+              Gray Light Secondary Dropdown
+              <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="block bg-charcoal soft-quarter">
+            <div class="dropdown">
+              <button class="btn btn-white btn-outline disabled dropdown-toggle" type="button">
+                White Secondary Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="dropdown">
+  &lt;button class="btn btn-blue btn-outline disabled dropdown-toggle" type="button">
+    Blue Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-cyan btn-outline disabled dropdown-toggle" type="button">
+    Cyan Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray btn-outline disabled dropdown-toggle" type="button">
+    Gray Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="dropdown">
+  &lt;button class="btn btn-gray-light btn-outline disabled dropdown-toggle" type="button">
+    Gray Light Secondary Dropdown
+    &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+      &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+    &lt;/svg>
+  &lt;/button>
+&lt;/div>
+&lt;div class="block bg-charcoal soft-quarter">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-white btn-outline disabled dropdown-toggle" type="button">
+      White Secondary Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div></pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-2669c9ad-9518-4a9e-8f5d-9de9a9407db2">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="sizes" name="sizes" href="/ui-components/atoms/buttons/dropdowns#sizes" fragment="sizes" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 15:38:31 GMT-0400 (EDT)">Sizes</h3>
+        </div>
+        <p>Adding <code>.btn-lg</code> or <code>.btn-sm</code> will increase or decrease your button element.</p>
+
+        <div class="crds-example crds-inline-markup" data-processed="true">
+          <div class="block">
+            <div class="dropdown">
+              <button class="btn btn-blue btn-lg dropdown-toggle" type="button">
+                Large Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-blue btn-outline btn-lg dropdown-toggle" type="button">
+                Large Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="block">
+            <div class="dropdown">
+              <button class="btn btn-blue dropdown-toggle" type="button">
+                Default Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-blue btn-outline dropdown-toggle" type="button">
+                Default Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="block">
+            <div class="dropdown">
+              <button class="btn btn-blue btn-sm dropdown-toggle" type="button">
+                Small Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-blue btn-outline btn-sm dropdown-toggle" type="button">
+                Small Dropdown
+                <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <figure class="highlight">
+          <pre class=" language-markup">
+&lt;div class="block">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue btn-lg dropdown-toggle" type="button">
+      Large Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue btn-outline btn-lg dropdown-toggle" type="button">
+      Large Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div>
+&lt;div class="block">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue dropdown-toggle" type="button">
+      Default Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue btn-outline dropdown-toggle" type="button">
+      Default Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div>
+&lt;div class="block">
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue btn-sm dropdown-toggle" type="button">
+      Small Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+  &lt;div class="dropdown">
+    &lt;button class="btn btn-blue btn-outline btn-sm dropdown-toggle" type="button">
+      Small Dropdown
+      &lt;svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        &lt;use xlink:href="/assets/svgs/icons.svg#chevron-down" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
+      &lt;/svg>
+    &lt;/button>
+  &lt;/div>
+&lt;/div></pre>
+          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c993b3bc-c883-4032-ba0e-a96b7e02d7f5">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </button>
+        </figure>
+      </section>
+    </div>
+  </div>
+</div>
