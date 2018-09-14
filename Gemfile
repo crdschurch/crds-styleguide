@@ -14,6 +14,10 @@ group :jekyll_plugins do
   # gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', tag: 'v3.0.4'
 end
 
+group "development" do
+  gem 'pry'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
