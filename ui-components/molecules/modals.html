@@ -288,21 +288,26 @@ layout: default
   &lt;div class="modal-dialog" role="document">
     &lt;div class="modal-content">
       &lt;div class="modal-header">
-        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true">&times;&lt;/span>&lt;/button>
+        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          &lt;span aria-hidden="true">&times;&lt;/span>
+        &lt;/button>
       &lt;/div>
       &lt;div class="modal-body">
         &lt;iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0">&lt;/iframe>
       &lt;/div>
     &lt;/div>
   &lt;/div>
-&lt;/div>
-        </pre>
+&lt;/div></pre>
       </figure>
     </section>
 
     <h2 class="page-header flush-top">Fullscreen Modals</h2>
 
-    <p>Full-screen modals slightly deviate from default modals in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>. Full-screen modals also use the <code>.alpha</code> class in place of the <code>.fade</code> class to achieve a smoother animation.</p>
+    <p>Fullscreen modals slightly deviate from default modals in that they require an additional sizing class modifier to achieve the full-screen effect. For this modal to work, you must add a class of <code>.modal-full</code> to the <code>.modal-dialog</code> <code>&lt;div&gt;</code>. Full-screen modals also use the <code>.alpha</code> class in place of the <code>.fade</code> class to achieve a smoother animation.</p>
+
+    <p>Fullscreen modals also differ from their default counterparts in that you cannot close a fullscreen modal by clicking the background. This is achieved by added <code>data-backdrop="static"</code> to the wrapping <code>.modal</code> div.</p>
+
+    <p class="callout callout-info">In these examples, custom Javascript was written to create an interactive demonstration to open/close the following modals. These custom functions (<code>openModal()</code> and <code>closeModal()</code>) have been included via <code>onClick</code> events on the modal launch and modal escape buttons. You can learn more about Bootstrap's modals <a href="https://getbootstrap.com/docs/3.3/javascript/#modals" target="_blank">here</a>.</p>
 
     <section>
       <div class="linkable">
@@ -314,12 +319,12 @@ layout: default
         <h3 class="component-header">Fullscreen modal</h3>
       </div>
       <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModal">Fullscreen Modal</button>
-        <div class="modal modal-splash alpha" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
+        <button type="button" class="btn btn-default" onClick="openModal('#fullscreenModal')">Fullscreen Modal</button>
+        <div class="modal modal-splash alpha" id="fullscreenModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
           <div class="modal-dialog modal-full">
             <div class="modal-content">
               <div class="modal-header">
-                <button aria-label="Close" class="close pull-right" type="button">
+                <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModal')">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -336,7 +341,7 @@ layout: default
               <div class="modal-footer">
                 <div class="btn-block-mobile text-center">
                   <button class="btn btn-cyan btn-lg" type="button">Sounds great</button>
-                  <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+                  <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModal')">Cancel</button>
                 </div>
               </div>
             </div>
@@ -345,12 +350,12 @@ layout: default
       </div>
       <figure class="highlight">
         <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModal">Fullscreen Modal&lt;/button>
-&lt;div class="modal modal-splash alpha" id="fullscreenModal" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
+&lt;button type="button" class="btn btn-default" onClick="openModal('#fullscreenModal')">Fullscreen Modal&lt;/button>
+&lt;div class="modal modal-splash alpha" id="fullscreenModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel" data-modal-type="fullscreen">
   &lt;div class="modal-dialog modal-full">
     &lt;div class="modal-content">
       &lt;div class="modal-header">
-        &lt;button aria-label="Close" class="close pull-right" type="button">
+        &lt;button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModal')">
           &lt;span aria-hidden="true">&times;&lt;/span>
         &lt;/button>
       &lt;/div>
@@ -367,13 +372,12 @@ layout: default
       &lt;div class="modal-footer">
         &lt;div class="btn-block-mobile text-center">
           &lt;button class="btn btn-cyan btn-lg" type="button">Sounds great&lt;/button>
-          &lt;button class="btn btn-white btn-outline btn-lg" type="button">Cancel&lt;/button>
+          &lt;button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModal')">Cancel&lt;/button>
         &lt;/div>
       &lt;/div>
     &lt;/div>
   &lt;/div>
-&lt;/div>
-        </pre>
+&lt;/div></pre>
       </figure>
     </section>
 
@@ -387,12 +391,12 @@ layout: default
         <h3 class="component-header">Fullscreen modal with form</h3>
       </div>
       <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModalForm">Fullscreen Modal</button>
-        <div class="modal modal-splash alpha" id="fullscreenModalForm" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
+        <button type="button" class="btn btn-default" onClick="openModal('#fullscreenModalForm')">Fullscreen modal with form</button>
+        <div class="modal modal-splash alpha" id="fullscreenModalForm" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
           <div class="modal-dialog modal-full">
             <div class="modal-content">
               <div class="modal-header">
-                <button aria-label="Close" class="close pull-right" type="button">
+                <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModalForm')">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -455,7 +459,7 @@ layout: default
                     <div class="col-md-6 col-md-offset-3">
                       <div class="btn-block-mobile">
                         <button class="btn btn-cyan btn-lg" type="button">Add me to this</button>
-                        <button class="btn btn-white btn-outline btn-lg" type="button">Cancel</button>
+                        <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModalForm')">Cancel</button>
                       </div>
                     </div>
                   </div>
@@ -467,12 +471,12 @@ layout: default
       </div>
       <figure class="highlight">
         <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#fullscreenModalForm">Fullscreen Modal&lt;/button>
-&lt;div class="modal modal-splash alpha" id="fullscreenModalForm" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
+&lt;button type="button" class="btn btn-default" onClick="openModal('#fullscreenModalForm')">Fullscreen modal with form&lt;/button>
+&lt;div class="modal modal-splash alpha" id="fullscreenModalForm" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
   &lt;div class="modal-dialog modal-full">
     &lt;div class="modal-content">
       &lt;div class="modal-header">
-        &lt;button aria-label="Close" class="close pull-right" type="button">
+        &lt;button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModalForm')">
           &lt;span aria-hidden="true">&times;&lt;/span>
         &lt;/button>
       &lt;/div>
@@ -535,7 +539,7 @@ layout: default
             &lt;div class="col-md-6 col-md-offset-3">
               &lt;div class="btn-block-mobile">
                 &lt;button class="btn btn-cyan btn-lg" type="button">Add me to this&lt;/button>
-                &lt;button class="btn btn-white btn-outline btn-lg" type="button">Cancel&lt;/button>
+                &lt;button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModalForm')">Cancel&lt;/button>
               &lt;/div>
             &lt;/div>
           &lt;/div>
