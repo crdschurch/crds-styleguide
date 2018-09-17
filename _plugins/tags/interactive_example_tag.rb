@@ -57,9 +57,18 @@ module Jekyll
       def file_code_html(files)
         content = files.map do |f, code|
           file_ext = File.extname(f).delete('.')
+          clippable_id = "clippable-#{SecureRandom.uuid}"
           <<-EOF
             <div class="file-code" data-file="#{f}">
               #{formatter.format(lexer(file_ext).lex(code.strip))}
+              <button class="btn btn-gray-light btn-sm clippable" type="button" data-clippable="##{clippable_id}">
+                <svg class="icon icon-1" viewBox="0 0 256 256">
+                  <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </button>
+              <div class="hidden" id="#{clippable_id}">
+                #{code}
+              </div>
             </div>
           EOF
         end
