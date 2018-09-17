@@ -3,3 +3,4 @@
 //= require ./vendor/bootstrap.min
 //= require ./components/tooltips-example
 //= require ./components/dark-theme
+//= require ./components/site-search
