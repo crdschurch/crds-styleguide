@@ -29,55 +29,27 @@ layout: default
 
     <p>By default, the <code>.media-label</code> is in-line with the heading text.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="media">
-        <div class="media-img-wrapper">
-          <div class="media-object-default img-circle media-object img-size-5">
-          </div>
-        </div>
-
-        <div class="media-body">
-          <h3 class="media-heading">Jane Doe
-            <span class="media-label">
-              <span class="label label-default">LABEL</span>
-            </span>
-          </h3>
-
-          <p class="media-meta">1.0 MI</p>
-
-          <span>1234 Main St.
-            <br> City, ST 56789</span>
-        </div>
-      </div>
+    {% example html %}
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object-default img-circle media-object img-size-5">
     </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="media">
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object-default img-circle media-object img-size-5">
-    &lt;/div>
-  &lt;/div>
+  </div>
 
-  &lt;div class="media-body">
-    &lt;h3 class="media-heading">Jane Doe
-      &lt;span class="media-label">
-        &lt;span class="label label-default">LABEL&lt;/span>
-      &lt;/span>
-    &lt;/h3>
+  <div class="media-body">
+    <h3 class="media-heading">Jane Doe
+      <span class="media-label">
+        <span class="label label-default">LABEL</span>
+      </span>
+    </h3>
 
-    &lt;p class="media-meta">1.0 MI&lt;/p>
+    <p class="media-meta">1.0 MI</p>
 
-    &lt;span>1234 Main St.
-      &lt;br> City, ST 56789&lt;/span>
-  &lt;/div>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-655d733d-7f07-4a44-92b6-1014815b2c8c">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    <span>1234 Main St.
+      <br> City, ST 56789</span>
+  </div>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="media-header-alignment" name="media-header-alignment" href="/ui-components/molecules/media-objects#media-header-alignment" fragment="media-header-alignment" target="_self">
@@ -90,53 +62,26 @@ layout: default
 
     <p>A modifier class of <code>.media-heading-stacked</code> can be added to the <code>.media-heading</code> element. This allows the <code>.media-label</code> to stack above (or below) the header text.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="media">
-        <div class="media-img-wrapper">
-          <div class="media-object-default img-circle media-object img-size-5">
-          </div>
-        </div>
-
-        <div class="media-body">
-          <h3 class="media-heading media-heading-stacked">
-            <span class="media-label">
-              <span class="label label-default">LABEL</span>
-            </span> Jane Doe
-          </h3>
-
-          <p class="media-meta">1.0 MI</p>
-
-          <span>1234 Main St.
-            <br> City, ST 56789</span>
-        </div>
-      </div>
+    {% example html %}
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object-default img-circle media-object img-size-5">
     </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="media">
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object-default img-circle media-object img-size-5">
-    &lt;/div>
-  &lt;/div>
+  </div>
 
-  &lt;div class="media-body">
-    &lt;h3 class="media-heading media-heading-stacked">
-      &lt;span class="media-label">
-        &lt;span class="label label-default">LABEL&lt;/span>
-      &lt;/span> Jane Doe
-    &lt;/h3>
+  <div class="media-body">
+    <h3 class="media-heading media-heading-stacked">
+      <span class="media-label">
+        <span class="label label-default">LABEL</span>
+      </span> Jane Doe
+    </h3>
 
-    &lt;p class="media-meta">1.0 MI&lt;/p>
+    <p class="media-meta">1.0 MI</p>
 
-    &lt;span>1234 Main St.
-      &lt;br> City, ST 56789&lt;/span>
-  &lt;/div>
-&lt;/div></pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4811d788-ad5a-49e6-a380-24d65bae76ec">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    <span>1234 Main St.
+      <br> City, ST 56789</span>
+  </div>
+</div>
+    {% endexample %}
   </div>
 </div>

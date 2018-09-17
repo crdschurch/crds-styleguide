@@ -29,28 +29,14 @@ layout: default
 
     <p>The default countdown pattern stacks each element in the timer.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <ul class="countdown-timer">
-        <li class="countdown-days">03</li>
-        <li class="countdown-hours">00</li>
-        <li class="countdown-minutes">42</li>
-        <li class="countdown-seconds">37</li>
-      </ul>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;ul class="countdown-timer">
-  &lt;li class="countdown-days">03&lt;/li>
-  &lt;li class="countdown-hours">00&lt;/li>
-  &lt;li class="countdown-minutes">42&lt;/li>
-  &lt;li class="countdown-seconds">37&lt;/li>
-&lt;/ul></pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-67dd10e0-a65e-4773-8eeb-db7de7c4db8d">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<ul class="countdown-timer">
+  <li class="countdown-days">03</li>
+  <li class="countdown-hours">00</li>
+  <li class="countdown-minutes">42</li>
+  <li class="countdown-seconds">37</li>
+</ul>
+    {% endexample %}
 
     <div class="linkable">
       <a id="countdown-bar" name="countdown-bar" href="/ui-components/molecules/countdown#countdown-bar" fragment="countdown-bar" target="_self">
@@ -63,39 +49,19 @@ layout: default
 
     <p>Countdown bars get wrapped in a generic <code>.countdown</code> selector.This adds support for a <code>.countdown-header</code> selector, which can act as a label for your timer.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <section class="container-fluid">
-        <div class="countdown">
-          <span class="countdown-header">The thing starts in...</span>
-          <ul class="countdown-timer list-inline">
-            <li class="countdown-days">03</li>
-            <li class="countdown-hours">00</li>
-            <li class="countdown-minutes">42</li>
-            <li class="countdown-seconds">37</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;section class="container-fluid">
-  &lt;div class="countdown">
-    &lt;span class="countdown-header">The thing starts in...&lt;/span>
-    &lt;ul class="countdown-timer list-inline">
-      &lt;li class="countdown-days">03&lt;/li>
-      &lt;li class="countdown-hours">00&lt;/li>
-      &lt;li class="countdown-minutes">42&lt;/li>
-      &lt;li class="countdown-seconds">37&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-&lt;/section>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4110ddd6-29ba-48ba-902f-e95622beb1a6">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<section class="container-fluid">
+  <div class="countdown">
+    <span class="countdown-header">The thing starts in...</span>
+    <ul class="countdown-timer list-inline">
+      <li class="countdown-days">03</li>
+      <li class="countdown-hours">00</li>
+      <li class="countdown-minutes">42</li>
+      <li class="countdown-seconds">37</li>
+    </ul>
+  </div>
+</section>
+    {% endexample %}
 
     <div class="linkable">
       <a id="color-variations" name="color-variations" href="/ui-components/molecules/countdown#color-variations" fragment="color-variations" target="_self">
@@ -110,38 +76,19 @@ layout: default
 
     <p>You can also change the text color alone. Currently only <code>.countdown-white</code> is supported.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <section class="container-fluid">
-        <div class="countdown countdown-bg-cyan">
-          <span class="countdown-header">The thing starts in...</span>
-          <ul class="countdown-timer list-inline">
-            <li class="countdown-days">03</li>
-            <li class="countdown-hours">00</li>
-            <li class="countdown-minutes">42</li>
-            <li class="countdown-seconds">37</li>
-          </ul>
-        </div>
-      </section>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;section class="container-fluid">
-  &lt;div class="countdown countdown-bg-cyan">
-    &lt;span class="countdown-header">The thing starts in...&lt;/span>
-    &lt;ul class="countdown-timer list-inline">
-      &lt;li class="countdown-days">03&lt;/li>
-      &lt;li class="countdown-hours">00&lt;/li>
-      &lt;li class="countdown-minutes">42&lt;/li>
-      &lt;li class="countdown-seconds">37&lt;/li>
-    &lt;/ul>
-  &lt;/div>
-&lt;/section></pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-e8db1611-4767-4927-a087-c7505708c9a5">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<section class="container-fluid">
+  <div class="countdown countdown-bg-cyan">
+    <span class="countdown-header">The thing starts in...</span>
+    <ul class="countdown-timer list-inline">
+      <li class="countdown-days">03</li>
+      <li class="countdown-hours">00</li>
+      <li class="countdown-minutes">42</li>
+      <li class="countdown-seconds">37</li>
+    </ul>
+  </div>
+</section>
+    {% endexample %}
 
     <div class="linkable">
       <a id="floating-timer" name="floating-timer" href="/ui-components/molecules/countdown#floating-timer" fragment="floating-timer" target="_self">
@@ -154,33 +101,16 @@ layout: default
 
     <p>By wrapping the countdown timer in a <code>.countdown-border</code> selector, the countdown will be centered and bordered, so it can float on its own outside the context of a color bar.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="countdown countdown-border">
-        <ul class="countdown-timer">
-          <li class="countdown-days">03</li>
-          <li class="countdown-hours">00</li>
-          <li class="countdown-minutes">42</li>
-          <li class="countdown-seconds">37</li>
-        </ul>
-      </div>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="countdown countdown-border">
-  &lt;ul class="countdown-timer">
-    &lt;li class="countdown-days">03&lt;/li>
-    &lt;li class="countdown-hours">00&lt;/li>
-    &lt;li class="countdown-minutes">42&lt;/li>
-    &lt;li class="countdown-seconds">37&lt;/li>
-  &lt;/ul>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-26c787ba-fe5d-4094-9222-f6deea0bd2cc">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<div class="countdown countdown-border">
+  <ul class="countdown-timer">
+    <li class="countdown-days">03</li>
+    <li class="countdown-hours">00</li>
+    <li class="countdown-minutes">42</li>
+    <li class="countdown-seconds">37</li>
+  </ul>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="buttons" name="buttons" href="/ui-components/molecules/countdown#buttons" fragment="buttons" target="_self">
@@ -193,28 +123,13 @@ layout: default
 
     <p>On the cyan countdown bar, buttons with the <code>.countdown-btn</code> will have a lightened background.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <section class="container-fluid">
-        <div class="countdown countdown-bg-cyan">
-          <span class="countdown-header push-right">Thing is happeneing now!</span>
-          <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
-        </div>
-      </section>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;section class="container-fluid">
-  &lt;div class="countdown countdown-bg-cyan">
-    &lt;span class="countdown-header push-right">Thing is happeneing now!&lt;/span>
-    &lt;a class="btn countdown-btn" href="/live/stream">Watch Now&lt;/a>
-  &lt;/div>
-&lt;/section>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c63d8d00-6d4e-4375-a271-d21537991d40">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<section class="container-fluid">
+  <div class="countdown countdown-bg-cyan">
+    <span class="countdown-header push-right">Thing is happeneing now!</span>
+    <a class="btn countdown-btn" href="/live/stream">Watch Now</a>
+  </div>
+</section>
+    {% endexample %}
   </div>
 </div>
