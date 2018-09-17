@@ -79,58 +79,29 @@ layout: default
 
         <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Label</label>
-            <div class="controls-stacked flush-ends">
-              <label class="control checkbox">
-                <input checked="checked" type="checkbox">
-                <span class="control-indicator" tabindex="0"></span>
-                Option one is selected
-              </label>
-              <label class="control checkbox">
-                <input type="checkbox">
-                <span class="control-indicator" tabindex="0"></span>
-                Option two can also be selected
-              </label>
-              <label class="control checkbox disabled">
-                <input disabled="disabled" type="checkbox">
-                <span class="control-indicator" tabindex="0"></span>
-                Option three is disabled
-              </label>
-            </div>
-            <p class="help-block hard-top">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Label&lt;/label>
-  &lt;div class="controls-stacked flush-ends">
-    &lt;label class="control checkbox">
-      &lt;input checked="checked" type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-stacked flush-ends">
+    <label class="control checkbox">
+      <input checked="checked" type="checkbox">
+      <span class="control-indicator" tabindex="0"></span>
       Option one is selected
-    &lt;/label>
-    &lt;label class="control checkbox">
-      &lt;input type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+    </label>
+    <label class="control checkbox">
+      <input type="checkbox">
+      <span class="control-indicator" tabindex="0"></span>
       Option two can also be selected
-    &lt;/label>
-    &lt;label class="control checkbox disabled">
-      &lt;input disabled="disabled" type="checkbox">
-      &lt;span class="control-indicator" tabindex="0">&lt;/span>
+    </label>
+    <label class="control checkbox disabled">
+      <input disabled="disabled" type="checkbox">
+      <span class="control-indicator" tabindex="0"></span>
       Option three is disabled
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-0e457841-22ec-4384-8bb9-b8e1c24c8416">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+    </label>
+  </div>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -145,46 +116,23 @@ layout: default
 
         <p>Best for limited options, utilizing a single horizontal row.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">What times are you available?</label>
-            <div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">Afternoon
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">Evening
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">What times are you available?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">Afternoon
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">Evening
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-f4ef83eb-4d21-4c9e-8324-b7c6a8bf355c">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">Afternoon
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">Evening
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -199,46 +147,23 @@ layout: default
 
         <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">What times are you available?</label>
-            <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">Afternoon
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">Evening
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">What times are you available?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">Afternoon
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">Evening
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-19cbaa94-9ecd-451f-bfd0-a17e264586e4">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">What times are you available?</label>
+  <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="checkbox" autocomplete="off" checked="checked">Morning (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">Afternoon
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">Evening
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -253,76 +178,38 @@ layout: default
 
         <p>Use with many options when horizontal space allows.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Age range</label>
-            <div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">High school
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">College
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">20s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">30s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">40s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">50s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">60s+
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Age range&lt;/label>
-  &lt;div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">High school
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">College
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">20s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">30s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">40s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">50s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">60s+
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-ad2d98b4-122e-4cd5-9777-805cf53269d0">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">High school
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">College
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">20s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">30s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">40s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">50s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">60s+
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -337,76 +224,38 @@ layout: default
 
         <p>Use when vertical space allows.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Age range</label>
-            <div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">High school
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">College
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">20s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">30s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">40s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">50s
-              </label>
-              <label class="btn btn-default">
-                <input type="checkbox" autocomplete="off">60s+
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Age range&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">High school
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">College
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">20s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">30s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">40s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">50s
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="checkbox" autocomplete="off">60s+
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-aa358eed-0aca-47f7-8de0-2822db507b2f">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Age range</label>
+  <div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="checkbox" autocomplete="off" checked="checked">Middle school (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">High school
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">College
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">20s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">30s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">40s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">50s
+    </label>
+    <label class="btn btn-default">
+      <input type="checkbox" autocomplete="off">60s+
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
     </div>
   </div>
