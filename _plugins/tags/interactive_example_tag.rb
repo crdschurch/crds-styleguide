@@ -8,8 +8,6 @@ module Jekyll
       new_opts = options.strip.split(' ').map { |a| [a.split('=').first, a.split('=').last] }.to_h
       @options = def_opts.merge(new_opts.symbolize_keys)
       raise "Missing required option: #{name}" if @options[:name].nil?
-      # @language = markup.nil? ? 'html' : markup.strip
-      # @highlighter = Jekyll::Tags::HighlightBlock.send(:new, tag_name, markup, tokens)
       super
     end
 
@@ -26,7 +24,7 @@ module Jekyll
 
       # clippable_id = "clippable-#{SecureRandom.uuid}"
 
-      content = <<-EOF
+      <<-EOF
         <div class="crds-example crds-embedded-markup">
           <iframe allowtransparency="true" src="#{entry_file}" width="100%" height="#{@options[:height]}" frameborder="0"></iframe>
           <div class="example-row">
@@ -41,35 +39,27 @@ module Jekyll
           </div>
         </div>
       EOF
-
-      # binding.pry
-
-      content
-      #   <div class="crds-example crds-inline-markup" id="#{clippable_id}">
-      #     #{source.strip}
-      #   </div>
-      #   <div class="crds-example-code">
-      #     #{formatter.format(lexer.lex(source.strip))}
-      #     <button class="btn btn-gray-light btn-sm clippable" type="button" data-clippable="##{clippable_id}">
-      #       <svg class="icon icon-1" viewBox="0 0 256 256">
-      #         <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-      #       </svg>
-      #     </button>
-      #   </div>
     end
 
     private
 
       def file_list_html(files)
-        files.map { |f, _| "<a class=\"list-group-item\" href=\"#\" data-file=\"#{f}\">#{f}</a>" }.join('')
+        content = files.map do |f, _|
+          <<-EOF
+            <a class="list-group-item file-code-trigger" href="javascript:void(0)" data-file="#{f}">
+              #{f}
+            </a>
+          EOF
+        end
+        content.join('')
       end
 
       def file_code_html(files)
-        content = files.map do |f, html|
+        content = files.map do |f, code|
           file_ext = File.extname(f).delete('.')
           <<-EOF
             <div class="file-code" data-file="#{f}">
-              #{formatter.format(lexer(file_ext).lex(html.strip))}
+              #{formatter.format(lexer(file_ext).lex(code.strip))}
             </div>
           EOF
         end

@@ -3,3 +3,4 @@
 //= require ./vendor/bootstrap.min
 //= require ./vendor/clipboard.min
 //= require ./components/clippable
+//= require ./components/interactive_example

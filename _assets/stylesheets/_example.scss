@@ -126,8 +126,15 @@ crds-example {
     padding: 0;
     border-left: 1px solid darken($gray, 10);
   }
+  .file-code {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
   pre {
     font-size: 80%;
+    margin-bottom: 0;
   }
   .list-group {
     background: $cr-white;
