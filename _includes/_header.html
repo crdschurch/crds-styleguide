@@ -1,18 +1,18 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="mobile-nav-trigger collapsed visible-xs ddk-navbar" data-target=".navbar-collapse" data-toggle="collapse">
+      <button type="button" class="mobile-nav-trigger collapsed visible-xs ddk-navbar" data-target=".navbar-collapse" data-toggle="collapse" aria-expanded="false">
+        <span class="sr-only">Toggle mobile navigation</span>
         <svg class="icon icon-1" viewBox="0 0 256 256">
           <use xlink:href="/assets/svgs/icons.svg#menu"></use>
         </svg>
-      </a>
+      </button>
 
-      <!-- 🚨 Need to figure out the toggle switch -->
-      <!-- <theme-toggle-switch class="visible-xs-block">
+      <div class="visible-xs-block">
         <a class="theme-toggle-switch">
           <svg class="icon icon-1" viewBox="0 0 256 256"><use xlink:href="/assets/svgs/icons.svg#contrast" height="256" width="256"></use></svg>
         </a>
-      </theme-toggle-switch> -->
+      </div>
 
       <a class="logo-ddk" href="/">
         <svg height="50px" viewBox="0 0 50 50" width="50px">
@@ -161,15 +161,14 @@
 
         <li><a href="https://github.com/crdschurch/crds-styleguide" target="_blank">Github</a></li>
 
-        <!-- 🚨 Figure out this toggle switch -->
-        <!-- <li class="hidden-xs">
-          <theme-toggle-switch>
+        <li class="hidden-xs">
+          <div>
             <a class="theme-toggle-switch">
               <svg class="icon icon-1" viewBox="0 0 256 256"><use xlink:href="/assets/svgs/icons.svg#contrast" height="256"
                   width="256"></use></svg>
             </a>
-          </theme-toggle-switch>
-        </li> -->
+          </div>
+        </li>
       </ul>
     </div>
 

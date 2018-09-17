@@ -61,6 +61,10 @@ $navbar-inverse-border: darken($cr-gray-dark, 10);
     border-radius: 0;
     background-color: $cr-white;
 
+    button {
+      border: none;
+    }
+
     .logo-ddk {
       float: left;
       display: block;

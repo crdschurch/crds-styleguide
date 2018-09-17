@@ -4,3 +4,5 @@
 //= require ./vendor/clipboard.min
 //= require ./components/clippable
 //= require ./components/interactive_example
+//= require ./components/tooltips-example
+//= require ./components/dark-theme
