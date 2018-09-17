@@ -62,13 +62,14 @@ layout: default
 
       <p>To ensure consistent treatment of typography, whether digital or print — Crossroads has curated a specific set of <a href="/ui-components/core/typography/typefaces">typefaces</a> that should be used when rendering any marketing materials or related content.</p>
 
-      <p>For digital media, we rely heavily on the inclusion of <a href="http://typekit.com">Adobe Typekit</a> to aid in the delivery and optimal performance for stylized web-fonts. Integration is as simple as dropping the following snippet into the <code>&lt;head&gt;</code> element on your page.</p>
+      <p>For digital media, we rely heavily on the inclusion of <a href="http://typekit.com">Adobe Typekit</a> to aid in the delivery and optimal performance for stylized web-fonts. Integration is as simple as dropping the following snippet into the <code><head></code> element on your page.</p>
 
       <br>
 
-      <pre class="language-markup">  &lt;script src=https://use.typekit.net/ccb3vpa.js&gt;&lt;/script&gt;
-        &lt;script&gt;try{Typekit.load({ async: true });}catch(e){}&lt;/script&gt;
-      </pre>
+      {% example html %}
+<script src=https://use.typekit.net/ccb3vpa.js></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+      {% endexample %}
 
       <br>
 
