@@ -39,7 +39,7 @@ module Jekyll
         module_names = {
           html: 'HTML',
           css: 'CSS',
-          js: 'Javasript',
+          js: 'Javascript',
           text: 'PlainText'
         }
         raise 'Lexer not supported' unless module_names.include?(@language.to_sym)
