@@ -1,19 +1,4 @@
 <div class="ddk-search-form">
   <input id="ddk-search" class="form-control" placeholder="Search" type="text">
-
-  <ul class="ddk-search-results list-unstyled hide">
-    {% for i in site.data.search-index %}
-    {% if i.name %}
-    <li>
-      <a href="{{ i.path }}" class="font-size-large">
-        <span class="component-name">{{ i.name }}</span>
-        <!-- 🚨 Create dynamic breadcrumbs - feels distinct from search -->
-        <!-- <span class="breadcrumbs">
-          <span>{{ crumb }}</span>
-        </span> -->
-      </a>
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
+  <ul class="ddk-search-results list-unstyled"></ul>
 </div>
