@@ -1,3 +1,3 @@
-$(document).ready(function(params) {
+$(window).on('load', function() {
   new Imgix.Optimizer();
 });

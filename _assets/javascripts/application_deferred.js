@@ -3,6 +3,6 @@
 //= require ./vendor/imgix.min
 //= require ./vendor/imgix-optimizer
 //= require ./components/dark-theme
-//= require ./components/images
 //= require ./components/modal-example
 //= require ./components/tooltips-example
+//= require ./components/images
