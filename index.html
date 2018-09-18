@@ -70,26 +70,7 @@
             </ul>
             <div class="push-top flush-bottom">
               <p><strong>Know it by name?</strong></p>
-              <!-- 🚨 Need to add component search here -->
-              <div class="ddk-search-form">
-                <input id="ddk-search" class="form-control" placeholder="Search" type="text">
-
-                <ul class="ddk-search-results list-unstyled hide">
-                  {% for result in site.pages %}
-                  {% if result.title %}
-                  <li>
-                    <a href="{{ result.path }}" class="font-size-large">
-                      <span class="component-name">{{ result.title }}</span>
-                      <!-- 🚨 Create dynamic breadcrumbs - feels distinct from search -->
-                      <!-- <span class="breadcrumbs">
-                        <span>{{ crumb }}</span>
-                      </span> -->
-                    </a>
-                  </li>
-                  {% endif %}
-                  {% endfor %}
-                </ul>
-              </div>
+              {% include _search.html %}
             </div>
           </div>
         </div>
