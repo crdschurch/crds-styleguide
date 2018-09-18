@@ -56,6 +56,7 @@ module Jekyll
 
       def file_code_html(files)
         content = files.map do |f, code|
+          code.slice!("---\n---\n")
           file_ext = File.extname(f).delete('.')
           clippable_id = "clippable-#{SecureRandom.uuid}"
           <<-EOF
