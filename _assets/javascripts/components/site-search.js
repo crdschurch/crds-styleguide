@@ -42,6 +42,8 @@ $("#ddk-search").keydown(function(e) {
 
   // If user types 'enter', then url directs to selected list option
   if (e.key === "Enter") {
+    var url = $('.focused a').attr('href');
+    window.location.href = url;
   }
 });
 
