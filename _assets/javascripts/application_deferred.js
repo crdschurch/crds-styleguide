@@ -3,6 +3,7 @@
 //= require ./vendor/bootstrap.min
 //= require ./vendor/clipboard.min
 //= require ./components/clippable
-//= require ./components/interactive_example
-//= require ./components/tooltips-example
 //= require ./components/dark-theme
+//= require ./components/interactive_example
+//= require ./components/modal-example
+//= require ./components/tooltips-example
