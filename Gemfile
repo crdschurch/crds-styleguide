@@ -5,6 +5,7 @@ gem 'uglifier'
 
 # To fix security vulnerability
 gem 'sprockets', '~> 3.7.2'
+gem 'coffee-script'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
