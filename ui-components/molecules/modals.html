@@ -27,61 +27,33 @@ layout: default
         </a>
         <h3 class="component-header">Default modal</h3>
       </div>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModal">
-          Default modal
-        </button>
+      {% example html %}
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModal">
+  Default modal
+</button>
 
-        <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h4 class="modal-title">Need a reminder?</h4>
-                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
-              </div>
-              <div class="modal-footer">
-                <div class="btn-block-mobile">
-                  <button type="button" class="btn btn-cyan btn-lg">Primary Action</button>
-                  <button type="button" class="btn btn-cyan btn-outline btn-lg">Secondary Action</button>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Need a reminder?</h4>
+        <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile">
+          <button type="button" class="btn btn-cyan btn-lg">Primary Action</button>
+          <button type="button" class="btn btn-cyan btn-outline btn-lg">Secondary Action</button>
         </div>
       </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModal">
-  Default modal
-&lt;/button>
-
-&lt;div class="modal fade" id="defaultModal" tabindex="-1" role="dialog" aria-labelledby="defaultModalLabel">
-  &lt;div class="modal-dialog" role="document">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body">
-        &lt;h4 class="modal-title">Need a reminder?&lt;/h4>
-        &lt;p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.&lt;/p>
-      &lt;/div>
-      &lt;div class="modal-footer">
-        &lt;div class="btn-block-mobile">
-          &lt;button type="button" class="btn btn-cyan btn-lg">Primary Action&lt;/button>
-          &lt;button type="button" class="btn btn-cyan btn-outline btn-lg">Secondary Action&lt;/button>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
 
     <section>
@@ -93,95 +65,51 @@ layout: default
         </a>
         <h3 class="component-header">Default modal with form</h3>
       </div>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalForm">
-          Default modal with form
+
+      {% example html %}
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalForm">
+  Default modal with form
+</button>
+
+<div class="modal fade" id="defaultModalForm" tabindex="-1" role="dialog" aria-labelledby="defaultModalFormLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
         </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Tell us more</h4>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        <form>
+          <div class="form-group">
+            <p class="font-size-large soft-half-top">Nullam id dolor id nibh?</p>
+            <label class="sr-only" for="input">Input</label>
+            <input class="form-control" name="input" placeholder="Placeholder" value="" type="text">
+          </div>
 
-        <div class="modal fade" id="defaultModalForm" tabindex="-1" role="dialog" aria-labelledby="defaultModalFormLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h4 class="modal-title">Tell us more</h4>
-                <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-                <form>
-                  <div class="form-group">
-                    <p class="font-size-large soft-half-top">Nullam id dolor id nibh?</p>
-                    <label class="sr-only" for="input">Input</label>
-                    <input class="form-control" name="input" placeholder="Placeholder" value="" type="text">
-                  </div>
-
-                  <div class="form-group">
-                    <p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?</p>
-                    <label class="sr-only">Default button group</label>
-                    <div aria-label="..." class="btn-group btn-group-block" role="group">
-                      <button class="btn btn-default" type="button">Default</button>
-                      <button class="btn btn-default" type="button">Label</button>
-                      <button class="btn btn-default" type="button">Label</button>
-                      <button class="btn btn-default" type="button">Label</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <div class="btn-block-mobile">
-                  <button type="button" class="btn btn-cyan btn-lg">Submit</button>
-                </div>
-              </div>
+          <div class="form-group">
+            <p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?</p>
+            <label class="sr-only">Default button group</label>
+            <div aria-label="..." class="btn-group btn-group-block" role="group">
+              <button class="btn btn-default" type="button">Default</button>
+              <button class="btn btn-default" type="button">Label</button>
+              <button class="btn btn-default" type="button">Label</button>
+              <button class="btn btn-default" type="button">Label</button>
             </div>
           </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile">
+          <button type="button" class="btn btn-cyan btn-lg">Submit</button>
         </div>
       </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalForm">
-  Default modal with form
-&lt;/button>
-
-&lt;div class="modal fade" id="defaultModalForm" tabindex="-1" role="dialog" aria-labelledby="defaultModalFormLabel">
-  &lt;div class="modal-dialog" role="document">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body">
-        &lt;h4 class="modal-title">Tell us more&lt;/h4>
-        &lt;p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/p>
-        &lt;form>
-          &lt;div class="form-group">
-            &lt;p class="font-size-large soft-half-top">Nullam id dolor id nibh?&lt;/p>
-            &lt;label class="sr-only" for="input">Input&lt;/label>
-            &lt;input class="form-control" name="input" placeholder="Placeholder" value="" type="text">
-          &lt;/div>
-
-          &lt;div class="form-group">
-            &lt;p class="font-size-large soft-half-top">Lorem id dolor id nibh ultricies vehicula ut id elit?&lt;/p>
-            &lt;label class="sr-only">Default button group&lt;/label>
-            &lt;div aria-label="..." class="btn-group btn-group-block" role="group">
-              &lt;button class="btn btn-default" type="button">Default&lt;/button>
-              &lt;button class="btn btn-default" type="button">Label&lt;/button>
-              &lt;button class="btn btn-default" type="button">Label&lt;/button>
-              &lt;button class="btn btn-default" type="button">Label&lt;/button>
-            &lt;/div>
-          &lt;/div>
-        &lt;/form>
-      &lt;/div>
-      &lt;div class="modal-footer">
-        &lt;div class="btn-block-mobile">
-          &lt;button type="button" class="btn btn-cyan btn-lg">Submit&lt;/button>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
 
     <section>
@@ -193,59 +121,32 @@ layout: default
         </a>
         <h3 class="component-header">Default modal with promo</h3>
       </div>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalPromo">
-          Default modal with promo
-        </button>
+      {% example html %}
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalPromo">
+  Default modal with promo
+</button>
 
-        <div class="modal modal-promo fade" id="defaultModalPromo" tabindex="-1" role="dialog" aria-labelledby="defaultModalPromoLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h4 class="modal-title">Do life together</h4>
-                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.</p>
-              </div>
-              <div class="modal-footer">
-                <div class="btn-block-mobile">
-                  <button type="button" class="btn btn-cyan btn-lg">Find out how</button>
-                </div>
-              </div>
-            </div>
-          </div>
+<div class="modal modal-promo fade" id="defaultModalPromo" tabindex="-1" role="dialog" aria-labelledby="defaultModalPromoLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-title">Do life together</h4>
+        <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="btn-block-mobile">
+          <button type="button" class="btn btn-cyan btn-lg">Find out how</button>
         </div>
       </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#defaultModalPromo">
-  Default modal with promo
-&lt;/button>
-
-&lt;div class="modal modal-promo fade" id="defaultModalPromo" tabindex="-1" role="dialog" aria-labelledby="defaultModalPromoLabel">
-  &lt;div class="modal-dialog" role="document">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body">
-        &lt;h4 class="modal-title">Do life together&lt;/h4>
-        &lt;p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur.&lt;/p>
-      &lt;/div>
-      &lt;div class="modal-footer">
-        &lt;div class="btn-block-mobile">
-          &lt;button type="button" class="btn btn-cyan btn-lg">Find out how&lt;/button>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
 
     <section>
@@ -259,47 +160,26 @@ layout: default
       </div>
 
       <p>To get the video modal to show display properly, add <code>.modal-video</code> to the wrapping modal div.</p>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
-          Video modal
-        </button>
-
-        <div class="modal modal-video fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
+      {% example html %}
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
   Video modal
-&lt;/button>
+</button>
 
-&lt;div class="modal modal-video fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
-  &lt;div class="modal-dialog" role="document">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body">
-        &lt;iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0">&lt;/iframe>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+<div class="modal modal-video fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <iframe allowfullscreen="" src="https://www.youtube.com/embed/LIdCR2rywl4" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
 
     <h2 class="page-header flush-top">Fullscreen Modals</h2>
@@ -319,67 +199,36 @@ layout: default
         </a>
         <h3 class="component-header">Fullscreen modal</h3>
       </div>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" onClick="openModal('#fullscreenModal')">Fullscreen Modal</button>
-        <div class="modal modal-splash alpha" id="fullscreenModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
-          <div class="modal-dialog modal-full">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModal')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body text-center">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h4 class="modal-title">Try this</h4>
-                      <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <div class="btn-block-mobile text-center">
-                  <button class="btn btn-cyan btn-lg" type="button">Sounds great</button>
-                  <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModal')">Cancel</button>
-                </div>
-              </div>
+      {% example html %}
+<button type="button" class="btn btn-default" onClick="openModal('#fullscreenModal')">Fullscreen Modal</button>
+<div class="modal modal-splash alpha" id="fullscreenModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel">
+  <div class="modal-dialog modal-full">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModal')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h4 class="modal-title">Try this</h4>
+              <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.</p>
             </div>
           </div>
         </div>
       </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" onClick="openModal('#fullscreenModal')">Fullscreen Modal&lt;/button>
-&lt;div class="modal modal-splash alpha" id="fullscreenModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalLabel" data-modal-type="fullscreen">
-  &lt;div class="modal-dialog modal-full">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModal')">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body text-center">
-        &lt;div class="container">
-          &lt;div class="row">
-            &lt;div class="col-md-8 col-md-offset-2">
-              &lt;h4 class="modal-title">Try this&lt;/h4>
-              &lt;p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum.&lt;/p>
-            &lt;/div>
-          &lt;/div>
-        &lt;/div>
-      &lt;/div>
-      &lt;div class="modal-footer">
-        &lt;div class="btn-block-mobile text-center">
-          &lt;button class="btn btn-cyan btn-lg" type="button">Sounds great&lt;/button>
-          &lt;button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModal')">Cancel&lt;/button>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+      <div class="modal-footer">
+        <div class="btn-block-mobile text-center">
+          <button class="btn btn-cyan btn-lg" type="button">Sounds great</button>
+          <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModal')">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
 
     <section>
@@ -391,165 +240,86 @@ layout: default
         </a>
         <h3 class="component-header">Fullscreen modal with form</h3>
       </div>
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <button type="button" class="btn btn-default" onClick="openModal('#fullscreenModalForm')">Fullscreen modal with form</button>
-        <div class="modal modal-splash alpha" id="fullscreenModalForm" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
-          <div class="modal-dialog modal-full">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModalForm')">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body text-center">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <h4 class="modal-title">Do this</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+
+      {% example html %}
+<button type="button" class="btn btn-default" onClick="openModal('#fullscreenModalForm')">Fullscreen modal with form</button>
+<div class="modal modal-splash alpha" id="fullscreenModalForm" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
+  <div class="modal-dialog modal-full">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModalForm')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h4 class="modal-title">Do this</h4>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+            </div>
+          </div>
+          <div class="row push-half-top soft-top">
+            <div class="col-md-6 col-md-offset-3">
+              <form>
+                <div class="form-group">
+                  <label class="sr-only" for="input">Address 1</label>
+                  <input class="form-control" name="input" placeholder="Address 1" value="" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label class="sr-only" for="input">Address 2</label>
+                  <input class="form-control" name="input" placeholder="Address 2" value="" type="text">
+                </div>
+
+                <div class="form-group">
+                  <label class="sr-only" for="input">City</label>
+                  <input class="form-control" name="input" placeholder="City" value="" type="text">
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="sr-only" for="input">State</label>
+                      <select class="form-control">
+                        <option disabled="" selected="">State</option>
+                        <option>Ohio</option>
+                        <option>Ohio</option>
+                        <option>Ohio</option>
+                        <option>Ohio</option>
+                        <option>Ohio</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="row push-half-top soft-top">
-                    <div class="col-md-6 col-md-offset-3">
-                      <form>
-                        <div class="form-group">
-                          <label class="sr-only" for="input">Address 1</label>
-                          <input class="form-control" name="input" placeholder="Address 1" value="" type="text">
-                        </div>
 
-                        <div class="form-group">
-                          <label class="sr-only" for="input">Address 2</label>
-                          <input class="form-control" name="input" placeholder="Address 2" value="" type="text">
-                        </div>
-
-                        <div class="form-group">
-                          <label class="sr-only" for="input">City</label>
-                          <input class="form-control" name="input" placeholder="City" value="" type="text">
-                        </div>
-
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="sr-only" for="input">State</label>
-                              <select class="form-control">
-                                <option disabled="" selected="">State</option>
-                                <option>Ohio</option>
-                                <option>Ohio</option>
-                                <option>Ohio</option>
-                                <option>Ohio</option>
-                                <option>Ohio</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="sr-only" for="input">Zip</label>
-                              <input class="form-control" name="input" placeholder="Zip" value="" type="text">
-                            </div>
-                          </div>
-                        </div>
-                      </form>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="sr-only" for="input">Zip</label>
+                      <input class="form-control" name="input" placeholder="Zip" value="" type="text">
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                      <div class="btn-block-mobile">
-                        <button class="btn btn-cyan btn-lg" type="button">Add me to this</button>
-                        <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModalForm')">Cancel</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="btn-block-mobile">
+                <button class="btn btn-cyan btn-lg" type="button">Add me to this</button>
+                <button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModalForm')">Cancel</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;button type="button" class="btn btn-default" onClick="openModal('#fullscreenModalForm')">Fullscreen modal with form&lt;/button>
-&lt;div class="modal modal-splash alpha" id="fullscreenModalForm" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="fullscreenModalFormLabel">
-  &lt;div class="modal-dialog modal-full">
-    &lt;div class="modal-content">
-      &lt;div class="modal-header">
-        &lt;button aria-label="Close" class="close pull-right" type="button" onClick="closeModal('#fullscreenModalForm')">
-          &lt;span aria-hidden="true">&times;&lt;/span>
-        &lt;/button>
-      &lt;/div>
-      &lt;div class="modal-body text-center">
-        &lt;div class="container">
-          &lt;div class="row">
-            &lt;div class="col-md-8 col-md-offset-2">
-              &lt;h4 class="modal-title">Do this&lt;/h4>
-              &lt;p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.&lt;/p>
-            &lt;/div>
-          &lt;/div>
-          &lt;div class="row push-half-top soft-top">
-            &lt;div class="col-md-6 col-md-offset-3">
-              &lt;form>
-                &lt;div class="form-group">
-                  &lt;label class="sr-only" for="input">Address 1&lt;/label>
-                  &lt;input class="form-control" name="input" placeholder="Address 1" value="" type="text">
-                &lt;/div>
-
-                &lt;div class="form-group">
-                  &lt;label class="sr-only" for="input">Address 2&lt;/label>
-                  &lt;input class="form-control" name="input" placeholder="Address 2" value="" type="text">
-                &lt;/div>
-
-                &lt;div class="form-group">
-                  &lt;label class="sr-only" for="input">City&lt;/label>
-                  &lt;input class="form-control" name="input" placeholder="City" value="" type="text">
-                &lt;/div>
-
-                &lt;div class="row">
-                  &lt;div class="col-sm-6">
-                    &lt;div class="form-group">
-                      &lt;label class="sr-only" for="input">State&lt;/label>
-                      &lt;select class="form-control">
-                        &lt;option disabled="" selected="">State&lt;/option>
-                        &lt;option>Ohio&lt;/option>
-                        &lt;option>Ohio&lt;/option>
-                        &lt;option>Ohio&lt;/option>
-                        &lt;option>Ohio&lt;/option>
-                        &lt;option>Ohio&lt;/option>
-                      &lt;/select>
-                    &lt;/div>
-                  &lt;/div>
-
-                  &lt;div class="col-sm-6">
-                    &lt;div class="form-group">
-                      &lt;label class="sr-only" for="input">Zip&lt;/label>
-                      &lt;input class="form-control" name="input" placeholder="Zip" value="" type="text">
-                    &lt;/div>
-                  &lt;/div>
-                &lt;/div>
-              &lt;/form>
-            &lt;/div>
-          &lt;/div>
-        &lt;/div>
-      &lt;/div>
-      &lt;div class="modal-footer">
-        &lt;div class="container">
-          &lt;div class="row">
-            &lt;div class="col-md-6 col-md-offset-3">
-              &lt;div class="btn-block-mobile">
-                &lt;button class="btn btn-cyan btn-lg" type="button">Add me to this&lt;/button>
-                &lt;button class="btn btn-white btn-outline btn-lg" type="button" onClick="closeModal('#fullscreenModalForm')">Cancel&lt;/button>
-              &lt;/div>
-            &lt;/div>
-          &lt;/div>
-        &lt;/div>
-      &lt;/div>
-    &lt;/div>
-  &lt;/div>
-&lt;/div></pre>
-      </figure>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </section>
   </div>
 </div>
