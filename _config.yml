@@ -21,7 +21,6 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
-  - _data
 
 # Assets declared for jekyll-assets gem
 assets:

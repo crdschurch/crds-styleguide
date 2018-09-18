@@ -1,0 +1,8 @@
+---
+---
+[{% for page in site.pages %}
+  {
+    "name": "{{ page.title }}",
+    "path": "{{ page.path }}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]
