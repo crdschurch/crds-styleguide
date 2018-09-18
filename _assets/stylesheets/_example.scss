@@ -1,8 +1,5 @@
-code {
-  .dark-theme & {
-    background: $cr-gray;
-    color: $cr-gray-darker;
-  }
+.dark-theme .crds-example-code code {
+  color: $cr-white;
 }
 
 .crds-example {
