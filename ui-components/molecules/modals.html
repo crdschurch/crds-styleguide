@@ -160,6 +160,8 @@ layout: default
       </div>
 
       <p>To get the video modal to show display properly, add <code>.modal-video</code> to the wrapping modal div.</p>
+
+      <p class="callout callout-info">Bootstrap modals have a known problem where video audio will continue even after the modal is closed. There are a number of documented solutions to choose from. Bootstrap recommends <a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal" target="_blank">this one</a>.</p>
       {% example html %}
 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#videoModal">
   Video modal
