@@ -35,5 +35,14 @@ assets:
 
 typekit_url: https://use.typekit.net/ccb3vpa.css
 
+imgix_params:
+  jumbotron: "auto=format,compress&w=100&fit=crop"
+  placeholder: "auto=format,compress&w=10"
+  placeholder_clip: "auto=format,compress&w=100&fit=clip"
+  placeholder_square: "auto=format,compress&w=10&h=10&fit=crop"
+  placeholder_sixteen_nine: "auto=format,compress&w=16&h=9&fit=crop"
+
 image_sizes:
   cards_3x: "(min-width: 1200px) 360px, (min-width: 992px) 294px, (min-width: 768px) 720px, 100vw"
+  full_width: "100vw"
+  half_width: "50vw"
