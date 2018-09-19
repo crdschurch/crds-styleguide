@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
-  <div class="container text-center">
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+  <div class="container text-center text-white">
     <ol class="breadcrumb ddk">
       <li>UI COMPONENTS</li>
       <li>MOLECULES</li>
@@ -55,7 +55,7 @@ layout: default
     <p>When you use this class, the text is white by default, as it expects the background image to be dark. You can change this behavior using the <a href="/ui-components/core/colors/text"><code>.text-black</code> helper class</a>.</p>
 
     {% example html %}
-<div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg?w=800&amp;h=425&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+<div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg{{ site.imgix_params.jumbotron }}');">
   <p class="small-heading text-uppercase">I am a small intro heading</p>
   <h1 class="title">the main heading</h1>
   <p>

@@ -4,7 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="jumbotron jumbotron-xl inverted mobile-soft-sides" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-jumbotron.png?w=1400&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6');">
+    <div class="jumbotron jumbotron-xl inverted mobile-soft-sides" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-jumbotron.png?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
       <h1 class="title">digital design kit</h1>
       <p>a style guide for creating digital things</p>
     </div>
@@ -24,7 +24,7 @@
   <div class="row push-bottom push-ends">
     <div class="col-md-4">
       <div class="card mobile-soft-bottom">
-        <img class="card-img-top img-responsive" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-designers.jpg?fit=clip&auto=compress,format" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="">
+        <img class="card-img-top img-responsive full-width" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-designers.jpg?{{ site.imgix_params.placeholder_clip }}" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="" data-optimize-img>
 
         <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Designers</h4>
 
@@ -33,7 +33,7 @@
     </div>
     <div class="col-md-4">
       <div class="card mobile-soft-ends">
-        <img class="card-img-top img-responsive" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-developers.jpg?fit=clip&auto=compress,format" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="">
+        <img class="card-img-top img-responsive full-width" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-developers.jpg?{{ site.imgix_params.placeholder_clip }}" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="" data-optimize-img>
 
         <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Developers</h4>
         <p class="card-text text-gray-dark"><a href="/developers/getting-started/intro">Get started</a> with the big picture or dig into the juicy details of <a href="/developers/getting-started/installation">installation</a> or <a href="/developers/getting-started/naming-conventions">naming conventions</a>.</p>
@@ -41,7 +41,7 @@
     </div>
     <div class="col-md-4">
       <div class="card mobile-soft-ends">
-        <img class="card-img-top img-responsive" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-anyone.jpg?fit=clip&auto=compress,format" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="">
+        <img class="card-img-top img-responsive full-width" src="//crds-cms-uploads.imgix.net/content/images/ddk/ddk-home-anyone.jpg?{{ site.imgix_params.placeholder_clip }}" sizes="{{ site.image_sizes.cards_3x }}" alt="" title="" data-optimize-img>
 
         <h4 class="text-gray-dark font-family-condensed-extra text-uppercase">Communications</h4>
         <p class="card-text text-gray-dark">Maybe you just need an <a href="/assets/logos">official logo</a>, <a href="/ui-components/core/colors/swatches">color</a> or direction on <a href="/designers/guidelines/photography">picking a photo</a> for a presentation.</p>
@@ -55,7 +55,6 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="text-center soft-ends">
-          <!-- 🚨 Element needs background image -->
           <div class="push-ends">
             <div class="inverted">
               <h2 class="font-family-condensed-extra text-uppercase flush-top">UI Components</h2>
