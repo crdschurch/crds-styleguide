@@ -23,10 +23,10 @@ title: Tooltips
     <p class="callout callout-warning" role="alert">Tooltips must be initialized with jQuery: select the specified element and call the tooltip() method.</p>
 
     <p>The following code will enable all tooltips on the document:</p>
-    <pre>
+    {% highlight js %}
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();
-});</pre>
+});{% endhighlight %}
     <section>
       <div class="linkable">
         <a id="default-tooltips" name="default-tooltips" href="/ui-components/atoms/default-tooltips" fragment="default-tooltips" target="_self">
@@ -39,20 +39,11 @@ $(document).ready(function(){
 
       <p>Tooltips work with buttons and button links.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default" data-toggle="tooltip" title="Example text giving more information.">Tooltip on button</button>
-          <button type="button" class="btn btn-link" data-toggle="tooltip" title="Example text giving more information.">Tooltip on link</button>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-default" data-toggle="tooltip" title="Example text giving more information.">Tooltip on button&lt;/button>
-  &lt;button type="button" class="btn btn-link" data-toggle="tooltip" title="Example text giving more information.">Tooltip on link&lt;/button>
-&lt;/div>
-        </pre>
-      </figure>
+      {% example html %}
+<div class="btn-group">
+  <button type="button" class="btn btn-default" data-toggle="tooltip" title="Example text giving more information.">Tooltip on button</button>
+  <button type="button" class="btn btn-link" data-toggle="tooltip" title="Example text giving more information.">Tooltip on link</button>
+</div>{% endexample %}
     </section>
 
     <section>
@@ -67,24 +58,14 @@ $(document).ready(function(){
 
       <p>You can change the direction which a tooltip appears by adding a <code>data-placement</code> attribute to the button.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <div class="btn-group">
-          <button type="button" class="btn btn-default" data-placement="left" data-toggle="tooltip" title="Tooltip on left">Tooltip on left</button>
-          <button type="button" class="btn btn-default" data-placement="right" data-toggle="tooltip" title="Tooltip on right">Tooltip on right</button>
-          <button type="button" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" title="Tooltip on bottom">Tooltip on bottom</button>
-          <button type="button" class="btn btn-default" data-placement="top" data-toggle="tooltip" title="Tooltip on top">Tooltip on top</button>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class="language-markup">
-&lt;div class="btn-group">
-  &lt;button type="button" class="btn btn-default" data-placement="left" data-toggle="tooltip" title="Tooltip on left">Tooltip on left&lt;/button>
-  &lt;button type="button" class="btn btn-default" data-placement="right" data-toggle="tooltip" title="Tooltip on right">Tooltip on right&lt;/button>
-  &lt;button type="button" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" title="Tooltip on bottom">Tooltip on bottom&lt;/button>
-  &lt;button type="button" class="btn btn-default" data-placement="top" data-toggle="tooltip" title="Tooltip on top">Tooltip on top&lt;/button>
-&lt;/div>
-        </pre>
-      </figure>
+      {% example html %}
+<div class="btn-group">
+  <button type="button" class="btn btn-default" data-placement="left" data-toggle="tooltip" title="Tooltip on left">Tooltip on left</button>
+  <button type="button" class="btn btn-default" data-placement="right" data-toggle="tooltip" title="Tooltip on right">Tooltip on right</button>
+  <button type="button" class="btn btn-default" data-placement="bottom" data-toggle="tooltip" title="Tooltip on bottom">Tooltip on bottom</button>
+  <button type="button" class="btn btn-default" data-placement="top" data-toggle="tooltip" title="Tooltip on top">Tooltip on top</button>
+</div>
+      {% endexample %}
     </section>
   </div>
 </div>

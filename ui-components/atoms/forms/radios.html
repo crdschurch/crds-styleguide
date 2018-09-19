@@ -81,58 +81,29 @@ title: Forms - Radios
 
         <p>Consider when labels exceed 44 characters or helper text is necessary for each option.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Label</label>
-            <form class="controls-stacked flush-ends">
-              <label class="control radio">
-                <input checked="checked" id="radio1" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option one is selected
-              </label>
-              <label class="control radio">
-                <input id="radio2" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option two will deselect option one
-              </label>
-              <label class="control radio disabled">
-                <input disabled="disabled" id="radio3" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option three is disabled
-              </label>
-            </form>
-            <p class="help-block hard-top">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Label&lt;/label>
-  &lt;form class="controls-stacked flush-ends">
-    &lt;label class="control radio">
-      &lt;input checked="checked" id="radio1" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <form class="controls-stacked flush-ends">
+    <label class="control radio">
+      <input checked="checked" id="radio1" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option one is selected
-    &lt;/label>
-    &lt;label class="control radio">
-      &lt;input id="radio2" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option two will deselect option one
-    &lt;/label>
-    &lt;label class="control radio disabled">
-      &lt;input disabled="disabled" id="radio3" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+    </label>
+    <label class="control radio disabled">
+      <input disabled="disabled" id="radio3" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option three is disabled
-    &lt;/label>
-  &lt;/form>
-  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-ec85dc52-91c7-41d1-89aa-6e870bc6afaf">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+    </label>
+  </form>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -145,58 +116,29 @@ title: Forms - Radios
           <h3 class="component-header" data-linked="Mon Sep 10 2018 12:44:30 GMT-0400 (EDT)">Radio (inline)</h3>
         </div>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Label</label>
-            <div class="controls-inline flush-ends">
-              <label class="control radio">
-                <input checked="checked" id="radio1" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option 1
-              </label>
-              <label class="control radio">
-                <input id="radio2" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option 2
-              </label>
-              <label class="control radio disabled">
-                <input disabled="disabled" id="radio3" name="radio" type="radio">
-                <span class="control-indicator"></span>
-                Option 3 (disabled)
-              </label>
-            </div>
-            <p class="help-block hard-top">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Label&lt;/label>
-  &lt;div class="controls-inline flush-ends">
-    &lt;label class="control radio">
-      &lt;input checked="checked" id="radio1" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Label</label>
+  <div class="controls-inline flush-ends">
+    <label class="control radio">
+      <input checked="checked" id="radio1" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option 1
-    &lt;/label>
-    &lt;label class="control radio">
-      &lt;input id="radio2" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+    </label>
+    <label class="control radio">
+      <input id="radio2" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option 2
-    &lt;/label>
-    &lt;label class="control radio disabled">
-      &lt;input disabled="disabled" id="radio3" name="radio" type="radio">
-      &lt;span class="control-indicator">&lt;/span>
+    </label>
+    <label class="control radio disabled">
+      <input disabled="disabled" id="radio3" name="radio" type="radio">
+      <span class="control-indicator"></span>
       Option 3 (disabled)
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block hard-top">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-72549f7b-32ad-427a-9f56-594571268ac1">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+    </label>
+  </div>
+  <p class="help-block hard-top">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -211,46 +153,23 @@ title: Forms - Radios
 
         <p>Best for limited options, utilizing a single horizontal row.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">How much?</label>
-            <div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">$50
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">$75
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">How much?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">$50
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">$75
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-ba67e0b2-21c1-40af-9832-1fb527bbb211">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div aria-label="..." class="btn-group btn-group-bar" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">$50
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">$75
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -265,46 +184,23 @@ title: Forms - Radios
 
         <p>Best for limited options, utilizing a single horizontal row that spans the full width of a column.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">How much?</label>
-            <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">$50
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">$75
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">How much?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">$50
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">$75
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-3164ab1f-ec36-4710-9045-2e984385d777">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">How much?</label>
+  <div aria-label="..." class="btn-group btn-group-bar btn-group-bar-flexbox" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="radio" autocomplete="off" checked="checked">$25 (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">$50
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">$75
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -319,58 +215,29 @@ title: Forms - Radios
 
         <p>Use with many options when horizontal space allows.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Best part of the weekend experience?</label>
-            <div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Music
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Videos/Media
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Message
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">I love it all (seriously)
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class="language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Best part of the weekend experience?&lt;/label>
-  &lt;div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Music
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Videos/Media
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Message
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">I love it all (seriously)
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-27cba1cb-42a7-4dc9-a978-de73f509ab02">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div aria-label="..." class="btn-group" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Music
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Videos/Media
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Message
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">I love it all (seriously)
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -385,58 +252,29 @@ title: Forms - Radios
 
         <p>Use when vertical space allows.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="form-group">
-            <label class="control-label block">Best part of the weekend experience?</label>
-            <div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
-              <label class="btn btn-default active">
-                <input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Music
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Videos/Media
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">Message
-              </label>
-              <label class="btn btn-default">
-                <input type="radio" autocomplete="off">I love it all (seriously)
-              </label>
-            </div>
-            <p class="help-block">Helper text if needed</p>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="form-group">
-  &lt;label class="control-label block">Best part of the weekend experience?&lt;/label>
-  &lt;div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
-    &lt;label class="btn btn-default active">
-      &lt;input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Music
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Videos/Media
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">Message
-    &lt;/label>
-    &lt;label class="btn btn-default">
-      &lt;input type="radio" autocomplete="off">I love it all (seriously)
-    &lt;/label>
-  &lt;/div>
-  &lt;p class="help-block">Helper text if needed&lt;/p>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7091f86a-c6d5-45cb-8513-bea36d5b0e66">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="form-group">
+  <label class="control-label block">Best part of the weekend experience?</label>
+  <div aria-label="..." class="btn-group btn-group-block" role="group" data-toggle="buttons">
+    <label class="btn btn-default active">
+      <input type="radio" autocomplete="off" checked="checked">Seeing friends (Pre-selected)
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Music
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Videos/Media
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">Message
+    </label>
+    <label class="btn btn-default">
+      <input type="radio" autocomplete="off">I love it all (seriously)
+    </label>
+  </div>
+  <p class="help-block">Helper text if needed</p>
+</div>
+        {% endexample %}
       </section>
     </div>
   </div>

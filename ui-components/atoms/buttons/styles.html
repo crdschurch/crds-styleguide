@@ -64,24 +64,12 @@ title: Buttons - Styles
 
         <p class="callout callout-info"><code>onclick="return false"</code> has been added to all link tag selectors to prevent the page from refreshing. This line of code is not necessarily needed for your project.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <a class="btn btn-blue" href="#" onclick="return false" role="button">Link</a>
-          <button class="btn btn-blue" type="button">Button</button>
-          <input class="btn btn-blue" value="Input" type="button">
-          <input class="btn btn-blue" value="Submit" type="submit">
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;a class="btn btn-blue" href="#"onclick="return false" role="button">Link&lt;/a>
-&lt;button class="btn btn-blue" type="button">Button&lt;/button>
-&lt;input class="btn btn-blue" value="Input" type="button">
-&lt;input class="btn btn-blue" value="Submit" type="submit"></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-93cb243a-922e-4bc6-8b5f-ae180fb39c2b">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<a class="btn btn-blue" href="#" role="button">Link</a>
+<button class="btn btn-blue" type="button">Button</button>
+<input class="btn btn-blue" value="Input" type="button">
+<input class="btn btn-blue" value="Submit" type="submit">
+        {% endexample %}
       </section>
 
       <section>
@@ -97,30 +85,15 @@ title: Buttons - Styles
 
         <p class="callout callout-info">For obvious reasons, the <code>.btn-white</code> style button works best on a dark background. All of the following white button examples have been given a wrapper with a dark background (and some minor padding for aesthetic reasons).</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <button class="btn btn-blue" type="button">Blue Primary</button>
-          <button class="btn btn-cyan" type="button">Cyan Primary</button>
-          <button class="btn btn-gray" type="button">Gray Primary</button>
-          <button class="btn btn-gray-light" type="button">Gray Light Primary</button>
-          <p class="bg-charcoal soft-quarter">
-            <button class="btn btn-white" type="button">White Primary</button>
-          </p>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;button class="btn btn-blue" type="button">Blue Primary&lt;/button>
-&lt;button class="btn btn-cyan" type="button">Cyan Primary&lt;/button>
-&lt;button class="btn btn-gray" type="button">Gray Primary&lt;/button>
-&lt;button class="btn btn-gray-light" type="button">Gray Light Primary&lt;/button>
-&lt;p class="bg-charcoal soft-quarter">
-  &lt;button class="btn btn-white" type="button">White Primary&lt;/button>
-&lt;/p></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7b900496-aad7-4c17-bf7a-b3245583eaee">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<button class="btn btn-blue" type="button">Blue Primary</button>
+<button class="btn btn-cyan" type="button">Cyan Primary</button>
+<button class="btn btn-gray" type="button">Gray Primary</button>
+<button class="btn btn-gray-light" type="button">Gray Light Primary</button>
+<p class="bg-charcoal soft-quarter">
+  <button class="btn btn-white" type="button">White Primary</button>
+</p>
+        {% endexample %}
       </section>
 
       <section>
@@ -134,30 +107,15 @@ title: Buttons - Styles
         </div>
         <p>Adding a class of <code>.btn-outline</code> to any <code>.btn</code> element will invert the text and background colors, creating an outline effect.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <button class="btn btn-blue btn-outline" type="button">Blue Secondary</button>
-          <button class="btn btn-cyan btn-outline" type="button">Cyan Secondary</button>
-          <button class="btn btn-gray btn-outline" type="button">Gray Secondary</button>
-          <button class="btn btn-gray-light btn-outline" type="button">Gray Light Secondary</button>
-          <p class="bg-charcoal soft-quarter">
-            <button class="btn btn-white btn-outline" type="button">White Secondary</button>
-          </p>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;button class="btn btn-blue btn-outline" type="button">Blue Secondary&lt;/button>
-&lt;button class="btn btn-cyan btn-outline" type="button">Cyan Secondary&lt;/button>
-&lt;button class="btn btn-gray btn-outline" type="button">Gray Secondary&lt;/button>
-&lt;button class="btn btn-gray-light btn-outline" type="button">Gray Light Secondary&lt;/button>
-&lt;p class="bg-charcoal soft-quarter">
-  &lt;button class="btn btn-white btn-outline" type="button">White Secondary&lt;/button>
-&lt;/p></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c756bbe1-b748-45f2-8055-871df5fd9e9a">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<button class="btn btn-blue btn-outline" type="button">Blue Secondary</button>
+<button class="btn btn-cyan btn-outline" type="button">Cyan Secondary</button>
+<button class="btn btn-gray btn-outline" type="button">Gray Secondary</button>
+<button class="btn btn-gray-light btn-outline" type="button">Gray Light Secondary</button>
+<p class="bg-charcoal soft-quarter">
+  <button class="btn btn-white btn-outline" type="button">White Secondary</button>
+</p>
+        {% endexample %}
       </section>
 
       <section>
@@ -171,20 +129,10 @@ title: Buttons - Styles
         </div>
         <p>There are two flavors of link-style buttons, a primary style and a secondary style. To create a link-style button, add a class of <code>.btn-link</code> to your button element.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <button class="btn btn-link" type="button">Link Primary</button>
-          <button class="btn btn-link secondary" type="button">Link Secondary</button>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;button class="btn btn-link" type="button">Link Primary&lt;/button>
-&lt;button class="btn btn-link secondary" type="button">Link Secondary&lt;/button></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4080cf87-eedb-4e2b-979f-d12fb9e80fa8">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<button class="btn btn-link" type="button">Link Primary</button>
+<button class="btn btn-link secondary" type="button">Link Secondary</button>
+        {% endexample %}
       </section>
 
       <section>
@@ -198,40 +146,20 @@ title: Buttons - Styles
         </div>
         <p>Adding <code>.btn-lg</code> or <code>.btn-sm</code> will increase or decrease your button element.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <p>
-            <button class="btn btn-blue btn-lg" type="button">Large Button</button>
-            <button class="btn btn-blue btn-outline btn-lg" type="button">Large Button</button>
-          </p>
-          <p>
-            <button class="btn btn-blue" type="button">Button</button>
-            <button class="btn btn-blue btn-outline" type="button">Button</button>
-          </p>
-          <p>
-            <button class="btn btn-blue btn-sm" type="button">Small Button</button>
-            <button class="btn btn-blue btn-outline btn-sm" type="button">Small Button</button>
-          </p>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;p>
-  &lt;button class="btn btn-blue btn-lg" type="button">Large Button&lt;/button>
-  &lt;button class="btn btn-blue btn-outline btn-lg" type="button">Large Button&lt;/button>
-&lt;/p>
-&lt;p>
-  &lt;button class="btn btn-blue" type="button">Button&lt;/button>
-  &lt;button class="btn btn-blue btn-outline" type="button">Button&lt;/button>
-&lt;/p>
-&lt;p>
-  &lt;button class="btn btn-blue btn-sm" type="button">Small Button&lt;/button>
-  &lt;button class="btn btn-blue btn-outline btn-sm" type="button">Small Button&lt;/button>
-&lt;/p></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-f5a29935-bbff-43d1-9801-a6e4b1427f8b">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<p>
+  <button class="btn btn-blue btn-lg" type="button">Large Button</button>
+  <button class="btn btn-blue btn-outline btn-lg" type="button">Large Button</button>
+</p>
+<p>
+  <button class="btn btn-blue" type="button">Button</button>
+  <button class="btn btn-blue btn-outline" type="button">Button</button>
+</p>
+<p>
+  <button class="btn btn-blue btn-sm" type="button">Small Button</button>
+  <button class="btn btn-blue btn-outline btn-sm" type="button">Small Button</button>
+</p>
+        {% endexample %}
       </section>
 
       <section>
@@ -245,20 +173,10 @@ title: Buttons - Styles
         </div>
         <p>To create a block level button, which spans the width of its parent, add a class of <code>.btn-block</code>.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <button class="btn btn-blue btn-block" type="button">Button</button>
-          <button class="btn btn-blue btn-outline btn-block" type="button">Button</button>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;button class="btn btn-blue btn-block" type="button">Button&lt;/button>
-&lt;button class="btn btn-blue btn-outline btn-block" type="button">Button&lt;/button></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-4ed9b9fe-7d9c-4ea9-93dd-e3795fcb8c50">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<button class="btn btn-blue btn-block" type="button">Button</button>
+<button class="btn btn-blue btn-outline btn-block" type="button">Button</button>
+        {% endexample %}
       </section>
     </div>
   </div>

@@ -29,35 +29,17 @@ title: Jumbotrons
     <p>The default jumbotron supports a title (<code>.title</code>), paragraph of text (<code>p</code>),
       a small, uppercase paragraph (<code>.small-heading.text-uppercase</code>), and a call-to-action button.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="jumbotron">
-        <p class="small-heading text-uppercase">I am a small intro heading</p>
-        <h1 class="title">the main heading</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Repudiandae quos reiciendis vitae eum.
-        </p>
-        <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
-      </div>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="jumbotron">
-  &lt;p class="small-heading text-uppercase">I am a small intro heading&lt;/p>
-  &lt;h1 class="title">the main heading&lt;/h1>
-  &lt;p>
+    {% example html %}
+<div class="jumbotron">
+  <p class="small-heading text-uppercase">I am a small intro heading</p>
+  <h1 class="title">the main heading</h1>
+  <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     Repudiandae quos reiciendis vitae eum.
-  &lt;/p>
-  &lt;a class="btn btn-lg btn-primary" href="#">Call To Action&lt;/a>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-9b60a213-6791-487f-8dc0-a348be36a54b">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+  </p>
+  <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="background-image" name="background-image" href="/ui-components/molecules/jumbotrons#background-image" fragment="background-image" target="_self">
@@ -73,34 +55,17 @@ title: Jumbotrons
 
     <p>When you use this class, the text is white by default, as it expects the background image to be dark. You can change this behavior using the <a href="/ui-components/core/colors/text"><code>.text-black</code> helper class</a>.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg{{ site.imgix_params.jumbotron }}');">
-        <p class="small-heading text-uppercase">I am a small intro heading</p>
-        <h1 class="title">the main heading</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Repudiandae quos reiciendis vitae eum.
-        </p>
-        <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
-      </div>
-    </div>
-    <figure class="highlight">
-      <pre>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg?w=800&amp;h=425&amp;fit=crop&amp;crop=entropy&amp;ixlib=js-1.0.6')</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>small-heading text-uppercase<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>I am a small intro heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the main heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Repudiandae quos reiciendis vitae eum.
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-lg btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Call To Action<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-270b5321-c14a-4067-8023-e02c75adcc2a">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<div class="jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/streaming-anywhere-hero-off.jpg{{ site.imgix_params.jumbotron }}');">
+  <p class="small-heading text-uppercase">I am a small intro heading</p>
+  <h1 class="title">the main heading</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Repudiandae quos reiciendis vitae eum.
+  </p>
+  <a class="btn btn-lg btn-primary" href="#">Call To Action</a>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="background-video" name="background-video" href="/ui-components/molecules/jumbotrons#background-video" fragment="background-video" target="_self">
@@ -121,75 +86,7 @@ title: Jumbotrons
       <li>The <code>src</code> tag needs to point to an absolute url of where the video is stored, and, according to <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video">HTML5 video tag documentation</a>, that url should end with a common video extension, such as .mp4.</li>
     </ul>
 
-    <div class="crds-example crds-embedded-markup">
-      <iframe allowtransparency="true" src="/examples/jumbotron-bg-video/index.html" width="100%" height="550" frameborder="0"></iframe>
-      <div class="example-row">
-        <div class="tree">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">index.html</a>
-          </div>
-        </div>
-        <div class="markup" id="markup-clippable-8f69f1e6-81a4-4554-bc46-f55c17d8d4ea">
-          <pre>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Jumbotron Video<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-
-  &lt;link rel="stylesheet" href="/app.e25d34d3e6f2d30d1696.css"" /&gt;
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://use.typekit.net/ccb3vpa.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-      Typekit<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token keyword">async</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/examples/_shared/theme_toggler.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron bg-video jumbotron-xl<span class="token punctuation">"</span></span> <span class="token attr-name">data-aspect-ratio</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2.34615<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bg-video-player<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>240<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>360<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bg-jumbotron-video hide<span class="token punctuation">"</span></span> <span class="token attr-name">autoplay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>autoplay<span class="token punctuation">"</span></span> <span class="token attr-name">loop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loop<span class="token punctuation">"</span></span> <span class="token attr-name">muted</span> <span class="token attr-name">playsinline</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://crds-cms-uploads.imgix.net/media/video/loop-video.mp4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron-content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the main heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quos reiciendis vitae eum.
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary CTA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-gray<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary CTA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-jumbotron-video-v0.1.0.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">new</span> <span class="token class-name">CRDS<span class="token punctuation">.</span>JumbotronVideos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-8f69f1e6-81a4-4554-bc46-f55c17d8d4ea">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+    {% interactive_example name=jumbotron-bg-video height=550 %}
 
     <div class="linkable">
       <a id="inline-video" name="inline-video" href="/ui-components/molecules/jumbotrons#inline-video" fragment="inline-video" target="_self">
@@ -212,74 +109,7 @@ title: Jumbotrons
       <li>Use a <code>data-video-id</code> attribute on the video trigger element to know which YouTube video to load  inline.</li>
     </ul>
 
-    <div class="crds-example crds-embedded-markup">
-      <iframe allowtransparency="true" src="/examples/jumbotron-inline-video/index.html" width="100%" height="550" frameborder="0"></iframe>
-      <div class="example-row">
-        <div class="tree">
-          <div class="list-group">
-            <a class="list-group-item active" href="#">index.html</a>
-          </div>
-        </div>
-        <div class="markup" id="markup-clippable-6ffdf25d-cc0b-4227-a279-957668dfabbc">
-          <pre>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Jumbotron Video<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
-
-  &lt;link rel="stylesheet" href="/app.e25d34d3e6f2d30d1696.css"" /&gt;
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/examples/jumbotron-inline-video/inline-video.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://use.typekit.net/ccb3vpa.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-    <span class="token keyword">try</span> <span class="token punctuation">{</span>
-      Typekit<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token keyword">async</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/examples/_shared/theme_toggler.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron inline-video jumbotron-xl<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url('//crds-cms-uploads.imgix.net/media/stills/crossroads-church-home.jpg')</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inline-video-player<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>jumbotron-content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>inline-video-trigger<span class="token punctuation">"</span></span> <span class="token attr-name">data-video-id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>LIdCR2rywl4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>the main heading<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae quos reiciendis vitae eum.
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-center<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary CTA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-gray<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary CTA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//d1tmclqz61gqwd.cloudfront.net/javascripts/crds-jumbotron-video-v0.1.0.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
-    <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">new</span> <span class="token class-name">CRDS<span class="token punctuation">.</span>JumbotronVideos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-6ffdf25d-cc0b-4227-a279-957668dfabbc">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+    {% interactive_example name=jumbotron-inline-video height=550 %}
 
     <div class="linkable">
       <a id="sizes" name="sizes" href="/ui-components/molecules/jumbotrons#sizes" fragment="sizes" target="_self">
@@ -292,40 +122,19 @@ title: Jumbotrons
 
     <p>You can adjust the height of the jumbotron by adding a sizing class, as shown below.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="jumbotron jumbotron-sm">
-        <h1 class="title">the main heading</h1>
-      </div>
-      <div class="jumbotron jumbotron-md">
-        <h1 class="title">the main heading</h1>
-      </div>
-      <div class="jumbotron jumbotron-lg">
-        <h1 class="title">the main heading</h1>
-      </div>
-      <div class="jumbotron jumbotron-xl">
-        <h1 class="title">the main heading</h1>
-      </div>
-    </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="jumbotron jumbotron-sm">
-  &lt;h1 class="title">the main heading&lt;/h1>
-&lt;/div>
-&lt;div class="jumbotron jumbotron-md">
-  &lt;h1 class="title">the main heading&lt;/h1>
-&lt;/div>
-&lt;div class="jumbotron jumbotron-lg">
-  &lt;h1 class="title">the main heading&lt;/h1>
-&lt;/div>
-&lt;div class="jumbotron jumbotron-xl">
-  &lt;h1 class="title">the main heading&lt;/h1>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-340fc02c-180d-4daf-bf02-961069dfb758">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    {% example html %}
+<div class="jumbotron jumbotron-sm">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-md">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-lg">
+  <h1 class="title">the main heading</h1>
+</div>
+<div class="jumbotron jumbotron-xl">
+  <h1 class="title">the main heading</h1>
+</div>
+    {% endexample %}
   </div>
 </div>

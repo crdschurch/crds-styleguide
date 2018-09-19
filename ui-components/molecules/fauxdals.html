@@ -20,65 +20,32 @@ title: Fauxdals
     <p>Fauxdals are modal-like pages that have the ability to be "closed out of". They are designed to cover the entire height/width of the viewport.</p>
 
     <div class="fauxdal-example">
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <div class="fauxdal-wrapper">
-          <div class="fauxdal fauxdal-center">
-            <div class="container-fluid">
-              <div class="pull-right close">
-                <a>
-                  <svg class="icon icon-1" viewBox="0 0 256 256">
-                    <use xlink:href="/assets/svgs/icons.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                </a>
-              </div>
-
-              <div class="fauxdal-content">
-                <h1 class="title">Fauxdal Title</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </div>
-
-              <br>
-
-              <footer class="page-footer btn-group-vertical">
-                <button class="btn btn-secondary" type="button">Call To Action</button>
-              </footer>
-            </div>
-          </div>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;div class="fauxdal-wrapper">
-  &lt;div class="fauxdal fauxdal-center">
-    &lt;div class="container-fluid">
-      &lt;div class="pull-right close">
-        &lt;a>
-          &lt;svg class="icon icon-1" viewBox="0 0 256 256">
-            &lt;use xlink:href="/assets/svgs/icons.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink">&lt;/use>
-          &lt;/svg>
-        &lt;/a>
-      &lt;/div>
-
-      &lt;div class="fauxdal-content">
-        &lt;h1 class="title">Fauxdal Title&lt;/h1>
-        &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p>
-      &lt;/div>
-
-      &lt;br>
-
-      &lt;footer class="page-footer btn-group-vertical">
-        &lt;button class="btn btn-secondary" type="button">Call To Action&lt;/button>
-      &lt;/footer>
-    &lt;/div>
-  &lt;/div>
-&lt;/div>
-        </pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-00827223-f0f7-4473-a8fc-7f834f5f5548">
+      {% example html %}
+<div class="fauxdal-wrapper">
+  <div class="fauxdal fauxdal-center">
+    <div class="container-fluid">
+      <div class="pull-right close">
+        <a>
           <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            <use xlink:href="/assets/svgs/icons.svg#close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-        </button>
-      </figure>
+        </a>
+      </div>
+
+      <div class="fauxdal-content">
+        <h1 class="title">Fauxdal Title</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+
+      <br>
+
+      <footer class="page-footer btn-group-vertical">
+        <button class="btn btn-secondary" type="button">Call To Action</button>
+      </footer>
+    </div>
+  </div>
+</div>
+      {% endexample %}
     </div>
   </div>
 </div>
