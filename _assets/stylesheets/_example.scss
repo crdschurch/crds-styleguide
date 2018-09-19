@@ -1,5 +1,22 @@
-.dark-theme .crds-example-code code {
-  color: $cr-white;
+.dark-theme {
+  div.highlight,
+  figure.highlight {
+    background: transparent;
+  }
+  pre {
+    border-color: darken($cr-gray-dark, 10);
+  }
+  code {
+    background-color: #404040;
+    color: $cr-gray-light;
+  }
+  .crds-example-code code {
+    background-color: transparent;
+  }
+  .alert code {
+    background-color: $code-bg;
+    color: $code-color;
+  }
 }
 
 .crds-example {
