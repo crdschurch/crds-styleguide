@@ -72,40 +72,20 @@ layout: default
 
       <p>Adding a class of <code>.searchbar</code> to your input's parent container will disable validation on that input. In this example, we're using input button groups, found in the <a href="/ui-components/atoms/forms/groups">groups documentation</a>.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <form class="searchbar">
-          <div class="input-group">
-            <input class="form-control" placeholder="Search ..." type="text">
-            <span class="input-group-btn">
-              <button class="btn btn-secondary" type="submit">
-                <svg class="icon icon-1" viewBox="0 0 256 256">
-                  <use xlink:href="/assets/svgs/icons.svg#search"></use>
-                </svg>
-              </button>
-            </span>
-          </div>
-        </form>
-      </div>
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;form class="searchbar">
-  &lt;div class="input-group">
-    &lt;input class="form-control" placeholder="Search ..." type="text">
-    &lt;span class="input-group-btn">
-      &lt;button class="btn btn-secondary" type="submit">
-        &lt;svg class="icon icon-1" viewBox="0 0 256 256">
-          &lt;use xlink:href="/assets/svgs/icons.svg#search">&lt;/use>
-        &lt;/svg>
-      &lt;/button>
-    &lt;/span>
-  &lt;/div>
-&lt;/form></pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-96d7af73-f18b-438a-81ce-1196a450781a">
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </button>
-      </figure>
+      {% example html %}
+<form class="searchbar">
+  <div class="input-group">
+    <input class="form-control" placeholder="Search ..." type="text">
+    <span class="input-group-btn">
+      <button class="btn btn-secondary" type="submit">
+        <svg class="icon icon-1" viewBox="0 0 256 256">
+          <use xlink:href="/assets/svgs/icons.svg#search"></use>
+        </svg>
+      </button>
+    </span>
+  </div>
+</form>
+      {% endexample %}
     </div>
   </div>
 </div>

@@ -2,7 +2,10 @@
 //= require ./vendor/bootstrap.min
 //= require ./vendor/imgix.min
 //= require ./vendor/imgix-optimizer
+//= require ./vendor/clipboard.min
+//= require ./components/clippable
 //= require ./components/dark-theme
+//= require ./components/images
+//= require ./components/interactive_example
 //= require ./components/modal-example
 //= require ./components/tooltips-example
-//= require ./components/images

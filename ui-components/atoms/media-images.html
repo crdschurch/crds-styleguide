@@ -35,32 +35,15 @@ layout: default
 
     <p>If no overlay image has been uploaded, the <code>.media-img-wrapper</code> will show the default image associated with <code>.media-object-default</code>.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="media">
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-6 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('[some url here]');"></div>
-        </div>
-      </div>
+    {% example html %}
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
     </div>
-
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="media">
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-6 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('[some url here]');">&lt;/div>
-  &lt;/div>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-7b5c325b-f39d-4767-94ed-d4e4c4859212">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('[some url here]');"></div>
+  </div>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="media-image---overlay" name="media-image---overlay" href="/ui-components/atoms/media-images#media-image---overlay" fragment="media-image---overlay" target="_self">
@@ -75,32 +58,15 @@ layout: default
 
     <p>The class <code>.media-object-overlay</code> positions the overlay image.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="media">
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-6 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-      </div>
+    {% example html %}
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
     </div>
-
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="media">
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-6 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-de77d81e-fd48-44e7-87ad-6f4888674b79">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
+</div>
+    {% endexample %}
 
     <div class="linkable">
       <a id="media-image---sizing" name="media-image---sizing" href="/ui-components/atoms/media-images#media-image---sizing" fragment="media-image---sizing" target="_self">
@@ -113,90 +79,44 @@ layout: default
 
     <p>Image sizing can be manipulated using the class <code>.img-size-*</code>, where <code>*</code> can be any number 1 - 6. Note that both <code>.media-object</code> divs <strong>must</strong> have the same sizing class applied.</p>
 
-    <div class="crds-example crds-inline-markup" data-processed="true">
-      <div class="media">
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-1 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-1 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-2 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-2 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-3 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-3 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-4 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-4 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-5 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-5 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-
-        <div class="media-img-wrapper">
-          <div class="media-object img-size-6 media-object-default img-circle">
-          </div>
-          <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
-        </div>
-      </div>
+    {% example html %}
+<div class="media">
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-1 media-object-default img-circle">
     </div>
-    <figure class="highlight">
-      <pre class=" language-markup">
-&lt;div class="media">
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-1 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-1 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
+    <div class="media-object img-size-1 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
 
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-2 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-2 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-2 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-2 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
 
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-3 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-3 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-3 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-3 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
 
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-4 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-4 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-4 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-4 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
 
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-5 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-5 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-5 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-5 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
 
-  &lt;div class="media-img-wrapper">
-    &lt;div class="media-object img-size-6 media-object-default img-circle">
-    &lt;/div>
-    &lt;div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');">&lt;/div>
-  &lt;/div>
-&lt;/div>
-      </pre>
-      <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-53ee7bdc-2c10-4369-827c-c4ebf168fc27">
-        <svg class="icon icon-1" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </button>
-    </figure>
+  <div class="media-img-wrapper">
+    <div class="media-object img-size-6 media-object-default img-circle">
+    </div>
+    <div class="media-object img-size-6 media-object-overlay img-circle" style="background-image: url('http://www.ucblueash.edu/now/wp-content/uploads/2017/01/chuck-mingo.jpg');"></div>
+  </div>
+</div>
+    {% endexample %}
   </div>
 </div>

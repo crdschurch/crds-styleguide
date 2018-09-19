@@ -53,9 +53,7 @@ layout: default
 
       <p>Execute the following command to update your application dependencies...</p>
 
-      <figure class="highlight">
-        <pre class="language-bash">npm install crds-styles --save-dev</pre>
-      </figure>
+      {% highlight text %}npm install crds-styles --save-dev{% endhighlight %}
 
       <br>
 
@@ -65,9 +63,7 @@ layout: default
 
       <p>Next, import <code>crds-styles</code> by adding the following line within your application’s SCSS manifest file...</p>
 
-      <figure class="highlight">
-        <pre class="language-css">@import ‘crds-styles/assets/stylesheets/bootstrap’;</pre>
-      </figure>
+      {% highlight scss %}@import 'crds-styles/assets/stylesheets/bootstrap';{% endhighlight %}
       <br>
       <h3 class="component-header">Update Your Build Process</h3>
 
@@ -77,8 +73,7 @@ layout: default
 
       <p>An example configuration for Webpack builds might look like this…</p>
 
-      <figure class="highlight">
-        <pre class="language-javascript">
+      {% highlight ts %}
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -91,8 +86,7 @@ module.exports = {
       }
     ])
   ]
-}</pre>
-      </figure>
+}{% endhighlight %}
 
       <br>
 

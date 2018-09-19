@@ -53,34 +53,17 @@ layout: default
           <h3 class="component-header" data-linked="Mon Sep 10 2018 16:49:05 GMT-0400 (EDT)">Default Card</h3>
         </div>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="card">
-            <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-            <div class="card-block">
-              <h4 class="card-title">Card title</h4>
-              <h5 class="card-subtitle">Card subtitle</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a class="card-link" href="#">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="card">
-  &lt;img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-  &lt;div class="card-block">
-    &lt;h4 class="card-title">Card title&lt;/h4>
-    &lt;h5 class="card-subtitle">Card subtitle&lt;/h5>
-    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p>
-    &lt;a class="card-link" href="#">Go somewhere&lt;/a>
-  &lt;/div>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-c32a4d78-1e7d-46b0-a7e4-adb1396ed9d9">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="card">
+  <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <h5 class="card-subtitle">Card subtitle</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a class="card-link" href="#">Go somewhere</a>
+  </div>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -95,32 +78,16 @@ layout: default
 
         <p>Modifier classes can be added to adjust the look of a given card. Here, the class <code>.card-title--overlap</code> has been added to the header element, which allows the text to overlap a top-placed image and provides a stylized emdash below.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="card">
-            <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"  src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-            <div class="card-block">
-              <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a class="card-link" href="#">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="card">
-  &lt;img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"  src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-  &lt;div class="card-block">
-    &lt;h4 class="card-title card-title--overlap text-uppercase">Card title&lt;/h4>
-    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p>
-    &lt;a class="card-link" href="#">Go somewhere&lt;/a>
-  &lt;/div>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-caba44be-bf65-47b5-999c-c21d5e116219">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="card">
+  <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"  src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
+  <div class="card-block">
+    <h4 class="card-title card-title--overlap text-uppercase">Card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a class="card-link" href="#">Go somewhere</a>
+  </div>
+</div>
+        {% endexample %}
       </section>
       <section>
         <div class="linkable">
@@ -136,40 +103,20 @@ layout: default
 
         <p>For left alignment on cards, adding a <code>.img-caption--left</code> to the <code>.img-caption</code> element will align the caption to the left, with <code>1rem</code> of padding.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="card">
-            <div class="card-img-caption">
-              <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-              <div class="img-caption">Card image caption</div>
-            </div>
-            <div class="card-block text-center">
-              <h4 class="card-title">Card title</h4>
-              <h5 class="card-subtitle">Card subtitle</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a class="card-link" href="#">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-&lt;div class="card">
-  &lt;div class="card-img-caption">
-    &lt;img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-    &lt;div class="img-caption">Card image caption&lt;/div>
-  &lt;/div>
-  &lt;div class="card-block text-center">
-    &lt;h4 class="card-title">Card title&lt;/h4>
-    &lt;h5 class="card-subtitle">Card subtitle&lt;/h5>
-    &lt;p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p>
-    &lt;a class="card-link" href="#">Go somewhere&lt;/a>
-  &lt;/div>
-&lt;/div></pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-6235f97a-28b9-4cf7-a330-365ff7633dcf">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="card">
+  <div class="card-img-caption">
+    <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
+    <div class="img-caption">Card image caption</div>
+  </div>
+  <div class="card-block text-center">
+    <h4 class="card-title">Card title</h4>
+    <h5 class="card-subtitle">Card subtitle</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a class="card-link" href="#">Go somewhere</a>
+  </div>
+</div>
+        {% endexample %}
       </section>
 
       <section>
@@ -184,27 +131,17 @@ layout: default
 
         <p>Cards can use utility classes to modify their appearance. Here, the text has been centered using <code>.text-center</code>.</p>
 
-        <div class="crds-example crds-inline-markup" data-processed="true">
-          <div class="card">
-            <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
-            <div class="card-block text-center">
-              <h4 class="card-title">Card title</h4>
-              <h5 class="card-subtitle">Card subtitle</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a class="card-link" href="#">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <figure class="highlight">
-          <pre class=" language-markup">
-
-          </pre>
-          <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-18c74344-c8be-4985-aa12-43e8e5e2859a">
-            <svg class="icon icon-1" viewBox="0 0 256 256">
-              <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </button>
-        </figure>
+        {% example html %}
+<div class="card">
+  <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized">
+  <div class="card-block text-center">
+    <h4 class="card-title">Card title</h4>
+    <h5 class="card-subtitle">Card subtitle</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a class="card-link" href="#">Go somewhere</a>
+  </div>
+</div>
+        {% endexample %}
       </section>
     </div>
   </div>

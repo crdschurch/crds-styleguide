@@ -46,8 +46,7 @@ layout: default
 
       <p>Consider the following example...</p>
 
-      <figure class="highlight">
-        <pre class="language-css">
+{% highlight css %}
 .btn-1 {
   padding: 1em;
   border: 1px solid #000;
@@ -58,13 +57,12 @@ layout: default
   padding: 1em;
   border: 1px solid #000;
   color: red;
-}</pre>
-      </figure>
+}{% endhighlight %}
+
       <br>
       <p>This is pretty verbose. We can make these selectors a little cleaner by refactoring them in an object-oriented fashion...</p>
 
-      <figure class="highlight">
-        <pre class="language-css">
+{% highlight css %}
 .btn {
   padding: 1em;
   border: 1px solid #000;
@@ -76,21 +74,18 @@ layout: default
 
 .btn-red {
   color: red;
-}</pre>
-      </figure>
+}{% endhighlight %}
 
       <br>
       <p>The general gist of OOCSS is that common declarations are encapsulated into base selectors and then augmented by more specific ones. Given the above refactored approach, you might find an element in your HTML that looks like this...</p>
 
-      <figure class="highlight">
-        <pre class="language-markup">&lt;a href="#" class="btn btn-blue"&gt;...&lt;/a&gt;</pre>
-      </figure>
+      {% highlight html %}<a href="#" class="btn btn-blue">...</a>{% endhighlight %}
       <h3 class="push-top component-header">Automation</h3>
       <p>When building stable, state-of-the-art web applications, testing is key.</p>
       <p>Crossroads has invested some considerable effort to development an automated test suite which simulates a number of critical user interactions. By running these tests after every application update, we can ensure minimal regressions and the utmost stability for our critical business processes.</p>
       <p>To help facilitate this automation, you are encouraged to proactively implement <code>data-automation-id</code> attributes with some unique value for any critical call-to-action, web or form control within your product features.</p>
       <p>This is as simple as making your HTML element look like the following example...</p>
-      <pre>&lt;a href="#" data-automation-id="unique-value"&gt;...&lt;/a&gt;</pre>
+      {% highlight css %}<a href="#" data-automation-id="unique-value">...</a>{% endhighlight %}
       <p>With this simple approach, you can empower our automation team to make our products more stable and battle-tested, one automated test at a time.</p>
     </div>
   </div>

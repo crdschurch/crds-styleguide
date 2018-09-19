@@ -1,7 +1,21 @@
-code {
-  .dark-theme & {
-    background: $cr-gray;
-    color: $cr-gray-darker;
+.dark-theme {
+  div.highlight,
+  figure.highlight {
+    background: transparent;
+  }
+  pre {
+    border-color: darken($cr-gray-dark, 10);
+  }
+  code {
+    background-color: #404040;
+    color: $cr-gray-light;
+  }
+  .crds-example-code code {
+    background-color: transparent;
+  }
+  .alert code {
+    background-color: $code-bg;
+    color: $code-color;
   }
 }
 
@@ -13,17 +27,17 @@ code {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 
-  &, & + figure.highlight > pre {
+  &, & + .crds-example-code pre.highlight {
     border-color: $cr-gray-lighter;
     padding: 1.25em;
   }
 
-  & + figure.highlight {
+  & + .crds-example-code {
     position: relative;
   }
 
   .dark-theme & {
-    &, & + figure.highlight > pre {
+    &, & + .crds-example-code pre.highlight {
       border-color: darken($cr-gray-dark, 10);
     }
   }
@@ -50,12 +64,16 @@ code {
     content: attr(data-label);
   }
 
-  & + figure.highlight > pre {
+  & + .crds-example-code pre.highlight {
     margin-top: 0;
     border-top: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding-left: 2em;
+
+    code {
+      white-space: pre;
+    }
   }
 
   .typeface-example & {
@@ -122,8 +140,15 @@ crds-example {
     padding: 0;
     border-left: 1px solid darken($gray, 10);
   }
+  .file-code {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
   pre {
     font-size: 80%;
+    margin-bottom: 0;
   }
   .list-group {
     background: $cr-white;

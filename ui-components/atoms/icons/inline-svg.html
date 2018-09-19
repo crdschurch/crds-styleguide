@@ -59,22 +59,11 @@ layout: default
 
       <p class="callout callout-info" role="alert">Prefixing the <code>href</code> attribute with <code>xlink:</code> is required for SVG images to display in Safari and iOS devices.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <svg class="icon" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#check-circle"></use>
-        </svg>
-      </div>
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;svg class="icon" viewBox="0 0 256 256">
-  &lt;use xlink:href="/assets/svgs/icons.svg#check-circle">&lt;/use>
-&lt;/svg></pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-8bdc06ac-24c1-414b-acba-4078fe52d63f">
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </button>
-      </figure>
+      {% example html %}
+<svg class="icon" viewBox="0 0 256 256">
+  <use xlink:href="/assets/svgs/icons.svg#check-circle"></use>
+</svg>
+      {% endexample %}
 
       <div class="linkable">
         <a id="icon-sprite-file" name="icon-sprite-file" href="/ui-components/atoms/icons/inline-svg#icon-sprite-file" fragment="icon-sprite-file" target="_self">

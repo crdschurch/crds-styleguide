@@ -57,23 +57,11 @@ layout: default
 
       <p>You can apply a color helper directly to the <code>&lt;svg&gt;</code> element.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <svg class="icon text-primary" viewBox="0 0 256 256">
-          <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
-        </svg>
-      </div>
-
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;svg class="icon text-primary" viewBox="0 0 256 256">
-  &lt;use xlink:href="/assets/svgs/icons.svg#calendar">&lt;/use>
-&lt;/svg></pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-0fc1d817-1e94-4cda-acb1-e1d77ebdc968">
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </button>
-      </figure>
+      {% example html %}
+<svg class="icon text-primary" viewBox="0 0 256 256">
+  <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
+</svg>
+      {% endexample %}
 
       <div class="linkable">
         <a id="applied-to-parent" name="applied-to-parent" href="/ui-components/atoms/icons/colors#applied-to-parent" fragment="applied-to-parent" target="_self">
@@ -86,24 +74,13 @@ layout: default
 
       <p>Here the color is applied to the parent element and the icon inherits it.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <div class="text-primary">
-          <svg class="icon" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
-          </svg>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;svg class="icon" viewBox="0 0 256 256">
-  &lt;use xlink:href="/assets/svgs/icons.svg#calendar">&lt;/use>
-&lt;/svg></pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-36e669ab-b5cf-4cd5-928a-646d52b28f1d">
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </button>
-      </figure>
+      {% example html %}
+<div class="text-primary">
+  <svg class="icon" viewBox="0 0 256 256">
+    <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
+  </svg>
+</div>
+      {% endexample %}
 
       <div class="linkable">
         <a id="background-colors" name="background-colors" href="/ui-components/atoms/icons/colors#background-colors" fragment="background-colors" target="_self">
@@ -116,24 +93,13 @@ layout: default
 
       <p>Notice that if the component in which the icon is placed has an color applied, the icon will also inherit that color.</p>
 
-      <div class="crds-example crds-inline-markup" data-processed="true">
-        <div class="alert alert-info">
-          <svg class="icon" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
-          </svg>
-        </div>
-      </div>
-      <figure class="highlight">
-        <pre class=" language-markup">
-&lt;svg class="icon" viewBox="0 0 256 256">
-  &lt;use xlink:href="/assets/svgs/icons.svg#calendar">&lt;/use>
-&lt;/svg></pre>
-        <button class="btn btn-gray-light btn-sm clippable" type="button" id="clippable-84d05b2b-bed2-4bd5-b242-c1dad36acf47">
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </button>
-      </figure>
+      {% example html %}
+<div class="alert alert-info">
+  <svg class="icon" viewBox="0 0 256 256">
+    <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
+  </svg>
+</div>
+      {% endexample %}
     </div>
   </div>
 </div>
