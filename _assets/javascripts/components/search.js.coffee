@@ -13,7 +13,7 @@ class DDK.Search
     @events()
 
   events: ->
-    $(document).keydown (e) =>
+    $(document).keyup (e) =>
       if e.key == "/" || e.key == "Escape"
         $("#ddk-search").focus()
     $(document).bind 'keydown', @search_el, @debounce(@traverse, 100)
