@@ -8,7 +8,9 @@ gem "jekyll", "~> 3.7.3"
 
 gem 'uglifier'
 
-# ---------------------------------------- | Plugins
+# To fix security vulnerability
+gem 'sprockets', '~> 3.7.2'
+gem 'coffee-script'
 
 group :jekyll_plugins do
   gem 'jekyll-assets'

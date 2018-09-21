@@ -5,7 +5,8 @@
 //= require ./vendor/clipboard.min
 //= require ./components/clippable
 //= require ./components/dark-theme
+//= require ./components/search
 //= require ./components/images
-//= require ./components/interactive_example
+//= require ./components/interactive-example
 //= require ./components/modal-example
 //= require ./components/tooltips-example
