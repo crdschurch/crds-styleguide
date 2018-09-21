@@ -17,7 +17,7 @@ class DDK.Search
       if e.key == "/" || e.key == "Escape"
         $("#ddk-search").focus()
     $(document).bind 'keydown', @search_el, @debounce(@traverse, 100)
-    $(document).bind 'keypress', @search_el, @debounce(@query, 100)
+    $(@search_el).bind 'keypress', @debounce(@query, 100)
 
   empty: ->
     $(@search_results).empty();
@@ -31,7 +31,7 @@ class DDK.Search
       else
         return false
 
-  query: (e) =>
+  query:  =>
     @empty()
     $.each @get_results(), (i,obj) =>
       li = @build_result(obj)
