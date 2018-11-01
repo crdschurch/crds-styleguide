@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/crdschurch/crds-styles.git
-  revision: f2425de1869f7e9e242d1d6e7315acee2a9396d7
-  branch: development
+  revision: aab9bd183ec91d65a8e4f5fb3103d9ea7ed0e89a
+  branch: defect/DE5968-toast-layout
   specs:
     crds-styles (3.0.7)
       bootstrap-sass (~> 3.3)
