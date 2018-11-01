@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/sarahsachs/Sites/cr-proj/crds-styles
+GIT
+  remote: https://github.com/crdschurch/crds-styles.git
+  revision: f2425de1869f7e9e242d1d6e7315acee2a9396d7
+  branch: development
   specs:
     crds-styles (3.0.7)
       bootstrap-sass (~> 3.3)
