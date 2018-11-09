@@ -14,9 +14,9 @@ gem 'coffee-script'
 
 group :jekyll_plugins do
   gem 'jekyll-assets'
-  # gem 'crds-styles', path: File.join(File.dirname(__FILE__), '../crds-styles')
+  gem 'crds-styles', path: File.join(File.dirname(__FILE__), '../crds-styles')
   # gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: 'development'
-  gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', tag: 'v3.0.5'
+  # gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', tag: 'v3.0.5'
 end
 
 # ---------------------------------------- | Utilities
