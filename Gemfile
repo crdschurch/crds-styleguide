@@ -17,9 +17,9 @@ group :jekyll_plugins do
   if ENV["CONTEXT"] == "local"
     gem 'crds-styles', path: File.join(File.dirname(__FILE__), '../crds-styles')
   elsif %w(deploy-preview branch-preview).include? ENV["CONTEXT"]
-    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: ENV["BRANCH"]
+    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: 'defect/DE5968-toast-layout'
   else
-    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: 'master'
+    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: 'development'
   end
 end
 

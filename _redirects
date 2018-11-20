@@ -13,4 +13,6 @@ https://crds-styleguide.netlify.com/* https://design.crossroads.net/:splat 301!
 /ui-components/atoms/forms /ui-components/atoms/forms/inputs 302
 /ui-components/atoms/icons /ui-components/atoms/icons/directory 302
 /ui-components/molecules/cards/ /ui-components/molecules/cards/types 302
+/ui-components/molecules/cards/ /ui-components/molecules/cards/types 302
+/designers/guidelines/copy-voice /content-admins/copy-voice 302
 /* /404/index.html 404
