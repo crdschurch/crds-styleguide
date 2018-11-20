@@ -6,12 +6,10 @@
 
 [context.production]
   publish = "_site/"
-  CONTEXT = production
   command = "bundle update crds-styles && bundle exec jekyll build"
 
 # Deploy Preview context: all deploys resulting from a pull/merge request will
 # inherit these settings.
 [context.deploy-preview]
   publish = "_site/"
-  CONTEXT = deploy-preview
   command = "bundle update crds-styles && bundle exec jekyll build"
