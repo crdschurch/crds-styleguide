@@ -1,9 +1,0 @@
-[build]
-  command = '''
-    current_branch_name=$(git rev-parse --abbrev-ref HEAD | tr -d '\n') &&
-    echo '>>>>' &&
-    echo $current_branch_name &&
-    echo '<<<<' &&
-    CURRENT_BRANCH=$current_branch_name bundle update crds-styles &&
-    bundle exec jekyll build
-  '''
