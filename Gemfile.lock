@@ -1,7 +1,6 @@
 GIT
   remote: https://github.com/crdschurch/crds-styles.git
-  revision: e53c134cbf06e65ad691019b68f4e1e7b8507c0b
-  branch: development
+  revision: 27cc4640f73674ecffd23e409056c1018b820e72
   specs:
     crds-styles (3.0.8)
       bootstrap-sass (~> 3.3)
