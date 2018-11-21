@@ -1,8 +1,8 @@
 [build]
   command = '''
-    current_branch_name=$(git rev-parse --abbrev-ref HEAD | tr -d '\n') &&
+    ORIGIN_BRANCH_NAME=$(git name-rev 59853c523b27ebea471bc82759d7ae323fdfd8b9 | awk '{print $2}' )
     echo '>>>>' &&
-    echo $current_branch_name &&
+    echo $ORIGIN_BRANCH_NAME &&
     echo '<<<<' &&
     CURRENT_BRANCH=$current_branch_name bundle update crds-styles &&
     bundle exec jekyll build
