@@ -14,13 +14,7 @@ gem 'coffee-script'
 
 group :jekyll_plugins do
   gem 'jekyll-assets'
-  if ENV["CONTEXT"] == "local"
-    gem 'crds-styles', path: File.join(File.dirname(__FILE__), '../crds-styles')
-  elsif %w(deploy-preview branch-preview).include? ENV["CONTEXT"]
-    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: ENV["BRANCH"]
-  else
-    gem 'crds-styles', git: 'https://github.com/crdschurch/crds-styles.git', branch: 'development'
-  end
+  gem 'crds-styles', path: File.join(File.dirname(__FILE__), 'vendor/gems/crds-styles')
 end
 
 # ---------------------------------------- | Utilities

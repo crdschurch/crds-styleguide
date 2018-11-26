@@ -1,0 +1,3 @@
+[submodule "vendor/gems/crds-styles"]
+	path = vendor/gems/crds-styles
+	url = git@github.com:crdschurch/crds-styles.git

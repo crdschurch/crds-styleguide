@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/crdschurch/crds-styles.git
-  revision: 27f358d98ada3df1a13174d0465249119fa2bec0
-  branch: development
+PATH
+  remote: vendor/gems/crds-styles
   specs:
     crds-styles (3.0.8)
       bootstrap-sass (~> 3.3)
@@ -133,4 +131,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.17.1
+   1.16.3
