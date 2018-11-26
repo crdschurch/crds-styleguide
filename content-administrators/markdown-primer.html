@@ -1,0 +1,165 @@
+---
+layout: default
+title: Markdown Primer
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+  <div class="container text-center text-white">
+    <ol class="breadcrumb ddk">
+      <li>
+        For Content Administrators
+      </li>
+      <li>
+        Guidelines
+      </li>
+    </ol>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav class="nav">
+        <ul class="list-unstyled">
+          <li>
+            <a href="/content-administrators/copy-voice">Copy/Voice</a>
+          </li>
+          <li>
+            <a href="/content-administrators/monetate-templates">Monetate Templates</a>
+          </li>
+          <li>
+            <a class="active" href="/content-administrators/markdown-primer">Markdown Primer</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <h1 class="page-header" data-linked="Fri Sep 07 2018 16:07:02 GMT-0400 (Eastern Daylight Time)">Markdown Primer</h1>
+      <section>
+        <div class="linkable">
+          <a id="headers" name="headers" href="/content-administrators/markdown-primer#headers" fragment="headers" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Headers</h2>
+        </div>
+        <p>When writing Markdown for headers, remember to hit <code>Enter</code> to add a line-break afterwards. Not doing so will cause your header text to become paragraph text.</p>
+        {% example md %}
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
+          <a id="emphasis" name="emphasis" href="/content-administrators/markdown-primer#emphasis" fragment="emphasis" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Emphasis</h2>
+        </div>
+        {% example md %}
+Emphasizes, aka italics, with single-wrapping *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with double-wrapping **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
+          <a id="lists" name="lists" href="/content-administrators/markdown-primer#lists" fragment="lists" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Lists</h2>
+        </div>
+        {% example md %}
+1. First ordered list item
+2. Another item
+    * Unordered sub-list.
+1. Actual numbers don't matter, just that it's a number
+    1. Ordered sub-list
+4. And another item.
+
+You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
+          <a id="links" name="links" href="/content-administrators/markdown-primer#links" fragment="links" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Links</h2>
+        </div>
+        {% example md %}
+[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
+          <a id="blockquotes" name="blockquotes" href="/content-administrators/markdown-primer#blockquotes" fragment="blockquotes" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Blockquotes</h2>
+        </div>
+        {% example md %}
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
+
+Quote break.
+
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
+          <a id="horizontal_rule" name="horizontal_rule" href="/content-administrators/markdown-primer#horizontal_rule" fragment="horizontal_rule" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Horizontal Rule</h2>
+        </div>
+        {% example md %}
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+Underscores
+        {% endexample %}
+      </section>
+    </div>
+  </div>
+</div>
