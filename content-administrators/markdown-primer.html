@@ -37,6 +37,24 @@ title: Markdown Primer
       <h1 class="page-header" data-linked="Fri Sep 07 2018 16:07:02 GMT-0400 (Eastern Daylight Time)">Markdown Primer</h1>
       <section>
         <div class="linkable">
+          <a id="paragraphs" name="paragraphs" href="/content-administrators/markdown-primer#paragraphs" fragment="paragraphs" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h2 class="component-header">Paragraphs</h2>
+        </div>
+        {% example md %}
+To create a new paragraph...
+
+... hit the `Enter` key to create a new line. Each line break will create a...
+
+... new paragraph!
+
+        {% endexample %}
+      </section>
+      <section>
+        <div class="linkable">
           <a id="headers" name="headers" href="/content-administrators/markdown-primer#headers" fragment="headers" target="_self">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
@@ -44,7 +62,6 @@ title: Markdown Primer
           </a>
           <h2 class="component-header">Headers</h2>
         </div>
-        <p>When writing Markdown for headers, remember to hit <code>Enter</code> to add a line-break afterwards. Not doing so will cause your header text to become paragraph text.</p>
         {% example md %}
 # Header 1
 
@@ -70,13 +87,12 @@ title: Markdown Primer
           <h2 class="component-header">Emphasis</h2>
         </div>
         {% example md %}
-Emphasizes, aka italics, with single-wrapping *asterisks* or _underscores_.
+Emphasis, aka italics, with single-wrapping *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with double-wrapping **asterisks** or __underscores__.
 
-Combined emphasis with **asterisks and _underscores_**.
+Combined strong and OG emphasis with **asterisks and _underscores_**. (Note that the bold asterisks wrap both comments.)
 
-Strikethrough uses two tildes. ~~Scratch this.~~
         {% endexample %}
       </section>
       <section>
@@ -96,7 +112,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     1. Ordered sub-list
 4. And another item.
 
-You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+    You can have properly indented paragraphs within list items. Notice the blank line above, and four leading spaces.
 
 * Unordered list can use asterisks
 - Or minuses
