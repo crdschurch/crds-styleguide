@@ -14,3 +14,9 @@ Welcome to Crossroads Styleguide, the official pattern library of [Crossroads Ch
 2. Run `jekyll serve` to build and serve the site locally
 
 See the Jekyll [documentation](https://jekyllrb.com/) for other build commands.
+
+License
+--------
+
+This project is licensed under the [3-Clause BSD
+License](https://opensource.org/licenses/BSD-3-Clause).

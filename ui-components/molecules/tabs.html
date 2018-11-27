@@ -1,0 +1,100 @@
+---
+layout: default
+title: Tabs
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+  <div class="container text-center text-white">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>MOLECULES</li>
+    </ol>
+    <h1>Tabs</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-offset-3">
+    <h2 class="page-header flush-top">Tabs</h2>
+
+    <section>
+      <div class="linkable">
+        <a id="default-modal" name="default-modal" href="/ui-components/molecules/modals#default-tab" fragment="default-tab" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Default tabs</h3>
+      </div>
+
+      <p>Default tabs are based on <a href="https://getbootstrap.com/docs/3.3/javascript/#tabs">Bootstrap's implementation</a>.</p>
+      {% example html %}
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content soft-top">
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+      <p>Cras mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+      <p>Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+      <p>Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Curabitur blandit tempus porttitor. Aenean lacinia bibendum nulla sed consectetur.</p>
+    </div>
+  </div>
+
+</div>
+      {% endexample %}
+    </section>
+
+    <section>
+      <div class="linkable">
+        <a id="default-modal" name="default-modal" href="/ui-components/molecules/modals#vertical-tab" fragment="vertical-tab" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h3 class="component-header">Vertical tabs</h3>
+      </div>
+
+      <p>Vertical tabs are a good solution for creating tabbable content for both mobile- and desktop-sized screens. The trick to getting the mobile dropdown menu to work is making sure your button <code>id</code> and list <code>aria-labelledby</code> match.</p>
+
+      <p class="callout callout-info">A class of <code>.height-example</code> has been added to the following example to prevent the vertical tabs from overlapping on top of the code example. This is for demonstration purposes only and should be removed when implementing your own vertical tabs.</p>
+      {% example html %}
+<div class="height-example sidebar-navigation push-bottom">
+  <div class="dropdown">
+    <button class="btn btn-gray-light btn-outline btn-block" id="sidebarNavigation" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+      </svg>
+      <span>Recent</span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="sidebarNavigation">
+      <li>
+        <a class="" href="#">Recent</a>
+      </li>
+      <li>
+        <a class="" href="#">Most Watched</a>
+      </li>
+      <li>
+        <a class="" href="#">Category</a>
+      </li>
+    </ul>
+  </div>
+</div>
+      {% endexample %}
+    </section>
+  </div>
+</div>
