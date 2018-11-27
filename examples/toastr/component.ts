@@ -14,7 +14,7 @@ export class AppComponent {
 
   showToast(toastType) {
     let options = { toastLife: 10000 },
-        message = 'I am a toast notitification!';
+        message = 'I am a toast notitification with a very, very, very long message!';
     switch (toastType) {
       case 'success':
         this.toastr.success(message, 'Success!', options);
