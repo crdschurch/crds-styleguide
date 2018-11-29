@@ -86,7 +86,7 @@ module Jekyll
           html: 'HTML',
           css: 'CSS',
           js: 'Javascript',
-          ts: 'Typescript'
+          ts: 'Typescript',
         }
         raise 'Lexer not supported' unless module_names.include?(lang.to_sym)
         Object.const_get("Rouge::Lexers::#{module_names[lang.to_sym]}").new

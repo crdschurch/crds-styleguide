@@ -18,9 +18,11 @@ module Jekyll
 
       clippable_id = "clippable-#{SecureRandom.uuid}"
 
+      markup = @language == 'md' ? ::Kramdown::Document.new(source).to_html : source
+
       content = <<-EOF
         <div class="crds-example crds-inline-markup" id="#{clippable_id}">
-          #{source.strip}
+          #{markup.strip}
         </div>
         <div class="crds-example-code">
           #{formatter.format(lexer.lex(source.strip))}
@@ -40,7 +42,8 @@ module Jekyll
           html: 'HTML',
           css: 'CSS',
           js: 'Javascript',
-          text: 'PlainText'
+          text: 'PlainText',
+          md: 'Markdown'
         }
         raise 'Lexer not supported' unless module_names.include?(@language.to_sym)
         Object.const_get("Rouge::Lexers::#{module_names[@language.to_sym]}").new
