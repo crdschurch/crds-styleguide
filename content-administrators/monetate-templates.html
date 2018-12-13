@@ -43,7 +43,10 @@ cta-3:
             <a href="/content-administrators/copy-voice">Copy/Voice</a>
           </li>
           <li>
-            <a class="active" href="/content-administrators/monetate-templates">Monetate Templates</a>
+            <a href="/content-administrators/monetate-templates">Monetate Templates</a>
+          </li>
+          <li>
+            <a class="active" href="/content-administrators/markdown-primer">Markdown Primer</a>
           </li>
         </ul>
       </nav>
@@ -111,7 +114,7 @@ cta-3:
   </div>
 
   <!-- Background color -->
-  <div class="l-text-wrapper s-text-wrapper" style="background-color: {{ page.cta-1.bg-color }}">
+  <div class="l-text-wrapper s-text-wrapper" style="background-color: {{ page.cta-1.bg-color }};">
     <!-- Details (short) -->
     <p class="l-details">{{ page.cta-1.details }}</p>
 
@@ -179,6 +182,54 @@ cta-3:
   </div>
 </div>
       {% endexample %}
+
+      <!-- CTA 1 mini -->
+      <div>
+        <h2 class="component-header">Monetate Examples - Using <code>.l-mini</code></h2>
+        <p>By default, all CTAs take the full-width of their parent container. This means, depending on where you use these, you may need to wrap the CTAs in an additional <code>div</code> with <a href="https://getbootstrap.com/docs/3.3/css/#grid">Bootstrap classes</a> like the following examples.</p>
+
+        <h3>Float the CTA in the text</h3>
+        <p>Add <code>sm-pull-right</code> to the Bootstrap classes or next to <code>cta</code> to make the text flow around the CTA.</p>
+      </div>
+      <div class="linkable">
+        <a id="monetate" name="voice" href="/content-administrators/monetate-templates#cta-1-mini" fragment="voice" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header">CTA 1 with <code>.l-mini</code></h2>
+        <p>This CTA example does not include a button with a link so it is wrapped with <code>&lt;a href=""&gt;</code>and <code>&lt;/a&gt;</code> turning the whole block into a link.</p>
+
+      </div>
+
+{% example html %}
+<!-- <div class="container">
+  <div class="row"> -->
+
+<div class="col-sm-6 col-md-4 mobile-hard-sides">
+  <a class="cta" href="">
+    <!-- Background image -->
+    <div class="cta cta-1 l-mini" style="background-image: url('{{ page.cta-1.bg-image }}')">
+      <!-- Foreground image -->
+      <div class="l-foreground-image">
+        <img alt="" src="{{ page.cta-1.fg-image }}" />
+      </div>
+
+      <!-- Background color -->
+      <div class="l-text-wrapper s-text-wrapper" style="background-color:{{ page.cta-1.bg-color }};">
+          <!-- Details (short) -->
+        <p class="l-details">{{ page.cta-1.details }}</p>
+
+        <!-- CTA (link) -->
+        <p class="l-action s-action">{{ page.cta-1.cta }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+      <!-- </div>
+      </div> -->
+{% endexample %}
+
     </div>
   </div>
 </div>
