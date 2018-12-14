@@ -14,7 +14,7 @@ gem 'coffee-script'
 
 group :jekyll_plugins do
   gem 'jekyll-assets'
-  gem 'crds-styles', path: File.join(File.dirname(__FILE__), 'vendor/gems/crds-styles')
+  gem 'crds-styles', path: File.join(File.dirname(__FILE__), '_assets/stylesheets/vendors/crds-styles')
 end
 
 # ---------------------------------------- | Utilities
