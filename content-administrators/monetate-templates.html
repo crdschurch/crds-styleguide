@@ -183,12 +183,10 @@ cta-3:
 </div>
       {% endexample %}
 
-      <!-- CTA 1 mini -->
       <div>
-        <h2 class="component-header">Monetate Examples - Using <code>.l-mini</code></h2>
+        <h2 class="section-header">Monetate Examples - Floating in the Text</h2>
         <p>By default, all CTAs take the full-width of their parent container. This means, depending on where you use these, you may need to wrap the CTAs in an additional <code>div</code> with <a href="https://getbootstrap.com/docs/3.3/css/#grid">Bootstrap classes</a> like the following examples.</p>
 
-        <h3>Float the CTA in the text</h3>
         <p>Add <code>sm-pull-right</code> to the Bootstrap classes or next to <code>cta</code> to make the text flow around the CTA.</p>
       </div>
       <div class="linkable">
@@ -197,16 +195,14 @@ cta-3:
             <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
           </svg>
         </a>
-        <h2 class="component-header">CTA 1 with <code>.l-mini</code></h2>
+        <h2 class="component-header">CTA 1 - Mini</h2>
         <p>This CTA example does not include a button with a link so it is wrapped with <code>&lt;a href=""&gt;</code>and <code>&lt;/a&gt;</code> turning the whole block into a link.</p>
 
       </div>
 
-{% example html %}
-<!-- <div class="container">
-  <div class="row"> -->
+      {% example html %}
 
-<div class="col-sm-6 col-md-4 mobile-hard-sides">
+<div class="col-sm-5 col-md-4">
   <a class="cta" href="">
     <!-- Background image -->
     <div class="cta cta-1 l-mini" style="background-image: url('{{ page.cta-1.bg-image }}')">
@@ -226,9 +222,7 @@ cta-3:
     </div>
   </a>
 </div>
-      <!-- </div>
-      </div> -->
-{% endexample %}
+      {% endexample %}
 
     </div>
   </div>
