@@ -202,7 +202,7 @@ cta-3:
 
       {% example html %}
 
-<div class="col-sm-5 col-md-4">
+<div class="col-sm-4 col-md-3">
   <a class="cta" href="">
     <!-- Background image -->
     <div class="cta cta-1 l-mini" style="background-image: url('{{ page.cta-1.bg-image }}')">
@@ -221,6 +221,35 @@ cta-3:
       </div>
     </div>
   </a>
+</div>
+      {% endexample %}
+
+      <div class="linkable">
+        <a id="monetate" name="voice" href="/content-administrators/monetate-templates#cta-2-mini" fragment="voice" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header">CTA 2 - Mini</h2>
+      </div>
+
+      {% example html %}
+
+<div class="col-sm-4 col-md-3">
+  <!-- Background image -->
+  <div class="cta cta-2 l-mini" style="background-image: url('{{ page.cta-2.bg-image }}')">
+    <!-- Foreground image -->
+    <div class="l-foreground-image"><img alt="" src="{{ page.cta-2.fg-image }}" /></div>
+
+    <div class="l-text-wrapper s-text-wrapper">
+      <!-- Headline -->
+      <h3 class="l-headline s-headline hidden-xs">{{ page.cta-2.headline }}</h3>
+      <!-- Details (long) -->
+
+      <p class="s-details hidden-xs hidden-sm">Sed posuere consectetur est at lobortis.</p>
+      <!-- CTA button --><a class="btn btn-white btn-outline" href="">Buy now</a>
+    </div>
+  </div>
 </div>
       {% endexample %}
 
