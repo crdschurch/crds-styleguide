@@ -5,7 +5,9 @@ title: Cards - Types
 
 <div
   class="ddk jumbotron"
-  style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');"
+  style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{
+    site.imgix_params.jumbotron
+  }}');"
   data-optimize-bg-img
 >
   <div class="container text-center text-white">
@@ -81,9 +83,32 @@ title: Cards - Types
             class="component-header"
             data-linked="Mon Sep 10 2018 16:49:05 GMT-0400 (EDT)"
           >
-            Media Stamp
+            Media Label
           </h3>
         </div>
+
+        <p>
+          For cards representing a form of media with a duration, it may improve
+          the user experience to give an indication of how much time
+          participating in said media will take. This is where media labels come
+          in handy.
+        </p>
+
+        <p>
+          The <code>media-label</code> object works by setting an absolute value
+          on its position, placing it firmly in the bottom right corner of a
+          card's image element (this works on both default and overlay cards).
+        </p>
+        <p>
+          The <code>span</code> tag within usually denotes the duration it takes
+          to consume that piece of media. An example of this data, properly
+          formatted, would be <code>1 hr 23 mins 45 sec</code>.
+        </p>
+        <p>
+          The <code>svg</code> icon can be any media type you require, found
+          <a href="/ui-components/atoms/icons/directory.html">here</a> with the
+          prefix of <code>media-</code>.
+        </p>
 
         {% example html %}
         <div class="card">
