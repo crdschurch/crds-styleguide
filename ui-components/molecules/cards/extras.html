@@ -1,0 +1,122 @@
+---
+layout: default
+title: Cards - Types
+---
+
+<div
+  class="ddk jumbotron"
+  style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');"
+  data-optimize-bg-img
+>
+  <div class="container text-center text-white">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>MOLECULES</li>
+      <li>CARDS</li>
+    </ol>
+    <h1>UI Components/Cards</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li><a href="/ui-components/molecules/cards/types">Types</a></li>
+          <li class="active">
+            <a href="/ui-components/molecules/cards/extras">Extras</a>
+          </li>
+          <li>
+            <a href="/ui-components/molecules/cards/grid-layout">Grid Layout</a>
+          </li>
+          <li>
+            <a href="/ui-components/molecules/cards/card-decks">Card Decks</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div>
+      <div class="linkable">
+        <a
+          id="extras"
+          name="extras"
+          href="/ui-components/molecules/cards/extras#extras"
+          fragment="extras"
+          target="_self"
+        >
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/svgs/icons.svg#link"
+            ></use>
+          </svg>
+        </a>
+        <h2
+          class="page-header flush-top"
+          data-linked="Mon Sep 10 2018 16:49:05 GMT-0400 (EDT)"
+        >
+          Extras
+        </h2>
+      </div>
+
+      <section>
+        <div class="linkable">
+          <a
+            id="media-stamp"
+            name="media-stamp"
+            href="/ui-components/molecules/cards/extras#media-stamp"
+            fragment="default-card"
+            target="_self"
+          >
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="/assets/svgs/icons.svg#link"
+              ></use>
+            </svg>
+          </a>
+          <h3
+            class="component-header"
+            data-linked="Mon Sep 10 2018 16:49:05 GMT-0400 (EDT)"
+          >
+            Media Stamp
+          </h3>
+        </div>
+
+        {% example html %}
+        <div class="card">
+          <a class="relative" href="#">
+            <div class="media-label bg-charcoal text-white">
+              <span class="font-size-smallest">14 min 43 sec</span>
+
+              <svg class="icon" viewBox="0 0 256 256">
+                <use xlink:href="/assets/svgs/icons.svg#media-article"></use>
+              </svg>
+            </div>
+            <img
+              src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+              data-optimize-img
+            />
+          </a>
+          <div class="card-block hard soft-quarter-top">
+            <a
+              class="text-gray font-size-smaller font-family-base-mid text-uppercase"
+              href="#"
+            >
+              Card topic
+            </a>
+            <h3 class="component-header flush"><a href="#">Card title</a></h3>
+            <p class="card-text soft-quarter-top">
+              <a class="text-gray-light font-size-smaller" href="#"
+                >Author McArthur</a
+              >
+            </p>
+          </div>
+        </div>
+        {% endexample %}
+      </section>
+    </div>
+  </div>
+</div>
