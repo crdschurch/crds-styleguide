@@ -11,7 +11,7 @@ Welcome to Crossroads Styleguide, the official pattern library of [Crossroads Ch
     1. By default, this command will pull the latest updates from the master branch of `crds-styles`
     2. If you are making updates to `crds-styles` locally, run `CONTENT=local bundle` to point your environment to a local version
     3. If you want `crds-styleguide` to point to a release-friendly (but not deployed) version of `crds-styles`, run `CONTENT=deploy-preview bundle` to point your environment to development
-2. Run `jekyll serve` to build and serve the site locally
+2. Run `bundle exec jekyll serve` to build and serve the site locally
 
 See the Jekyll [documentation](https://jekyllrb.com/) for other build commands.
 
