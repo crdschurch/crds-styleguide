@@ -17,6 +17,7 @@ cta-3:
   lead: "God says to serve those in need. So we do."
   headline: "Thanksgiving food drive"
   details: "We believe that helping those in need is a core part of who we are and who God wants us to be. So we do it in a big, big way at Thanksgiving. This year, we've ordered thousands of boxes, expectant that God will show up through your unprecendented generosity."
+  details-short: "We believe that helping those in need is a core part of who we are and who God wants us to be."
   cta: "Sign up to serve"
   bg-image: "//crds-cms-uploads.imgix.net/content/images/crossroads-serve-bg2.jpg"
 ---
@@ -43,7 +44,10 @@ cta-3:
             <a href="/content-administrators/copy-voice">Copy/Voice</a>
           </li>
           <li>
-            <a class="active" href="/content-administrators/monetate-templates">Monetate Templates</a>
+            <a href="/content-administrators/monetate-templates">Monetate Templates</a>
+          </li>
+          <li>
+            <a class="active" href="/content-administrators/markdown-primer">Markdown Primer</a>
           </li>
         </ul>
       </nav>
@@ -111,7 +115,7 @@ cta-3:
   </div>
 
   <!-- Background color -->
-  <div class="l-text-wrapper s-text-wrapper" style="background-color: {{ page.cta-1.bg-color }}">
+  <div class="l-text-wrapper s-text-wrapper" style="background-color: {{ page.cta-1.bg-color }};">
     <!-- Details (short) -->
     <p class="l-details">{{ page.cta-1.details }}</p>
 
@@ -179,6 +183,107 @@ cta-3:
   </div>
 </div>
       {% endexample %}
+
+      <div>
+        <h2 class="section-header">Monetate Examples - Floating in the Text</h2>
+        <p>By default, all CTAs take the full-width of their parent container. This means, depending on where you use these, you may need to wrap the CTAs in an additional <code>div</code> with <a href="https://getbootstrap.com/docs/3.3/css/#grid">Bootstrap classes</a> like the following examples.</p>
+
+        <p>Add <code>sm-pull-right</code> next to the Bootstrap classes (in our first example, the <code>&lt;div class="col-sm-4 col-md-3"&gt;</code>).</p>
+      </div>
+      <div class="linkable">
+        <a id="monetate" name="voice" href="/content-administrators/monetate-templates#cta-1-mini" fragment="voice" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header">CTA 1 - Mini</h2>
+        <p>This CTA example does not include a button with a link so it is wrapped with <code>&lt;a href=""&gt;</code>and <code>&lt;/a&gt;</code> turning the whole block into a link.</p>
+
+      </div>
+
+      {% example html %}
+
+<div class="col-sm-4 col-md-3">
+  <a class="cta" href="">
+    <!-- Background image -->
+    <div class="cta cta-1 l-mini" style="background-image: url('{{ page.cta-1.bg-image }}')">
+      <!-- Foreground image -->
+      <div class="l-foreground-image">
+        <img alt="" src="{{ page.cta-1.fg-image }}" />
+      </div>
+
+      <!-- Background color -->
+      <div class="l-text-wrapper s-text-wrapper" style="background-color:{{ page.cta-1.bg-color }};">
+          <!-- Details (short) -->
+        <p class="l-details">{{ page.cta-1.details }}</p>
+
+        <!-- CTA (link) -->
+        <p class="l-action s-action">{{ page.cta-1.cta }}</p>
+      </div>
+    </div>
+  </a>
+</div>
+      {% endexample %}
+
+      <div class="linkable">
+        <a id="monetate" name="voice" href="/content-administrators/monetate-templates#cta-2-mini" fragment="voice" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header">CTA 2 - Mini</h2>
+      </div>
+
+      {% example html %}
+
+<div class="col-sm-4 col-md-3">
+  <!-- Background image -->
+  <div class="cta cta-2 l-mini" style="background-image: url('{{ page.cta-2.bg-image }}')">
+    <!-- Foreground image -->
+    <div class="l-foreground-image"><img alt="" src="{{ page.cta-2.fg-image }}" /></div>
+
+    <div class="l-text-wrapper s-text-wrapper">
+      <!-- Headline -->
+      <h3 class="l-headline s-headline hidden-xs">{{ page.cta-2.headline }}</h3>
+      <!-- Details (long) -->
+
+      <p class="s-details hidden-xs hidden-sm">Sed posuere consectetur est at lobortis.</p>
+      <!-- CTA button --><a class="btn btn-white btn-outline" href="">Buy now</a>
+    </div>
+  </div>
+</div>
+      {% endexample %}
+
+      <div class="linkable">
+        <a id="monetate" name="voice" href="/content-administrators/monetate-templates#cta-3-mini" fragment="voice" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="//www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="component-header">CTA 3 - Mini</h2>
+      </div>
+
+      {% example html %}
+
+<div class="col-sm-5 col-md-4">
+  <!-- Background image -->
+  <div class="cta cta-3 l-mini" style="background-image: url('{{ page.cta-3.bg-image }}')">
+    <!-- Lead text -->
+    <p class="l-lead s-lead hidden-xs">{{ page.cta-3.lead }}</p>
+    <!-- Headline -->
+
+    <h2 class="l-headline s-headline font-size-h4">{{ page.cta-3.headline }}</h2>
+    <!-- Details (long) -->
+
+    <p class="l-details s-details font-size-small visible-md visible-lg">{{ page.cta-3.details-short }}</p>
+    <!-- CTA button -->
+
+    <div class="l-action"><a class="btn btn-white btn-outline" href="">{{ page.cta-3.cta }}</a></div>
+  </div>
+</div>
+
+      {% endexample %}
+
     </div>
   </div>
 </div>
