@@ -1,17 +1,4 @@
-@import "crds-styles-sprockets";
-@import "fonts"
-, "global"
-, "colors"
-, "component-list"
-, "document"
-, "example"
-, "fonts"
-, "forms"
-, "homepage"
-, "icons"
-, "loaders"
-, "modals"
-, "pygments"
-, "tabs"
-, "typography"
-;
+@import "vendors/crds-styles/assets/stylesheets/crds-styles";
+@import "fonts", "global", "colors", "component-list", "document", "example",
+  "fonts", "forms", "homepage", "icons", "loaders", "modals", "pygments", "tabs",
+  "typography";

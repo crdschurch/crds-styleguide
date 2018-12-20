@@ -1,7 +1,9 @@
 _site
 .DS*
-.sass-cache
-.jekyll-metadata
-.jekyll-cache
 .env
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
 .vscode
+node_modules
+tmp
