@@ -3,5 +3,6 @@
   "prettier.printWidth": 120,
   "files.associations": {
     "*.html": "liquid"
-  }
+  },
+  "prettier.singleQuote": true
 }
