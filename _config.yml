@@ -23,16 +23,6 @@ exclude:
   - vendor
   - README.md
 
-# Assets declared for jekyll-assets gem
-assets:
-  source_maps: true # false on JEKYLL_ENV=production
-  destination: "/assets"
-  compression: false # true on JEKYLL_ENV=production
-  js_compressor: uglifier
-  sources:
-    - _assets/stylesheets
-    - _assets/javascripts
-
 typekit_url: https://use.typekit.net/ccb3vpa.css
 
 imgix_params:
