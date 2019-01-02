@@ -32,7 +32,7 @@ class DDK.Search
       else
         return false
 
-  query:  =>
+  query:  (e) =>
     @empty()
     $.each @get_results(), (i,obj) =>
       li = @build_result(obj)
@@ -43,6 +43,9 @@ class DDK.Search
     li = $('<li></li>').append(a)
 
   traverse: (e) =>
+    if e.key == 'Backspace' && $(@search_el).val().length > 0
+      @query()
+
     if e.key == 'Escape' && $(@search_el).val().length > 0
       @reset()
 
