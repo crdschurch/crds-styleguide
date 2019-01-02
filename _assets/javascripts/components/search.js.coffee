@@ -66,7 +66,7 @@ class DDK.Search
 
     if e.key == "Enter" && $(@search_el).val().length > 0
       url = $('.focused a').attr('href')
-      window.location.href = url
+      window.location.href = url unless url == undefined
 
   debounce: (func, wait, immediate) ->
     timeout = undefined
