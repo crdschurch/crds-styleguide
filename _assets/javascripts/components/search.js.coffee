@@ -18,6 +18,7 @@ class DDK.Search
         $("#ddk-search").focus()
     $(document).bind 'keydown', @search_el, @debounce(@traverse, 100)
     $(@search_el).bind 'keypress', @debounce(@query, 100)
+    $(document).bind 'mouseup', @debounce(@cancel, 100)
 
   empty: ->
     $(@search_results).empty();
@@ -42,6 +43,9 @@ class DDK.Search
     li = $('<li></li>').append(a)
 
   traverse: (e) =>
+    if e.key == 'Escape' && $(@search_el).val().length > 0
+      @reset()
+
     if e.key == "ArrowDown"
       if @focused
         @focused.removeClass("focused")
@@ -86,6 +90,14 @@ class DDK.Search
       if callNow
         func.apply context, args
       return
+
+  cancel: (e) =>
+    container = $(".ddk-search-form")
+    if !container.is(e.target) && container.has(e.target).length == 0
+      @reset()
+
+  reset: ->
+    @empty() && $("#ddk-search").val('') && $("#ddk-search").blur()
 
   log: (str) ->
     if @debug
