@@ -13,8 +13,7 @@ gem 'sprockets', '~> 3.7.2'
 gem 'coffee-script'
 
 group :jekyll_plugins do
-  gem 'jekyll-assets'
-  gem 'crds-styles', path: File.join(File.dirname(__FILE__), '_assets/stylesheets/vendors/crds-styles')
+  gem 'jekyll-asset-pipeline', git: 'https://github.com/crdschurch/jekyll-asset-pipeline', tag: '0.0.2'
 end
 
 # ---------------------------------------- | Utilities
