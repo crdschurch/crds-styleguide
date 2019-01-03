@@ -19,9 +19,8 @@ title: Cards - Card Decks
     <aside class="mobile-push-bottom">
       <nav>
         <ul class="list-unstyled">
-          <li>
-            <a href="/ui-components/molecules/cards/types">Types</a>
-          </li>
+          <li><a href="/ui-components/molecules/cards/types">Types</a></li>
+          <li><a href="/ui-components/molecules/cards/extras">Extras</a></li>
           <li>
             <a href="/ui-components/molecules/cards/grid-layout">Grid Layout</a>
           </li>
@@ -34,52 +33,50 @@ title: Cards - Card Decks
 
     <div>
       <div class="linkable">
-        <a id="card-decks" name="card-decks" href="/ui-components/molecules/cards/card-decks#card-decks" fragment="card-decks"
-          target="_self">
+        <a id="card-decks" name="card-decks" href="/ui-components/molecules/cards/card-decks#card-decks" fragment="card-decks" target="_self">
           <svg class="icon icon-1" viewBox="0 0 256 256">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
           </svg>
         </a>
-        <h2 class="page-header" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">Card Decks</h2>
+        <h2 class="page-header flush-top" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">
+          Card Decks
+        </h2>
       </div>
 
-      <p>A card deck is a group of cards which share the same height as the tallest card in the deck. Height is
-        determined by the length of content within a card, and the card with the most content will dictate the height
-        of the other cards in the deck.</p>
+      <p>A card deck is a group of cards which share the same height as the tallest card in the deck. Height is determined by the length of content within a card, and the card with the most content will dictate the height of the other cards in the deck.</p>
 
-      <p class="callout callout-info" role="alert">The examples below pull the carousel effect by using the <a class="callout-link"
-          href="https://github.com/crdschurch/crds-card-carousel">crds-card-carousel shared library, along with the
-          library's dependencies.</a>.</p>
+      <p class="callout callout-info" role="alert">The examples below pull the carousel effect by using the <a class="callout-link" href="https://github.com/crdschurch/crds-card-carousel">crds-card-carousel shared library, along with the library's dependencies.</a>.</p>
 
       <section>
         <div class="linkable">
-          <a id="default-card-deck" name="default-card-deck" href="/ui-components/molecules/cards/card-decks#default-card-deck"
-            fragment="default-card-deck" target="_self">
+          <a id="default-card-deck" name="default-card-deck" href="/ui-components/molecules/cards/card-decks#default-card-deck" fragment="default-card-deck" target="_self">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
             </svg>
           </a>
-          <h3 class="component-header" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">Default Card Deck</h3>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">
+            Default Card Deck
+          </h3>
         </div>
-        <p>Adding a data attribute of <code>data-crds-carousel="mobile-scroll"</code> to a card deck and <a href="https://github.com/crdschurch/crds-card-carousel/blob/development/README.md">instantiating
-            the crds-card-carousel script</a> enables side-scrolling on mobile-sized screens only. On larger screens,
-          the layout will be an expanded view, creating new rows for each set of four cards.</p>
+        <p>Adding a data attribute of <code>data-crds-carousel="mobile-scroll"</code> to a card deck and <a href="https://github.com/crdschurch/crds-card-carousel/blob/development/README.md">instantiating the crds-card-carousel script</a> enables side-scrolling on mobile-sized screens only. On larger screens, the layout will be an expanded view, creating new rows for each set of four cards.</p>
 
         {% interactive_example name=card-deck-default height=500 %}
       </section>
 
       <section>
         <div class="linkable">
-          <a id="card-deck-carousel" name="card-deck-carousel" href="/ui-components/molecules/cards/card-decks#card-deck-carousel"
-            fragment="card-deck-carousel" target="_self">
+          <a id="card-deck-carousel" name="card-deck-carousel" href="/ui-components/molecules/cards/card-decks#card-deck-carousel" fragment="card-deck-carousel" target="_self">
             <svg class="icon icon-1" viewBox="0 0 256 256">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
             </svg>
           </a>
-          <h3 class="component-header" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">Card Deck Carousel</h3>
+          <h3 class="component-header" data-linked="Mon Sep 10 2018 16:48:54 GMT-0400 (EDT)">
+            Card Deck Carousel
+          </h3>
         </div>
-        <p>Adding a data attribute of <code>data-crds-carousel="always-scroll"</code> to a card deck and <a href="https://github.com/crdschurch/crds-card-carousel/blob/development/README.md">instantiating
-            the crds-card-carousel-script</a> will create a side-scrolling effect on all screen sizes.</p>
+
+        <p>Adding a data attribute of <code>data-crds-carousel="always-scroll"</code> to a card deck and <a href="https://github.com/crdschurch/crds-card-carousel/blob/development/README.md">instantiating the crds-card-carousel-script</a> will create a side-scrolling effect on all screen sizes.</p>
+
         {% interactive_example name=card-deck-carousel height=500 %}
       </section>
     </div>
