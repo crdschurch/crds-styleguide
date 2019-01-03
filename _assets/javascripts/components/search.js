@@ -1,154 +1,166 @@
-(function() {
-  if (typeof window.DDK === "undefined") {
-    window.DDK = {};
+if (typeof window.DDK === "undefined") {
+  window.DDK = {};
+}
+
+DDK.Search = class Search {
+  constructor() {
+    this.search_el = "#ddk-search";
+    this.search_results = ".ddk-search-results";
+    this.focused = undefined;
+    this.debug = false;
+
+    this.query = this.query.bind(this);
+    this.traverse = this.traverse.bind(this);
+    this.cancel = this.cancel.bind(this);
+    $.get("/search-index.json", data => {
+      return (this.json = data);
+    });
+    this.events();
   }
 
-  DDK.Search = function() {
-    class Search {
-      constructor() {
-        this.query = this.query.bind(this);
-        this.traverse = this.traverse.bind(this);
-        $.get("/search-index.json", data => {
-          return (this.json = data);
-        });
-        this.events();
+  events() {
+    $(document).keyup(e => {
+      if (e.key === "/" || e.key === "Escape") {
+        return $("#ddk-search").focus();
       }
+    });
+    $(document).bind(
+      "keydown",
+      this.search_el,
+      this.debounce(this.traverse, 100)
+    );
+    $(this.search_el).bind("keypress", this.debounce(this.query, 100));
+    return $(document).bind("mouseup", this.debounce(this.cancel, 100));
+  }
 
-      events() {
-        $(document).keyup(e => {
-          if (e.key === "/" || e.key === "Escape") {
-            return $("#ddk-search").focus();
-          }
-        });
-        $(document).bind(
-          "keydown",
-          this.search_el,
-          this.debounce(this.traverse, 100)
-        );
-        return $(this.search_el).bind(
-          "keypress",
-          this.debounce(this.query, 100)
-        );
+  empty() {
+    return $(this.search_results).empty();
+  }
+
+  get_results() {
+    const input = $(this.search_el).val();
+    return $.grep(this.json, function(n, i) {
+      if (n.name) {
+        const matches = n.name.match(new RegExp(input, "i"));
+        return matches && matches.length > 0;
+      } else {
+        return false;
       }
+    });
+  }
 
-      empty() {
-        return $(this.search_results).empty();
-      }
+  query(e) {
+    this.empty();
+    return $.each(this.get_results(), (i, obj) => {
+      const li = this.build_result(obj);
+      return $(this.search_results).append(li);
+    });
+  }
 
-      get_results() {
-        var input;
-        input = $(this.search_el).val();
-        return $.grep(this.json, function(n, i) {
-          var matches;
-          if (n.name) {
-            matches = n.name.match(new RegExp(input, "i"));
-            return matches && matches.length > 0;
-          } else {
-            return false;
-          }
-        });
-      }
+  build_result(obj) {
+    let li;
+    const a = $("<a class='font-size-large'></a>")
+      .attr("href", obj.path)
+      .html(`<span class='component-name'>${obj.name}</span>`);
+    return (li = $("<li></li>").append(a));
+  }
 
-      query() {
-        this.empty();
-        return $.each(this.get_results(), (i, obj) => {
-          var li;
-          li = this.build_result(obj);
-          return $(this.search_results).append(li);
-        });
-      }
-
-      build_result(obj) {
-        var a, li;
-        a = $("<a class='font-size-large'></a>")
-          .attr("href", obj.path)
-          .html(`<span class='component-name'>${obj.name}</span>`);
-        return (li = $("<li></li>").append(a));
-      }
-
-      traverse(e) {
-        var next, url;
-        if (e.key === "ArrowDown") {
-          if (this.focused) {
-            this.focused.removeClass("focused");
-            next = this.focused.next();
-            if (next.length > 0) {
-              this.focused = next.addClass("focused");
-            } else {
-              this.focused = $(`${this.search_results} li`)
-                .eq(0)
-                .addClass("focused");
-            }
-          } else {
-            this.focused = $(`${this.search_results} li`)
-              .eq(0)
-              .addClass("focused");
-          }
-        }
-        if (e.key === "ArrowUp") {
-          if (this.focused) {
-            this.focused.removeClass("focused");
-            next = this.focused.prev();
-            if (next.length > 0) {
-              this.focused = next.addClass("focused");
-            } else {
-              this.focused = $(`${this.search_results} li`)
-                .last()
-                .addClass("focused");
-            }
-          } else {
-            this.focused = $(`${this.search_results} li`)
-              .last()
-              .addClass("focused");
-          }
-        }
-        if (e.key === "Enter" && $(this.search_el).val().length > 0) {
-          url = $(".focused a").attr("href");
-          return (window.location.href = url);
-        }
-      }
-
-      debounce(func, wait, immediate) {
-        var timeout;
-        timeout = void 0;
-        return function() {
-          var args, callNow, context, later;
-          context = this;
-          args = arguments;
-          later = function() {
-            timeout = null;
-            if (!immediate) {
-              func.apply(context, args);
-            }
-          };
-          callNow = immediate && !timeout;
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-          if (callNow) {
-            func.apply(context, args);
-          }
-        };
-      }
-
-      log(str) {
-        if (this.debug) {
-          return console.log(str);
-        }
+  traverse(e) {
+    let next;
+    if (e.key === "Backspace") {
+      if ($(this.search_el).val().length > 0) {
+        this.query();
+      } else {
+        this.reset();
       }
     }
 
-    Search.prototype.search_el = "#ddk-search";
+    if (e.key === "Escape" && $(this.search_el).val().length > 0) {
+      this.reset();
+    }
 
-    Search.prototype.search_results = ".ddk-search-results";
+    if (e.key === "ArrowDown") {
+      if (this.focused) {
+        this.focused.removeClass("focused");
+        next = this.focused.next();
+        if (next.length > 0) {
+          this.focused = next.addClass("focused");
+        } else {
+          this.focused = $(`${this.search_results} li`)
+            .eq(0)
+            .addClass("focused");
+        }
+      } else {
+        this.focused = $(`${this.search_results} li`)
+          .eq(0)
+          .addClass("focused");
+      }
+    }
 
-    Search.prototype.focused = void 0;
+    if (e.key === "ArrowUp") {
+      if (this.focused) {
+        this.focused.removeClass("focused");
+        next = this.focused.prev();
+        if (next.length > 0) {
+          this.focused = next.addClass("focused");
+        } else {
+          this.focused = $(`${this.search_results} li`)
+            .last()
+            .addClass("focused");
+        }
+      } else {
+        this.focused = $(`${this.search_results} li`)
+          .last()
+          .addClass("focused");
+      }
+    }
 
-    Search.prototype.debug = false;
+    if (e.key === "Enter" && $(this.search_el).val().length > 0) {
+      const url = $(".focused a").attr("href");
+      if (url !== undefined) {
+        return (window.location.href = url);
+      }
+    }
+  }
 
-    return Search;
-  }.call(this);
+  debounce(func, wait, immediate) {
+    let timeout = undefined;
+    return function() {
+      const context = this;
+      const args = arguments;
 
-  $(function() {
-    return new DDK.Search();
-  });
-}.call(this));
+      const later = function() {
+        timeout = null;
+        if (!immediate) {
+          func.apply(context, args);
+        }
+      };
+
+      const callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) {
+        func.apply(context, args);
+      }
+    };
+  }
+
+  cancel(e) {
+    const container = $(".ddk-search-form");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      return this.reset();
+    }
+  }
+
+  reset() {
+    return this.empty() && $("#ddk-search").val("") && $("#ddk-search").blur();
+  }
+
+  log(str) {
+    if (this.debug) {
+      return console.log(str);
+    }
+  }
+};
+
+$(() => new DDK.Search());
