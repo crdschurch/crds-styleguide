@@ -47,6 +47,8 @@ title: Cards - Types
 
       <p>A card is a flexible and extensible content container. It includes options for images, headers, and a wide variety of content.</p>
 
+      <p>The DDK provides support for three styles of card: <a href="/ui-components/molecules/cards/types#default-card">default cards</a>, <a href="/ui-components/molecules/cards/types#card-with-overlapping-header">cards with an overlapping header</a>, and <a href="/ui-components/molecules/cards/types#default-overlay-cards">overlay cards</a>.</p>
+
       <section>
         <div class="linkable">
           <a id="default-card" name="default-card" href="/ui-components/molecules/cards/types#default-card" fragment="default-card" target="_self">
@@ -61,7 +63,8 @@ title: Cards - Types
 
         {% example html %}
 <div class="card">
-  <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized" />
+  <img alt="Card image caption" class="card-img-top img-responsive" ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg"
+    src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized" />
   <div class="card-block">
     <h4 class="card-title">Card title</h4>
     <h5 class="card-subtitle">Card subtitle</h5>
@@ -69,6 +72,41 @@ title: Cards - Types
     <a class="card-link" href="#">Go somewhere</a>
   </div>
 </div>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a href="/ui-components/molecules/cards/types#default-overlay-cards" id="default-overlay-cards" name="default-overlay-cards"
+            fragment="default-overlay-cards" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header">Default Overlay Cards</h3>
+        </div>
+
+        <p>Sometimes you want your words and pictures to come together as one. That's where overlay cards come in!</p>
+
+        <p>This card style works best with visually arresting imagery and short, but descriptive titles (category and author are optional).</p>
+
+        <p>Like all the cards in this section, these cards are designed to fill the width of the container you put it in. (But because of an overlay card's showy nature, it's best to put it in a large spot for all to admire.)</p>
+
+        <p class="callout callout-info">Adding a class of <code>overlay-card-xl</code> to <code>overlay-card</code> will create a card that is nearly the full height of a page.</p>
+
+        {% example html %}
+<a href="#" class="overlay-card">
+  <div class="bg-overlay"></div>
+  <div class="overlay-card-image">
+    <img ix-src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" src="//crds-cms-uploads.imgix.net/content/images/crossroads-go-header-imgs-nicaragua.jpg" ix-initialized="ix-initialized" />
+  </div>
+
+  <div class="overlay-card-content">
+    <p class="overlay-card-category">Category Name</p>
+    <h2 class="overlay-card-title">Card Title</h2>
+    <p class="overlay-card-author">Card Author</p>
+  </div>
+</a>
         {% endexample %}
       </section>
 
@@ -99,8 +137,6 @@ title: Cards - Types
 </div>
         {% endexample %}
       </section>
-
-
     </div>
   </div>
 </div>
