@@ -1,10 +1,35 @@
 $(document).ready(function() {
-  var themeSwitch = document.getElementsByClassName('theme-toggle-switch');
+  var themeSwitch = $(".theme-toggle-switch");
 
-  localStorage.getItem('currentState') == 'on' ? $('body').addClass('dark-theme') : $('body').removeClass('dark-theme');
+  if (localStorage.getItem("currentState") == "on") {
+    $("body").addClass("dark-theme");
+    $("iframe")
+      .contents()
+      .find("body")
+      .addClass("dark-theme");
+  } else {
+    $("body").removeClass("dark-theme");
+    $("iframe")
+      .contents()
+      .find("body")
+      .removeClass("dark-theme");
+  }
 
-  $(themeSwitch).click(function(){
-    $('body').toggleClass('dark-theme');
-    $('body').hasClass('dark-theme') ? localStorage.setItem('currentState', 'on') : localStorage.removeItem('currentState');
+  $(themeSwitch).click(function() {
+    $("body").toggleClass("dark-theme");
+
+    if ($("body").hasClass("dark-theme")) {
+      localStorage.setItem("currentState", "on");
+      $("iframe")
+        .contents()
+        .find("body")
+        .addClass("dark-theme");
+    } else {
+      localStorage.removeItem("currentState");
+      $("iframe")
+        .contents()
+        .find("body")
+        .removeClass("dark-theme");
+    }
   });
 });
