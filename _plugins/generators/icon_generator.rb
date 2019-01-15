@@ -7,7 +7,7 @@ module Jekyll
         icons = Dir.glob(path).collect{|f| File.basename(f, '.svg') }
         site.config['icon_directory'] = {
           "source" => File.dirname(path),
-          "icons" => icons
+          "icons" => icons.sort
         }
       end
 
