@@ -3,7 +3,13 @@ layout: default
 title: Icons - Directory
 ---
 
-<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+<div
+  class="ddk jumbotron"
+  style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{
+    site.imgix_params.jumbotron
+  }}');"
+  data-optimize-bg-img
+>
   <div class="container text-center text-white">
     <ol class="breadcrumb ddk">
       <li>UI COMPONENTS</li>
@@ -22,321 +28,57 @@ title: Icons - Directory
           <li class="active">
             <a href="/ui-components/atoms/icons/directory">Directory</a>
           </li>
-          <li>
-            <a href="/ui-components/atoms/icons/inline-svg">Usage</a>
-          </li>
-          <li>
-            <a href="/ui-components/atoms/icons/resize-svg">Sizes</a>
-          </li>
-          <li>
-            <a href="/ui-components/atoms/icons/colors">Colors</a>
-          </li>
+          <li><a href="/ui-components/atoms/icons/inline-svg">Usage</a></li>
+          <li><a href="/ui-components/atoms/icons/resize-svg">Sizes</a></li>
+          <li><a href="/ui-components/atoms/icons/colors">Colors</a></li>
         </ul>
       </nav>
     </aside>
 
     <div>
       <div class="linkable">
-        <a id="icon-directory" name="icon-directory" href="/ui-components/atoms/icons/directory#icon-directory" fragment="icon-directory" target="_self">
+        <a
+          id="icon-directory"
+          name="icon-directory"
+          href="/ui-components/atoms/icons/directory#icon-directory"
+          fragment="icon-directory"
+          target="_self"
+        >
           <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            <use
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="/assets/svgs/icons.svg#link"
+            ></use>
           </svg>
         </a>
-        <h2 class="page-header" data-linked="Mon Sep 10 2018 10:16:47 GMT-0400 (EDT)">Icon Directory</h2>
+        <h2
+          class="page-header"
+          data-linked="Mon Sep 10 2018 10:16:47 GMT-0400 (EDT)"
+        >
+          Icon Directory
+        </h2>
       </div>
 
-      <p>Below is a full list of the approved icons. See <a href="/ui-components/atoms/icons/inline-svg">the usage docs</a> for more info.</p>
-      <p>In order to add a new icon to the directory, <a href="mailto:design@crossroads.net">send a request</a> to Communications with the proposed new SVG.</p>
+      <p>
+        Below is a full list of the approved icons. See
+        <a href="/ui-components/atoms/icons/inline-svg">the usage docs</a> for
+        more info.
+      </p>
+      <p>
+        In order to add a new icon to the directory,
+        <a href="mailto:design@crossroads.net">send a request</a> to
+        Communications with the proposed new SVG.
+      </p>
 
       <ul class="list-unstyled push-top soft-top icon-directory-list">
+        {% for icon in site.icon_directory.icons %}
         <li>
           <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#account-thin"></use>
+            <use xlink:href="/assets/svgs/icons.svg#{{ icon }}"></use>
           </svg>
-          <span class="soft-half-left">account-thin</span>
+          <span class="soft-half-left">{{ icon }}</span>
         </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#calendar"></use>
-          </svg>
-          <span class="soft-half-left">calendar</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#camera"></use>
-          </svg>
-          <span class="soft-half-left">camera</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#caret-down"></use>
-          </svg>
-          <span class="soft-half-left">caret-down</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chart-bar-thin"></use>
-          </svg>
-          <span class="soft-half-left">chart-bar-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chat-thin"></use>
-          </svg>
-          <span class="soft-half-left">chat-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#check-circle"></use>
-          </svg>
-          <span class="soft-half-left">check-circle</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
-          </svg>
-          <span class="soft-half-left">chevron-down</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chevron-left"></use>
-          </svg>
-          <span class="soft-half-left">chevron-left</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chevron-right"></use>
-          </svg>
-          <span class="soft-half-left">chevron-right</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#chevron-up"></use>
-          </svg>
-          <span class="soft-half-left">chevron-up</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#circle-thin"></use>
-          </svg>
-          <span class="soft-half-left">circle-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#clock-o"></use>
-          </svg>
-          <span class="soft-half-left">clock-o</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#close-thin"></use>
-          </svg>
-          <span class="soft-half-left">close-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#close"></use>
-          </svg>
-          <span class="soft-half-left">close</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#contrast"></use>
-          </svg>
-          <span class="soft-half-left">contrast</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#copy"></use>
-          </svg>
-          <span class="soft-half-left">copy</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#credit-card"></use>
-          </svg>
-          <span class="soft-half-left">credit-card</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#download"></use>
-          </svg>
-          <span class="soft-half-left">download</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#equalizer"></use>
-          </svg>
-          <span class="soft-half-left">equalizer</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#exclamation-circle"></use>
-          </svg>
-          <span class="soft-half-left">exclamation-circle</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#eye-slash"></use>
-          </svg>
-          <span class="soft-half-left">eye-slash</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#eye"></use>
-          </svg>
-          <span class="soft-half-left">eye</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#facebook"></use>
-          </svg>
-          <span class="soft-half-left">facebook</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#github"></use>
-          </svg>
-          <span class="soft-half-left">github</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#instagram"></use>
-          </svg>
-          <span class="soft-half-left">instagram</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#link"></use>
-          </svg>
-          <span class="soft-half-left">link</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#location-arrow"></use>
-          </svg>
-          <span class="soft-half-left">location-arrow</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#map-marker"></use>
-          </svg>
-          <span class="soft-half-left">map-marker</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#media-article"></use>
-          </svg>
-          <span class="soft-half-left">media-article</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#media-music"></use>
-          </svg>
-          <span class="soft-half-left">media-music</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#media-podcast"></use>
-          </svg>
-          <span class="soft-half-left">media-podcast</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#media-video"></use>
-          </svg>
-          <span class="soft-half-left">media-video</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#menu"></use>
-          </svg>
-          <span class="soft-half-left">menu</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#menu-thin"></use>
-          </svg>
-          <span class="soft-half-left">menu-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#minus"></use>
-          </svg>
-          <span class="soft-half-left">minus</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#play-thin"></use>
-          </svg>
-          <span class="soft-half-left">play-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#plus"></use>
-          </svg>
-          <span class="soft-half-left">plus</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#question-circle"></use>
-          </svg>
-          <span class="soft-half-left">question-circle</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#screwhead-crds"></use>
-          </svg>
-          <span class="soft-half-left">screwhead-crds</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#search"></use>
-          </svg>
-          <span class="soft-half-left">search</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#search-thin"></use>
-          </svg>
-          <span class="soft-half-left">search-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#share"></use>
-          </svg>
-          <span class="soft-half-left">share</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#twitter"></use>
-          </svg>
-          <span class="soft-half-left">twitter</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#university"></use>
-          </svg>
-          <span class="soft-half-left">university</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#usd"></use>
-          </svg>
-          <span class="soft-half-left">usd</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#user-plus-thin"></use>
-          </svg>
-          <span class="soft-half-left">user-plus-thin</span>
-        </li>
-        <li>
-          <svg class="icon icon-1" viewBox="0 0 256 256">
-            <use xlink:href="/assets/svgs/icons.svg#youtube"></use>
-          </svg>
-          <span class="soft-half-left">youtube</span>
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
