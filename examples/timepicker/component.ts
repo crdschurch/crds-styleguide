@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'my-app',
   template: `
     <timepicker [(ngModel)]="mytime"></timepicker>
-    <p>Time is: {{mytime}}</p>
+    <p class="soft-half-left">Time is: {{mytime}}</p>
   `
 })
 export class AppComponent implements OnInit {
