@@ -73,27 +73,48 @@ title: Tabs
 
       <p class="callout callout-info">A class of <code>.height-example</code> has been added to the following example to prevent the vertical tabs from overlapping on top of the code example. This is for demonstration purposes only and should be removed when implementing your own vertical tabs.</p>
       {% example html %}
-<div class="height-example sidebar-navigation push-bottom">
-  <div class="dropdown">
-    <button class="btn btn-gray-light btn-outline btn-block" id="sidebarNavigation" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+<ul class="sidebar-nav">
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="javascript:void(0)">
+      Recent
+    </a>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link active" href="javascript:void(0)">
+      Most Watched
+    </a>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="#collapse-cat-a" data-toggle="collapse">
+      Category A
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down-thin"></use>
       </svg>
-      <span>Recent</span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="sidebarNavigation">
-      <li>
-        <a class="" href="#">Recent</a>
+    </a>
+    <ul class="sidebar-subnav collapse" id="collapse-cat-a">
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #1
+        </a>
       </li>
-      <li>
-        <a class="" href="#">Most Watched</a>
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #2
+        </a>
       </li>
-      <li>
-        <a class="" href="#">Category</a>
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #3
+        </a>
       </li>
     </ul>
-  </div>
-</div>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="javascript:void(0)">
+      Category B
+    </a>
+  </li>
+</ul>
       {% endexample %}
     </section>
   </div>
