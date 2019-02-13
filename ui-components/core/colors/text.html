@@ -5,7 +5,13 @@ title: Colors - Text
 
 <div class="container-fluid">
   <div class="row">
-    <div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+    <div
+      class="ddk jumbotron"
+      style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{
+        site.imgix_params.jumbotron
+      }}');"
+      data-optimize-bg-img
+    >
       <div class="container text-center text-white">
         <ol class="breadcrumb ddk">
           <li>UI COMPONENTS</li>
@@ -13,9 +19,11 @@ title: Colors - Text
           <li>COLORS</li>
         </ol>
         <h1>UI Components / Colors</h1>
-        <p>When referencing color in your stylesheet overrides, please ensure you're using one of the following variables. These
-          values provide the core color palette for Crossroads' brand identity and have been used to override the Bootstrap defaults,
-          where noted below.</p>
+        <p>
+          When referencing color in your stylesheet overrides, please ensure you're using one of the following
+          variables. These values provide the core color palette for Crossroads' brand identity and have been used to
+          override the Bootstrap defaults, where noted below.
+        </p>
       </div>
     </div>
   </div>
@@ -44,8 +52,13 @@ title: Colors - Text
 
     <div>
       <div class="linkable">
-        <a id="contextual-colors" name="contextual-colors" href="/ui-components/core/colors/text#contextual-colors" fragment="contextual-colors"
-          target="_self">
+        <a
+          id="contextual-colors"
+          name="contextual-colors"
+          href="/ui-components/core/colors/text#contextual-colors"
+          fragment="contextual-colors"
+          target="_self"
+        >
           <svg class="icon icon-1" viewBox="0 0 256 256">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
           </svg>
@@ -53,21 +66,28 @@ title: Colors - Text
         <h2 class="page-header">Contextual Colors</h2>
       </div>
 
-      <p>Here you'll find additional text utility classes, altering the color of any given text. These classes can be used
-        similarly to the contextual color classes found in <a href="http://getbootstrap.com/docs/3.3/css/#helper-classes-colors"
-          target="_blank">Bootstrap's documentation</a>.</p>
+      <p>
+        Here you'll find additional text utility classes, altering the color of any given text. These classes can be
+        used similarly to the contextual color classes found in
+        <a href="http://getbootstrap.com/docs/3.3/css/#helper-classes-colors" target="_blank"
+          >Bootstrap's documentation</a
+        >.
+      </p>
 
-      <p class="callout callout-info" role="alert">A dark background has been applied to the <code>.text-white</code> code
-        example so you can see the text and the class' impact on said text.</p>
+      <p class="callout callout-info" role="alert">
+        A dark background has been applied to the <code>.text-white</code> code example so you can see the text and the
+        class' impact on said text.
+      </p>
 
       {% example html %}
-<div class="bg-charcoal">
-  <p class="text-white bg-charcoal">Lorem ipsum dolor sit amet, consectetur ...</p>
-</div>
-<p class="text-black">Lorem ipsum dolor sit amet, consectetur ...</p>
-<p class="text-gray-dark">Lorem ipsum dolor sit amet, consectetur ...</p>
-<p class="text-gray-light">Lorem ipsum dolor sit amet, consectetur ...</p>
-<p class="text-cyan-light">Lorem ipsum dolor sit amet, consectetur ...</p>
+      <div class="bg-charcoal">
+        <p class="text-white bg-charcoal">Lorem ipsum dolor sit amet, consectetur ...</p>
+      </div>
+      <p class="text-black">Lorem ipsum dolor sit amet, consectetur ...</p>
+      <p class="text-gray-dark">Lorem ipsum dolor sit amet, consectetur ...</p>
+      <p class="text-gray-light">Lorem ipsum dolor sit amet, consectetur ...</p>
+      <p class="text-cyan">Lorem ipsum dolor sit amet, consectetur ...</p>
+      <p class="text-cyan-light">Lorem ipsum dolor sit amet, consectetur ...</p>
       {% endexample %}
     </div>
   </div>
