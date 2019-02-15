@@ -69,31 +69,81 @@ title: Tabs
         <h3 class="component-header">Vertical tabs</h3>
       </div>
 
-      <p>Vertical tabs are a good solution for creating tabbable content for both mobile- and desktop-sized screens. The trick to getting the mobile dropdown menu to work is making sure your button <code>id</code> and list <code>aria-labelledby</code> match.</p>
+      <p>
+        Vertical tabs are a good solution for creating tabbable content for both
+        mobile- and desktop-sized screens.
+      </p>
 
-      <p class="callout callout-info">A class of <code>.height-example</code> has been added to the following example to prevent the vertical tabs from overlapping on top of the code example. This is for demonstration purposes only and should be removed when implementing your own vertical tabs.</p>
+      <p>
+        On mobile screens, the tabs receive a light gray background color. The
+        intention is for the tabs to make use of <a
+        href="https://getbootstrap.com/docs/3.3/javascript/#collapse"
+        target="_blank">Bootstrap's collapse feature</a>. This can be
+        accomplished by using an element with a
+        <code>.sidebar-nav-trigger</code> class.
+      </p>
+
+      <p>
+        Vertical tabs also support nested tabs, which can be hidden with the
+        collapse feature as well. Icons within the collapse triggers will
+        automatically be rotated upon expand/collapse events.
+      </p>
+
+      <p>
+        The example below shows all of these features put together, but you
+        certainly don't need to make use of all features to create vertical
+        tabs.
+      </p>
+
       {% example html %}
-<div class="height-example sidebar-navigation push-bottom">
-  <div class="dropdown">
-    <button class="btn btn-gray-light btn-outline btn-block" id="sidebarNavigation" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <svg class="icon icon-1 pull-right push-left" viewBox="0 0 256 256">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down"></use>
+<button class="sidebar-nav-trigger" data-toggle="collapse" data-target="#sidebar-nav">
+  Most Watched
+  <svg class="icon icon-1" viewBox="0 0 256 256">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down-thin"></use>
+  </svg>
+</button>
+<ul class="sidebar-nav collapse" id="sidebar-nav">
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="javascript:void(0)">
+      Recent
+    </a>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link active" href="javascript:void(0)">
+      Most Watched
+    </a>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="#collapse-cat-a" data-toggle="collapse">
+      Category A
+      <svg class="icon icon-1" viewBox="0 0 256 256">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#chevron-down-thin"></use>
       </svg>
-      <span>Recent</span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="sidebarNavigation">
-      <li>
-        <a class="" href="#">Recent</a>
+    </a>
+    <ul class="sidebar-subnav collapse" id="collapse-cat-a">
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #1
+        </a>
       </li>
-      <li>
-        <a class="" href="#">Most Watched</a>
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #2
+        </a>
       </li>
-      <li>
-        <a class="" href="#">Category</a>
+      <li class="sidebar-subnav-item">
+        <a class="sidebar-subnav-link" href="javascript:void()">
+          Sub-Item #3
+        </a>
       </li>
     </ul>
-  </div>
-</div>
+  </li>
+  <li class="sidebar-nav-item">
+    <a class="sidebar-nav-link" href="javascript:void(0)">
+      Category B
+    </a>
+  </li>
+</ul>
       {% endexample %}
     </section>
   </div>
