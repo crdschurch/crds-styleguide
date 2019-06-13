@@ -1,0 +1,29 @@
+---
+layout: default
+title: Shared-footer
+---
+
+<div class="ddk jumbotron"
+    style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');"
+    data-optimize-bg-img>
+    <div class="container text-center text-white">
+        <ol class="breadcrumb ddk">
+            <li>UI COMPONENTS</li>
+            <li>MOLECULES</li>
+        </ol>
+        <h1>UI Components / Shared-footer</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-offset-3">
+
+        <p>The default shared-footer supports two optional properties (<code>src</code>): a url string for a JSON object that contains data to generate the component, 
+            and (<code>env</code>): a string specifying the environment the component should be built in. (<code>env</code>) can be one of the following strings: (<code>"Int"</code>, <code>"Demo"</code>, <code>"Prod"</code>). 
+            If neither properties are included, the source is defaulted to <a href="https://crds-data.netlify.com/shared-footer/prod.json"> Prod.</a></p>
+
+        {% example html %}
+        <shared-footer env="Int"></shared-footer>
+        {% endexample %}
+    </div>
+</div>
