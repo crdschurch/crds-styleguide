@@ -1,0 +1,31 @@
+---
+layout: default
+title: Snail-trail
+---
+
+<div class="ddk jumbotron"
+    style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');"
+    data-optimize-bg-img>
+    <div class="container text-center text-white">
+        <ol class="breadcrumb ddk">
+            <li>UI COMPONENTS</li>
+            <li>MOLECULES</li>
+        </ol>
+        <h1>UI Components / Snail Trail </h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-offset-3">
+
+        <p>The Snail Trail component can be used as a supplementary navigation bar, that also functions as a carousel on mobile devices. The default Snail Trail supports one required and two optional properties: </p>
+        <p class="col-md-offset-1"><code>name</code>: a required string specifying the name of the Snail Trail, displayed as the item. </p>
+        <p class="col-md-offset-1"><code>src</code>: a url string for a JSON object that contains data to generate the component. </p>
+        <p class="col-md-offset-1"><code>env</code>: a string specifying the environment the component should be built in (Int, Demo, or Prod) </p>
+        <p class="col-md-offset-1"> Note: If <code>src</code> and <code>env</code> aren't included, the source is defaulted to <a href="https://crds-data.netlify.com/snail-trails/trending/Prod.json"> Prod.</a> </p>
+
+        {% example html %}
+        <snail-trail env="Int" name="Trending"></snail-trail>
+        {% endexample %}
+    </div>
+</div>
