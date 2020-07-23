@@ -204,16 +204,21 @@ $navbar-inverse-border: darken($cr-gray-dark, 10);
 // 3. Footer
 .footer {
   width: 100%;
-  background-color: lighten($cr-gray-lighter, 5);
+  background-color: $cr-blue;
   padding: 2rem 0;
   margin-top: 2rem;
+  color: $cr-white;
 
   .dark-theme & {
-    background: $cr-gray-darker;
+    background: $cr-blue;
   }
 
   .inverted & {
     background: rgba($cr-white, .2);
+  }
+
+  a {
+    color: $cr-orange;
   }
 
   .footer-list {

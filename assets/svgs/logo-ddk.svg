@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg id="logo-ddk" width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Fill-1" fill="#0196DC" fill-rule="nonzero" points="0 50 50 50 50 0 0 0"></polygon>
+        <polygon id="Fill-1" fill="#253746" fill-rule="nonzero" points="0 50 50 50 50 0 0 0"></polygon>
         <path d="M11.316,35 L11.316,16.296 L15.068,16.296 C19.072,16.296 19.828,18.536 19.828,21.784 L19.828,29.064 C19.828,31.92 19.352,35 15.012,35 L11.316,35 Z" id="Fill-2" fill="#FFFFFF" fill-rule="nonzero"></path>
-        <path d="M13.836,18.452 L13.836,32.844 L14.844,32.844 C16.888,32.844 17.28,31.612 17.28,29.456 L17.28,21.56 C17.28,19.656 16.944,18.452 14.844,18.452 L13.836,18.452 Z" id="Fill-4" fill="#0196DC" fill-rule="nonzero"></path>
+        <path d="M13.836,18.452 L13.836,32.844 L14.844,32.844 C16.888,32.844 17.28,31.612 17.28,29.456 L17.28,21.56 C17.28,19.656 16.944,18.452 14.844,18.452 L13.836,18.452 Z" id="Fill-4" fill="#253746" fill-rule="nonzero"></path>
         <path d="M21.568,35 L21.568,16.296 L25.32,16.296 C29.324,16.296 30.08,18.536 30.08,21.784 L30.08,29.064 C30.08,31.92 29.604,35 25.264,35 L21.568,35 Z" id="Fill-6" fill="#FFFFFF" fill-rule="nonzero"></path>
-        <path d="M24.088,18.452 L24.088,32.844 L25.096,32.844 C27.14,32.844 27.532,31.612 27.532,29.456 L27.532,21.56 C27.532,19.656 27.196,18.452 25.096,18.452 L24.088,18.452 Z" id="Fill-8" fill="#0196DC" fill-rule="nonzero"></path>
+        <path d="M24.088,18.452 L24.088,32.844 L25.096,32.844 C27.14,32.844 27.532,31.612 27.532,29.456 L27.532,21.56 C27.532,19.656 27.196,18.452 25.096,18.452 L24.088,18.452 Z" id="Fill-8" fill="#253746" fill-rule="nonzero"></path>
         <path d="M31.82,35 L34.284,35 L34.284,28.812 L35.544,26.236 L38.232,35 L40.976,35 L37.252,23.632 L40.724,16.296 L37.952,16.296 C36.832,18.956 35.068,23.184 34.312,24.976 L34.284,24.976 L34.284,16.296 L31.82,16.296 L31.82,35 Z" id="Fill-10" fill="#FFFFFF" fill-rule="nonzero"></path>
     </g>
 </svg>
