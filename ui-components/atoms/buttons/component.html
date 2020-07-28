@@ -1,0 +1,206 @@
+---
+layout: default
+title: Buttons - Component
+---
+
+<div class="ddk jumbotron" style="background-image: url('//crds-cms-uploads.imgix.net/content/images/ddk/ddk-interior-jumbotron-bg.jpg?{{ site.imgix_params.jumbotron }}');" data-optimize-bg-img>
+  <div class="container text-center text-white">
+    <ol class="breadcrumb ddk">
+      <li>UI COMPONENTS</li>
+      <li>ATOMS</li>
+      <li>BUTTONS</li>
+    </ol>
+    <h1>UI Components / Buttons</h1>
+    <p>Button patterns help solicit action from a user in a clean and consistent manner. These elements are commonly used to submit a form or direct a user's attention towards a primary call-to-action.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="component">
+    <aside class="mobile-push-bottom">
+      <nav>
+        <ul class="list-unstyled">
+          <li class="active">
+            <a href="/ui-components/atoms/buttons/component">Component</a>
+          </li>
+          <li >
+            <a href="/ui-components/atoms/buttons/styles">Styles</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/states">States</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/groups">Groups</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/dropdowns">Dropdowns</a>
+          </li>
+          <li>
+            <a href="/ui-components/atoms/buttons/button-inputs">Button Inputs</a>
+          </li>
+          <li>
+          <a href="/ui-components/atoms/buttons/placement">Placement</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div>
+      <div class="linkable">
+        <a id="component" name="component" href="/ui-components/atoms/buttons/component#component" fragment="component" target="_self">
+          <svg class="icon icon-1" viewBox="0 0 256 256">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+          </svg>
+        </a>
+        <h2 class="page-header flush-top" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Component</h2>
+      </div>
+
+      <section>
+        <div class="linkable">
+          <a id="crds-button" name="crds-button" href="/ui-components/atoms/buttons/component#crds-button" fragment="button-tags" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Crds-Button</h3>
+        </div>
+        <p>Use the button component <code>&lt;crds-button&gt;</code></p>
+        {% example html %}
+          <crds-button text="Crds Button" color="blue"></crds-button>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="solid-color-options" name="solid-color-options" href="/ui-components/atoms/buttons/component#solid-color-options" fragment="solid-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Solid Color Options</h3>
+        </div>
+        <p>Use <code>color=""</code> attribute on the component to select the color of the button.</p>
+
+
+        {% example html %}
+<crds-button text="Blue Primary" color="blue"></crds-button>
+<crds-button text="Orange Primary" color="orange"></crds-button>
+<crds-button text="Gray Primary" color="gray"></crds-button>
+<crds-button text="Gray Light Primary" color="gray-light"></crds-button>
+<div class="bg-charcoal soft-quarter">
+  <crds-button text="White Primary" color="white"></crds-button>
+</div>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="outline-color-options" name="outline-color-options" href="/ui-components/atoms/buttons/component#outline-color-options" fragment="outline-color-options" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Outline Color Options</h3>
+        </div>
+        <p>Add <code>display="outline"</code> to create an outline button style.</p>
+
+        {% example html %}
+<crds-button text="Blue Primary" color="blue" display="outline"></crds-button>
+<crds-button text="Orange Primary" color="orange" display="outline"></crds-button>
+<crds-button text="Gray Primary" color="gray" display="outline"></crds-button>
+<crds-button text="Gray Light Primary" color="gray-light" display="outline"></crds-button>
+<div class="bg-charcoal soft-quarter">
+  <crds-button text="White Primary" color="white" display="outline"></crds-button>
+</div>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="link-style" name="link-style" href="/ui-components/atoms/buttons/component#link-style" fragment="link-style" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Link Style</h3>
+        </div>
+        <p>To create a link style add <code>display="link"</code>. Also add <code>color="orange"</code> because this is the link color used across the board.</p>
+
+        {% example html %}
+          <crds-button text="Link" color="orange" display="link"></crds-button>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="sizes" name="sizes" href="/ui-components/atoms/buttons/component#sizes" fragment="sizes" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Sizes</h3>
+        </div>
+        <p>Adding <code>size="lg"</code> or <code>size="sm"</code> will increase or decrease your button element.</p>
+
+        {% example html %}
+<p>
+  <crds-button text="Large Button" color="blue" size="lg"></crds-button>
+  <crds-button text="Large Button" color="blue" display="outline" size="lg"></crds-button>
+</p>
+<p>
+  <crds-button text="Button" color="blue" size="default"></crds-button>
+  <crds-button text="Button" color="blue" display="outline" size="default"></crds-button>
+</p>
+<p>
+  <crds-button text="Small Button" color="blue" size="sm"></crds-button>
+  <crds-button text="Small Button" color="blue" display="outline" size="sm"></crds-button>
+</p>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="block-display-buttons" name="block-display-buttons" href="/ui-components/atoms/buttons/component#block-display-buttons" fragment="block-display-buttons" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Block Display Buttons</h3>
+        </div>
+        <p>To create a block level button, which spans the width of its parent, add <code>block="true"</code>. If you want to create a block level button only on mobile, add <code>block-mobile="true"</code>.</p>
+
+        {% example html %}
+<div>
+  <crds-button text="Block Button" color="blue" block="true"></crds-button>
+  <crds-button text="Block Button" color="blue" block="true" display="outline"></crds-button>
+</div>
+<div>
+  <crds-button text="Mobile Block Button" color="blue" block-mobile="true"></crds-button>
+  <crds-button text="Mobile Block Button" color="blue" block-mobile="true" display="outline"></crds-button>
+</div>
+        {% endexample %}
+      </section>
+
+      <section>
+        <div class="linkable">
+          <a id="icons" name="icons" href="/ui-components/atoms/buttons/component#icons" fragment="icons" target="_self">
+            <svg class="icon icon-1" viewBox="0 0 256 256">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svgs/icons.svg#link"></use>
+            </svg>
+          </a>
+          <h3 class="component-header" data-linked="Mon Jul 27 2020 10:14:38 GMT-0400 (EDT)">Icons</h3>
+        </div>
+        <p>To add an icon to the button, add <code>icon="" icon-size="" icon-color=""</code>. If you would like the icon on the left side of the text add <code>icon-align="left"</code>. To see a list of the icons <a href="/ui-components/atoms/icons/directory">click here</a>.</p>
+        {% example html %}
+<crds-button text="Blue Primary" color="blue" icon="youtube" icon-size="20" icon-color="white"></crds-button>
+<crds-button text="Orange Primary" color="orange" icon="github" icon-size="20" icon-color="blue"></crds-button>
+<crds-button text="Blue Primary" color="blue" icon="link" icon-size="20" icon-color="white"></crds-button>
+<crds-button text="Orange Primary" color="orange" icon="download" icon-size="20" icon-color="blue"></crds-button>
+        {% endexample %}
+      </section>
+      <section>
+        <h3 class="component-header">More Info on this Component</h3>
+        <p>If you would like to get a better look at the Button component, check it out in the <a href="https://components.crossroads.net/?path=/story/ddk-atoms--crds-button" target="_blank">Component Library</a></p>
+      </section>
+    </div>
+  </div>
+</div>
