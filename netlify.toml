@@ -1,6 +1,6 @@
 [build]
   command = '''
-    bundle exec jekyll build
+    bundle exec jekyll build  && ./bin/netlify-redirector
   '''
 
 [context.branch-deploy.environment]
