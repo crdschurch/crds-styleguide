@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
+  <link rel="preload" href="{{site.components_endpoint}}/crds-components/crds-components.esm.js" as="script">
+  <link rel="preload" href="{{site.components_endpoint}}/crds-components.js" as="script">
+​
   <link rel="icon" type="image/x-icon" href="/assets/favs/favicon.ico">
   <link rel="icon" type="image/png" href="/assets/favs/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="/assets/favs/favicon-32x32.png" sizes="32x32">
@@ -32,10 +34,20 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#a37304">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
-
+​
   {% stylesheet_link_tag application %}
-
+​
   <title>
     {% if page.title and page.title != site.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}
   </title>
+​
+  <script type="module" onload="componentsLoaded()" src="{{site.components_endpoint}}/crds-components/crds-components.esm.js"></script>
+  <script nomodule="" onload="componentsLoaded()" src="{{site.components_endpoint}}/crds-components.js"></script>
+  <script>
+    function componentsLoaded() {
+      var componentsReady = new Event('components-ready');
+      document.dispatchEvent(componentsReady);
+      window.componentsReady = true;
+    }
+  </script>
 </head>
