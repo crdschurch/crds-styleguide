@@ -10,3 +10,6 @@ _redirects
 node_modules
 tmp
 .vscode/*
+
+# Local Netlify folder
+.netlify
