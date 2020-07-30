@@ -5,16 +5,16 @@ https://design-demo.crossroads.net/*,https://design.crossroads.net/:splat,301!
 # Optional: Redirect default Netlify subdomain to primary domain
 https://crds-styleguide.netlify.com/*,https://design.crossroads.net/:splat,301!
 
-/ui-components/core/colors,/ui-components/core/colors/swatches,302
-/ui-components/core/typography,/ui-components/core/typography/typefaces,302
-/ui-components/core/utilities,/ui-components/core/utilities/borders,302
-/ui-components/atoms/buttons,/ui-components/atoms/buttons/component,302
-/ui-components/atoms/feedback,/ui-components/atoms/feedback/alerts,302
-/ui-components/atoms/forms,/ui-components/atoms/forms/inputs,302
-/ui-components/atoms/icons,/ui-components/atoms/icons/directory,302
-/ui-components/molecules/cards/,/ui-components/molecules/cards/types,302
-/ui-components/molecules/cards/,/ui-components/molecules/cards/types,302
-/designers/guidelines/copy-voice,/content-admins/copy-voice,302
+/ui-components/core/colors,/ui-components/core/colors/swatches,302!
+/ui-components/core/typography,/ui-components/core/typography/typefaces,302!
+/ui-components/core/utilities,/ui-components/core/utilities/borders,302!
+/ui-components/atoms/buttons,/ui-components/atoms/buttons/component,302!
+/ui-components/atoms/feedback,/ui-components/atoms/feedback/alerts,302!
+/ui-components/atoms/forms,/ui-components/atoms/forms/inputs,302!
+/ui-components/atoms/icons,/ui-components/atoms/icons/directory,302!
+/ui-components/molecules/cards/,/ui-components/molecules/cards/types,302!
+/ui-components/molecules/cards/,/ui-components/molecules/cards/types,302!
+/designers/guidelines/copy-voice,/content-admins/copy-voice,302!
 /components/*,https://${env:CRDS_COMPONENTS_ENDPOINT}/dist/:splat,200!
 /components/*,https://components-int.crossroads.net/dist/:splat,200!
 /*,/404/index.html,404
