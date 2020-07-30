@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-gem 'netlify-redirector', github: 'crdschurch/netlify-redirector'
-
 # ---------------------------------------- | Base
 
 gem "jekyll", "~> 3.7.3"

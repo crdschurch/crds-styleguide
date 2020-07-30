@@ -1,7 +1,10 @@
 [build]
   command = '''
-    bundle exec jekyll build  && ./bin/netlify-redirector
+    bundle exec jekyll build
   '''
+
+[[plugins]]
+  package = "@helloample/netlify-plugin-redirects"
 
 [context.branch-deploy.environment]
   CRDS_COMPONENTS_ENDPOINT = "components-int.crossroads.net"

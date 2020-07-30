@@ -2,6 +2,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
+    "@helloample/netlify-plugin-redirects": "^1.1.4",
     "bootstrap-sass": "^3.4.1",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
@@ -16,5 +17,8 @@
   },
   "scripts": {
     "build": "gulp"
+  },
+  "dependencies": {
+    "netlify": "^4.3.8"
   }
 }
